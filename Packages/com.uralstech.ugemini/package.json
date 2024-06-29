@@ -1,0 +1,46 @@
+{
+    "name": "com.uralstech.ugemini",
+  
+    "displayName": "UGemini",
+    "description": "UGemini: A C# wrapper for the Google Gemini API.",
+  
+    "keywords": [
+      "API",
+      "Google",
+      "Gemini",
+      "AI",
+      "Integration"
+    ],
+  
+    "version": "1.0.0-preview.1",
+    "unity": "2022.3",
+  
+    "hideInEditor": false,
+  
+    "documentationUrl": "https://github.com/Uralstech/UGemini/blob/master/UGemini/Packages/com.uralstech.ugemini/Documentation~/README.md",
+    "changelogUrl": "https://github.com/Uralstech/UGemini/releases",
+    "licensesUrl": "https://github.com/Uralstech/UGemini/blob/master/LICENSE",
+    "license": "Apache-2.0",
+  
+    "repository": {
+      "type": "git",
+      "repository": "https://github.com/Uralstech/UGemini.git"
+    },
+  
+    "author": {
+      "name": "Udayshankar Ravikumar",
+      "url": "https://github.com/Uralstech"
+    },
+  
+    "samples": [
+      {
+        "displayName": "Usage Sample",
+        "description": "A sample scene showcasing the capabilities of the UGemini plugin.",
+        "path": "Samples~/UsageSample"
+      }
+    ],
+  
+    "dependencies": {
+      "com.unity.nuget.newtonsoft-json": "3.2.1"
+    }
+  }
