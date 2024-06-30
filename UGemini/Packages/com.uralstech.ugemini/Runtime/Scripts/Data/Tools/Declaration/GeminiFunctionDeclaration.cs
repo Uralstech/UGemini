@@ -1,7 +1,7 @@
-﻿using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json;
-using Uralstech.UGemini.Schema;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System.ComponentModel;
+using Uralstech.UGemini.Schema;
 
 namespace Uralstech.UGemini.Tools.Declaration
 {

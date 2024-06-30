@@ -23,6 +23,8 @@ public class UIChatMessage : MonoBehaviour
                     case GeminiContentType.ImagePNG:
                     case GeminiContentType.ImageJPEG:
                         image.LoadImage(Convert.FromBase64String(part.InlineData.Data));
+
+                        _messageImage.texture = image;
                         break;
 
                     default:
