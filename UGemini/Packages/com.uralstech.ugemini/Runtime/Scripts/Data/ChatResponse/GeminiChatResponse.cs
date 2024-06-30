@@ -32,6 +32,9 @@ namespace Uralstech.UGemini.Chat
         /// </summary>
         public GeminiUsageMetadata UsageMetadata;
 
+        /// <summary>
+        /// The parts of the <see cref="GeminiChatResponse"/> message.
+        /// </summary>
         [JsonIgnore]
         public GeminiContentPart[] Parts => Candidates[0].Content.Parts;
     }
