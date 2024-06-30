@@ -82,9 +82,9 @@ namespace Uralstech.UGemini.Samples
             }
 
             List<GeminiContent> contents = new()
-        {
-            GeminiContent.GetContent(text, GeminiRole.User),
-        };
+            {
+                GeminiContent.GetContent(text, GeminiRole.User),
+            };
 
             GeminiChatResponse response;
             GeminiFunctionCall functionCall;

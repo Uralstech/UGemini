@@ -714,9 +714,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1574253905}
-        m_TargetAssemblyTypeName: Uralstech.UGemini.Samples.FunctionCallingChatManager,
-          Assembly-CSharp
+      - m_Target: {fileID: 1574253900}
+        m_TargetAssemblyTypeName: ChatManager, Assembly-CSharp
         m_MethodName: OnChat
         m_Mode: 1
         m_Arguments:
@@ -847,7 +846,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1879736806}
   m_HandleRect: {fileID: 1879736805}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -903,7 +902,7 @@ GameObject:
   - component: {fileID: 1574253903}
   - component: {fileID: 1574253902}
   - component: {fileID: 1574253901}
-  - component: {fileID: 1574253905}
+  - component: {fileID: 1574253900}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -911,6 +910,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1574253900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574253899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26455f76bf49214bbf724b45cfa75a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _chatInput: {fileID: 67212099}
+  _chatResponse: {fileID: 1597445502}
 --- !u!114 &1574253901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,20 +1009,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1574253905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574253899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87f8e2d9b2c841a4a94f86b736d1828a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _chatInput: {fileID: 67212099}
-  _chatResponse: {fileID: 1597445502}
 --- !u!1 &1581178460
 GameObject:
   m_ObjectHideFlags: 0
