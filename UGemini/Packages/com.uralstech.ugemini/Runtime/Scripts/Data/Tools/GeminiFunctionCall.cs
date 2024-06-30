@@ -24,5 +24,23 @@ namespace Uralstech.UGemini.Tools
         /// </remarks>
         [JsonProperty("args", DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public JObject Arguments = null;
+
+        /// <summary>
+        /// Creates a <see cref="GeminiFunctionResponse"/> for this function call.
+        /// </summary>
+        /// <param name="responseJson">The JSON response data.</param>
+        /// <returns>A new <see cref="GeminiFunctionResponse"/> object.</returns>
+        public GeminiFunctionResponse GetResponse(JObject responseJson = null)
+        {
+            return new GeminiFunctionResponse()
+            {
+                Name = Name,
+                Response = responseJson == null ? null : new GeminiFunctionResponseContent()
+                {
+                    Name = Name,
+                    ResponseData = responseJson
+                }
+            };
+        }
     }
 }

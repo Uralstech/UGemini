@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System.ComponentModel;
 
 namespace Uralstech.UGemini.Tools
 {
@@ -18,6 +19,7 @@ namespace Uralstech.UGemini.Tools
         /// <summary>
         /// The function response in JSON object format.
         /// </summary>
-        public GeminiFunctionResponseContent Response;
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public GeminiFunctionResponseContent Response = null;
     }
 }

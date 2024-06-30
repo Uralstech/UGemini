@@ -3,6 +3,7 @@ using Newtonsoft.Json.Serialization;
 using System;
 using System.ComponentModel;
 using UnityEngine;
+using Uralstech.UGemini.Tools;
 
 namespace Uralstech.UGemini
 {
@@ -29,7 +30,7 @@ namespace Uralstech.UGemini
         /// <param name="role">The role of the content creator.</param>
         /// <param name="message">The message.</param>
         /// <returns>A new <see cref="GeminiContent"/> object.</returns>
-        public static GeminiContent GetNew(string message, GeminiRole role = GeminiRole.Unspecified)
+        public static GeminiContent GetContent(string message, GeminiRole role = GeminiRole.Unspecified)
         {
             return new GeminiContent
             {
@@ -51,7 +52,7 @@ namespace Uralstech.UGemini
         /// <param name="message">The message.</param>
         /// <param name="image">The image texture.</param>
         /// <returns>A new <see cref="GeminiContent"/> object.</returns>
-        public static GeminiContent GetNew(string message, Texture2D image, GeminiRole role = GeminiRole.Unspecified)
+        public static GeminiContent GetContent(string message, Texture2D image, GeminiRole role = GeminiRole.Unspecified)
         {
             return new()
             {
@@ -69,6 +70,46 @@ namespace Uralstech.UGemini
                             MimeType = GeminiContentType.ImageJPEG,
                             Data = Convert.ToBase64String(image.EncodeToJPG())
                         }
+                    }
+                }
+            };
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="GeminiContent"/> from a <see cref="GeminiFunctionCall"/>.
+        /// </summary>
+        /// <param name="functionCall">The function call.</param>
+        /// <returns>A new <see cref="GeminiContent"/> object.</returns>
+        public static GeminiContent GetContent(GeminiFunctionCall functionCall)
+        {
+            return new GeminiContent
+            {
+                Role = GeminiRole.Assistant,
+                Parts = new[]
+                {
+                    new GeminiContentPart
+                    {
+                        FunctionCall = functionCall,
+                    }
+                }
+            };
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="GeminiContent"/> from a <see cref="GeminiFunctionResponse"/>.
+        /// </summary>
+        /// <param name="functionResponse">The function response.</param>
+        /// <returns>A new <see cref="GeminiContent"/> object.</returns>
+        public static GeminiContent GetContent(GeminiFunctionResponse functionResponse)
+        {
+            return new GeminiContent
+            {
+                Role = GeminiRole.ToolResponse,
+                Parts = new[]
+                {
+                    new GeminiContentPart
+                    {
+                        FunctionResponse = functionResponse,
                     }
                 }
             };
