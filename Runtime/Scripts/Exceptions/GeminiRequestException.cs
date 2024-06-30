@@ -51,7 +51,7 @@ namespace Uralstech.UGemini.Exceptions
             RequestError = request.error;
             RequestErrorCode = request.responseCode;
             RequestErrorMessage = request.downloadHandler.text;
-            
+
             ApiVersionString = apiVersion;
             IsBetaApi = apiVersion.Contains("beta");
         }

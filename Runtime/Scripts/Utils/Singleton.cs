@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Uralstech.Utils.Singleton
+namespace Uralstech.UGemini.Utils.Singleton
 {
     public class Singleton<T> : MonoBehaviour
         where T : Component

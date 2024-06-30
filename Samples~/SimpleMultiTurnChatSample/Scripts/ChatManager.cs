@@ -1,4 +1,7 @@
+using System;
+using System.Linq;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using Uralstech.UGemini;
@@ -7,11 +10,13 @@ using Uralstech.UGemini.Chat;
 public class ChatManager : MonoBehaviour
 {
     [SerializeField] private bool _useBeta = true;
+    [SerializeField] private Dropdown _fileType;
     [SerializeField] private InputField _chatInput;
     [SerializeField] private Transform _chatMessages;
     [SerializeField] private UIChatMessage _chatMessagePrefab;
 
     private readonly List<GeminiContent> _chatHistory = new();
+    private readonly List<GeminiContentPart> _uploadedData = new();
     private GeminiContent _systemPrompt = null;
 
     private GeminiRole _senderRole = GeminiRole.User;
@@ -26,6 +31,31 @@ public class ChatManager : MonoBehaviour
         }
 
         _senderRole = (GeminiRole)role;
+    }
+
+    public async void OnAddFile(string filePath)
+    {
+        byte[] data;
+        try
+        {
+            data = await File.ReadAllBytesAsync(filePath);
+        }
+        catch (SystemException exception)
+        {
+            Debug.LogError($"Failed to load file: {exception.Message}");
+            return;
+        }
+
+        _uploadedData.Add(new GeminiContentPart
+        {
+            InlineData = new GeminiContentBlob()
+            {
+                MimeType = (GeminiContentType)_fileType.value,
+                Data = Convert.ToBase64String(data),
+            }
+        });
+
+        Debug.Log("Added file!");
     }
 
     public async void OnChat()
@@ -51,9 +81,19 @@ public class ChatManager : MonoBehaviour
             addedContent = _systemPrompt = GeminiContent.GetNew(text);
         }
         else
-            _chatHistory.Add(addedContent = GeminiContent.GetNew(text, _senderRole));
+        {
+            addedContent = GeminiContent.GetNew(text, _senderRole);
+            if (_uploadedData.Count > 0)
+            {
+                addedContent.Parts = addedContent.Parts.Concat(_uploadedData).ToArray();
+                _uploadedData.Clear();
+            }
+            
+            _chatHistory.Add(addedContent);
+        }
        
         AddMessage(addedContent, _settingSystemPrompt);
+
         _settingSystemPrompt = false;
         if (_chatHistory.Count == 0)
             return;

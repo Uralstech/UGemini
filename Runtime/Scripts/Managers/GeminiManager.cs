@@ -1,10 +1,10 @@
+using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
-using Newtonsoft.Json;
 using Uralstech.UGemini.Exceptions;
-using Uralstech.Utils.Singleton;
+using Uralstech.UGemini.Utils.Singleton;
 
 namespace Uralstech.UGemini
 {
