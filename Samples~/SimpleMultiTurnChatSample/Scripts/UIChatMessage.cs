@@ -1,39 +1,41 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-using Uralstech.UGemini;
 
-public class UIChatMessage : MonoBehaviour
+namespace Uralstech.UGemini.Samples
 {
-    [SerializeField] private Text _senderText;
-    [SerializeField] private Text _messageText;
-    [SerializeField] private RawImage _messageImage;
-
-    public void Setup(GeminiContent content, bool isSystemPrompt)
+    public class UIChatMessage : MonoBehaviour
     {
-        Texture2D image = new(1, 1);
-        foreach (GeminiContentPart part in content.Parts)
+        [SerializeField] private Text _senderText;
+        [SerializeField] private Text _messageText;
+        [SerializeField] private RawImage _messageImage;
+    
+        public void Setup(GeminiContent content, bool isSystemPrompt)
         {
-            if (part.Text != null)
-                _messageText.text = part.Text;
-            else if (part.InlineData != null)
+            Texture2D image = new(1, 1);
+            foreach (GeminiContentPart part in content.Parts)
             {
-                switch (part.InlineData.MimeType)
+                if (part.Text != null)
+                    _messageText.text = part.Text;
+                else if (part.InlineData != null)
                 {
-                    case GeminiContentType.ImagePNG:
-                    case GeminiContentType.ImageJPEG:
-                        image.LoadImage(Convert.FromBase64String(part.InlineData.Data));
-
-                        _messageImage.texture = image;
-                        break;
-
-                    default:
-                        Debug.LogError($"Could not load image of type: {part.InlineData.MimeType}!");
-                        break;
+                    switch (part.InlineData.MimeType)
+                    {
+                        case GeminiContentType.ImagePNG:
+                        case GeminiContentType.ImageJPEG:
+                            image.LoadImage(Convert.FromBase64String(part.InlineData.Data));
+    
+                            _messageImage.texture = image;
+                            break;
+    
+                        default:
+                            Debug.LogError($"Could not load data of type: {part.InlineData.MimeType}!");
+                            break;
+                    }
                 }
             }
+    
+            _senderText.text = isSystemPrompt ? "System" : content.Role.ToString();
         }
-
-        _senderText.text = isSystemPrompt ? "System" : content.Role.ToString();
     }
 }

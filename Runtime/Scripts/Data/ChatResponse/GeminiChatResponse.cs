@@ -31,5 +31,8 @@ namespace Uralstech.UGemini.Chat
         /// Metadata on the generation requests' token usage.
         /// </summary>
         public GeminiUsageMetadata UsageMetadata;
+
+        [JsonIgnore]
+        public GeminiContentPart[] Parts => Candidates[0].Content.Parts;
     }
 }

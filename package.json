@@ -9,7 +9,7 @@
     "AI",
     "Integration"
   ],
-  "version": "1.0.0-preview.2",
+  "version": "1.0.0-preview.3",
   "unity": "2022.3",
   "hideInEditor": false,
   "documentationUrl": "https://github.com/Uralstech/UGemini/blob/master/UGemini/Packages/com.uralstech.ugemini/Documentation~/README.md",
@@ -29,6 +29,11 @@
       "displayName": "Mult-turn Chat",
       "description": "A sample scene showing a multi-turn chat system.",
       "path": "Samples~/SimpleMultiTurnChatSample"
+    },
+    {
+      "displayName": "Function Calling",
+      "description": "A sample scene showing a function calling system.",
+      "path": "Samples~/FunctionCallingSample"
     }
   ],
   "dependencies": {
