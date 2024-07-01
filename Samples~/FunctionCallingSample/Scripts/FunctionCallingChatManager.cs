@@ -15,57 +15,57 @@ namespace Uralstech.UGemini.Samples
         {
             FunctionDeclarations = new GeminiFunctionDeclaration[]
             {
-            new GeminiFunctionDeclaration()
-            {
-                Name = "printToConsole",
-                Description = "Print text to the user's console.",
-                Parameters = new GeminiSchema()
+                new GeminiFunctionDeclaration()
                 {
-                    Type = GeminiSchemaDataType.Object,
-                    Properties = new Dictionary<string, GeminiSchema>()
+                    Name = "printToConsole",
+                    Description = "Print text to the user's console.",
+                    Parameters = new GeminiSchema()
                     {
+                        Type = GeminiSchemaDataType.Object,
+                        Properties = new Dictionary<string, GeminiSchema>()
                         {
-                            "text", new GeminiSchema()
                             {
-                                Type = GeminiSchemaDataType.String,
-                                Description = "The text to print. e.g. \"Hello, World!\"",
-                                Nullable = false,
-                            }
-                        },
-                    },
-                    Required = new string[] { "text" },
-                }
-            },
-
-            new GeminiFunctionDeclaration()
-            {
-                Name = "changeTextColor",
-                Description = "Change the color of the text.",
-                Parameters = new GeminiSchema()
-                {
-                    Type = GeminiSchemaDataType.Object,
-                    Properties = new Dictionary<string, GeminiSchema>()
-                    {
-                        {
-                            "color", new GeminiSchema()
-                            {
-                                Type = GeminiSchemaDataType.String,
-                                Description = "The color to set. e.g. \"BLUE\"",
-                                Format = GeminiSchemaDataFormat.Enum,
-                                Enum = new string[]
+                                "text", new GeminiSchema()
                                 {
-                                    "RED",
-                                    "GREEN",
-                                    "BLUE",
-                                    "WHITE",
-                                },
-                                Nullable = false,
-                            }
+                                    Type = GeminiSchemaDataType.String,
+                                    Description = "The text to print. e.g. \"Hello, World!\"",
+                                    Nullable = false,
+                                }
+                            },
                         },
-                    },
-                    Required = new string[] { "color" },
+                        Required = new string[] { "text" },
+                    }
+                },
+    
+                new GeminiFunctionDeclaration()
+                {
+                    Name = "changeTextColor",
+                    Description = "Change the color of the text.",
+                    Parameters = new GeminiSchema()
+                    {
+                        Type = GeminiSchemaDataType.Object,
+                        Properties = new Dictionary<string, GeminiSchema>()
+                        {
+                            {
+                                "color", new GeminiSchema()
+                                {
+                                    Type = GeminiSchemaDataType.String,
+                                    Description = "The color to set. e.g. \"BLUE\"",
+                                    Format = GeminiSchemaDataFormat.Enum,
+                                    Enum = new string[]
+                                    {
+                                        "RED",
+                                        "GREEN",
+                                        "BLUE",
+                                        "WHITE",
+                                    },
+                                    Nullable = false,
+                                }
+                            },
+                        },
+                        Required = new string[] { "color" },
+                    }
                 }
-            }
             },
         };
 

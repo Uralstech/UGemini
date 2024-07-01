@@ -47,7 +47,7 @@ namespace Uralstech.UGemini.Samples
                 return;
             }
     
-            _uploadedData.Add(new GeminiContentPart
+            _uploadedData.Add(new GeminiContentPart()
             {
                 InlineData = new GeminiContentBlob()
                 {
@@ -106,6 +106,8 @@ namespace Uralstech.UGemini.Samples
             };
     
             GeminiChatResponse response = await GeminiManager.Instance.Compute<GeminiChatRequest, GeminiChatResponse>(request, GeminiManager.RequestEndPoint.Chat, useBeta: _useBeta);
+            
+            _chatHistory.Add(response.Candidates[0].Content);
             AddMessage(response.Candidates[0].Content);
         }
     
