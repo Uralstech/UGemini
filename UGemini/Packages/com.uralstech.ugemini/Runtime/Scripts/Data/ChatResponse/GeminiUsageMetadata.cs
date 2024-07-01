@@ -18,6 +18,11 @@ namespace Uralstech.UGemini.Chat
         public int PromptTokenCount;
 
         /// <summary>
+        /// Number of tokens in the cached part of the prompt, i.e. in the cached content.
+        /// </summary>
+        public int CachedContentTokenCount;
+
+        /// <summary>
         /// Total number of tokens across the generated candidates.
         /// </summary>
         public int CandidatesTokenCount;

@@ -11,7 +11,7 @@ namespace Uralstech.UGemini.Tools
     public class GeminiFunctionResponseContent
     {
         /// <summary>
-        /// The name (of the response type?).
+        /// The name of the function.
         /// </summary>
         public string Name;
 

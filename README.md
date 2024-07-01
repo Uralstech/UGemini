@@ -35,6 +35,35 @@ Follow the steps detailed in the OpenUPM installation method and only install th
 
 *Optional, but required if you don't want to bother with encoding your AudioClips into Base64 strings manually.
 
+### Gemini API Support
+
+- [x] `models` endpoint :warning:
+    - [ ] `batchEmbedContents` method
+    - [x] `countTokens` method
+    - [ ] `embedContent` method
+    - [ ] `generateAnswer` method :test_tube:
+    - [x] `generateContent` method
+        - [x] JSON output :test_tube:
+        - [x] System instructions :test_tube:
+        - [x] Text generation
+        - [x] Vision
+        - [x] Function calling :test_tube:
+        - [x] Safety settings
+
+    - [ ] `get` method
+    - [ ] `list` method
+    - [ ] `streamGenerateContent` method
+    
+- [ ] `cachedContents` endpoint :test_tube:
+- [ ] `corpora` endpoint :test_tube:
+- [ ] `files` endpoint :test_tube:
+- [ ] `media` endpoint :test_tube:
+- [ ] `tunedModels` endpoint
+- [ ] `operations` endpoint
+
+:warning: - Not all methods/features of supported
+:test_tube: - Using the v1beta API
+
 ### Documentation
 
 See <https://github.com/Uralstech/UGemini/blob/master/UGemini/Packages/com.uralstech.ugemini/Documentation~/README.md>.
