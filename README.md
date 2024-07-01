@@ -61,7 +61,7 @@ Follow the steps detailed in the OpenUPM installation method and only install th
 - [ ] `tunedModels` endpoint
 - [ ] `operations` endpoint
 
-:warning: - Not all methods/features of supported
+:warning: - Not all methods/features are supported
 
 :test_tube: - Using the v1beta API
 
