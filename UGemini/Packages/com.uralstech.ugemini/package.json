@@ -9,7 +9,7 @@
     "AI",
     "Integration"
   ],
-  "version": "1.0.0-preview.4",
+  "version": "1.0.0",
   "unity": "2022.3",
   "hideInEditor": false,
   "documentationUrl": "https://github.com/Uralstech/UGemini/blob/master/UGemini/Packages/com.uralstech.ugemini/Documentation~/README.md",
@@ -39,6 +39,11 @@
       "displayName": "JSON Response",
       "description": "A sample scene showing a system where Gemini responds in a specified JSON format.",
       "path": "Samples~/JSONResponseSample"
+    },
+    {
+      "displayName": "Token Counting",
+      "description": "A sample scene showing a token counting system using the \"countTokens\" endpoint.",
+      "path": "Samples~/TokenCounterSample"
     }
   ],
   "dependencies": {

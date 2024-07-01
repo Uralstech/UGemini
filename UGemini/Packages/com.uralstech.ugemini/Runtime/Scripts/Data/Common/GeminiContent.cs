@@ -65,15 +65,42 @@ namespace Uralstech.UGemini
                     },
                     new GeminiContentPart
                     {
-                        InlineData = new()
-                        {
-                            MimeType = GeminiContentType.ImageJPEG,
-                            Data = Convert.ToBase64String(image.EncodeToJPG())
-                        }
+                        InlineData = GeminiContentBlob.GetContentBlob(image),
+                    },
+                }
+            };
+        }
+
+#if UTILITIES_ENCODING_WAV_1_0_0_OR_GREATER && UTILITIES_AUDIO_1_0_0_OR_GREATER
+        /// <summary>
+        /// Creates a new <see cref="GeminiContent"/> from a role, message and <see cref="AudioClip"/>.
+        /// </summary>
+        /// <remarks>
+        /// Requires <see href="https://openupm.com/packages/com.utilities.encoder.wav/">Utilities.Encoding.Wav</see>.
+        /// </remarks>
+        /// <param name="role">The role of the content creator.</param>
+        /// <param name="message">The message.</param>
+        /// <param name="audio">The audio clip.</param>
+        /// <returns>A new <see cref="GeminiContent"/> object.</returns>
+        public static GeminiContent GetContent(string message, AudioClip audio, GeminiRole role = GeminiRole.Unspecified)
+        {
+            return new()
+            {
+                Role = role,
+                Parts = new[]
+                {
+                    new GeminiContentPart
+                    {
+                        Text = message,
+                    },
+                    new GeminiContentPart
+                    {
+                        InlineData = GeminiContentBlob.GetContentBlob(audio),
                     }
                 }
             };
         }
+#endif
 
         /// <summary>
         /// Creates a new <see cref="GeminiContent"/> from a <see cref="GeminiFunctionCall"/>.
