@@ -62,6 +62,7 @@ Follow the steps detailed in the OpenUPM installation method and only install th
 - [ ] `operations` endpoint
 
 :warning: - Not all methods/features of supported
+
 :test_tube: - Using the v1beta API
 
 ### Documentation
