@@ -17,7 +17,7 @@ namespace Uralstech.UGemini.Tools
         public string Name;
 
         /// <summary>
-        /// The function response in JSON object format.
+        /// The function response data.
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiFunctionResponseContent Response = null;

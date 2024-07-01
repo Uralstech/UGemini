@@ -70,5 +70,14 @@ namespace Uralstech.UGemini.Chat
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiGenerationConfiguration GenerationConfig = null;
+
+        /// <summary>
+        /// The name of the cached content used as context to serve the prediction. Format: cachedContents/{cachedContent}
+        /// </summary>
+        /// <remarks>
+        /// Note: only used in explicit caching, where users can have control over caching (e.g. what content to cache) and enjoy guaranteed cost savings.
+        /// </remarks>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public string CachedContent = null;
     }
 }

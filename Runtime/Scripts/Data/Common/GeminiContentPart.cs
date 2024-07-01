@@ -40,5 +40,11 @@ namespace Uralstech.UGemini
         /// </remarks>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiFunctionResponse FunctionResponse = null;
+
+        /// <summary>
+        /// URI based data.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public GeminiFileData FileData = null;
     }
 }
