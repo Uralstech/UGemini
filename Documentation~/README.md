@@ -526,7 +526,7 @@ public async void DeleteFile(string fileId)
 }
 ```
 
-Again, just put in the file's ID!.
+Again, just put in the file's ID!
 
 ### Samples
 
