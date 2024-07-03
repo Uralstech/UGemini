@@ -7,6 +7,9 @@ namespace Uralstech.UGemini.FileAPI
     /// <summary>
     /// Uploads a file to the Gemini File API. Response type is <see cref="GeminiFileUploadResponse"/>.
     /// </summary>
+    /// <remarks>
+    /// This feature is currently being worked on and is unstable.
+    /// </remarks>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class GeminiFileUploadRequest : IGeminiPostRequest
     {
