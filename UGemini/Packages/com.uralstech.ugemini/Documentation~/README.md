@@ -84,7 +84,7 @@ These are all the types of requests and endpoints that are supported:
     - Counts the number of tokens in the given request contents for the given model
     - Runs a `countTokens` request on the model
     
-- *`GeminiFileUploadRequest` | `GeminiFileUploadResponse` (:construction:):
+- *`GeminiFileUploadRequest` | `GeminiFileUploadResponse` 🚧:
     - Available in the `Uralstech.UGemini.FileAPI` namespace
     - Uploads a file to be available through the File API
     - Runs an `upload` request on the File/Media API
@@ -104,7 +104,7 @@ These are all the types of requests and endpoints that are supported:
     - Deletes a file uploaded to the File API
     - Runs a `delete` request on the File API
     
-:construction: - The feature is being worked on and is unstable
+🚧 - The feature is being worked on and is unstable
 
 *Part of the File API. More about it further down in the documentation.
 
@@ -432,7 +432,7 @@ The `GeminiSchema` object is the same type used for function calling.
 
 The Gemini File API can be used to store data on the cloud for future prompting with the Gemini models. The code for most of these requests is very simple.
 
-#### Uploading Files (:construction:)
+#### Uploading Files 🚧
     
 The package's code for this API method is unstable.
 
