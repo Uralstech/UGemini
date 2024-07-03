@@ -5,7 +5,7 @@ using System.Text;
 namespace Uralstech.UGemini.FileAPI
 {
     /// <summary>
-    /// Uploads a file to the Gemini File API. Response type is <see cref="GeminiFile"/>.
+    /// Uploads a file to the Gemini File API. Response type is <see cref="GeminiFileUploadResponse"/>.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class GeminiFileUploadRequest : IGeminiPostRequest

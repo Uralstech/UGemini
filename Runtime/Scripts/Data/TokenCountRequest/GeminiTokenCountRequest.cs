@@ -55,7 +55,7 @@ namespace Uralstech.UGemini.TokenCounting
             ApiVersion = useBetaApi ? "v1beta" : "v1";
         }
 
-        [Obsolete("It is recommended to use GeminiManager.Request instead of GeminiManager.Compute, as it is more generic and thus supports more request types.")]
+        [Obsolete("Please use a different constructor as this constructor is only for the deprecated GeminiManager.Compute method.")]
         public GeminiTokenCountRequest() { }
 
         /// <inheritdoc/>
