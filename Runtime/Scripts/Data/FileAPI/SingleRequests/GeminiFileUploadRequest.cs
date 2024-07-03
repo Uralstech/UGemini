@@ -50,7 +50,7 @@ namespace Uralstech.UGemini.FileAPI
 
         /// <inheritdoc/>
         [JsonIgnore]
-        public string ContentType;
+        public string ContentType { get; }
 
         /// <inheritdoc/>
         [JsonIgnore]

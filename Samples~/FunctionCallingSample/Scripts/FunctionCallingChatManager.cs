@@ -7,6 +7,8 @@ using Uralstech.UGemini.Schema;
 using Uralstech.UGemini.Tools;
 using Uralstech.UGemini.Tools.Declaration;
 
+#pragma warning disable IDE0090 // Use 'new(...)'
+
 namespace Uralstech.UGemini.Samples
 {
     public class FunctionCallingChatManager : MonoBehaviour
@@ -90,12 +92,12 @@ namespace Uralstech.UGemini.Samples
             GeminiFunctionCall functionCall;
             do
             {
-                response = await GeminiManager.Instance.Compute<GeminiChatRequest, GeminiChatResponse>(new GeminiChatRequest()
+                response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(useBetaApi: true)
                 {
                     Contents = contents.ToArray(),
                     Tools = new GeminiTool[] { s_geminiFunctions },
                     ToolConfig = GeminiToolConfiguration.GetConfiguration(GeminiFunctionCallingMode.Any),
-                }, GeminiManager.RequestEndPoint.Chat, useBeta: true);
+                });
 
                 functionCall = response.Parts[0].FunctionCall;
                 if (functionCall != null)
@@ -130,7 +132,6 @@ namespace Uralstech.UGemini.Samples
                     contents.Add(GeminiContent.GetContent(functionCall));
                     contents.Add(GeminiContent.GetContent(functionCall.GetResponse(functionResponse)));
                 }
-
             } while (functionCall != null);
 
             _chatResponse.text = response.Parts[0].Text;
@@ -161,3 +162,5 @@ namespace Uralstech.UGemini.Samples
         }
     }
 }
+
+#pragma warning restore IDE0090 // Use 'new(...)'
