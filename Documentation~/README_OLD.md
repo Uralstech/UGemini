@@ -1,23 +1,19 @@
 ## UGemini Documentation
 
-### DEPRECATION NOTICE
-
-`GeminiManager.Compute` and parts of related types have been deprecated. Please check `README_OLD.md` for documentation regarding the deprecated code.
-
 ### Setup
 
 Add an instance of `GeminiManager` to your scene, and set it up with your Gemini API key. You can get your API key from [*here*](https://makersuite.google.com/app/apikey).
 
-### Main API
+### Coding
 
 There are only two methods in `GeminiManager`:
 
-| Method            | What it does                          |
-| -------------     | -------------                         |
-| `SetApiKey`       | Sets the Gemini API key through code  |
-| `Request`         | Computes a request on the Gemini API  |
+| Method                                                                                    | What it does                          |
+| -------------                                                                             | -------------                         |
+| `void SetApiKey(string)`                                                                  | Sets the Gemini API key through code  |
+| `Task<TResponse> Compute<TRequest, TResponse>(TRequest, RequestEndPoint, string, bool)`   | Computes a request on the Gemini API  |
 
-All computations on the Gemini API are done through `GeminiManager.Request` and its variants.
+All computations on the Gemini API are done through `GeminiManager.Compute`.
 
 In this documentation, the fields and properties of each type will not be explained. Every type has been fully documented in code, so
 please check the code docstrings to learn more about each type.
@@ -25,7 +21,7 @@ please check the code docstrings to learn more about each type.
 #### Beta API
 
 `GeminiManager` supports both the `v1` and `v1beta` Gemini API versions. As a lot of features are still unsupported in the main `v1` API, you may
-need to use the beta API. You can set the `useBetaApi` boolean parameter in the request constructor to do so.
+need to use the beta API. You can set the `useBeta` boolean parameter in the `Compute` method to do so.
 
 #### Models
 
@@ -41,79 +37,57 @@ need to use the beta API. You can set the `useBetaApi` boolean parameter in the 
     - Gemini 1.0 Pro Vision is deprecated. Use Use 1.5 Flash (`Gemini1_5Flash`) or 1.5 Pro (`Gemini1_5Pro`) instead.
 
 
-By default, all model requests use the [*Gemini 1.5 Flash*](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash)
-model. This can be changed by either providing a string ID or one of the constants to the `model` parameter in the request constructor.
+By default, the `Compute` method uses the [*Gemini 1.5 Flash*](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash)
+model for all requests. This can be changed by either providing a string ID or one of the constants to the `model` parameter in the `Compute` method.
 
 #### Simple GenerateContent (Chat) Request
 
 This is a simple request that asks Gemini a question and logs the response to the console.
 
 ```csharp
-using Uralstech.UGemini;
 using Uralstech.UGemini.Chat;
 
 async void QueryGemini()
 {
     string text = "Hello! How are you doing?";
-    GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(
-        new GeminiChatRequest(GeminiManager.Gemini1_5Flash)
+    GeminiChatResponse response = await GeminiManager.Instance.Compute<GeminiChatRequest, GeminiChatResponse>(
+        new GeminiChatRequest()
         {
             Contents = new GeminiContent[]
             {
                 GeminiContent.GetContent(text, GeminiRole.User),
             },
-        }
+        },
+        GeminiManager.RequestEndPoint.Chat
     );
 
     Debug.Log(response.Parts[0].Text);
 }
 ```
 
-That's all! We give a request argument of type `GeminiChatRequest`, specify that we expect a response of type `GeminiChatResponse`, and voilà!
-We've got the response in `response.Parts[0].Text`!
+That's all! We specify that we are executing a request of type `GeminiChatRequest`, and that we expect a response of type `GeminiChatResponse`,
+then we specified the content of the request and the endpoint we want to execute it on, `GeminiManager.RequestEndPoint.Chat`! And voilà, we've
+got the response in `response.Parts[0].Text`!
 
-These are all the types of requests and endpoints that are supported:
+Right now, there are two types of requests and endpoints that are supported:
 
 - `GeminiChatRequest` | `GeminiChatResponse`:
     - Available in the `Uralstech.UGemini.Chat` namespace
-    - Generates content from the given model
-    - Runs a `generateContent` request on the model
+    - Meant to run on the `GeminiManager.RequestEndPoint.Chat` endpoint
+    - Runs a `generateContent` request on the given model
+
+and
 
 - `GeminiTokenCountRequest` | `GeminiTokenCountResponse`:
     - Available in the `Uralstech.UGemini.TokenCounting` namespace
+    - Meant to run on the `GeminiManager.RequestEndPoint.CountTokens` endpoint
     - Counts the number of tokens in the given request contents for the given model
-    - Runs a `countTokens` request on the model
-    
-- *`GeminiFileUploadRequest` | `GeminiFileUploadResponse` (:construction:):
-    - Available in the `Uralstech.UGemini.FileAPI` namespace
-    - Uploads a file to be available through the File API
-    - Runs an `upload` request on the File/Media API
-    
-- *`GeminiFileListRequest` | `GeminiFileListResponse`:
-    - Available in the `Uralstech.UGemini.FileAPI` namespace
-    - Requests metadata for all existing files uploaded to the File API
-    - Runs a `list` request on the File API
-    
-- *`GeminiFileGetRequest` | `GeminiFile`:
-    - Available in the `Uralstech.UGemini.FileAPI` namespace
-    - Requests metadata for a single file uploaded to the File API
-    - Runs a `get` request on the File API
-    
-- *`GeminiFileDeleteRequest`:
-    - Available in the `Uralstech.UGemini.FileAPI` namespace
-    - Deletes a file uploaded to the File API
-    - Runs a `delete` request on the File API
-    
-:construction: - The feature is being worked on and is unstable
-
-*Part of the File API. More about it further down in the documentation.
 
 #### Multi-turn Chat Request
 
 This is a simple method that maintains the user's chat history with Gemini.
 
 ```csharp
-using Uralstech.UGemini;
 using Uralstech.UGemini.Chat;
 
 List<GeminiContent> _chatHistory = new();
@@ -121,12 +95,12 @@ List<GeminiContent> _chatHistory = new();
 async Task<string> OnChat(string text)
 {
     _chatHistory.Add(GeminiContent.GetContent(text, GeminiRole.User));
-    GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(
-        new GeminiChatRequest(GeminiManager.Gemini1_5Flash)
-        {
-            Contents = _chatHistory.ToArray(),
-        }
-    );
+    GeminiChatRequest request = new()
+    {
+        Contents = _chatHistory.ToArray(),
+    };
+
+    GeminiChatResponse response = await GeminiManager.Instance.Compute<GeminiChatRequest, GeminiChatResponse>(request, GeminiManager.RequestEndPoint.Chat);
     
     _chatHistory.Add(response.Candidates[0].Content);
     return response.Parts[0].Text;
@@ -143,7 +117,7 @@ one type of data in each part, like one part of text, one part of an image, and 
 `GeminiContent` object.
 
 ```csharp
-using Uralstech.UGemini;
+using Uralstech.UGemini.Chat;
 
 async Task<GeminiContent> GetFileContent(string filePath, GeminiContentType contentType)
 {
@@ -185,26 +159,24 @@ Now, the `GeminiContent` returned by the method can be fed into a chat request!
 create them from Unity types like `AudioClip` or `Texture2D`:
 
 - `GeminiContent.GetContent`
-    - Can convert `string` messages, `Texture2D` images, *`AudioClip` audio and **`GeminiFile` data to `GeminiContent` objects.
+    - Can convert `string` messages, `Texture2D` images and *`AudioClip` audio to `GeminiContent` objects.
 
 - `GeminiContentBlob.GetContentBlob`
     - Can convert `Texture2D` images and *`AudioClip` audio to `GeminiContentBlob` objects.
 
 *Requires [*Utilities.Encoding.Wav*](https://openupm.com/packages/com.utilities.encoder.wav/).
-**More about this further down in the documentation.
 
 #### Function Calling
 
 First, we have to setup our tools and define our function schemas.
 
 ```csharp
-using Uralstech.UGemini;
 using Uralstech.UGemini.Chat;
 using Uralstech.UGemini.Schema;
 using Uralstech.UGemini.Tools;
 using Uralstech.UGemini.Tools.Declaration;
 
-GeminiTool _geminiFunctions = new GeminiTool()
+GeminiTool s_geminiFunctions = new GeminiTool()
 {
     FunctionDeclarations = new GeminiFunctionDeclaration[]
     {
@@ -287,14 +259,12 @@ public async Task<string> OnChat(string text)
     GeminiFunctionCall functionCall;
     do
     {
-        response = await GeminiManager.Instance.Request<GeminiChatResponse>(
-            new GeminiChatRequest(useBetaApi: true)
-            {
-                Contents = contents.ToArray(),
-                Tools = new GeminiTool[] { _geminiFunctions },
-                ToolConfig = GeminiToolConfiguration.GetConfiguration(GeminiFunctionCallingMode.Any),
-            }
-        );
+        response = await GeminiManager.Instance.Compute<GeminiChatRequest, GeminiChatResponse>(new GeminiChatRequest()
+        {
+            Contents = contents.ToArray(),
+            Tools = new GeminiTool[] { s_geminiFunctions },
+            ToolConfig = GeminiToolConfiguration.GetConfiguration(GeminiFunctionCallingMode.Any),
+        }, GeminiManager.RequestEndPoint.Chat, useBeta: true);
 
         functionCall = response.Parts[0].FunctionCall;
         if (functionCall != null)
@@ -329,6 +299,7 @@ public async Task<string> OnChat(string text)
             contents.Add(GeminiContent.GetContent(functionCall));
             contents.Add(GeminiContent.GetContent(functionCall.GetResponse(functionResponse)));
         }
+
     } while (functionCall != null);
 
     return response.Parts[0].Text;
@@ -374,14 +345,10 @@ Also, note that the request is using the beta API, as function calling is, as of
 In JSON mode, Gemini will always respond in a specified JSON response schema.
 
 ```csharp
-using Uralstech.UGemini;
-using Uralstech.UGemini.Chat;
-using Uralstech.UGemini.Schema;
-
 public async Task<string> OnChat(string text)
 {
     // Note: It seems GeminiManager.Gemini1_5Flash is not very good at JSON.
-    GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(GeminiManager.Gemini1_5Pro, true)
+    GeminiChatResponse response = await GeminiManager.Instance.Compute<GeminiChatRequest, GeminiChatResponse>(new GeminiChatRequest()
     {
         Contents = new GeminiContent[]
         {
@@ -417,7 +384,7 @@ public async Task<string> OnChat(string text)
                 },
             },
         }
-    });
+    }, GeminiManager.RequestEndPoint.Chat, GeminiManager.Gemini1_5Pro, true);
 
     return response.Parts[0].Text;
 }
@@ -427,106 +394,6 @@ Here, we used a schema for an array of objects, which contain two parameters: `e
 We have told Gemini to split the response into the parameters, where a mathematical expression and its explanation is given.
 
 The `GeminiSchema` object is the same type used for function calling.
-
-### File API
-
-The Gemini File API can be used to store data on the cloud for future prompting with the Gemini models. The code for most of these requests is very simple.
-
-#### Uploading Files (:construction:)
-    
-The package's code for this API method is unstable.
-
-```csharp
-using Uralstech.UGemini;
-using Uralstech.UGemini.FileAPI;
-
-public async void UploadFile(string text)
-{
-    GeminiFileUploadResponse response = await GeminiManager.Instance.Request<GeminiFileUploadResponse>(new GeminiFileUploadRequest(GeminiContentType.TextPlain.MimeType())
-    {
-        RawData = Encoding.UTF8.GetBytes(text)
-    });
-    
-    Debug.Log($"Uploaded file: {FileToText(response.File)}");
-}
-
-// This method will be used in the examples multiple times.
-private string FileToText(GeminiFile file)
-{
-    return $"{nameof(GeminiFile)}(\n" +
-        $"\t{file.Name}\n" +
-        $"\t{file.DisplayName}\n" +
-        $"\t{file.MimeType}\n" +
-        $"\t{file.SizeBytes}\n" +
-        $"\t{file.CreateTime}\n" +
-        $"\t{file.UpdateTime}\n" +
-        $"\t{file.ExpirationTime}\n" +
-        $"\t{file.Sha256Hash}\n" +
-        $"\t{file.Uri}\n" +
-        $"\t{file.State}\n" +
-        $"\t{file.Status?.Message}\n" +
-        $"\t{file.VideoMetadata?.VideoDuration}\n" +
-        $")";
-}
-```
-
-That's it! Convert your data to a byte array and just give the right MIME type as an argument!
-
-#### Listing Available Files
-
-```csharp
-using Uralstech.UGemini;
-using Uralstech.UGemini.FileAPI;
-
-public async void ListFiles(int maxFiles = 10, string pageToken = string.Empty)
-{
-    GeminiFileListResponse response = await GeminiManager.Instance.Request<GeminiFileListResponse>(new GeminiFileListRequest()
-    {
-        MaxResponseFiles = maxFiles,
-        PageToken = string.IsNullOrWhiteSpace(pageToken) ? string.Empty : pageToken,
-    });
-
-    Debug.Log($"Got file list response, next page token: {response?.NextPageToken}:");
-    for (int i = 0; i < (response?.Files?.Length ?? 0); i++)
-        Debug.Log($"File {i + 1}: {FileToText(response.Files[i])}");
-
-    Debug.Log($"File list page completed.");
-}
-```
-
-`maxFiles` is the total number of pages you want to retrieve in each request, and `pageToken` is the 'identifier' for the current page
-in the multiple pages of file metadata. You can leave it empty to get the first page, and use `response.NextPageToken` as the token for
-for the next page, and run the request again with it.
-
-#### Retrieving a File
-
-```csharp
-using Uralstech.UGemini;
-using Uralstech.UGemini.FileAPI;
-
-public async void GetFile(string fileId)
-{
-    GeminiFile file = await GeminiManager.Instance.Request<GeminiFile>(new GeminiFileGetRequest(fileId));
-    Debug.Log($"Got file: {FileToText(file)}");
-}
-```
-
-Just put in the file's ID! You can get it from the `GeminiFile.Name` property, but remember to remove the "files/" prefix.
-
-#### Deleting a File
-
-```csharp
-using Uralstech.UGemini;
-using Uralstech.UGemini.FileAPI;
-
-public async void DeleteFile(string fileId)
-{
-    await GeminiManager.Instance.Request(new GeminiFileDeleteRequest(fileId));
-    Debug.Log("File deleted.");
-}
-```
-
-Again, just put in the file's ID!.
 
 ### Samples
 
