@@ -44,6 +44,9 @@ namespace Uralstech.UGemini
         /// <summary>
         /// URI based data.
         /// </summary>
+        /// <remarks>
+        /// Only available in the beta API.
+        /// </remarks>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiFileData FileData = null;
     }

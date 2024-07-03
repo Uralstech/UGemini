@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using System;
+using System.Net;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -69,8 +70,79 @@ namespace Uralstech.UGemini
         }
 
         /// <summary>
+        /// Computes a request on the Gemini API.
+        /// </summary>
+        /// 
+        /// <typeparam name="TResponse">
+        /// The response type. For example, a request of type <see cref="Chat.GeminiChatRequest"/> corresponds
+        /// to a response type of <see cref="Chat.GeminiChatResponse"/>, and a request of type <see cref="TokenCounting.GeminiTokenCountRequest"/>
+        /// corresponds to a response of type <see cref="TokenCounting.GeminiTokenCountResponse"/>.
+        /// </typeparam>
+        /// 
+        /// <param name="request">The request object.</param>
+        /// <returns>The computed response.</returns>
+        /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
+        public async Task<TResponse> Request<TResponse>(IGeminiPostRequest request)
+        {
+            string utf8RequestData = request.GetUtf8EncodedData();
+            string requestEndpoint = request.EndpointUri;
+
+            using UnityWebRequest webRequest = UnityWebRequest.Post(requestEndpoint, utf8RequestData, request.ContentType);
+            return JsonConvert.DeserializeObject<TResponse>((await ComputeRequest(webRequest)).downloadHandler.text);
+        }
+
+        /// <summary>
+        /// Computes a request on the Gemini API.
+        /// </summary>
+        /// 
+        /// <typeparam name="TResponse">
+        /// The response type. For example, a request of type <see cref="Chat.GeminiChatRequest"/> corresponds
+        /// to a response type of <see cref="Chat.GeminiChatResponse"/>, and a request of type <see cref="TokenCounting.GeminiTokenCountRequest"/>
+        /// corresponds to a response of type <see cref="TokenCounting.GeminiTokenCountResponse"/>.
+        /// </typeparam>
+        /// 
+        /// <param name="request">The request object.</param>
+        /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
+        public async Task<TResponse> Request<TResponse>(IGeminiGetRequest request)
+        {
+            string requestEndpoint = request.EndpointUri;
+
+            using UnityWebRequest webRequest = UnityWebRequest.Get(requestEndpoint);
+            return JsonConvert.DeserializeObject<TResponse>((await ComputeRequest(webRequest)).downloadHandler.text);
+        }
+
+        /// <summary>
+        /// Computes a request on the Gemini API.
+        /// </summary>
+        /// <param name="request">The request object.</param>
+        /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
+        public async void Request(IGeminiDeleteRequest request)
+        {
+            string requestEndpoint = request.EndpointUri;
+            using UnityWebRequest webRequest = UnityWebRequest.Delete(requestEndpoint);
+
+            await ComputeRequest(webRequest);
+        }
+
+        private async Task<UnityWebRequest> ComputeRequest(UnityWebRequest webRequest)
+        {
+            webRequest.SetRequestHeader("X-goog-api-key", _geminiApiKey);
+            UnityWebRequestAsyncOperation operation = webRequest.SendWebRequest();
+            while (!operation.isDone)
+                await Task.Yield();
+
+            if (webRequest.result != UnityWebRequest.Result.Success)
+                throw new GeminiRequestException(webRequest);
+
+            Debug.Log("Gemini API computation succeeded.");
+            return webRequest;
+        }
+
+        #region Obsolete
+        /// <summary>
         /// The request endpoint.
         /// </summary>
+        [Obsolete("It is recommended to use GeminiManager.Request instead of GeminiManager.Compute, as it is more generic and thus supports more request types.")]
         public enum RequestEndPoint
         {
             /// <summary>The chat endpoint.</summary>
@@ -109,6 +181,7 @@ namespace Uralstech.UGemini
         /// <returns>The computed request.</returns>
         /// <exception cref="ArgumentException">Thrown if unexpected arguments are encountered.</exception>
         /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
+        [Obsolete("It is recommended to use GeminiManager.Request instead of GeminiManager.Compute, as it is more generic and thus supports more request types.")]
         public async Task<TResponse> Compute<TRequest, TResponse>(TRequest request, RequestEndPoint endpoint, string model = Gemini1_5Flash, bool useBeta = false)
         {
             Debug.Log("Computing request on Gemini API.");
@@ -139,5 +212,6 @@ namespace Uralstech.UGemini
             Debug.Log("Gemini API computation succeeded.");
             return JsonConvert.DeserializeObject<TResponse>(webRequest.downloadHandler.text);
         }
+        #endregion
     }
 }

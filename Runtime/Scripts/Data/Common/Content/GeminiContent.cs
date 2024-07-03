@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Serialization;
 using System.ComponentModel;
 using UnityEngine;
+using Uralstech.UGemini.FileAPI;
 using Uralstech.UGemini.Tools;
 
 namespace Uralstech.UGemini
@@ -100,6 +101,36 @@ namespace Uralstech.UGemini
             };
         }
 #endif
+
+        /// <summary>
+        /// Creates a new <see cref="GeminiContent"/> from a role, message and <see cref="GeminiFile"/>.
+        /// </summary>
+        /// <param name="role">The role of the content creator.</param>
+        /// <param name="message">The message.</param>
+        /// <param name="file">The <see cref="GeminiFile"/>.</param>
+        /// <returns>A new <see cref="GeminiContent"/> object.</returns>
+        public static GeminiContent GetContent(string message, GeminiFile file, GeminiRole role = GeminiRole.Unspecified)
+        {
+            return new GeminiContent
+            {
+                Role = role,
+                Parts = new[]
+                {
+                    new GeminiContentPart
+                    {
+                        Text = message,
+                    },
+                    new GeminiContentPart
+                    {
+                        FileData = new GeminiFileData
+                        {
+                            MimeType = file.MimeType,
+                            FileUri = file.Uri,
+                        },
+                    }
+                }
+            };
+        }
 
         /// <summary>
         /// Creates a new <see cref="GeminiContent"/> from a <see cref="GeminiFunctionCall"/>.

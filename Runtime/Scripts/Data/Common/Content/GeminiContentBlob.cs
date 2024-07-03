@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using System;
 using UnityEngine;
 
 namespace Uralstech.UGemini
@@ -16,6 +15,11 @@ namespace Uralstech.UGemini
         /// <summary>
         /// The type of the data.
         /// </summary>
+        /// <remarks>
+        /// You can use <see cref="EnumExtensions.ContentType(string)"/> to convert <see cref="string"/>
+        /// values to their <see cref="GeminiContentType"/> equivalents, like:
+        /// <c>"image/png".ContentType()</c>
+        /// </remarks>
         public GeminiContentType MimeType;
 
         /// <summary>
@@ -38,7 +42,7 @@ namespace Uralstech.UGemini
             return new GeminiContentBlob()
             {
                 MimeType = GeminiContentType.AudioWAV,
-                Data = Convert.ToBase64String(Utilities.Encoding.Wav.AudioClipExtensions.EncodeToWav(audio))
+                Data = audio.ToBase64WAV()
             };
         }
 #endif
@@ -55,12 +59,12 @@ namespace Uralstech.UGemini
                 ? new GeminiContentBlob()
                 {
                     MimeType = GeminiContentType.ImageJPEG,
-                    Data = Convert.ToBase64String(image.EncodeToJPG())
+                    Data = image.ToBase64JPEG()
                 }
                 : new GeminiContentBlob()
                 {
                     MimeType = GeminiContentType.ImagePNG,
-                    Data = Convert.ToBase64String(image.EncodeToPNG())
+                    Data = image.ToBase64PNG()
                 };
         }
     }

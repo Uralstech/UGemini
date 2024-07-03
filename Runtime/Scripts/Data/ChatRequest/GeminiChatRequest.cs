@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System;
 using System.ComponentModel;
 using Uralstech.UGemini.Tools.Declaration;
 
@@ -9,7 +10,7 @@ namespace Uralstech.UGemini.Chat
     /// Request to generate a response from the model.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class GeminiChatRequest
+    public class GeminiChatRequest : IGeminiPostRequest
     {
         /// <summary>
         /// The content of the current conversation with the model.
@@ -44,7 +45,7 @@ namespace Uralstech.UGemini.Chat
         /// A list of unique <see cref="GeminiSafetySettings"/> instances for blocking unsafe content.
         /// </summary>
         /// <remarks>
-        /// This will be enforced on <see cref="GeminiChatRequest.Contents"/> and <see cref="ChatResponse.GeminiChatResponse.Candidates"/>.<br/>
+        /// This will be enforced on <see cref="Contents"/> and <see cref="GeminiChatResponse.Candidates"/>.<br/>
         /// There should not be more than one setting for each <see cref="GeminiSafetyHarmCategory"/> type. The API will block any<br/>
         /// contents and responses that fail to meet the thresholds set by these settings. This list overrides the default<br/>
         /// settings for each <see cref="GeminiSafetyHarmCategory"/> specified in the <see cref="SafetySettings"/>. If there is<br/>
@@ -76,8 +77,49 @@ namespace Uralstech.UGemini.Chat
         /// </summary>
         /// <remarks>
         /// Note: only used in explicit caching, where users can have control over caching (e.g. what content to cache) and enjoy guaranteed cost savings.
+        /// <br/><br/>
+        /// Only available in the beta API.
         /// </remarks>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public string CachedContent = null;
+
+        /// <summary>
+        /// The model to use.
+        /// </summary>
+        [JsonIgnore]
+        public string Model;
+
+        /// <summary>
+        /// The API version to use.
+        /// </summary>
+        [JsonIgnore]
+        public string ApiVersion;
+
+        /// <inheritdoc/>
+        [JsonIgnore]
+        public string ContentType => GeminiContentType.ApplicationJSON.MimeType();
+
+        /// <inheritdoc/>
+        public string EndpointUri => $"https://generativelanguage.googleapis.com/{ApiVersion}/models/{Model}:generateContent";
+
+        /// <summary>
+        /// Creates a new <see cref="GeminiChatRequest"/>.
+        /// </summary>
+        /// <param name="model">The model to use.</param>
+        /// <param name="useBetaApi">Should the request use the Beta API?</param>
+        public GeminiChatRequest(string model = GeminiManager.Gemini1_5Flash, bool useBetaApi = false)
+        {
+            Model = model;
+            ApiVersion = useBetaApi ? "v1beta" : "v1";
+        }
+
+        [Obsolete("It is recommended to use GeminiManager.Request instead of GeminiManager.Compute, as it is more generic and thus supports more request types.")]
+        public GeminiChatRequest() { }
+
+        /// <inheritdoc/>
+        public string GetUtf8EncodedData()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
     }
 }
