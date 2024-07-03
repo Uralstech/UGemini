@@ -116,7 +116,7 @@ namespace Uralstech.UGemini
         /// </summary>
         /// <param name="request">The request object.</param>
         /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
-        public async void Request(IGeminiDeleteRequest request)
+        public async Task Request(IGeminiDeleteRequest request)
         {
             string requestEndpoint = request.EndpointUri;
             using UnityWebRequest webRequest = UnityWebRequest.Delete(requestEndpoint);

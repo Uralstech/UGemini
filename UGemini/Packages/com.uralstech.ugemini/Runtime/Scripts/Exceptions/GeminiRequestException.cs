@@ -11,7 +11,7 @@ namespace Uralstech.UGemini.Exceptions
         /// <summary>
         /// The endpoint of the failed request.
         /// </summary>
-        [Obsolete("It is recommended to use GeminiManager.Request instead of GeminiManager.Compute, as it is more generic and thus supports more request types.")]
+        [Obsolete("Please use GeminiRequestException.RequestEndpoint as this property is only for the deprecated GeminiManager.Compute method.")]
         public GeminiManager.RequestEndPoint RequestEndPoint;
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace Uralstech.UGemini.Exceptions
         /// <summary>
         /// The request's API version as a string.
         /// </summary>
-        [Obsolete("It is recommended to use GeminiManager.Request instead of GeminiManager.Compute, as it is more generic and thus supports more request types.")]
+        [Obsolete("Please use GeminiRequestException.IsBetaApi as this property is only for the deprecated GeminiManager.Compute method.")]
         public string ApiVersionString;
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace Uralstech.UGemini.Exceptions
         /// </summary>
         public bool IsBetaApi;
 
-        [Obsolete("It is recommended to use GeminiManager.Request instead of GeminiManager.Compute, as it is more generic and thus supports more request types.")]
+        [Obsolete("Please use a different constructor as this constructor is only for the deprecated GeminiManager.Compute method.")]
         internal GeminiRequestException(GeminiManager.RequestEndPoint requestEndPoint, UnityWebRequest request, string apiVersion)
             : base($"Failed Gemini request: " +
                   $"Request API version: {apiVersion} | " +
@@ -69,13 +69,13 @@ namespace Uralstech.UGemini.Exceptions
                   $"Request Endpoint: {webRequest.uri.AbsolutePath} | " +
                   $"Request Error Code: {webRequest.responseCode} | " +
                   $"Request Error: {webRequest.error} | " +
-                  $"Details:\n{webRequest.downloadHandler.text}")
+                  $"Details:\n{webRequest.downloadHandler?.text}")
         {
             RequestEndpoint = webRequest.uri;
 
             RequestError = webRequest.error;
             RequestErrorCode = webRequest.responseCode;
-            RequestErrorMessage = webRequest.downloadHandler.text;
+            RequestErrorMessage = webRequest.downloadHandler?.text;
 
             IsBetaApi = RequestEndpoint.AbsolutePath.Contains("beta");
         }

@@ -9,7 +9,7 @@
     "AI",
     "Integration"
   ],
-  "version": "1.1.0-preview.2",
+  "version": "1.1.0-preview.3",
   "unity": "2022.3",
   "hideInEditor": false,
   "documentationUrl": "https://github.com/Uralstech/UGemini/blob/master/UGemini/Packages/com.uralstech.ugemini/Documentation~/README.md",
@@ -44,6 +44,11 @@
       "displayName": "Token Counting",
       "description": "A sample scene showing a token counting system using the \"countTokens\" endpoint.",
       "path": "Samples~/TokenCounterSample"
+    },
+    {
+      "displayName": "Prompting with File API",
+      "description": "A sample scene with a system to create, delete, retrieve, list and prompt Gemini with files stored in the File/Media API endpoints.",
+      "path": "Samples~/FileAPISample"
     }
   ],
   "dependencies": {

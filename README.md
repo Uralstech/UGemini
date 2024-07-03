@@ -56,8 +56,14 @@ Follow the steps detailed in the OpenUPM installation method and only install th
     
 - [ ] `cachedContents` endpoint :test_tube:
 - [ ] `corpora` endpoint :test_tube:
-- [x] `files` endpoint :test_tube: :construction:
-- [x] `media` endpoint :test_tube: :construction:
+- [x] `files` endpoint :test_tube:
+    - [x] `delete` method
+    - [x] `get` method
+    - [x] `list` method
+
+- [x] `media` endpoint :test_tube:
+    - [x] `upload` method :construction:
+    
 - [ ] `tunedModels` endpoint
 - [ ] `operations` endpoint :construction:
 

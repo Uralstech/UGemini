@@ -12,6 +12,7 @@ namespace Uralstech.UGemini.FileAPI
         /// <summary>
         /// The list of files.
         /// </summary>
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public GeminiFile[] Files;
 
         /// <summary>
