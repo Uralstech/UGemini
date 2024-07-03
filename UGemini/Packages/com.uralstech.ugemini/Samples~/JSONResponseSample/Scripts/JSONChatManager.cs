@@ -21,7 +21,7 @@ namespace Uralstech.UGemini.Samples
             }
 
             // Note: It seems GeminiManager.Gemini1_5Flash is not very good at JSON.
-            GeminiChatResponse response = await GeminiManager.Instance.Compute<GeminiChatRequest, GeminiChatResponse>(new GeminiChatRequest()
+            GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(GeminiManager.Gemini1_5Pro, true)
             {
                 Contents = new GeminiContent[]
                 {
@@ -57,7 +57,7 @@ namespace Uralstech.UGemini.Samples
                         },
                     },
                 }
-            }, GeminiManager.RequestEndPoint.Chat, GeminiManager.Gemini1_5Pro, true);
+            });
 
             _chatResponse.text = response.Parts[0].Text;
         }

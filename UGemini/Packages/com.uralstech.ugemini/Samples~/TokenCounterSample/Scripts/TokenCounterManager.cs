@@ -6,6 +6,7 @@ namespace Uralstech.UGemini.Samples
 {
     public class TokenCounterManager : MonoBehaviour
     {
+        [SerializeField] private bool _useBeta;
         [SerializeField] private InputField _contentInput;
         [SerializeField] private Text _response;
 
@@ -18,13 +19,13 @@ namespace Uralstech.UGemini.Samples
                 return;
             }
 
-            GeminiTokenCountResponse response = await GeminiManager.Instance.Compute<GeminiTokenCountRequest, GeminiTokenCountResponse>(new GeminiTokenCountRequest()
+            GeminiTokenCountResponse response = await GeminiManager.Instance.Request<GeminiTokenCountResponse>(new GeminiTokenCountRequest(GeminiManager.Gemini1_5Flash, _useBeta)
             {
                 Contents = new GeminiContent[]
                 {
                     GeminiContent.GetContent(text, GeminiRole.User),
                 },
-            }, GeminiManager.RequestEndPoint.CountTokens, GeminiManager.Gemini1_5Flash, true);
+            });
             
             _response.text = $"Tokens: {response.TotalTokens}";
         }
