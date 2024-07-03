@@ -11,7 +11,13 @@ namespace Uralstech.UGemini.Exceptions
         /// <summary>
         /// The endpoint of the failed request.
         /// </summary>
+        [Obsolete("It is recommended to use GeminiManager.Request instead of GeminiManager.Compute, as it is more generic and thus supports more request types.")]
         public GeminiManager.RequestEndPoint RequestEndPoint;
+
+        /// <summary>
+        /// The endpoint of the failed request.
+        /// </summary>
+        public Uri RequestEndpoint;
 
         /// <summary>
         /// The response code returned by the request.
@@ -31,6 +37,7 @@ namespace Uralstech.UGemini.Exceptions
         /// <summary>
         /// The request's API version as a string.
         /// </summary>
+        [Obsolete("It is recommended to use GeminiManager.Request instead of GeminiManager.Compute, as it is more generic and thus supports more request types.")]
         public string ApiVersionString;
 
         /// <summary>
@@ -38,6 +45,7 @@ namespace Uralstech.UGemini.Exceptions
         /// </summary>
         public bool IsBetaApi;
 
+        [Obsolete("It is recommended to use GeminiManager.Request instead of GeminiManager.Compute, as it is more generic and thus supports more request types.")]
         internal GeminiRequestException(GeminiManager.RequestEndPoint requestEndPoint, UnityWebRequest request, string apiVersion)
             : base($"Failed Gemini request: " +
                   $"Request API version: {apiVersion} | " +
@@ -54,6 +62,22 @@ namespace Uralstech.UGemini.Exceptions
 
             ApiVersionString = apiVersion;
             IsBetaApi = apiVersion.Contains("beta");
+        }
+
+        internal GeminiRequestException(UnityWebRequest webRequest)
+            : base($"Failed Gemini request: " +
+                  $"Request Endpoint: {webRequest.uri.AbsolutePath} | " +
+                  $"Request Error Code: {webRequest.responseCode} | " +
+                  $"Request Error: {webRequest.error} | " +
+                  $"Details:\n{webRequest.downloadHandler.text}")
+        {
+            RequestEndpoint = webRequest.uri;
+
+            RequestError = webRequest.error;
+            RequestErrorCode = webRequest.responseCode;
+            RequestErrorMessage = webRequest.downloadHandler.text;
+
+            IsBetaApi = RequestEndpoint.AbsolutePath.Contains("beta");
         }
     }
 }

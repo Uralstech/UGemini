@@ -129,5 +129,95 @@ namespace Uralstech.UGemini
         /// </summary>
         [EnumMember(Value = "video/3gpp")]
         Video3GPP,
+
+        /// <summary>
+        /// (File API) Plain text.
+        /// </summary>
+        [EnumMember(Value = "text/plain")]
+        TextPlain,
+
+        /// <summary>
+        /// (File API) HTML text.
+        /// </summary>
+        [EnumMember(Value = "text/html")]
+        TextHTML,
+
+        /// <summary>
+        /// (File API) CSS text.
+        /// </summary>
+        [EnumMember(Value = "text/css")]
+        TextCSS,
+
+        /// <summary>
+        /// (File API) JavaScript text.
+        /// </summary>
+        [EnumMember(Value = "text/javascript")]
+        TextJavaScript,
+
+        /// <summary>
+        /// (File API) TypeScript text.
+        /// </summary>
+        [EnumMember(Value = "text/x-typescript")]
+        TextXTypeScript,
+
+        /// <summary>
+        /// (File API) CSV text.
+        /// </summary>
+        [EnumMember(Value = "text/csv")]
+        TextCSV,
+
+        /// <summary>
+        /// (File API) Markdown text.
+        /// </summary>
+        [EnumMember(Value = "text/markdown")]
+        TextMarkdown,
+
+        /// <summary>
+        /// (File API) Python text.
+        /// </summary>
+        [EnumMember(Value = "text/x-python")]
+        TextXPython,
+
+        /// <summary>
+        /// (File API) XML text.
+        /// </summary>
+        [EnumMember(Value = "text/xml")]
+        TextXML,
+
+        /// <summary>
+        /// (File API) RTF text.
+        /// </summary>
+        [EnumMember(Value = "text/rtf")]
+        TextRTF,
+
+        /// <summary>
+        /// (File API) Application JavaScript content.
+        /// </summary>
+        [EnumMember(Value = "application/x-javascript")]
+        ApplicationXJavaScript,
+
+        /// <summary>
+        /// (File API) Application TypeScript content.
+        /// </summary>
+        [EnumMember(Value = "application/x-typescript")]
+        ApplicationXTypeScript,
+
+        /// <summary>
+        /// (File API) Application Python content.
+        /// </summary>
+        [EnumMember(Value = "application/x-python-code")]
+        ApplicationXPython,
+
+        /// <summary>
+        /// (File API) Application JSON content.
+        /// </summary>
+        [EnumMember(Value = "application/json")]
+        ApplicationJSON,
+
+        /// <summary>
+        /// (File API) Application RTF content.
+        /// </summary>
+        [EnumMember(Value = "application/rtf")]
+        ApplicationRTF,
     }
 }
