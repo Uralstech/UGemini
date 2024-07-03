@@ -100,6 +100,7 @@ namespace Uralstech.UGemini.Chat
         public string ContentType => GeminiContentType.ApplicationJSON.MimeType();
 
         /// <inheritdoc/>
+        [JsonIgnore]
         public string EndpointUri => $"https://generativelanguage.googleapis.com/{ApiVersion}/models/{Model}:generateContent";
 
         /// <summary>

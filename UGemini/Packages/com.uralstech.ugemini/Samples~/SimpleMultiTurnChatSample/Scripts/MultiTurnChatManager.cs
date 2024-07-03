@@ -99,13 +99,11 @@ namespace Uralstech.UGemini.Samples
             if (_chatHistory.Count == 0)
                 return;
     
-            GeminiChatRequest request = new()
+            GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(useBetaApi: _useBeta)
             {
                 Contents = _chatHistory.ToArray(),
                 SystemInstruction = _systemPrompt,
-            };
-    
-            GeminiChatResponse response = await GeminiManager.Instance.Compute<GeminiChatRequest, GeminiChatResponse>(request, GeminiManager.RequestEndPoint.Chat, useBeta: _useBeta);
+            });
             
             _chatHistory.Add(response.Candidates[0].Content);
             AddMessage(response.Candidates[0].Content);
