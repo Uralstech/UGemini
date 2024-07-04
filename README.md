@@ -37,39 +37,39 @@ Follow the steps detailed in the OpenUPM installation method and only install th
 
 ### Gemini API Support
 
-- [x] `models` endpoint :warning:
+- [x] `models` endpoint ⚠️
     - [ ] `batchEmbedContents` method
     - [x] `countTokens` method
     - [ ] `embedContent` method
-    - [ ] `generateAnswer` method :test_tube:
+    - [ ] `generateAnswer` method 🧪
     - [x] `generateContent` method
-        - [x] JSON output :test_tube:
-        - [x] System instructions :test_tube:
+        - [x] JSON output 🧪
+        - [x] System instructions 🧪
         - [x] Text generation
         - [x] Vision
-        - [x] Function calling :test_tube:
+        - [x] Function calling 🧪
         - [x] Safety settings
 
     - [ ] `get` method
     - [ ] `list` method
     - [ ] `streamGenerateContent` method
     
-- [ ] `cachedContents` endpoint :test_tube:
-- [ ] `corpora` endpoint :test_tube:
-- [x] `files` endpoint :test_tube:
+- [ ] `cachedContents` endpoint 🧪
+- [ ] `corpora` endpoint 🧪
+- [x] `files` endpoint 🧪
     - [x] `delete` method
     - [x] `get` method
     - [x] `list` method
 
-- [x] `media` endpoint :test_tube:
-    - [x] `upload` method :construction:
+- [x] `media` endpoint 🧪
+    - [x] `upload` method 🚧
     
 - [ ] `tunedModels` endpoint
-- [ ] `operations` endpoint :construction:
+- [ ] `operations` endpoint 🚧
 
-:warning: - Not all methods/features are supported<br/>
-:construction: - The feature is being worked on and is unstable<br/>
-:test_tube: - Using the v1beta API
+⚠️ - Not all methods/features are supported<br/>
+🚧 - The feature is being worked on and is unstable<br/>
+🧪 - Using the v1beta API
 
 ### Documentation
 
