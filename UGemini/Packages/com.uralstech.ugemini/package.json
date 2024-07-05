@@ -1,7 +1,7 @@
 {
   "name": "com.uralstech.ugemini",
   "displayName": "UGemini",
-  "description": "UGemini: A C# wrapper for the Google Gemini API.",
+  "description": "UGemini: A C# wrapper for the Google Gemini API.\n\nFor those updating from v1.0.x: Check the changelog and go to the update notes for v1.1.0 for an update guide.",
   "keywords": [
     "API",
     "Google",

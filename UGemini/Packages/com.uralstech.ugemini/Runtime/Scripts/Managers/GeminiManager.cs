@@ -1,6 +1,5 @@
 using Newtonsoft.Json;
 using System;
-using System.Net;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -15,6 +14,8 @@ namespace Uralstech.UGemini
     [AddComponentMenu("Uralstech/UGemini/Gemini API Manager")]
     public class GeminiManager : Singleton<GeminiManager>
     {
+        private const string MultiPartFormDataSeperator = "xxxxxxxxxx";
+
         /// <summary>
         /// <see href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro-vision">
         /// Note: Gemini 1.0 Pro Vision is deprecated. Use 1.5 Flash or 1.5 Pro instead.
@@ -88,6 +89,30 @@ namespace Uralstech.UGemini
             string requestEndpoint = request.EndpointUri;
 
             using UnityWebRequest webRequest = UnityWebRequest.Post(requestEndpoint, utf8RequestData, request.ContentType);
+            return JsonConvert.DeserializeObject<TResponse>((await ComputeRequest(webRequest)).downloadHandler.text);
+        }
+
+        /// <summary>
+        /// Computes a request on the Gemini API.
+        /// </summary>
+        /// 
+        /// <typeparam name="TResponse">
+        /// The response type. For example, a request of type <see cref="Chat.GeminiChatRequest"/> corresponds
+        /// to a response type of <see cref="Chat.GeminiChatResponse"/>, and a request of type <see cref="TokenCounting.GeminiTokenCountRequest"/>
+        /// corresponds to a response of type <see cref="TokenCounting.GeminiTokenCountResponse"/>.
+        /// </typeparam>
+        /// 
+        /// <param name="request">The request object.</param>
+        /// <returns>The computed response.</returns>
+        /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
+        public async Task<TResponse> Request<TResponse>(IGeminiMultiPartPostRequest request)
+        {
+            string requestEndpoint = request.EndpointUri;
+            string requestData = request.GetUtf8EncodedData(MultiPartFormDataSeperator);
+
+            using UnityWebRequest webRequest = UnityWebRequest.Post(requestEndpoint, requestData, $"multipart/related; boundary={MultiPartFormDataSeperator}");
+            webRequest.SetRequestHeader("X-Goog-Upload-Protocol", "multipart");
+
             return JsonConvert.DeserializeObject<TResponse>((await ComputeRequest(webRequest)).downloadHandler.text);
         }
 

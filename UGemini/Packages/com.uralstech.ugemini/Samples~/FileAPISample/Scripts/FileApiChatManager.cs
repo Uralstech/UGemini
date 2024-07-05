@@ -9,6 +9,7 @@ public class FileApiChatManager : MonoBehaviour
 {
     [Header("File API")]
     [SerializeField] private InputField _fileContentInput;
+    [SerializeField] private InputField _fileDisplayNameInput;
     [SerializeField] private InputField _fileIdInput;
     [SerializeField] private InputField _maxFileListInput;
     [SerializeField] private InputField _fileListTokenInput;
@@ -29,6 +30,10 @@ public class FileApiChatManager : MonoBehaviour
 
         GeminiFileUploadResponse response = await GeminiManager.Instance.Request<GeminiFileUploadResponse>(new GeminiFileUploadRequest(GeminiContentType.TextPlain.MimeType())
         {
+            File = new GeminiFileUploadMetaData()
+            {
+                DisplayName = string.IsNullOrEmpty(_fileDisplayNameInput.text) ? null : _fileDisplayNameInput.text,
+            },
             RawData = Encoding.UTF8.GetBytes(text)
         });
 
