@@ -6,7 +6,7 @@ namespace Uralstech.UGemini.FileAPI
     /// <summary>
     /// The response for a <see cref="GeminiFileListRequest"/> call.
     /// </summary>
-    [JsonObject(NamingStrategyType = typeof (CamelCaseNamingStrategy))]
+    [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class GeminiFileListResponse
     {
         /// <summary>
