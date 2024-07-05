@@ -11,22 +11,12 @@ namespace Uralstech.UGemini.FileAPI
     /// This feature is currently being worked on and is unstable.
     /// </remarks>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class GeminiFileUploadRequest : IGeminiPostRequest
+    public class GeminiFileUploadRequest : IGeminiMultiPartPostRequest
     {
-        // /// <summary>
-        // /// The <see cref="GeminiFileUploadRequest"/> resource name.
-        // /// </summary>
-        // /// <remarks>
-        // /// The ID (name excluding the "files/" prefix) can contain up to 40 characters that are lowercase alphanumeric or dashes (-).<br/>
-        // /// The ID cannot start or end with a dash. If the name is empty on create, a unique name will be generated. Example: files/123-456
-        // /// </remarks>
-        // public string Name;
-
-        // /// <summary>
-        // /// The human-readable display name for the <see cref="GeminiFileUploadRequest"/>. The display name must be no more than 512 characters in length, including spaces. Example: "Welcome Image"
-        // /// </summary>
-        // [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
-        // public string DisplayName = null;
+        /// <summary>
+        /// Metadata for the <see cref="GeminiFile"/> to be uploaded.
+        /// </summary>
+        public GeminiFileUploadMetaData File;
 
         /// <summary>
         /// The IANA standard MIME type of the <see cref="GeminiFileUploadRequest"/>.
@@ -71,9 +61,21 @@ namespace Uralstech.UGemini.FileAPI
         }
 
         /// <inheritdoc/>
-        public string GetUtf8EncodedData()
+        public string GetUtf8EncodedData(string dataSeperator)
         {
-            return Encoding.UTF8.GetString(RawData);
+            StringBuilder data = new($"--{dataSeperator}\r\n");
+
+            data.Append("Content-Disposition: form-data; name=\"metadata\"\r\n");
+            data.Append("Content-Type: application/json; charset=UTF-8\r\n\r\n");
+            data.Append($"{JsonConvert.SerializeObject(this)}\r\n");
+
+            data.Append($"--{dataSeperator}\r\n");
+            data.Append("Content-Disposition: form-data; name=\"file\"\r\n");
+            data.Append($"Content-Type: {ContentType}\r\n\r\n");
+            data.Append($"{Encoding.UTF8.GetString(RawData)}\r\n");
+            data.Append($"--{dataSeperator}--\r\n");
+
+            return data.ToString();
         }
     }
 }
