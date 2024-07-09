@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System;
 using System.ComponentModel;
 using UnityEngine;
+using Uralstech.UGemini.Chat;
 using Uralstech.UGemini.FileAPI;
 using Uralstech.UGemini.Tools;
 
@@ -11,7 +13,7 @@ namespace Uralstech.UGemini
     /// The base structured datatype containing multi-part content of a message.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class GeminiContent
+    public class GeminiContent : IAppendableData<GeminiContent>
     {
         /// <summary>
         /// Ordered Parts that constitute a single message. Parts may have different MIME types.
@@ -22,7 +24,7 @@ namespace Uralstech.UGemini
         /// Optional. The producer of the content.
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(GeminiRole.Unspecified)]
-        public GeminiRole Role = GeminiRole.Unspecified;
+        public GeminiRole Role;
 
         /// <summary>
         /// Creates a new <see cref="GeminiContent"/> from a role and message.
@@ -170,6 +172,29 @@ namespace Uralstech.UGemini
                     }
                 }
             };
+        }
+
+        /// <inheritdoc/>
+        public void Append(GeminiContent data)
+        {
+            if (data.Role != default)
+                Role = data.Role;
+
+            if (data.Parts != null)
+            {
+                for (int i = 0; i < Parts.Length; i++)
+                    Parts[i].Append(data.Parts[i]);
+
+                if (data.Parts.Length > Parts.Length)
+                {
+                    GeminiContentPart[] allParts = new GeminiContentPart[data.Parts.Length];
+                    Parts.CopyTo(allParts, 0);
+
+                    Array.Copy(data.Parts, Parts.Length, allParts, Parts.Length, data.Parts.Length - Parts.Length);
+
+                    Parts = allParts;
+                }
+            }
         }
     }
 }

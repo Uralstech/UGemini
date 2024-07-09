@@ -41,8 +41,10 @@ namespace Uralstech.UGemini.TokenCounting
         public string ContentType => GeminiContentType.ApplicationJSON.MimeType();
 
         /// <inheritdoc/>
-        [JsonIgnore]
-        public string EndpointUri => $"https://generativelanguage.googleapis.com/{ApiVersion}/models/{Model}:countTokens";
+        public string GetEndpointUri(GeminiRequestMetadata metadata)
+        {
+            return $"https://generativelanguage.googleapis.com/{ApiVersion}/models/{Model}:countTokens";
+        }
 
         /// <summary>
         /// Creates a new <see cref="GeminiTokenCountRequest"/>.

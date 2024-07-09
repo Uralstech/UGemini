@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System;
 
 namespace Uralstech.UGemini.Chat
 {
@@ -15,7 +16,7 @@ namespace Uralstech.UGemini.Chat
     /// - feedback on each candidate is reported on <see cref="GeminiCandidate.FinishReason"/> and <see cref="GeminiCandidate.SafetyRatings"/>.
     /// </remarks>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class GeminiChatResponse
+    public class GeminiChatResponse : IAppendableData<GeminiChatResponse>
     {
         /// <summary>
         /// Candidate responses from the model.
@@ -37,5 +38,31 @@ namespace Uralstech.UGemini.Chat
         /// </summary>
         [JsonIgnore]
         public GeminiContentPart[] Parts => Candidates[0].Content.Parts;
+
+        /// <inheritdoc/>
+        public void Append(GeminiChatResponse data)
+        {
+            if (data.PromptFeedback != null)
+                PromptFeedback.Append(data.PromptFeedback);
+
+            if (data.UsageMetadata != null)
+                UsageMetadata.Append(data.UsageMetadata);
+
+            if (data.Candidates != null)
+            {
+                for (int i = 0; i < Candidates.Length; i++)
+                    Candidates[i].Append(data.Candidates[i]);
+
+                if (data.Candidates.Length > Candidates.Length)
+                {
+                    GeminiCandidate[] allCandidates = new GeminiCandidate[data.Candidates.Length];
+                    Candidates.CopyTo(allCandidates, 0);
+
+                    Array.Copy(data.Candidates, Candidates.Length, allCandidates, Candidates.Length, data.Candidates.Length - Candidates.Length);
+
+                    Candidates = allCandidates;
+                }
+            }
+        }
     }
 }

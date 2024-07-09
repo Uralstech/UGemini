@@ -21,9 +21,12 @@
         public string PageToken = string.Empty;
 
         /// <inheritdoc>
-        public string EndpointUri => string.IsNullOrEmpty(PageToken)
-            ? $"https://generativelanguage.googleapis.com/{ApiVersion}/files?pageSize={MaxResponseFiles}"
-            : $"https://generativelanguage.googleapis.com/{ApiVersion}/files?pageSize={MaxResponseFiles}&pageToken={PageToken}";
+        public string GetEndpointUri(GeminiRequestMetadata metadata)
+        {
+            return string.IsNullOrEmpty(PageToken)
+                ? $"https://generativelanguage.googleapis.com/{ApiVersion}/files?pageSize={MaxResponseFiles}"
+                : $"https://generativelanguage.googleapis.com/{ApiVersion}/files?pageSize={MaxResponseFiles}&pageToken={PageToken}";
+        }
 
         /// <summary>
         /// Creates a new <see cref="GeminiFileGetRequest"/>.
