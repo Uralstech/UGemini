@@ -16,7 +16,10 @@
         public string FileId;
 
         /// <inheritdoc>
-        public string EndpointUri => $"https://generativelanguage.googleapis.com/{ApiVersion}/files/{FileId}";
+        public string GetEndpointUri(GeminiRequestMetadata metadata)
+        {
+            return $"https://generativelanguage.googleapis.com/{ApiVersion}/files/{FileId}";
+        }
 
         /// <summary>
         /// Creates a new <see cref="GeminiFileGetRequest"/>.

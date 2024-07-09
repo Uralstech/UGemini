@@ -7,7 +7,7 @@ namespace Uralstech.UGemini.Chat
     /// Metadata on the generation request's token usage.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class GeminiUsageMetadata
+    public class GeminiUsageMetadata : IAppendableData<GeminiUsageMetadata>
     {
         /// <summary>
         /// Number of tokens in the prompt. When cachedContent is set, this is still the total effective prompt size. I.e. this includes the number of tokens in the cached content.
@@ -31,5 +31,14 @@ namespace Uralstech.UGemini.Chat
         /// Total token count for the generation request (prompt + candidates).
         /// </summary>
         public int TotalTokenCount;
+
+        /// <inheritdoc/>
+        public void Append(GeminiUsageMetadata data)
+        {
+            PromptTokenCount = data.PromptTokenCount;
+            CachedContentTokenCount = data.CachedContentTokenCount;
+            CandidatesTokenCount = data.CandidatesTokenCount;
+            TotalTokenCount = data.TotalTokenCount;
+        }
     }
 }

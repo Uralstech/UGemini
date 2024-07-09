@@ -9,7 +9,7 @@ namespace Uralstech.UGemini
     /// A datatype containing media that is part of a multi-part Content message. Must only contain one field at a time.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class GeminiContentPart
+    public class GeminiContentPart : IAppendableData<GeminiContentPart>
     {
         /// <summary>
         /// Inline text.
@@ -49,5 +49,26 @@ namespace Uralstech.UGemini
         /// </remarks>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiFileData FileData = null;
+
+        /// <inheritdoc/>
+        public void Append(GeminiContentPart data)
+        {
+            if (string.IsNullOrEmpty(Text))
+                Text = data.Text;
+            else if (!string.IsNullOrEmpty(data.Text))
+                Text += data.Text;
+
+            if (data.InlineData != null)
+                InlineData = data.InlineData;
+
+            if (data.FunctionCall != null)
+                FunctionCall = data.FunctionCall;
+
+            if (data.FunctionResponse != null)
+                FunctionResponse = data.FunctionResponse;
+
+            if (data.FileData != null)
+                FileData = data.FileData;
+        }
     }
 }
