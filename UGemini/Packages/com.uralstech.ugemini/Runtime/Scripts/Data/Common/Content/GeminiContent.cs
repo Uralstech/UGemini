@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 using Uralstech.UGemini.FileAPI;
@@ -11,7 +12,7 @@ namespace Uralstech.UGemini
     /// The base structured datatype containing multi-part content of a message.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class GeminiContent
+    public class GeminiContent : IAppendableData<GeminiContent>
     {
         /// <summary>
         /// Ordered Parts that constitute a single message. Parts may have different MIME types.
@@ -22,7 +23,7 @@ namespace Uralstech.UGemini
         /// Optional. The producer of the content.
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(GeminiRole.Unspecified)]
-        public GeminiRole Role = GeminiRole.Unspecified;
+        public GeminiRole Role;
 
         /// <summary>
         /// Creates a new <see cref="GeminiContent"/> from a role and message.
@@ -170,6 +171,45 @@ namespace Uralstech.UGemini
                     }
                 }
             };
+        }
+
+        /// <inheritdoc/>
+        public void Append(GeminiContent data)
+        {
+            if (data.Role != default)
+                Role = data.Role;
+
+            if (data.Parts != null)
+            {
+                List<GeminiContentPart> partsToAdd = new();
+                for (int i = 0; i < data.Parts.Length; i++)
+                {
+                    GeminiContentPart partToAppend = data.Parts[i];
+                    bool appended = false;
+
+                    for (int j = 0; j < Parts.Length; j++)
+                    {
+                        GeminiContentPart part = Parts[j];
+                        if (part.IsAppendable(partToAppend))
+                        {
+                            part.Append(partToAppend);
+                            appended = true;
+                        }
+                    }
+
+                    if (!appended)
+                        partsToAdd.Add(partToAppend);
+                }
+
+                if (partsToAdd.Count > 0)
+                {
+                    GeminiContentPart[] allParts = new GeminiContentPart[Parts.Length + partsToAdd.Count];
+                    Parts.CopyTo(allParts, 0);
+
+                    partsToAdd.CopyTo(allParts, Parts.Length);
+                    Parts = allParts;
+                }
+            }
         }
     }
 }

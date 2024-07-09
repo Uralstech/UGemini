@@ -7,7 +7,7 @@ namespace Uralstech.UGemini.Chat
     /// A response candidate generated from the model.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class GeminiCandidate
+    public class GeminiCandidate : IAppendableData<GeminiCandidate>
     {
         /// <summary>
         /// Generated content returned from the model.
@@ -54,5 +54,30 @@ namespace Uralstech.UGemini.Chat
         /// Index of the candidate in the list of candidates.
         /// </summary>
         public int Index;
+
+        /// <inheritdoc/>
+        public void Append(GeminiCandidate data)
+        {
+            if (Content == null)
+                Content = data.Content;
+            else if (data.Content != null)
+                Content.Append(data.Content);
+
+            if (data.FinishReason != default)
+                FinishReason = data.FinishReason;
+
+            if (data.SafetyRatings != null)
+                SafetyRatings = data.SafetyRatings;
+
+            if (data.CitationMetadata != null)
+                CitationMetadata = data.CitationMetadata;
+
+            TokenCount = data.TokenCount;
+
+            if (data.GroundingAttributions != null)
+                GroundingAttributions = data.GroundingAttributions;
+
+            Index = data.Index;
+        }
     }
 }

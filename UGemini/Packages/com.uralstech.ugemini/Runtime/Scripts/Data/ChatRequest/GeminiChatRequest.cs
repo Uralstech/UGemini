@@ -1,7 +1,10 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Threading.Tasks;
 using Uralstech.UGemini.Tools.Declaration;
 
 namespace Uralstech.UGemini.Chat
@@ -10,8 +13,17 @@ namespace Uralstech.UGemini.Chat
     /// Request to generate a response from the model.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class GeminiChatRequest : IGeminiPostRequest
+    public class GeminiChatRequest : IGeminiStreamablePostRequest<GeminiChatResponse>
     {
+        /// <summary>
+        /// Serialization settings for deserializing partial streamed responses.
+        /// </summary>
+        private static readonly JsonSerializerSettings s_partialDataSerializerSettings = new()
+        {
+            DefaultValueHandling = DefaultValueHandling.Ignore,
+            NullValueHandling = NullValueHandling.Ignore,
+        };
+
         /// <summary>
         /// The content of the current conversation with the model.
         /// </summary>
@@ -100,8 +112,24 @@ namespace Uralstech.UGemini.Chat
         public string ContentType => GeminiContentType.ApplicationJSON.MimeType();
 
         /// <inheritdoc/>
+        public string GetEndpointUri(GeminiRequestMetadata metadata)
+        {
+            return metadata?.IsStreaming == true
+                ? $"https://generativelanguage.googleapis.com/{ApiVersion}/models/{Model}:streamGenerateContent"
+                : $"https://generativelanguage.googleapis.com/{ApiVersion}/models/{Model}:generateContent";
+        }
+
+        /// <summary>
+        /// Callback for receiving streamed responses.
+        /// </summary>
         [JsonIgnore]
-        public string EndpointUri => $"https://generativelanguage.googleapis.com/{ApiVersion}/models/{Model}:generateContent";
+        public Func<GeminiChatResponse, Task> OnPartialResponseReceived;
+
+        /// <summary>
+        /// The streamed response.
+        /// </summary>
+        [JsonIgnore]
+        public GeminiChatResponse StreamedResponse { get; private set; }
 
         /// <summary>
         /// Creates a new <see cref="GeminiChatRequest"/>.
@@ -121,6 +149,24 @@ namespace Uralstech.UGemini.Chat
         public string GetUtf8EncodedData()
         {
             return JsonConvert.SerializeObject(this);
+        }
+
+        /// <inheritdoc/>
+        public async Task ProcessStreamedData(List<JToken> allEvents, JToken lastEvent)
+        {
+            try
+            {
+                GeminiChatResponse partialResponse = lastEvent.ToObject<GeminiChatResponse>(JsonSerializer.Create(s_partialDataSerializerSettings));
+
+                if (StreamedResponse == null)
+                    StreamedResponse = partialResponse;
+                else
+                    StreamedResponse.Append(partialResponse);
+
+                if (OnPartialResponseReceived != null)
+                    await OnPartialResponseReceived.Invoke(StreamedResponse);
+            }
+            catch { }
         }
     }
 }

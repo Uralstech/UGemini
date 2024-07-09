@@ -7,7 +7,7 @@ namespace Uralstech.UGemini.Chat
     /// A set of the feedback metadata the prompt specified in <see cref="GeminiChatResponse.Candidates"/>.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class GeminiPromptFeedback
+    public class GeminiPromptFeedback : IAppendableData<GeminiPromptFeedback>
     {
         /// <summary>
         /// If set, the prompt was blocked and no candidates are returned. Rephrase your prompt.
@@ -19,5 +19,14 @@ namespace Uralstech.UGemini.Chat
         /// Ratings for safety of the prompt. There is at most one rating per category.
         /// </summary>
         public GeminiSafetyRating[] SafetyRatings;
+
+        /// <inheritdoc/>
+        public void Append(GeminiPromptFeedback data)
+        {
+            if (data.BlockReason != default)
+                BlockReason = data.BlockReason;
+
+            SafetyRatings = data.SafetyRatings;
+        }
     }
 }

@@ -46,8 +46,10 @@ namespace Uralstech.UGemini.FileAPI
         public string ContentType { get; }
 
         /// <inheritdoc/>
-        [JsonIgnore]
-        public string EndpointUri => $"https://generativelanguage.googleapis.com/upload/{ApiVersion}/files";
+        public string GetEndpointUri(GeminiRequestMetadata metadata)
+        {
+            return $"https://generativelanguage.googleapis.com/upload/{ApiVersion}/files";
+        }
 
         /// <summary>
         /// Creates a new <see cref="GeminiFileUploadRequest"/>.

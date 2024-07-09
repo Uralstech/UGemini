@@ -21,7 +21,7 @@ This *should* work on any reasonably modern Unity version. Built and tested in U
         - *`com.utilities`
 4. Open the Unity Package Manager window (`Window` -> `Package Manager`)
 5. Change the registry from `Unity` to `My Registries`
-6. Add the `UGemini` and *`Utilities.Encoder.Wav` packages
+6. Add the `UGemini`, *`Utilities.Async` and *`Utilities.Encoder.Wav` packages
 
 #### From GitHub Through Unity Package Manager
 
@@ -30,10 +30,20 @@ This *should* work on any reasonably modern Unity version. Built and tested in U
 3. Paste the UPM branch URL and press enter:
     - `https://github.com/Uralstech/UGemini.git#upm`
 
-*\*Adding additional dependencies:*<br/>
-Follow the steps detailed in the OpenUPM installation method and only install the *`Utilities.Encoder.Wav` package.
+*Adding additional dependencies:*<br/>
+Follow the steps detailed in the OpenUPM installation method and only install the *`Utilities.Async` and *`Utilities.Encoder.Wav` packages.
 
-*Optional, but required if you don't want to bother with encoding your AudioClips into Base64 strings manually.
+#### From GitHub Clone/Download
+
+1. Clone or download the repository from the desired branch (master, preview/unstable)
+2. Drag the package folder `UGemini/UGemini/Packages/com.uralstech.ugemini` into your Unity project's `Packages` folder
+3. In the `Packages` folder of your project, add the following line to the list in `manifest.json`:
+    `"com.uralstech.ugemini": "1.0.1",`
+
+*Adding additional dependencies:*<br/>
+Follow the steps detailed in the OpenUPM installation method and only install the *`Utilities.Async` and *`Utilities.Encoder.Wav` packages.
+
+*Optional, but `Utilities.Async` is required for streaming content and `Utilities.Encoder.Wav` is recommended if you don't want to bother with encoding your AudioClips into Base64 strings manually.
 
 ### Gemini API Support
 
@@ -52,7 +62,7 @@ Follow the steps detailed in the OpenUPM installation method and only install th
 
     - [ ] `get` method
     - [ ] `list` method
-    - [ ] `streamGenerateContent` method
+    - [x] `streamGenerateContent` method
     
 - [ ] `cachedContents` endpoint 🧪
 - [ ] `corpora` endpoint 🧪

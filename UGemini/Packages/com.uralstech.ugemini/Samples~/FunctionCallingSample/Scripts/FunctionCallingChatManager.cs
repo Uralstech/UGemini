@@ -1,4 +1,5 @@
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -89,7 +90,7 @@ namespace Uralstech.UGemini.Samples
             };
 
             GeminiChatResponse response;
-            GeminiFunctionCall functionCall;
+            GeminiFunctionCall functionCall = null;
             do
             {
                 response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(useBetaApi: true)
@@ -99,10 +100,20 @@ namespace Uralstech.UGemini.Samples
                     ToolConfig = GeminiToolConfiguration.GetConfiguration(GeminiFunctionCallingMode.Any),
                 });
 
-                functionCall = response.Parts[0].FunctionCall;
-                if (functionCall != null)
+                contents.Add(response.Candidates[0].Content);
+
+                GeminiContentPart[] allFunctionCalls = Array.FindAll(response.Parts, part => part.FunctionCall != null);
+                functionCall = null;
+
+                int textIndex = Array.FindIndex(response.Parts, part => !string.IsNullOrEmpty(part.Text));
+                if (textIndex > -1)
+                    _chatResponse.text = response.Parts[textIndex].Text;
+
+                for (int i = 0; i < allFunctionCalls.Length; i++)
                 {
+                    functionCall = allFunctionCalls[i].FunctionCall;
                     JObject functionResponse = null;
+
                     switch (functionCall.Name)
                     {
                         case "printToConsole":
@@ -129,7 +140,6 @@ namespace Uralstech.UGemini.Samples
                             break;
                     }
 
-                    contents.Add(GeminiContent.GetContent(functionCall));
                     contents.Add(GeminiContent.GetContent(functionCall.GetResponse(functionResponse)));
                 }
             } while (functionCall != null);
