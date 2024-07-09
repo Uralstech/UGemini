@@ -58,7 +58,9 @@ namespace Uralstech.UGemini.Chat
         /// <inheritdoc/>
         public void Append(GeminiCandidate data)
         {
-            if (data.Content != null)
+            if (Content == null)
+                Content = data.Content;
+            else if (data.Content != null)
                 Content.Append(data.Content);
 
             if (data.FinishReason != default)
