@@ -114,7 +114,7 @@ namespace Uralstech.UGemini.Chat
         /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return metadata.IsStreaming
+            return metadata?.IsStreaming == true
                 ? $"https://generativelanguage.googleapis.com/{ApiVersion}/models/{Model}:streamGenerateContent"
                 : $"https://generativelanguage.googleapis.com/{ApiVersion}/models/{Model}:generateContent";
         }
