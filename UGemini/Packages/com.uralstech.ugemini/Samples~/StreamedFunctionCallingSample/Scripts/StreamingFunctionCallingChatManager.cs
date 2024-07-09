@@ -1,6 +1,7 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using Uralstech.UGemini.Chat;
@@ -12,7 +13,7 @@ using Uralstech.UGemini.Tools.Declaration;
 
 namespace Uralstech.UGemini.Samples
 {
-    public class FunctionCallingChatManager : MonoBehaviour
+    public class StreamingFunctionCallingChatManager : MonoBehaviour
     {
         private static readonly GeminiTool s_geminiFunctions = new GeminiTool()
         {
@@ -39,36 +40,6 @@ namespace Uralstech.UGemini.Samples
                         Required = new string[] { "text" },
                     }
                 },
-    
-                new GeminiFunctionDeclaration()
-                {
-                    Name = "changeTextColor",
-                    Description = "Change the color of the text.",
-                    Parameters = new GeminiSchema()
-                    {
-                        Type = GeminiSchemaDataType.Object,
-                        Properties = new Dictionary<string, GeminiSchema>()
-                        {
-                            {
-                                "color", new GeminiSchema()
-                                {
-                                    Type = GeminiSchemaDataType.String,
-                                    Description = "The color to set. e.g. \"BLUE\"",
-                                    Format = GeminiSchemaDataFormat.Enum,
-                                    Enum = new string[]
-                                    {
-                                        "RED",
-                                        "GREEN",
-                                        "BLUE",
-                                        "WHITE",
-                                    },
-                                    Nullable = false,
-                                }
-                            },
-                        },
-                        Required = new string[] { "color" },
-                    }
-                }
             },
         };
 
@@ -93,16 +64,19 @@ namespace Uralstech.UGemini.Samples
             GeminiFunctionCall functionCall;
             do
             {
-                response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(useBetaApi: true)
+                response = await GeminiManager.Instance.StreamRequest(new GeminiChatRequest(useBetaApi: true)
                 {
                     Contents = contents.ToArray(),
                     Tools = new GeminiTool[] { s_geminiFunctions },
-                    ToolConfig = GeminiToolConfiguration.GetConfiguration(GeminiFunctionCallingMode.Any),
+
+                    OnPartialResponseReceived = streamedResponse =>
+                    {
+                        _chatResponse.text = Array.Find(streamedResponse.Parts, part => !string.IsNullOrEmpty(part.Text))?.Text;
+                        return Task.CompletedTask;
+                    }
                 });
 
                 contents.Add(response.Candidates[0].Content);
-
-                _chatResponse.text = Array.Find(response.Parts, part => !string.IsNullOrEmpty(part.Text))?.Text;
                 GeminiContentPart[] allFunctionCalls = Array.FindAll(response.Parts, part => part.FunctionCall != null);
 
                 functionCall = null;
@@ -115,17 +89,6 @@ namespace Uralstech.UGemini.Samples
                     {
                         case "printToConsole":
                             Debug.Log(functionCall.Arguments["text"].ToObject<string>());
-                            break;
-
-                        case "changeTextColor":
-                            if (!TryChangeTextColor(functionCall.Arguments["color"].ToObject<string>()))
-                            {
-                                functionResponse = new JObject()
-                                {
-                                    ["result"] = "Unknown color."
-                                };
-                            }
-
                             break;
 
                         default:
@@ -143,30 +106,6 @@ namespace Uralstech.UGemini.Samples
                     })));
                 }
             } while (functionCall != null);
-        }
-
-        private bool TryChangeTextColor(string color)
-        {
-            switch (color)
-            {
-                case "RED":
-                    _chatResponse.color = Color.red; break;
-
-                case "GREEN":
-                    _chatResponse.color = Color.green; break;
-
-                case "BLUE":
-                    _chatResponse.color = Color.blue; break;
-
-                case "WHITE":
-                    _chatResponse.color = Color.white; break;
-
-                default:
-                    return false;
-            }
-
-            Debug.Log("Changed text color!");
-            return true;
         }
     }
 }
