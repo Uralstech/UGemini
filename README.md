@@ -62,7 +62,7 @@ Follow the steps detailed in the OpenUPM installation method and only install th
 
     - [ ] `get` method
     - [ ] `list` method
-    - [x] `streamGenerateContent` method 🚧
+    - [x] `streamGenerateContent` method
     
 - [ ] `cachedContents` endpoint 🧪
 - [ ] `corpora` endpoint 🧪
