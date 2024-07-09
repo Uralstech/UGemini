@@ -1,9 +1,8 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
-using Uralstech.UGemini.Chat;
 using Uralstech.UGemini.FileAPI;
 using Uralstech.UGemini.Tools;
 
@@ -182,16 +181,32 @@ namespace Uralstech.UGemini
 
             if (data.Parts != null)
             {
-                for (int i = 0; i < Parts.Length; i++)
-                    Parts[i].Append(data.Parts[i]);
-
-                if (data.Parts.Length > Parts.Length)
+                List<GeminiContentPart> partsToAdd = new();
+                for (int i = 0; i < data.Parts.Length; i++)
                 {
-                    GeminiContentPart[] allParts = new GeminiContentPart[data.Parts.Length];
+                    GeminiContentPart partToAppend = data.Parts[i];
+                    bool appended = false;
+
+                    for (int j = 0; j < Parts.Length; j++)
+                    {
+                        GeminiContentPart part = Parts[j];
+                        if (part.IsAppendable(partToAppend))
+                        {
+                            part.Append(partToAppend);
+                            appended = true;
+                        }
+                    }
+
+                    if (!appended)
+                        partsToAdd.Add(partToAppend);
+                }
+
+                if (partsToAdd.Count > 0)
+                {
+                    GeminiContentPart[] allParts = new GeminiContentPart[Parts.Length + partsToAdd.Count];
                     Parts.CopyTo(allParts, 0);
 
-                    Array.Copy(data.Parts, Parts.Length, allParts, Parts.Length, data.Parts.Length - Parts.Length);
-
+                    partsToAdd.CopyTo(allParts, Parts.Length);
                     Parts = allParts;
                 }
             }
