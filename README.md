@@ -84,3 +84,5 @@ Follow the steps detailed in the OpenUPM installation method and only install th
 ### Documentation
 
 See <https://github.com/Uralstech/UGemini/blob/master/UGemini/Packages/com.uralstech.ugemini/Documentation~/README.md>.
+
+See <https://uralstech.github.io/UGemini/> for reference manual.

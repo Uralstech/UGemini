@@ -18,13 +18,13 @@ namespace Uralstech.UGemini
         private const string MultiPartFormDataSeperator = "xxxxxxxxxx";
 
         /// <summary>
-        /// <see href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro-vision">
+        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro-vision">
         /// Note: Gemini 1.0 Pro Vision is deprecated. Use 1.5 Flash or 1.5 Pro instead.
         /// <br/><br/>
         /// Gemini 1.0 Pro Vision is a performance-optimized multimodal model that can perform visual-related tasks.<br/>
         /// For example, 1.0 Pro Vision can generate image descriptions, identify objects present in images, provide<br/>
         /// information about places or objects present in images, and more.
-        /// </see>
+        /// </a>
         /// <br/><br/>
         /// Supports image, video and text input.
         /// </summary>
@@ -32,29 +32,29 @@ namespace Uralstech.UGemini
         public const string Gemini1_0ProVision = "gemini-pro-vision";
 
         /// <summary>
-        /// <see href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro">
+        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro">
         /// Gemini 1.0 Pro is an NLP model that handles tasks like multi-turn text and code chat, and code generation.
-        /// </see>
+        /// </a>
         /// <br/><br/>
         /// Supports text input.
         /// </summary>
         public const string Gemini1_0Pro = "gemini-1.0-pro";
 
         /// <summary>
-        /// <see href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro">
+        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro">
         /// Gemini 1.5 Pro is a mid-size multimodal model that is optimized for a wide-range of reasoning tasks.<br/>
         /// 1.5 Pro can process large amounts of data at once, including 2 hours of video, 19 hours of audio,<br/>
         /// codebases with 60,000 lines of code, or 2,000 pages of text.
-        /// </see>
+        /// </a>
         /// <br/><br/>
         /// Supports audio, image, video and text input.
         /// </summary>
         public const string Gemini1_5Pro = "gemini-1.5-pro";
 
         /// <summary>
-        /// <see href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash">
+        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash">
         /// Gemini 1.5 Flash is a fast and versatile multimodal model for scaling across diverse tasks.
-        /// </see>
+        /// </a>
         /// <br/><br/>
         /// Supports audio, image, video and text input.
         /// </summary>

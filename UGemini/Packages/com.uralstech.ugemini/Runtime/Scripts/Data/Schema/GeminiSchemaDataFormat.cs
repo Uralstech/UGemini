@@ -56,12 +56,12 @@ namespace Uralstech.UGemini.Schema
         Binary,
 
         /// <summary>
-        /// Date string as defined by "full-date - <see href="https://datatracker.ietf.org/doc/html/rfc3339#section-5.6">[!RFC3339]</see>"
+        /// Date string as defined by <a href="https://datatracker.ietf.org/doc/html/rfc3339#section-5.6">full-date - RFC 3339</a>.
         /// </summary>
         Date,
 
         /// <summary>
-        /// Date and time string as defined by "date-time - <see href="https://datatracker.ietf.org/doc/html/rfc3339#section-5.6">[!RFC3339]</see>"
+        /// Date and time string as defined by <a href="https://datatracker.ietf.org/doc/html/rfc3339#section-5.6">date-time - RFC 3339</a>.
         /// </summary>
         DateTime,
     }

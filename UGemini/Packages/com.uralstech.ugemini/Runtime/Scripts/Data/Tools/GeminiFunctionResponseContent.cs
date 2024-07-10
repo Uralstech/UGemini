@@ -5,7 +5,7 @@ using Newtonsoft.Json.Serialization;
 namespace Uralstech.UGemini.Tools
 {
     /// <summary>
-    /// The response of a Gemini function call. Based on <see href="https://protobuf.dev/reference/protobuf/google.protobuf/#struct">Struct</see> format
+    /// The response of a Gemini function call. Based on the Protocol Buffer <a href="https://protobuf.dev/reference/protobuf/google.protobuf/#struct">Struct</a> type.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class GeminiFunctionResponseContent

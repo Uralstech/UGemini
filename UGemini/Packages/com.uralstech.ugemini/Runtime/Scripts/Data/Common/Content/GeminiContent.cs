@@ -77,7 +77,7 @@ namespace Uralstech.UGemini
         /// Creates a new <see cref="GeminiContent"/> from a role, message and <see cref="AudioClip"/>.
         /// </summary>
         /// <remarks>
-        /// Requires <see href="https://openupm.com/packages/com.utilities.encoder.wav/">Utilities.Encoding.Wav</see>.
+        /// Requires <a href="https://openupm.com/packages/com.utilities.encoder.wav/">Utilities.Encoding.Wav</a>.
         /// </remarks>
         /// <param name="role">The role of the content creator.</param>
         /// <param name="message">The message.</param>
