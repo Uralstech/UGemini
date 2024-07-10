@@ -18,10 +18,10 @@ This *should* work on any reasonably modern Unity version. Built and tested in U
     - URL: `https://package.openupm.com`
     - Scope(s)
         - `com.uralstech`
-        - *`com.utilities`
+        - `com.utilities`*
 4. Open the Unity Package Manager window (`Window` -> `Package Manager`)
 5. Change the registry from `Unity` to `My Registries`
-6. Add the `UGemini`, *`Utilities.Async` and *`Utilities.Encoder.Wav` packages
+6. Add the `UGemini`, `Utilities.Async`* and `Utilities.Encoder.Wav`* packages
 
 #### From GitHub Through Unity Package Manager
 
@@ -31,7 +31,7 @@ This *should* work on any reasonably modern Unity version. Built and tested in U
     - `https://github.com/Uralstech/UGemini.git#upm`
 
 *Adding additional dependencies:*<br/>
-Follow the steps detailed in the OpenUPM installation method and only install the *`Utilities.Async` and *`Utilities.Encoder.Wav` packages.
+Follow the steps detailed in the OpenUPM installation method and only install the `Utilities.Async`* and `Utilities.Encoder.Wav`* packages.
 
 #### From GitHub Clone/Download
 
@@ -41,7 +41,7 @@ Follow the steps detailed in the OpenUPM installation method and only install th
     `"com.uralstech.ugemini": "1.0.1",`
 
 *Adding additional dependencies:*<br/>
-Follow the steps detailed in the OpenUPM installation method and only install the *`Utilities.Async` and *`Utilities.Encoder.Wav` packages.
+Follow the steps detailed in the OpenUPM installation method and only install the `Utilities.Async`* and `Utilities.Encoder.Wav`* packages.
 
 *Optional, but `Utilities.Async` is required for streaming content and `Utilities.Encoder.Wav` is recommended if you don't want to bother with encoding your AudioClips into Base64 strings manually.
 
@@ -72,7 +72,7 @@ Follow the steps detailed in the OpenUPM installation method and only install th
     - [x] `list` method
 
 - [x] `media` endpoint 🧪
-    - [x] `upload` method 🚧
+    - [x] `upload` method
     
 - [ ] `tunedModels` endpoint
 - [ ] `operations` endpoint 🚧

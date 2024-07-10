@@ -4,20 +4,51 @@
 
 `GeminiManager.Compute` and parts of related types have been deprecated. Please check `README_OLD.md` for documentation regarding the deprecated code.
 
+### Table of Contents
+
+- [**Setup**](#setup)
+- [**Main API Interface (GeminiManager.cs)**](#geminimanager)
+    - [***Beta API Support***](#beta-api)
+    - [***Model Support***](#models)
+    - [***QuickStart: `generateContent` Request Through `GeminiChatRequest`***](#quickstart-generatecontent-chat-request)
+    - [***QuickStart: `generateContent` Request w/ Chat History***](#quickstart-multi-turn-generatecontent-request)
+- [**GeminiChatRequest, In-Depth**](#geminichatrequest-in-depth):
+    - [***Streaming Responses***](#streaming-responses)
+    - [***Including Additional Media to Requests***](#adding-media-content-to-requests)
+        - [*Content Utility Methods*](#utility-methods)
+    - [***Function Calling***](#function-calling)
+    - [***JSON Response Mode***](#json-response-mode)
+- [**GeminiTokenCountRequest**](#geminitokencountrequest)
+- [**File API**](#file-api)
+    - [***Upload Files***](#uploading-files)
+    - [***List All Files***](#listing-all-files)
+    - [***Request Metadata for Single Files***](#retrieving-file-metadata)
+    - [***Deleting Files***](#deleting-a-file)
+- [**Samples**](#samples)
+    - [***Multi-turn Chat***](#mult-turn-chat)
+    - [***Function Calling***](#function-calling-1)
+    - [***Streaming Generated Content***](#streaming-generated-content)
+    - [***JSON Response***](#json-response)
+    - [***Prompting with File API***](#prompting-with-file-api)
+    - [***Token Counting***](#token-counting)
+
 ### Setup
 
 Add an instance of `GeminiManager` to your scene, and set it up with your Gemini API key. You can get your API key from [*here*](https://makersuite.google.com/app/apikey).
 
-### Main API
+### `GeminiManager`
 
 There are only two methods in `GeminiManager`:
 
-| Method            | What it does                          |
-| -------------     | -------------                         |
-| `SetApiKey`       | Sets the Gemini API key through code  |
-| `Request`         | Computes a request on the Gemini API  |
+| Method            | What it does                                      |
+| -------------     | -------------                                     |
+| `SetApiKey`       | Sets the Gemini API key through code              |
+| `Request`         | Computes a request on the Gemini API              |
+| `StreamRequest`*  | Computes a streaming request on the Gemini API    |
 
-All computations on the Gemini API are done through `GeminiManager.Request` and its variants.
+*Requires `Utilities.Async` package.
+
+All computations on the Gemini API are done through `GeminiManager.Request`, `GeminiManager.StreamRequest` and their variants.
 
 In this documentation, the fields and properties of each type will not be explained. Every type has been fully documented in code, so
 please check the code docstrings to learn more about each type.
@@ -31,20 +62,17 @@ need to use the beta API. You can set the `useBetaApi` boolean parameter in the 
 
 `GeminiManager` has four constant model IDs:
 
-- `Gemini1_5Flash` - [*Gemini 1.5 Flash*](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash)
-
-- `Gemini1_5Pro` - [*Gemini 1.5 Pro*](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro)
-
-- `Gemini1_0Pro` - [*Gemini 1.0 Pro*](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro)
-
-- `Gemini1_0ProVision` - [*Gemini 1.0 Pro Vision*](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro-vision)
+- [`Gemini1_5Flash`](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash)
+- [`Gemini1_5Pro`](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro)
+- [`Gemini1_0Pro`](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro)
+- [`Gemini1_0ProVision`](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro-vision)
     - Gemini 1.0 Pro Vision is deprecated. Use Use 1.5 Flash (`Gemini1_5Flash`) or 1.5 Pro (`Gemini1_5Pro`) instead.
 
+By default, all model requests use [*Gemini 1.5 Flash*](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash).
+This can be changed by providing the model's ID as a `string` or by providing one of the `GeminiManager` constants to the `model`
+parameter in the request constructor.
 
-By default, all model requests use the [*Gemini 1.5 Flash*](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash)
-model. This can be changed by either providing a string ID or one of the constants to the `model` parameter in the request constructor.
-
-#### Simple GenerateContent (Chat) Request
+#### QuickStart: `generateContent` (Chat) Request
 
 This is a simple request that asks Gemini a question and logs the response to the console.
 
@@ -72,43 +100,7 @@ async void QueryGemini()
 That's all! We give a request argument of type `GeminiChatRequest`, specify that we expect a response of type `GeminiChatResponse`, and voilà!
 We've got the response in `response.Parts[0].Text`!
 
-These are all the types of requests and endpoints that are supported:
-
-- `GeminiChatRequest` | `GeminiChatResponse`:
-    - Available in the `Uralstech.UGemini.Chat` namespace
-    - Generates content from the given model
-    - Runs a `generateContent` request on the model
-
-- `GeminiTokenCountRequest` | `GeminiTokenCountResponse`:
-    - Available in the `Uralstech.UGemini.TokenCounting` namespace
-    - Counts the number of tokens in the given request contents for the given model
-    - Runs a `countTokens` request on the model
-    
-- *`GeminiFileUploadRequest` | `GeminiFileUploadResponse` 🚧:
-    - Available in the `Uralstech.UGemini.FileAPI` namespace
-    - Uploads a file to be available through the File API
-    - Runs an `upload` request on the File/Media API
-    
-- *`GeminiFileListRequest` | `GeminiFileListResponse`:
-    - Available in the `Uralstech.UGemini.FileAPI` namespace
-    - Requests metadata for all existing files uploaded to the File API
-    - Runs a `list` request on the File API
-    
-- *`GeminiFileGetRequest` | `GeminiFile`:
-    - Available in the `Uralstech.UGemini.FileAPI` namespace
-    - Requests metadata for a single file uploaded to the File API
-    - Runs a `get` request on the File API
-    
-- *`GeminiFileDeleteRequest`:
-    - Available in the `Uralstech.UGemini.FileAPI` namespace
-    - Deletes a file uploaded to the File API
-    - Runs a `delete` request on the File API
-    
-🚧 - The feature is being worked on and is unstable
-
-*Part of the File API. More about it further down in the documentation.
-
-#### Multi-turn Chat Request
+#### QuickStart: Multi-turn `generateContent` Request
 
 This is a simple method that maintains the user's chat history with Gemini.
 
@@ -133,8 +125,48 @@ async Task<string> OnChat(string text)
 }
 ```
 
-Here, we simply have a list of `GeminiContent` objects, which tracks the messages of the conversation. Every time `OnChat` is called, the user's request and
-the model's reply are added the the list. That is all!
+Here, we simply have a list of `GeminiContent` objects, which tracks the messages of the conversation.
+Every time `OnChat` is called, the user's request and the model's reply are added the the list.
+
+### `GeminiChatRequest` In-Depth
+
+Available in the `Uralstech.UGemini.Chat` namespace. Generates content from the given model by running a `generateContent` request.
+
+#### Streaming Responses
+
+`GeminiChatRequest` allows you to stream Gemini's response in real-time. You can do so by using `GeminiManager.StreamRequest` and
+utilizing the callback in `GeminiChatRequest`.
+
+You can even stream function calls! Check out the `Streaming Generated Content` sample included in the package.
+
+```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Chat;
+
+[SerializeField] private Text _chatResponse;
+
+async Task<string> OnChat(string text)
+{
+    GeminiChatResponse response = await GeminiManager.Instance.StreamRequest(new GeminiChatRequest(GeminiManager.Gemini1_5Flash)
+    {
+        Contents = new GeminiContent[]
+        {
+            GeminiContent.GetContent(text, GeminiRole.User),
+        },
+    
+        OnPartialResponseReceived = streamedResponse =>
+        {
+            _chatResponse.text = streamedResponse.Parts[0].Text;
+            return Task.CompletedTask;
+        }
+    });
+
+    return response.Parts[0].Text;
+}
+```
+
+If you do not want to use the callback, you can let the `StreamRequest` task run in the background, and access the streamed data from the
+`GeminiChatRequest.StreamedResponse` property.
 
 #### Adding Media Content to Requests
 
@@ -181,17 +213,18 @@ async Task<GeminiContent> GetFileContent(string filePath, GeminiContentType cont
 
 Now, the `GeminiContent` returned by the method can be fed into a chat request!
 
+##### Utility Methods
+
 `GeminiContent` and `GeminiContentBlob` also contain static utility methods to help
 create them from Unity types like `AudioClip` or `Texture2D`:
 
 - `GeminiContent.GetContent`
-    - Can convert `string` messages, `Texture2D` images, *`AudioClip` audio and **`GeminiFile` data to `GeminiContent` objects.
+    - Can convert `string` messages, `Texture2D` images, `AudioClip`* audio and `GeminiFile` data to `GeminiContent` objects.
 
 - `GeminiContentBlob.GetContentBlob`
-    - Can convert `Texture2D` images and *`AudioClip` audio to `GeminiContentBlob` objects.
+    - Can convert `Texture2D` images and `AudioClip`* audio to `GeminiContentBlob` objects.
 
 *Requires [*Utilities.Encoding.Wav*](https://openupm.com/packages/com.utilities.encoder.wav/).
-**More about this further down in the documentation.
 
 #### Function Calling
 
@@ -266,12 +299,10 @@ GeminiTool _geminiFunctions = new GeminiTool()
 For each function, we need a declaration with a name and description. The parameters are an object of type `GeminiSchema`, which defines the
 schema of each of the parameters. The type is of `GeminiSchemaDataType.Object`, and contains the dictionary of parameter schemas.
 
-The key of the dictionary should be the parameter name, and the value should be another `GeminiSchema` object which defines the type, description,
+The keys of the dictionary should be the parameter name, and the values should be `GeminiSchema` objects which define the type, description,
 format, etc. of the parameter.
 
-Finally, we have the `Required` property which tells Gemini which fields are absolutely required in each call.
-
-Now, we can move on to the chat.
+Finally, we have the `Required` property which tells Gemini which fields are absolutely required in each call. Now, we can move on to the chat.
 
 ```csharp
 [SerializeField] private Text _chatResponse;
@@ -285,21 +316,29 @@ public async Task<string> OnChat(string text)
     
     GeminiChatResponse response;
     GeminiFunctionCall functionCall;
+    string responseText = string.Empty;
     do
     {
-        response = await GeminiManager.Instance.Request<GeminiChatResponse>(
-            new GeminiChatRequest(useBetaApi: true)
-            {
-                Contents = contents.ToArray(),
-                Tools = new GeminiTool[] { _geminiFunctions },
-                ToolConfig = GeminiToolConfiguration.GetConfiguration(GeminiFunctionCallingMode.Any),
-            }
-        );
-
-        functionCall = response.Parts[0].FunctionCall;
-        if (functionCall != null)
+        response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(useBetaApi: true)
         {
+            Contents = contents.ToArray(),
+            Tools = new GeminiTool[] { s_geminiFunctions },
+            ToolConfig = GeminiToolConfiguration.GetConfiguration(GeminiFunctionCallingMode.Any),
+        });
+
+        // Don't forget to do this! If the function call is not added to the chat
+        // history, Gemini will throw an error when receiving the response!
+        contents.Add(response.Candidates[0].Content);
+
+        responseText = Array.Find(response.Parts, part => !string.IsNullOrEmpty(part.Text))?.Text;
+        GeminiContentPart[] allFunctionCalls = Array.FindAll(response.Parts, part => part.FunctionCall != null);
+
+        functionCall = null;
+        for (int i = 0; i < allFunctionCalls.Length; i++)
+        {
+            functionCall = allFunctionCalls[i].FunctionCall;
             JObject functionResponse = null;
+
             switch (functionCall.Name)
             {
                 case "printToConsole":
@@ -326,12 +365,15 @@ public async Task<string> OnChat(string text)
                     break;
             }
 
-            contents.Add(GeminiContent.GetContent(functionCall));
-            contents.Add(GeminiContent.GetContent(functionCall.GetResponse(functionResponse)));
+            contents.Add(GeminiContent.GetContent(functionCall.GetResponse(functionResponse ?? new JObject()
+            {
+                ["result"] = "Completed executing function successfully."
+            })));
         }
     } while (functionCall != null);
 
-    return response.Parts[0].Text;
+    _chatResponse.text = responseText;
+    return responseText;
 }
 
 private bool TryChangeTextColor(string color)
@@ -360,18 +402,19 @@ private bool TryChangeTextColor(string color)
 ```
 
 Here, we are going through each response, checking if a function was called, and calling the requested function.
-The response is a JSON object, which is optional. Note the use of `GeminiToolConfiguration.GetConfiguration`, which is a utility method
-to create a `GeminiToolConfiguration` with the given `GeminiFunctionCallingMode`. Here it is `GeminiFunctionCallingMode.Any`, which means
-Gemini will always call at least one function in each conversation.
 
-After the function is called, we respond by adding the call and response to the history. We use the `GetResponse` utility method to get a
+The response is a JSON object, which is optional, but it is recommended to include. Note the use of `GeminiToolConfiguration.GetConfiguration`,
+which is a utility method to create a `GeminiToolConfiguration` with the given `GeminiFunctionCallingMode`. Here, it is `GeminiFunctionCallingMode.Any`,
+which means Gemini will always call at least one function in each conversation.
+
+After the function is called, we respond by adding the calls and responses to the history. We use the `GetResponse` utility method to get a
 `GeminiFunctionResponse` object with the response JSON.
 
-Also, note that the request is using the beta API, as function calling is, as of writing, not available in the production API.
+Function calling is, as of writing, only available in the Beta API.
 
-#### JSON Mode
+#### JSON Response Mode
 
-In JSON mode, Gemini will always respond in a specified JSON response schema.
+In JSON mode, Gemini will always respond in the specified JSON response schema.
 
 ```csharp
 using Uralstech.UGemini;
@@ -428,14 +471,45 @@ We have told Gemini to split the response into the parameters, where a mathemati
 
 The `GeminiSchema` object is the same type used for function calling.
 
+JSON mode is also only available in the Beta API.
+
+### `GeminiTokenCountRequest`
+
+Available in the `Uralstech.UGemini.TokenCounting` namespace. Counts the number of tokens in the
+given request contents for the given model by running a `countTokens` request.
+
+```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.TokenCounting;
+
+public async Task<int> CountTokens(string text)
+{
+    GeminiTokenCountResponse response = await GeminiManager.Instance.Request<GeminiTokenCountResponse>(new GeminiTokenCountRequest(GeminiManager.Gemini1_5Flash)
+    {
+        Contents = new GeminiContent[]
+        {
+            GeminiContent.GetContent(text, GeminiRole.User),
+        },
+    });
+    
+    return response.TotalTokens;
+}
+```
+
+We just include the content to count the tokens of and send the request! You can also have
+a whole `GeminiChatRequest` as an argument in `GeminiTokenCountRequest.CompleteRequest` for
+the token counting request to see how much a chat request has/will cost you.
+
 ### File API
 
 The Gemini File API can be used to store data on the cloud for future prompting with the Gemini models. The code for most of these requests is very simple.
 
-#### Uploading Files 🚧
-    
-The package's code for this API method is unstable.
+All File API types are available in the `Uralstech.UGemini.FileAPI` namespace. The File API is only available in the Beta API.
 
+#### Uploading Files
+
+Uploads a file to be available through the File API by running an `upload` request.
+    
 ```csharp
 using Uralstech.UGemini;
 using Uralstech.UGemini.FileAPI;
@@ -444,6 +518,10 @@ public async void UploadFile(string text)
 {
     GeminiFileUploadResponse response = await GeminiManager.Instance.Request<GeminiFileUploadResponse>(new GeminiFileUploadRequest(GeminiContentType.TextPlain.MimeType())
     {
+        File = new GeminiFileUploadMetaData()
+        {
+            DisplayName = "I'm a File",
+        },
         RawData = Encoding.UTF8.GetBytes(text)
     });
     
@@ -471,8 +549,14 @@ private string FileToText(GeminiFile file)
 ```
 
 That's it! Convert your data to a byte array and just give the right MIME type as an argument!
+Setting the file upload metadata is optional.
 
-#### Listing Available Files
+Please note that setting `GeminiFileUploadMetaData.Name` will always throw an error and it seems
+to be an API issue.
+
+#### Listing All Files
+
+Requests the metadata for all existing files uploaded to the File API by running a `list` request.
 
 ```csharp
 using Uralstech.UGemini;
@@ -498,7 +582,9 @@ public async void ListFiles(int maxFiles = 10, string pageToken = string.Empty)
 in the multiple pages of file metadata. You can leave it empty to get the first page, and use `response.NextPageToken` as the token for
 for the next page, and run the request again with it.
 
-#### Retrieving a File
+#### Retrieving File Metadata
+
+Requests metadata for a single file uploaded to the File API by running a `get` request.
 
 ```csharp
 using Uralstech.UGemini;
@@ -515,6 +601,8 @@ Just put in the file's ID! You can get it from the `GeminiFile.Name` property, b
 
 #### Deleting a File
 
+Deletes a file uploaded to the File API by running a `delete` request.
+
 ```csharp
 using Uralstech.UGemini;
 using Uralstech.UGemini.FileAPI;
@@ -530,4 +618,28 @@ Again, just put in the file's ID!
 
 ### Samples
 
-For full-fledged examples of the features of this package, check out the samples in the Unity Package Manager.
+For full-fledged examples of the features of this package, check out the samples included in the package:
+
+#### Mult-turn Chat
+
+A sample scene showing a multi-turn chat system. [***GitHub Source***](https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/SimpleMultiTurnChatSample)
+
+#### Function Calling
+
+A sample scene showing a function calling system. [***GitHub Source***](https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/FunctionCallingSample)
+
+#### Streaming Generated Content
+
+A sample showing a system which streams Gemini's responses, including function calls. [***GitHub Source***](https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/StreamedFunctionCallingSample)
+
+#### JSON Response
+
+A sample scene showing a system where Gemini responds in a specified JSON format. [***GitHub Source***](https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/JSONResponseSample)
+
+#### Prompting with File API
+
+A sample scene with a system to create, delete, retrieve, list and prompt Gemini with files stored in the File/Media API endpoints. [***GitHub Source***](https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/FileAPISample)
+
+#### Token Counting
+
+A sample scene showing a token counting system using the `countTokens` endpoint. [***GitHub Source***](https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/TokenCounterSample)
