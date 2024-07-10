@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Uralstech.UGemini
 {
+    /// <summary>
+    /// Extensions for Unity types.
+    /// </summary>
     public static class UnityExtensions
     {
 #if UTILITIES_ENCODING_WAV_1_0_0_OR_GREATER && UTILITIES_AUDIO_1_0_0_OR_GREATER

@@ -21,11 +21,12 @@ var searchData=
   ['imagewebp_18',['ImageWebP',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca5494a4a29108bd6bc1e80b733652b3f0',1,'Uralstech::UGemini']]],
   ['index_19',['Index',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_candidate.html#a29d57f52a884fc096671fd799738923d',1,'Uralstech::UGemini::Chat::GeminiCandidate']]],
   ['inlinedata_20',['InlineData',['../class_uralstech_1_1_u_gemini_1_1_gemini_content_part.html#abb1cf8411242d1e70d67dadf87bfc0e2',1,'Uralstech::UGemini::GeminiContentPart']]],
-  ['int_21',['Int',['../namespace_uralstech_1_1_u_gemini_1_1_schema.html#abb0c9f7d6bbb1d4940ef8553d6377068a1686a6c336b71b36d77354cea19a8b52',1,'Uralstech::UGemini::Schema']]],
-  ['integer_22',['Integer',['../namespace_uralstech_1_1_u_gemini_1_1_schema.html#ad730020272e108c03945937e79a5055aaa0faef0851b4294c06f2b94bb1cb2044',1,'Uralstech::UGemini::Schema']]],
-  ['isappendable_23',['IsAppendable',['../class_uralstech_1_1_u_gemini_1_1_gemini_content_part.html#a1162b9168947253cbf34c1c578d6848a',1,'Uralstech::UGemini::GeminiContentPart']]],
-  ['isbetaapi_24',['IsBetaApi',['../class_uralstech_1_1_u_gemini_1_1_exceptions_1_1_gemini_request_exception.html#a7048a21b7f7b7f09785006d3c107e26f',1,'Uralstech::UGemini::Exceptions::GeminiRequestException']]],
-  ['isempty_25',['IsEmpty',['../class_uralstech_1_1_u_gemini_1_1_gemini_content_part.html#a1377210d2713fc59d67a0fcf9be11660',1,'Uralstech::UGemini::GeminiContentPart']]],
-  ['isstreaming_26',['IsStreaming',['../class_uralstech_1_1_u_gemini_1_1_gemini_request_metadata.html#a3420538a582860aeafe39fd5ff67f329',1,'Uralstech::UGemini::GeminiRequestMetadata']]],
-  ['items_27',['Items',['../class_uralstech_1_1_u_gemini_1_1_schema_1_1_gemini_schema.html#ac07bef009172baa056cbe393cc7502a8',1,'Uralstech::UGemini::Schema::GeminiSchema']]]
+  ['instance_21',['Instance',['../class_uralstech_1_1_u_gemini_1_1_utils_1_1_singleton_1_1_singleton.html#a84485d2d649cb79a823a37e96821067c',1,'Uralstech::UGemini::Utils::Singleton::Singleton']]],
+  ['int_22',['Int',['../namespace_uralstech_1_1_u_gemini_1_1_schema.html#abb0c9f7d6bbb1d4940ef8553d6377068a1686a6c336b71b36d77354cea19a8b52',1,'Uralstech::UGemini::Schema']]],
+  ['integer_23',['Integer',['../namespace_uralstech_1_1_u_gemini_1_1_schema.html#ad730020272e108c03945937e79a5055aaa0faef0851b4294c06f2b94bb1cb2044',1,'Uralstech::UGemini::Schema']]],
+  ['isappendable_24',['IsAppendable',['../class_uralstech_1_1_u_gemini_1_1_gemini_content_part.html#a1162b9168947253cbf34c1c578d6848a',1,'Uralstech::UGemini::GeminiContentPart']]],
+  ['isbetaapi_25',['IsBetaApi',['../class_uralstech_1_1_u_gemini_1_1_exceptions_1_1_gemini_request_exception.html#a7048a21b7f7b7f09785006d3c107e26f',1,'Uralstech::UGemini::Exceptions::GeminiRequestException']]],
+  ['isempty_26',['IsEmpty',['../class_uralstech_1_1_u_gemini_1_1_gemini_content_part.html#a1377210d2713fc59d67a0fcf9be11660',1,'Uralstech::UGemini::GeminiContentPart']]],
+  ['isstreaming_27',['IsStreaming',['../class_uralstech_1_1_u_gemini_1_1_gemini_request_metadata.html#a3420538a582860aeafe39fd5ff67f329',1,'Uralstech::UGemini::GeminiRequestMetadata']]],
+  ['items_28',['Items',['../class_uralstech_1_1_u_gemini_1_1_schema_1_1_gemini_schema.html#ac07bef009172baa056cbe393cc7502a8',1,'Uralstech::UGemini::Schema::GeminiSchema']]]
 ];

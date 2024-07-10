@@ -2,11 +2,18 @@ using UnityEngine;
 
 namespace Uralstech.UGemini.Utils.Singleton
 {
+    /// <summary>
+    /// Utility class to make inheriting types singletons.
+    /// </summary>
+    /// <typeparam name="T">The type to be made a singleton.</typeparam>
     public class Singleton<T> : MonoBehaviour
         where T : Component
     {
         private static T s_instance;
 
+        /// <summary>
+        /// The active instance of type <typeparamref name="T"/>.
+        /// </summary>
         public static T Instance
         {
             get

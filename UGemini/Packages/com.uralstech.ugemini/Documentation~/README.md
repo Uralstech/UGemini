@@ -4,6 +4,10 @@
 
 `GeminiManager.Compute` and parts of related types have been deprecated. Please check `README_OLD.md` for documentation regarding the deprecated code.
 
+### Reference Manual
+
+See `refman.pdf` for the offline reference manual or go to <https://uralstech.github.io/UGemini/>.
+
 ### Table of Contents
 
 - [**Setup**](#setup)

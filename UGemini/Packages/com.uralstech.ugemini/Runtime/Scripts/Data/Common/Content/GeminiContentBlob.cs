@@ -33,7 +33,7 @@ namespace Uralstech.UGemini
         /// Converts the given <see cref="AudioClip"/> to a <see cref="GeminiContentBlob"/>.
         /// </summary>
         /// <remarks>
-        /// Requires <see href="https://openupm.com/packages/com.utilities.encoder.wav/">Utilities.Encoding.Wav</see>.
+        /// Requires <a href="https://openupm.com/packages/com.utilities.encoder.wav/">Utilities.Encoding.Wav</a>.
         /// </remarks>
         /// <param name="audio">The <see cref="AudioClip"/> to use.</param>
         /// <returns>A new <see cref="GeminiContentBlob"/> object.</returns>

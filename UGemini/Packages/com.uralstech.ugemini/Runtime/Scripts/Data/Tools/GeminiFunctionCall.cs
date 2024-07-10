@@ -20,7 +20,7 @@ namespace Uralstech.UGemini.Tools
         /// Optional. The function parameters and values in JSON object format.
         /// </summary>
         /// <remarks>
-        /// See Protocol Buffer format here: <see href="https://protobuf.dev/reference/protobuf/google.protobuf/#google.protobuf.Struct"/>.
+        /// See Protocol Buffer <a href="https://protobuf.dev/reference/protobuf/google.protobuf/#google.protobuf.Struct">Struct</a>.
         /// </remarks>
         [JsonProperty("args", DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public JObject Arguments = null;
