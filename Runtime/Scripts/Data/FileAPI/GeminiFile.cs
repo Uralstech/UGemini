@@ -5,6 +5,9 @@ using Uralstech.UGemini.Status;
 
 namespace Uralstech.UGemini.FileAPI
 {
+    /// <summary>
+    /// Metadata for a file uploaded to the File API.
+    /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class GeminiFile
     {

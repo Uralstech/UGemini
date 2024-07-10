@@ -31,7 +31,6 @@
         /// <summary>
         /// Creates a new <see cref="GeminiFileGetRequest"/>.
         /// </summary>
-        /// <param name="fileId">The ID of the file to get.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
         public GeminiFileListRequest(bool useBetaApi = true)
         {

@@ -10,7 +10,7 @@ namespace Uralstech.UGemini
     public static class EnumExtensions
     {
         /// <summary>
-        /// Converts a <see cref="GeminiContentType"/> to its <see href="https://www.iana.org/assignments/media-types/media-types.xhtml">MIME type</see>.
+        /// Converts a <see cref="GeminiContentType"/> to its <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">MIME type</a>.
         /// </summary>
         /// <param name="enumValue">The <see cref="GeminiContentType"/> value.</param>
         /// <returns>The MIME type as a string.</returns>

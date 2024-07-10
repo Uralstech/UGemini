@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 namespace Uralstech.UGemini.Schema
 {
     /// <summary>
-    /// Contains the list of OpenAPI data types as defined by <see href="https://spec.openapis.org/oas/v3.0.3#data-types"/>.
+    /// Contains the list of OpenAPI data types as defined by the <a href="https://spec.openapis.org/oas/v3.0.3#data-types">OpenAPI Specification</a>.
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum GeminiSchemaDataType
