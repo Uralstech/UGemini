@@ -15,6 +15,9 @@ using Utilities.Async;
 
 namespace Uralstech.UGemini.Utils.Web
 {
+    /// <summary>
+    /// Extensions for the <see cref="UnityWebRequest"/> type.
+    /// </summary>
     public static class WebRequestHelper
     {
 #if UTILITIES_ASYNC_1_0_0_OR_GREATER
@@ -25,7 +28,7 @@ namespace Uralstech.UGemini.Utils.Web
         /// <param name="serverSentEventHandler">
         /// The callback to handle Server Sent Events (SSEs).<br/>
         /// Parameters:<br/>
-        ///     - <see cref="List{}">List&lt;<see cref="JToken"/>&gt;</see> : All SSEs, excluding the latest one.<br/>
+        ///     - List&lt;<see cref="JToken"/>&gt; : All SSEs, excluding the latest one.<br/>
         ///     - <see cref="JToken"/> : The latest SSE.<br/>
         /// Return type: <see cref="Task"/>
         /// </param>

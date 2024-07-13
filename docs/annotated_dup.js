@@ -33,6 +33,13 @@ var annotated_dup =
           [ "GeminiFileVideoMetaData", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_video_meta_data.html", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_video_meta_data" ],
           [ "GeminiTimeSpanJsonConverter", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_time_span_json_converter.html", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_time_span_json_converter" ]
         ] ],
+        [ "Models", "namespace_uralstech_1_1_u_gemini_1_1_models.html", [
+          [ "GeminiModel", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model" ],
+          [ "GeminiModelGetRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_get_request.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_get_request" ],
+          [ "GeminiModelId", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id" ],
+          [ "GeminiModelListRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request" ],
+          [ "GeminiModelListResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_response.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_response" ]
+        ] ],
         [ "Schema", "namespace_uralstech_1_1_u_gemini_1_1_schema.html", [
           [ "GeminiSchema", "class_uralstech_1_1_u_gemini_1_1_schema_1_1_gemini_schema.html", "class_uralstech_1_1_u_gemini_1_1_schema_1_1_gemini_schema" ]
         ] ],
@@ -57,9 +64,13 @@ var annotated_dup =
         ] ],
         [ "Utils", "namespace_uralstech_1_1_u_gemini_1_1_utils.html", [
           [ "Singleton", "namespace_uralstech_1_1_u_gemini_1_1_utils_1_1_singleton.html", [
-            [ "Singleton", "class_uralstech_1_1_u_gemini_1_1_utils_1_1_singleton_1_1_singleton.html", null ]
+            [ "Singleton", "class_uralstech_1_1_u_gemini_1_1_utils_1_1_singleton_1_1_singleton.html", "class_uralstech_1_1_u_gemini_1_1_utils_1_1_singleton_1_1_singleton" ]
+          ] ],
+          [ "Web", "namespace_uralstech_1_1_u_gemini_1_1_utils_1_1_web.html", [
+            [ "WebRequestHelper", "class_uralstech_1_1_u_gemini_1_1_utils_1_1_web_1_1_web_request_helper.html", "class_uralstech_1_1_u_gemini_1_1_utils_1_1_web_1_1_web_request_helper" ]
           ] ]
         ] ],
+        [ "EnumExtensions", "class_uralstech_1_1_u_gemini_1_1_enum_extensions.html", "class_uralstech_1_1_u_gemini_1_1_enum_extensions" ],
         [ "GeminiContent", "class_uralstech_1_1_u_gemini_1_1_gemini_content.html", "class_uralstech_1_1_u_gemini_1_1_gemini_content" ],
         [ "GeminiContentBlob", "class_uralstech_1_1_u_gemini_1_1_gemini_content_blob.html", "class_uralstech_1_1_u_gemini_1_1_gemini_content_blob" ],
         [ "GeminiContentPart", "class_uralstech_1_1_u_gemini_1_1_gemini_content_part.html", "class_uralstech_1_1_u_gemini_1_1_gemini_content_part" ],
@@ -72,7 +83,8 @@ var annotated_dup =
         [ "IGeminiMultiPartPostRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_multi_part_post_request.html", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_multi_part_post_request" ],
         [ "IGeminiPostRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_post_request.html", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_post_request" ],
         [ "IGeminiRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_request.html", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_request" ],
-        [ "IGeminiStreamablePostRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request" ]
+        [ "IGeminiStreamablePostRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request" ],
+        [ "UnityExtensions", "class_uralstech_1_1_u_gemini_1_1_unity_extensions.html", "class_uralstech_1_1_u_gemini_1_1_unity_extensions" ]
       ] ]
     ] ]
 ];

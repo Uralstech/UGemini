@@ -3,6 +3,7 @@ using Newtonsoft.Json.Serialization;
 using System;
 using System.ComponentModel;
 using Uralstech.UGemini.Chat;
+using Uralstech.UGemini.Models;
 
 namespace Uralstech.UGemini.TokenCounting
 {
@@ -28,7 +29,7 @@ namespace Uralstech.UGemini.TokenCounting
         /// The model to use.
         /// </summary>
         [JsonIgnore]
-        public string Model;
+        public GeminiModelId Model;
 
         /// <summary>
         /// The API version to use.
@@ -43,7 +44,7 @@ namespace Uralstech.UGemini.TokenCounting
         /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"https://generativelanguage.googleapis.com/{ApiVersion}/models/{Model}:countTokens";
+            return $"https://generativelanguage.googleapis.com/{ApiVersion}/{Model.Name}:countTokens";
         }
 
         /// <summary>
@@ -51,13 +52,14 @@ namespace Uralstech.UGemini.TokenCounting
         /// </summary>
         /// <param name="model">The model to use.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiTokenCountRequest(string model = GeminiManager.Gemini1_5Flash, bool useBetaApi = false)
+        public GeminiTokenCountRequest(GeminiModelId model, bool useBetaApi = false)
         {
             Model = model;
             ApiVersion = useBetaApi ? "v1beta" : "v1";
         }
 
-        [Obsolete("Please use a different constructor as this constructor is only for the deprecated GeminiManager.Compute method.")]
+        /// \deprecated Use <see cref="GeminiTokenCountRequest(GeminiModelId, bool)"/> as this constructor is only for the deprecated <see cref="GeminiManager.Compute{TRequest, TResponse}(TRequest, GeminiManager.RequestEndPoint, string, bool)"/> method.
+        [Obsolete("Use GeminiTokenCountRequest(GeminiModelId, bool) as this constructor is only for the deprecated GeminiManager.Compute method.")]
         public GeminiTokenCountRequest() { }
 
         /// <inheritdoc/>

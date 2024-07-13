@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using Uralstech.UGemini.Models;
 using Uralstech.UGemini.TokenCounting;
 
 namespace Uralstech.UGemini.Samples
@@ -19,7 +20,7 @@ namespace Uralstech.UGemini.Samples
                 return;
             }
 
-            GeminiTokenCountResponse response = await GeminiManager.Instance.Request<GeminiTokenCountResponse>(new GeminiTokenCountRequest(GeminiManager.Gemini1_5Flash, _useBeta)
+            GeminiTokenCountResponse response = await GeminiManager.Instance.Request<GeminiTokenCountResponse>(new GeminiTokenCountRequest(GeminiModel.Gemini1_5Flash, _useBeta)
             {
                 Contents = new GeminiContent[]
                 {

@@ -11,7 +11,8 @@ namespace Uralstech.UGemini.Exceptions
         /// <summary>
         /// The endpoint of the failed request.
         /// </summary>
-        [Obsolete("Please use GeminiRequestException.RequestEndpoint as this property is only for the deprecated GeminiManager.Compute method.")]
+        /// \deprecated Use <see cref="RequestEndPoint"/> as this property is only for the deprecated <see cref="GeminiManager.Compute{TRequest, TResponse}(TRequest, GeminiManager.RequestEndPoint, string, bool)"/> method.
+        [Obsolete("Use GeminiRequestException.RequestEndpoint as this property is only for the deprecated GeminiManager.Compute method.")]
         public GeminiManager.RequestEndPoint RequestEndPoint;
 
         /// <summary>
@@ -37,7 +38,8 @@ namespace Uralstech.UGemini.Exceptions
         /// <summary>
         /// The request's API version as a string.
         /// </summary>
-        [Obsolete("Please use GeminiRequestException.IsBetaApi as this property is only for the deprecated GeminiManager.Compute method.")]
+        /// \deprecated Use <see cref="IsBetaApi"/> as this property is only for the deprecated <see cref="GeminiManager.Compute{TRequest, TResponse}(TRequest, GeminiManager.RequestEndPoint, string, bool)"/> method.
+        [Obsolete("Use GeminiRequestException.IsBetaApi as this property is only for the deprecated GeminiManager.Compute method.")]
         public string ApiVersionString;
 
         /// <summary>
@@ -45,7 +47,7 @@ namespace Uralstech.UGemini.Exceptions
         /// </summary>
         public bool IsBetaApi;
 
-        [Obsolete("Please use a different constructor as this constructor is only for the deprecated GeminiManager.Compute method.")]
+        [Obsolete]
         internal GeminiRequestException(GeminiManager.RequestEndPoint requestEndPoint, UnityWebRequest request, string apiVersion)
             : base($"Failed Gemini request: " +
                   $"Request API version: {apiVersion} | " +

@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using Uralstech.UGemini;
 using Uralstech.UGemini.Chat;
 using Uralstech.UGemini.FileAPI;
+using Uralstech.UGemini.Models;
 
 public class FileApiChatManager : MonoBehaviour
 {
@@ -101,7 +102,7 @@ public class FileApiChatManager : MonoBehaviour
         }
 
         GeminiFile file = await GeminiManager.Instance.Request<GeminiFile>(new GeminiFileGetRequest(promptFile));
-        GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(GeminiManager.Gemini1_5Flash, true)
+        GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(GeminiModel.Gemini1_5Flash, true)
         {
             Contents = new GeminiContent[]
             {

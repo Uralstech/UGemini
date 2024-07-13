@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">UGemini<span id="projectnumber">&#160;1.2.3</span>
+   <div id="projectname">UGemini<span id="projectnumber">&#160;1.3.0</span>
    </div>
    <div id="projectbrief">A C# wrapper for the Google Gemini API.</div>
   </td>
@@ -143,41 +143,40 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab540f88449967ebfc8f67e1bb5101d75" id="r_ab540f88449967ebfc8f67e1bb5101d75"><td class="memItemLeft" align="right" valign="top">async Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab540f88449967ebfc8f67e1bb5101d75">Request</a> (<a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_delete_request.html">IGeminiDeleteRequest</a> request)</td></tr>
 <tr class="memdesc:ab540f88449967ebfc8f67e1bb5101d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a request on the Gemini API.  <br /></td></tr>
 <tr class="separator:ab540f88449967ebfc8f67e1bb5101d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd7e9c3ee0423260780ac32f834b1fc" id="r_aebd7e9c3ee0423260780ac32f834b1fc"><td class="memItemLeft" align="right" valign="top">async Task&lt; TResponse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebd7e9c3ee0423260780ac32f834b1fc">StreamRequest&lt; TResponse &gt;</a> (<a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html">IGeminiStreamablePostRequest</a>&lt; TResponse &gt; request)</td></tr>
+<tr class="memdesc:aebd7e9c3ee0423260780ac32f834b1fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a streaming request on the Gemini API.  <br /></td></tr>
+<tr class="separator:aebd7e9c3ee0423260780ac32f834b1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89b800c896b599e48e247ab98a58b088" id="r_a89b800c896b599e48e247ab98a58b088"><td class="memItemLeft" align="right" valign="top">async Task&lt; TResponse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89b800c896b599e48e247ab98a58b088">Compute&lt; TRequest, TResponse &gt;</a> (TRequest request, <a class="el" href="#a425aa6a4ccc3d1a7ebf9d83ee2050782">RequestEndPoint</a> endpoint, string model=<a class="el" href="#a4c1005ecacfe4dcc078de5b1538fdc6f">Gemini1_5Flash</a>, bool useBeta=false)</td></tr>
 <tr class="memdesc:a89b800c896b599e48e247ab98a58b088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a request in the Gemini API.  <br /></td></tr>
 <tr class="separator:a89b800c896b599e48e247ab98a58b088"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a041763144e2402bb9d8e53152956553f" id="r_a041763144e2402bb9d8e53152956553f"><td class="memItemLeft" align="right" valign="top"><a id="a041763144e2402bb9d8e53152956553f" name="a041763144e2402bb9d8e53152956553f"></a>
-const string&#160;</td><td class="memItemRight" valign="bottom"><b>Gemini1_0ProVision</b> = &quot;gemini-pro-vision&quot;</td></tr>
+<tr class="memitem:a041763144e2402bb9d8e53152956553f" id="r_a041763144e2402bb9d8e53152956553f"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a041763144e2402bb9d8e53152956553f">Gemini1_0ProVision</a> = &quot;gemini-pro-vision&quot;</td></tr>
 <tr class="memdesc:a041763144e2402bb9d8e53152956553f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro-vision">Note: Gemini 1.0 Pro Vision is deprecated. Use 1.5 Flash or 1.5 Pro instead. <br  />
 <br  />
  Gemini 1.0 Pro Vision is a performance-optimized multimodal model that can perform visual-related tasks.<br  />
  For example, 1.0 Pro Vision can generate image descriptions, identify objects present in images, provide<br  />
  information about places or objects present in images, and more. </a> <br  />
 <br  />
- Supports image, video and text input. <br /></td></tr>
+ Supports image, video and text input.  <br /></td></tr>
 <tr class="separator:a041763144e2402bb9d8e53152956553f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a756739fea8919da8ab6d56c5c10dc370" id="r_a756739fea8919da8ab6d56c5c10dc370"><td class="memItemLeft" align="right" valign="top"><a id="a756739fea8919da8ab6d56c5c10dc370" name="a756739fea8919da8ab6d56c5c10dc370"></a>
-const string&#160;</td><td class="memItemRight" valign="bottom"><b>Gemini1_0Pro</b> = &quot;gemini-1.0-pro&quot;</td></tr>
+<tr class="memitem:a756739fea8919da8ab6d56c5c10dc370" id="r_a756739fea8919da8ab6d56c5c10dc370"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a756739fea8919da8ab6d56c5c10dc370">Gemini1_0Pro</a> = &quot;gemini-1.0-pro&quot;</td></tr>
 <tr class="memdesc:a756739fea8919da8ab6d56c5c10dc370"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro">Gemini 1.0 Pro is an NLP model that handles tasks like multi-turn text and code chat, and code generation. </a> <br  />
 <br  />
- Supports text input. <br /></td></tr>
+ Supports text input.  <br /></td></tr>
 <tr class="separator:a756739fea8919da8ab6d56c5c10dc370"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0718ada289434a1fdd702eac7e5c870a" id="r_a0718ada289434a1fdd702eac7e5c870a"><td class="memItemLeft" align="right" valign="top"><a id="a0718ada289434a1fdd702eac7e5c870a" name="a0718ada289434a1fdd702eac7e5c870a"></a>
-const string&#160;</td><td class="memItemRight" valign="bottom"><b>Gemini1_5Pro</b> = &quot;gemini-1.5-pro&quot;</td></tr>
+<tr class="memitem:a0718ada289434a1fdd702eac7e5c870a" id="r_a0718ada289434a1fdd702eac7e5c870a"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0718ada289434a1fdd702eac7e5c870a">Gemini1_5Pro</a> = &quot;gemini-1.5-pro&quot;</td></tr>
 <tr class="memdesc:a0718ada289434a1fdd702eac7e5c870a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro">Gemini 1.5 Pro is a mid-size multimodal model that is optimized for a wide-range of reasoning tasks.<br  />
  1.5 Pro can process large amounts of data at once, including 2 hours of video, 19 hours of audio,<br  />
  codebases with 60,000 lines of code, or 2,000 pages of text. </a> <br  />
 <br  />
- Supports audio, image, video and text input. <br /></td></tr>
+ Supports audio, image, video and text input.  <br /></td></tr>
 <tr class="separator:a0718ada289434a1fdd702eac7e5c870a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c1005ecacfe4dcc078de5b1538fdc6f" id="r_a4c1005ecacfe4dcc078de5b1538fdc6f"><td class="memItemLeft" align="right" valign="top"><a id="a4c1005ecacfe4dcc078de5b1538fdc6f" name="a4c1005ecacfe4dcc078de5b1538fdc6f"></a>
-const string&#160;</td><td class="memItemRight" valign="bottom"><b>Gemini1_5Flash</b> = &quot;gemini-1.5-flash&quot;</td></tr>
+<tr class="memitem:a4c1005ecacfe4dcc078de5b1538fdc6f" id="r_a4c1005ecacfe4dcc078de5b1538fdc6f"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c1005ecacfe4dcc078de5b1538fdc6f">Gemini1_5Flash</a> = &quot;gemini-1.5-flash&quot;</td></tr>
 <tr class="memdesc:a4c1005ecacfe4dcc078de5b1538fdc6f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash">Gemini 1.5 Flash is a fast and versatile multimodal model for scaling across diverse tasks. </a> <br  />
 <br  />
- Supports audio, image, video and text input. <br /></td></tr>
+ Supports audio, image, video and text input.  <br /></td></tr>
 <tr class="separator:a4c1005ecacfe4dcc078de5b1538fdc6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -204,10 +203,13 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
 </div><div class="memdoc">
 
 <p>The request endpoint. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated</a></b></dt><dd>Use <a class="el" href="#adc073fccf089ba4c89b6c1730deef63c" title="Computes a request on the Gemini API.">Request&lt;TResponse&gt;(IGeminiPostRequest)</a> instead, as it is more generic and supports more request types. </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a425aa6a4ccc3d1a7ebf9d83ee2050782a55dcdf017b51fc96f7b5f9d63013b95d" name="a425aa6a4ccc3d1a7ebf9d83ee2050782a55dcdf017b51fc96f7b5f9d63013b95d"></a>Chat&#160;</td><td class="fielddoc"><p>The chat endpoint. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated</a></b></dt><dd></dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a425aa6a4ccc3d1a7ebf9d83ee2050782a85a63de01cd75e7a87a44cc632a045c5" name="a425aa6a4ccc3d1a7ebf9d83ee2050782a85a63de01cd75e7a87a44cc632a045c5"></a>CountTokens&#160;</td><td class="fielddoc"><p>The token counting endpoint. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated</a></b></dt><dd></dd></dl>
 </td></tr>
 </table>
 
@@ -281,6 +283,7 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
   </table>
   </dd>
 </dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated</a></b></dt><dd>Use <a class="el" href="#adc073fccf089ba4c89b6c1730deef63c" title="Computes a request on the Gemini API.">Request&lt;TResponse&gt;(IGeminiPostRequest)</a> instead, as it is more generic and supports more request types. </dd></dl>
 
 </div>
 </div>
@@ -450,6 +453,167 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aebd7e9c3ee0423260780ac32f834b1fc" name="aebd7e9c3ee0423260780ac32f834b1fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebd7e9c3ee0423260780ac32f834b1fc">&#9670;&#160;</a></span>StreamRequest&lt; TResponse &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; TResponse &gt; Uralstech.UGemini.GeminiManager.StreamRequest&lt; TResponse &gt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html">IGeminiStreamablePostRequest</a>&lt; TResponse &gt;</td>          <td class="paramname"><span class="paramname"><em>request</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes a streaming request on the Gemini API. </p>
+<p>Use callbacks in the request object to receive the streamed data. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TResponse</td><td>The response type. For example, a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html" title="Request to generate a response from the model.">Chat.GeminiChatRequest</a> corresponds to a response type of <a class="el" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_response.html" title="Response from the model supporting multiple candidates.">Chat.GeminiChatResponse</a>, and a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_request.html" title="Request to count tokens in given content.">TokenCounting.GeminiTokenCountRequest</a> corresponds to a response of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_response.html" title="A response from CountTokens.">TokenCounting.GeminiTokenCountResponse</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>The request object.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">GeminiRequestException</td><td>Thrown when the API request fails.</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>TResponse</em></td><td>&#160;:</td><td valign="top"><em>IAppendableData&lt;TResponse&gt;</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a756739fea8919da8ab6d56c5c10dc370" name="a756739fea8919da8ab6d56c5c10dc370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a756739fea8919da8ab6d56c5c10dc370">&#9670;&#160;</a></span>Gemini1_0Pro</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string Uralstech.UGemini.GeminiManager.Gemini1_0Pro = &quot;gemini-1.0-pro&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro">Gemini 1.0 Pro is an NLP model that handles tasks like multi-turn text and code chat, and code generation. </a> <br  />
+<br  />
+ Supports text input. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated</a></b></dt><dd>Use <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#a8cf014ae3cac1b512d34ad88b4b3ec86" title="Gemini 1.0 Pro is an NLP model that handles tasks like multi-turn text and code chat,...">Models.GeminiModel.Gemini1_0Pro</a> instead. </dd></dl>
+
+</div>
+</div>
+<a id="a041763144e2402bb9d8e53152956553f" name="a041763144e2402bb9d8e53152956553f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a041763144e2402bb9d8e53152956553f">&#9670;&#160;</a></span>Gemini1_0ProVision</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string Uralstech.UGemini.GeminiManager.Gemini1_0ProVision = &quot;gemini-pro-vision&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro-vision">Note: Gemini 1.0 Pro Vision is deprecated. Use 1.5 Flash or 1.5 Pro instead. <br  />
+<br  />
+ Gemini 1.0 Pro Vision is a performance-optimized multimodal model that can perform visual-related tasks.<br  />
+ For example, 1.0 Pro Vision can generate image descriptions, identify objects present in images, provide<br  />
+ information about places or objects present in images, and more. </a> <br  />
+<br  />
+ Supports image, video and text input. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated</a></b></dt><dd>Use <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#a639af8e6822eda8126e4b4971cf64664" title="Note: Gemini 1.0 Pro Vision is deprecated. Use 1.5 Flash or 1.5 Pro instead.    Gemini 1....">Models.GeminiModel.Gemini1_0ProVision</a> instead. </dd></dl>
+
+</div>
+</div>
+<a id="a4c1005ecacfe4dcc078de5b1538fdc6f" name="a4c1005ecacfe4dcc078de5b1538fdc6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1005ecacfe4dcc078de5b1538fdc6f">&#9670;&#160;</a></span>Gemini1_5Flash</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string Uralstech.UGemini.GeminiManager.Gemini1_5Flash = &quot;gemini-1.5-flash&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash">Gemini 1.5 Flash is a fast and versatile multimodal model for scaling across diverse tasks. </a> <br  />
+<br  />
+ Supports audio, image, video and text input. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated</a></b></dt><dd>Use <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#a3b0a0484e82dc1877abb45e3db5fe589" title="Gemini 1.5 Flash is a fast and versatile multimodal model for scaling across diverse tasks....">Models.GeminiModel.Gemini1_5Flash</a> instead. </dd></dl>
+
+</div>
+</div>
+<a id="a0718ada289434a1fdd702eac7e5c870a" name="a0718ada289434a1fdd702eac7e5c870a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0718ada289434a1fdd702eac7e5c870a">&#9670;&#160;</a></span>Gemini1_5Pro</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string Uralstech.UGemini.GeminiManager.Gemini1_5Pro = &quot;gemini-1.5-pro&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro">Gemini 1.5 Pro is a mid-size multimodal model that is optimized for a wide-range of reasoning tasks.<br  />
+ 1.5 Pro can process large amounts of data at once, including 2 hours of video, 19 hours of audio,<br  />
+ codebases with 60,000 lines of code, or 2,000 pages of text. </a> <br  />
+<br  />
+ Supports audio, image, video and text input. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated</a></b></dt><dd>Use <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#adadc5fec3cd85e2d6965bf4de43bddc0" title="Gemini 1.5 Pro is a mid-size multimodal model that is optimized for a wide-range of reasoning tasks....">Models.GeminiModel.Gemini1_5Pro</a> instead. </dd></dl>
 
 </div>
 </div>

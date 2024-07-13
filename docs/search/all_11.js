@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['temperature_0',['Temperature',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_generation_configuration.html#aebe9b20e0ac68dbde83b6a067f1f4163',1,'Uralstech::UGemini::Chat::GeminiGenerationConfiguration']]],
+  ['temperature_0',['Temperature',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_generation_configuration.html#aebe9b20e0ac68dbde83b6a067f1f4163',1,'Uralstech.UGemini.Chat.GeminiGenerationConfiguration.Temperature'],['../class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#a44ece306510970a1a8505f756794c036',1,'Uralstech.UGemini.Models.GeminiModel.Temperature']]],
   ['text_1',['Text',['../class_uralstech_1_1_u_gemini_1_1_gemini_content_part.html#af9e3d8f3de91a004055ee2599a1b75d4',1,'Uralstech::UGemini::GeminiContentPart']]],
   ['textcss_2',['TextCSS',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73cad601acb65e102a8ce83ef5f96d1e716c',1,'Uralstech::UGemini']]],
   ['textcsv_3',['TextCSV',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca945322016ed527f2e00d8fe6ff2ee4e1',1,'Uralstech::UGemini']]],
@@ -13,14 +13,18 @@ var searchData=
   ['textxpython_10',['TextXPython',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca077005b32057d70b83b7b78172c70df8',1,'Uralstech::UGemini']]],
   ['textxtypescript_11',['TextXTypeScript',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca4a07195344ee1042ff85164921294594',1,'Uralstech::UGemini']]],
   ['threshold_12',['Threshold',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_safety_settings.html#a9962d8fe55c7e028f127785234cc1157',1,'Uralstech::UGemini::Chat::GeminiSafetySettings']]],
-  ['tokencount_13',['TokenCount',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_candidate.html#a7719d8ebb0bba1d1091359ab569d6494',1,'Uralstech::UGemini::Chat::GeminiCandidate']]],
-  ['toolconfig_14',['ToolConfig',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html#aa0665fb7c116a965ea787c9cca7e1cc6',1,'Uralstech::UGemini::Chat::GeminiChatRequest']]],
-  ['toolresponse_15',['ToolResponse',['../namespace_uralstech_1_1_u_gemini.html#a0d462193ef311a2c0dcde6730b1cea52afde9e414e674f69454deb52a73765e62',1,'Uralstech::UGemini']]],
-  ['tools_16',['Tools',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html#a3de7382d373ca63482e5f88e57c1c966',1,'Uralstech::UGemini::Chat::GeminiChatRequest']]],
-  ['topk_17',['TopK',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_generation_configuration.html#ae1fe92f6184bd1905a42945dc04db415',1,'Uralstech::UGemini::Chat::GeminiGenerationConfiguration']]],
-  ['topp_18',['TopP',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_generation_configuration.html#a28c175432583ac9519c6abbfc123d3fd',1,'Uralstech::UGemini::Chat::GeminiGenerationConfiguration']]],
-  ['totaltokencount_19',['TotalTokenCount',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_usage_metadata.html#a4cbc44e9304f3cf2605bafb67bc394f1',1,'Uralstech::UGemini::Chat::GeminiUsageMetadata']]],
-  ['totaltokens_20',['TotalTokens',['../class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_response.html#ac30f0c1df0556b19f9c5424f39fcc68e',1,'Uralstech::UGemini::TokenCounting::GeminiTokenCountResponse']]],
-  ['toxicity_21',['Toxicity',['../namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea6882500ce8663d315bd70a1a1c522fe6',1,'Uralstech::UGemini']]],
-  ['type_22',['Type',['../class_uralstech_1_1_u_gemini_1_1_status_1_1_gemini_status_details.html#a75d82313bbaeed25fb132d156b62eec1',1,'Uralstech.UGemini.Status.GeminiStatusDetails.Type'],['../class_uralstech_1_1_u_gemini_1_1_schema_1_1_gemini_schema.html#a898c914eab89fabe3dadaf5e4c5b5afd',1,'Uralstech.UGemini.Schema.GeminiSchema.Type']]]
+  ['tobase64jpeg_13',['ToBase64JPEG',['../class_uralstech_1_1_u_gemini_1_1_unity_extensions.html#ac6ace7cf2fa07f87fa9db77d0f78cd47',1,'Uralstech::UGemini::UnityExtensions']]],
+  ['tobase64png_14',['ToBase64PNG',['../class_uralstech_1_1_u_gemini_1_1_unity_extensions.html#a4793aaaf5bd7c29fab1a57636089416d',1,'Uralstech::UGemini::UnityExtensions']]],
+  ['tobase64wav_15',['ToBase64WAV',['../class_uralstech_1_1_u_gemini_1_1_unity_extensions.html#a18a33cc7348c33e5bd6c1284bdfe8f14',1,'Uralstech::UGemini::UnityExtensions']]],
+  ['tokencount_16',['TokenCount',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_candidate.html#a7719d8ebb0bba1d1091359ab569d6494',1,'Uralstech::UGemini::Chat::GeminiCandidate']]],
+  ['toolconfig_17',['ToolConfig',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html#aa0665fb7c116a965ea787c9cca7e1cc6',1,'Uralstech::UGemini::Chat::GeminiChatRequest']]],
+  ['toolresponse_18',['ToolResponse',['../namespace_uralstech_1_1_u_gemini.html#a0d462193ef311a2c0dcde6730b1cea52afde9e414e674f69454deb52a73765e62',1,'Uralstech::UGemini']]],
+  ['tools_19',['Tools',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html#a3de7382d373ca63482e5f88e57c1c966',1,'Uralstech::UGemini::Chat::GeminiChatRequest']]],
+  ['topk_20',['TopK',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_generation_configuration.html#ae1fe92f6184bd1905a42945dc04db415',1,'Uralstech.UGemini.Chat.GeminiGenerationConfiguration.TopK'],['../class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#af343d66e9fe3fcbc4ba28d1dc991c065',1,'Uralstech.UGemini.Models.GeminiModel.TopK']]],
+  ['topp_21',['TopP',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_generation_configuration.html#a28c175432583ac9519c6abbfc123d3fd',1,'Uralstech.UGemini.Chat.GeminiGenerationConfiguration.TopP'],['../class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#a808cb740ff9440b5d73dcd3f26233f18',1,'Uralstech.UGemini.Models.GeminiModel.TopP']]],
+  ['totaltokencount_22',['TotalTokenCount',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_usage_metadata.html#a4cbc44e9304f3cf2605bafb67bc394f1',1,'Uralstech::UGemini::Chat::GeminiUsageMetadata']]],
+  ['totaltokens_23',['TotalTokens',['../class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_response.html#ac30f0c1df0556b19f9c5424f39fcc68e',1,'Uralstech::UGemini::TokenCounting::GeminiTokenCountResponse']]],
+  ['towav_24',['ToWAV',['../class_uralstech_1_1_u_gemini_1_1_unity_extensions.html#af2af35bb487a691d9cf68bc3e195dd24',1,'Uralstech::UGemini::UnityExtensions']]],
+  ['toxicity_25',['Toxicity',['../namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea6882500ce8663d315bd70a1a1c522fe6',1,'Uralstech::UGemini']]],
+  ['type_26',['Type',['../class_uralstech_1_1_u_gemini_1_1_status_1_1_gemini_status_details.html#a75d82313bbaeed25fb132d156b62eec1',1,'Uralstech.UGemini.Status.GeminiStatusDetails.Type'],['../class_uralstech_1_1_u_gemini_1_1_schema_1_1_gemini_schema.html#a898c914eab89fabe3dadaf5e4c5b5afd',1,'Uralstech.UGemini.Schema.GeminiSchema.Type']]]
 ];

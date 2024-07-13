@@ -11,5 +11,6 @@ var searchData=
   ['state_8',['State',['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file.html#aff3dcc16ced0439e2bfe77719bf62df8',1,'Uralstech::UGemini::FileAPI::GeminiFile']]],
   ['status_9',['Status',['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file.html#ab5cee51acc7ec3a63508518f88c23ad7',1,'Uralstech::UGemini::FileAPI::GeminiFile']]],
   ['stopsequences_10',['StopSequences',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_generation_configuration.html#ae2e96230a1c69091301d7ae3194a027a',1,'Uralstech::UGemini::Chat::GeminiGenerationConfiguration']]],
-  ['systeminstruction_11',['SystemInstruction',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html#a701b2356cc58f68d3c916d5e98282adb',1,'Uralstech::UGemini::Chat::GeminiChatRequest']]]
+  ['supportedgenerationmethods_11',['SupportedGenerationMethods',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#a559ca297a6e50609fedaf816dc89a5e8',1,'Uralstech::UGemini::Models::GeminiModel']]],
+  ['systeminstruction_12',['SystemInstruction',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html#a701b2356cc58f68d3c916d5e98282adb',1,'Uralstech::UGemini::Chat::GeminiChatRequest']]]
 ];
