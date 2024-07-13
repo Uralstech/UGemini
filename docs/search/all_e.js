@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['pagetoken_0',['PageToken',['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_list_request.html#ade0f44344f990a15d67e2b83c02f5ea2',1,'Uralstech::UGemini::FileAPI::GeminiFileListRequest']]],
+  ['pagetoken_0',['PageToken',['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_list_request.html#ade0f44344f990a15d67e2b83c02f5ea2',1,'Uralstech.UGemini.FileAPI.GeminiFileListRequest.PageToken'],['../class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html#aa89ea4cdd060f9efe1e8a9aa8ff3054f',1,'Uralstech.UGemini.Models.GeminiModelListRequest.PageToken']]],
   ['parameters_1',['Parameters',['../class_uralstech_1_1_u_gemini_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html#ad45eded0ba314e4af96d89511c2837fb',1,'Uralstech::UGemini::Tools::Declaration::GeminiFunctionDeclaration']]],
   ['partindex_2',['PartIndex',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_grounding_passage_id.html#a8c439ad68fbb11c8b78f31f4e51bbc54',1,'Uralstech::UGemini::Chat::GeminiGroundingPassageId']]],
   ['parts_3',['Parts',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_response.html#af1d3aa0f8c16eea71168233a6b1666c2',1,'Uralstech.UGemini.Chat.GeminiChatResponse.Parts'],['../class_uralstech_1_1_u_gemini_1_1_gemini_content.html#aa47065d6b052c4cfb7afe0fbe224cc8d',1,'Uralstech.UGemini.GeminiContent.Parts']]],

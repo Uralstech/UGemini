@@ -17,6 +17,7 @@ namespace Uralstech.UGemini
     {
         private const string MultiPartFormDataSeperator = "xxxxxxxxxx";
 
+        #region Obsolete
         /// <summary>
         /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro-vision">
         /// Note: Gemini 1.0 Pro Vision is deprecated. Use 1.5 Flash or 1.5 Pro instead.
@@ -28,7 +29,8 @@ namespace Uralstech.UGemini
         /// <br/><br/>
         /// Supports image, video and text input.
         /// </summary>
-        [Obsolete("Gemini 1.0 Pro Vision is deprecated. Use Use 1.5 Flash (Gemini1_5Flash) or 1.5 Pro (Gemini1_5Pro) instead.")]
+        /// \deprecated Use <see cref="Models.GeminiModel.Gemini1_0ProVision"/> instead.
+        [Obsolete("Use UGemini.Models.GeminiModel.Gemini1_0ProVision instead.")]
         public const string Gemini1_0ProVision = "gemini-pro-vision";
 
         /// <summary>
@@ -38,6 +40,8 @@ namespace Uralstech.UGemini
         /// <br/><br/>
         /// Supports text input.
         /// </summary>
+        /// \deprecated Use <see cref="Models.GeminiModel.Gemini1_0Pro"/> instead.
+        [Obsolete("Use UGemini.Models.GeminiModel.Gemini1_0Pro instead.")]
         public const string Gemini1_0Pro = "gemini-1.0-pro";
 
         /// <summary>
@@ -49,6 +53,8 @@ namespace Uralstech.UGemini
         /// <br/><br/>
         /// Supports audio, image, video and text input.
         /// </summary>
+        /// \deprecated Use <see cref="Models.GeminiModel.Gemini1_5Pro"/> instead.
+        [Obsolete("Use UGemini.Models.GeminiModel.Gemini1_5Pro instead.")]
         public const string Gemini1_5Pro = "gemini-1.5-pro";
 
         /// <summary>
@@ -58,7 +64,10 @@ namespace Uralstech.UGemini
         /// <br/><br/>
         /// Supports audio, image, video and text input.
         /// </summary>
+        /// \deprecated Use <see cref="Models.GeminiModel.Gemini1_5Flash"/> instead.
+        [Obsolete("Use UGemini.Models.GeminiModel.Gemini1_5Flash instead.")]
         public const string Gemini1_5Flash = "gemini-1.5-flash";
+        #endregion
 
         [SerializeField, Tooltip("Your Gemini API key.")] private string _geminiApiKey;
 
@@ -221,13 +230,16 @@ namespace Uralstech.UGemini
         /// <summary>
         /// The request endpoint.
         /// </summary>
-        [Obsolete("It is recommended to use GeminiManager.Request instead of GeminiManager.Compute, as it is more generic and thus supports more request types.")]
+        /// \deprecated Use <see cref="Request{TResponse}(IGeminiPostRequest)"/> instead, as it is more generic and supports more request types.
+        [Obsolete("Use GeminiManager.Request instead of GeminiManager.Compute, as it is more generic and supports more request types.")]
         public enum RequestEndPoint
         {
             /// <summary>The chat endpoint.</summary>
+            /// \deprecated
             Chat,
 
             /// <summary>The token counting endpoint.</summary>
+            /// \deprecated
             CountTokens,
         }
 
@@ -260,7 +272,8 @@ namespace Uralstech.UGemini
         /// <returns>The computed request.</returns>
         /// <exception cref="ArgumentException">Thrown if unexpected arguments are encountered.</exception>
         /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
-        [Obsolete("It is recommended to use GeminiManager.Request instead of GeminiManager.Compute, as it is more generic and thus supports more request types.")]
+        /// \deprecated Use <see cref="Request{TResponse}(IGeminiPostRequest)"/> instead, as it is more generic and supports more request types.
+        [Obsolete("Use GeminiManager.Request instead, as it is more generic and supports more request types.")]
         public async Task<TResponse> Compute<TRequest, TResponse>(TRequest request, RequestEndPoint endpoint, string model = Gemini1_5Flash, bool useBeta = false)
         {
             Debug.Log("Computing request on Gemini API.");

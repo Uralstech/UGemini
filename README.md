@@ -60,8 +60,8 @@ Follow the steps detailed in the OpenUPM installation method and only install th
         - [x] Function calling 🧪
         - [x] Safety settings
 
-    - [ ] `get` method
-    - [ ] `list` method
+    - [x] `get` method
+    - [x] `list` method
     - [x] `streamGenerateContent` method
     
 - [ ] `cachedContents` endpoint 🧪
@@ -75,7 +75,7 @@ Follow the steps detailed in the OpenUPM installation method and only install th
     - [x] `upload` method
     
 - [ ] `tunedModels` endpoint
-- [ ] `operations` endpoint 🚧
+- [ ] `operations` endpoint
 
 ⚠️ - Not all methods/features are supported<br/>
 🚧 - The feature is being worked on and is unstable<br/>
