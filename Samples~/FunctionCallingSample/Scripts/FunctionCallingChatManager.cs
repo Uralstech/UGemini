@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Uralstech.UGemini.Chat;
+using Uralstech.UGemini.Models;
 using Uralstech.UGemini.Schema;
 using Uralstech.UGemini.Tools;
 using Uralstech.UGemini.Tools.Declaration;
@@ -93,7 +94,7 @@ namespace Uralstech.UGemini.Samples
             GeminiFunctionCall functionCall;
             do
             {
-                response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(useBetaApi: true)
+                response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(GeminiModel.Gemini1_5Flash, true)
                 {
                     Contents = contents.ToArray(),
                     Tools = new GeminiTool[] { s_geminiFunctions },

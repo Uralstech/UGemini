@@ -5,6 +5,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using Uralstech.UGemini.Chat;
+using Uralstech.UGemini.Models;
 
 namespace Uralstech.UGemini.Samples
 {
@@ -99,7 +100,7 @@ namespace Uralstech.UGemini.Samples
             if (_chatHistory.Count == 0)
                 return;
     
-            GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(useBetaApi: _useBeta)
+            GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(GeminiModel.Gemini1_5Flash, _useBeta)
             {
                 Contents = _chatHistory.ToArray(),
                 SystemInstruction = _systemPrompt,

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using Uralstech.UGemini.Models;
 using Uralstech.UGemini.Tools.Declaration;
 
 namespace Uralstech.UGemini.Chat
@@ -99,7 +100,7 @@ namespace Uralstech.UGemini.Chat
         /// The model to use.
         /// </summary>
         [JsonIgnore]
-        public string Model;
+        public GeminiModelId Model;
 
         /// <summary>
         /// The API version to use.
@@ -115,8 +116,8 @@ namespace Uralstech.UGemini.Chat
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return metadata?.IsStreaming == true
-                ? $"https://generativelanguage.googleapis.com/{ApiVersion}/models/{Model}:streamGenerateContent"
-                : $"https://generativelanguage.googleapis.com/{ApiVersion}/models/{Model}:generateContent";
+                ? $"https://generativelanguage.googleapis.com/{ApiVersion}/{Model.Name}:streamGenerateContent"
+                : $"https://generativelanguage.googleapis.com/{ApiVersion}/{Model.Name}:generateContent";
         }
 
         /// <summary>
@@ -136,13 +137,14 @@ namespace Uralstech.UGemini.Chat
         /// </summary>
         /// <param name="model">The model to use.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiChatRequest(string model = GeminiManager.Gemini1_5Flash, bool useBetaApi = false)
+        public GeminiChatRequest(GeminiModelId model, bool useBetaApi = false)
         {
             Model = model;
             ApiVersion = useBetaApi ? "v1beta" : "v1";
         }
 
-        [Obsolete("Please use a different constructor as this constructor is only for the deprecated GeminiManager.Compute method.")]
+        /// \deprecated Use <see cref="GeminiChatRequest(GeminiModelId, bool)"/> as this constructor is only for the deprecated <see cref="GeminiManager.Compute{TRequest, TResponse}(TRequest, GeminiManager.RequestEndPoint, string, bool)"/> method.
+        [Obsolete("Use GeminiChatRequest(GeminiModelId, bool) as this constructor is only for the deprecated GeminiManager.Compute method.")]
         public GeminiChatRequest() { }
 
         /// <inheritdoc/>

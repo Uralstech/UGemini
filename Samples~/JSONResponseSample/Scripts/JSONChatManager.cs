@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Uralstech.UGemini.Chat;
+using Uralstech.UGemini.Models;
 using Uralstech.UGemini.Schema;
 
 namespace Uralstech.UGemini.Samples
@@ -20,8 +21,8 @@ namespace Uralstech.UGemini.Samples
                 return;
             }
 
-            // Note: It seems GeminiManager.Gemini1_5Flash is not very good at JSON.
-            GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(GeminiManager.Gemini1_5Pro, true)
+            // Note: It seems GeminiModel.Gemini1_5Flash is not very good at JSON.
+            GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(GeminiModel.Gemini1_5Pro, true)
             {
                 Contents = new GeminiContent[]
                 {

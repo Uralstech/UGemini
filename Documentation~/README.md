@@ -1,12 +1,9 @@
 ## UGemini Documentation
 
-### DEPRECATION NOTICE
-
-`GeminiManager.Compute` and parts of related types have been deprecated. Please check `README_OLD.md` for documentation regarding the deprecated code.
-
 ### Reference Manual
 
 See `refman.pdf` for the offline reference manual or go to <https://uralstech.github.io/UGemini/>.
+The reference manual also includes notices for all deprecations.
 
 ### Table of Contents
 
@@ -22,6 +19,9 @@ See `refman.pdf` for the offline reference manual or go to <https://uralstech.gi
         - [*Content Utility Methods*](#utility-methods)
     - [***Function Calling***](#function-calling)
     - [***JSON Response Mode***](#json-response-mode)
+- [**Model Metadata Requests**](#model-metadata)
+    - [***GeminiModelGetRequest***](#geminimodelgetrequest)
+    - [***GeminiModelListRequest***](#geminimodellistrequest)
 - [**GeminiTokenCountRequest**](#geminitokencountrequest)
 - [**File API**](#file-api)
     - [***Upload Files***](#uploading-files)
@@ -60,11 +60,11 @@ please check the code docstrings to learn more about each type.
 #### Beta API
 
 `GeminiManager` supports both the `v1` and `v1beta` Gemini API versions. As a lot of features are still unsupported in the main `v1` API, you may
-need to use the beta API. You can set the `useBetaApi` boolean parameter in the request constructor to do so.
+need to use the Beta API. You can set the `useBetaApi` boolean parameter in the request constructor to do so.
 
 #### Models
 
-`GeminiManager` has four constant model IDs:
+`GeminiModel` from `Uralstech.UGemini.Models` has four static model IDs:
 
 - [`Gemini1_5Flash`](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash)
 - [`Gemini1_5Pro`](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro)
@@ -72,8 +72,7 @@ need to use the beta API. You can set the `useBetaApi` boolean parameter in the 
 - [`Gemini1_0ProVision`](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro-vision)
     - Gemini 1.0 Pro Vision is deprecated. Use Use 1.5 Flash (`Gemini1_5Flash`) or 1.5 Pro (`Gemini1_5Pro`) instead.
 
-By default, all model requests use [*Gemini 1.5 Flash*](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash).
-This can be changed by providing the model's ID as a `string` or by providing one of the `GeminiManager` constants to the `model`
+You can provide the model ID as a `string` or as one of the `GeminiModel` statics to the `model`
 parameter in the request constructor.
 
 #### QuickStart: `generateContent` (Chat) Request
@@ -83,12 +82,13 @@ This is a simple request that asks Gemini a question and logs the response to th
 ```csharp
 using Uralstech.UGemini;
 using Uralstech.UGemini.Chat;
+using Uralstech.UGemini.Models;
 
 async void QueryGemini()
 {
     string text = "Hello! How are you doing?";
     GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(
-        new GeminiChatRequest(GeminiManager.Gemini1_5Flash)
+        new GeminiChatRequest(GeminiModel.Gemini1_5Flash)
         {
             Contents = new GeminiContent[]
             {
@@ -111,6 +111,7 @@ This is a simple method that maintains the user's chat history with Gemini.
 ```csharp
 using Uralstech.UGemini;
 using Uralstech.UGemini.Chat;
+using Uralstech.UGemini.Models;
 
 List<GeminiContent> _chatHistory = new();
 
@@ -118,7 +119,7 @@ async Task<string> OnChat(string text)
 {
     _chatHistory.Add(GeminiContent.GetContent(text, GeminiRole.User));
     GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(
-        new GeminiChatRequest(GeminiManager.Gemini1_5Flash)
+        new GeminiChatRequest(GeminiModel.Gemini1_5Flash)
         {
             Contents = _chatHistory.ToArray(),
         }
@@ -146,12 +147,13 @@ You can even stream function calls! Check out the `Streaming Generated Content` 
 ```csharp
 using Uralstech.UGemini;
 using Uralstech.UGemini.Chat;
+using Uralstech.UGemini.Models;
 
-[SerializeField] private Text _chatResponse;
+[SerializeField] Text _chatResponse;
 
 async Task<string> OnChat(string text)
 {
-    GeminiChatResponse response = await GeminiManager.Instance.StreamRequest(new GeminiChatRequest(GeminiManager.Gemini1_5Flash)
+    GeminiChatResponse response = await GeminiManager.Instance.StreamRequest(new GeminiChatRequest(GeminiModel.Gemini1_5Flash)
     {
         Contents = new GeminiContent[]
         {
@@ -237,6 +239,7 @@ First, we have to setup our tools and define our function schemas.
 ```csharp
 using Uralstech.UGemini;
 using Uralstech.UGemini.Chat;
+using Uralstech.UGemini.Models;
 using Uralstech.UGemini.Schema;
 using Uralstech.UGemini.Tools;
 using Uralstech.UGemini.Tools.Declaration;
@@ -309,9 +312,9 @@ format, etc. of the parameter.
 Finally, we have the `Required` property which tells Gemini which fields are absolutely required in each call. Now, we can move on to the chat.
 
 ```csharp
-[SerializeField] private Text _chatResponse;
+[SerializeField] Text _chatResponse;
 
-public async Task<string> OnChat(string text)
+async Task<string> OnChat(string text)
 {
     List<GeminiContent> contents = new()
     {
@@ -323,10 +326,10 @@ public async Task<string> OnChat(string text)
     string responseText = string.Empty;
     do
     {
-        response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(useBetaApi: true)
+        response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(GeminiModel.Gemini1_5Flash, true)
         {
             Contents = contents.ToArray(),
-            Tools = new GeminiTool[] { s_geminiFunctions },
+            Tools = new GeminiTool[] { _geminiFunctions },
             ToolConfig = GeminiToolConfiguration.GetConfiguration(GeminiFunctionCallingMode.Any),
         });
 
@@ -380,7 +383,7 @@ public async Task<string> OnChat(string text)
     return responseText;
 }
 
-private bool TryChangeTextColor(string color)
+bool TryChangeTextColor(string color)
 {
     switch (color)
     {
@@ -423,12 +426,13 @@ In JSON mode, Gemini will always respond in the specified JSON response schema.
 ```csharp
 using Uralstech.UGemini;
 using Uralstech.UGemini.Chat;
+using Uralstech.UGemini.Models;
 using Uralstech.UGemini.Schema;
 
-public async Task<string> OnChat(string text)
+async Task<string> OnChat(string text)
 {
-    // Note: It seems GeminiManager.Gemini1_5Flash is not very good at JSON.
-    GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(GeminiManager.Gemini1_5Pro, true)
+    // Note: It seems GeminiModel.Gemini1_5Flash is not very good at JSON.
+    GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(GeminiModel.Gemini1_5Pro, true)
     {
         Contents = new GeminiContent[]
         {
@@ -477,6 +481,54 @@ The `GeminiSchema` object is the same type used for function calling.
 
 JSON mode is also only available in the Beta API.
 
+### Model Metadata
+
+The `Uralstech.UGemini.Models` namespace has request types to help retrieve metadata of Gemini models through `GeminiModelGetRequest` and `GeminiModelListRequest`.
+
+#### `GeminiModelGetRequest`
+
+Gets information about a specific model by running a `get` request.
+
+```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models;
+
+async Task<GeminiModel> GetModel(string modelId)
+{
+    return await GeminiManager.Instance.Request<GeminiModel>(new GeminiModelGetRequest(modelId));
+}
+```
+
+We just give the unique ID of the model, like `gemini-pro` or `gemini-1.5-flash`, and we get a `GeminiModel` object as the response!
+
+Just one thing to note: the newer models will not be recognized by the request if you're not using the Beta API.
+
+#### `GeminiModelListRequest`
+
+Gets information about all models by running a `list` request.
+
+```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models;
+
+async Task<GeminiModel[]> ListModels(int maxModels = 50, string pageToken = string.Empty)
+{
+    GeminiModelListResponse response = await GeminiManager.Instance.Request<GeminiModelListResponse>(new GeminiModelListRequest()
+    {
+        MaxResponseModels = maxModels,
+        PageToken = string.IsNullOrWhiteSpace(pageToken) ? string.Empty : pageToken,
+    });
+
+    return response?.Models;
+}
+```
+
+`MaxResponseModels` is the total number of pages you want to retrieve in each request, and `PageToken` is the 'identifier' for the requested page
+in the multiple pages of file metadata. You can leave it empty to get the first page, and use `response.NextPageToken` as the token for
+for the next page, and run the request again with it.
+
+Again, the newer models will not be recognized by the request if you're not using the Beta API.
+
 ### `GeminiTokenCountRequest`
 
 Available in the `Uralstech.UGemini.TokenCounting` namespace. Counts the number of tokens in the
@@ -484,11 +536,12 @@ given request contents for the given model by running a `countTokens` request.
 
 ```csharp
 using Uralstech.UGemini;
+using Uralstech.UGemini.Models;
 using Uralstech.UGemini.TokenCounting;
 
-public async Task<int> CountTokens(string text)
+async Task<int> CountTokens(string text)
 {
-    GeminiTokenCountResponse response = await GeminiManager.Instance.Request<GeminiTokenCountResponse>(new GeminiTokenCountRequest(GeminiManager.Gemini1_5Flash)
+    GeminiTokenCountResponse response = await GeminiManager.Instance.Request<GeminiTokenCountResponse>(new GeminiTokenCountRequest(GeminiModel.Gemini1_5Flash)
     {
         Contents = new GeminiContent[]
         {
@@ -518,7 +571,7 @@ Uploads a file to be available through the File API by running an `upload` reque
 using Uralstech.UGemini;
 using Uralstech.UGemini.FileAPI;
 
-public async void UploadFile(string text)
+async Task<GeminiFile> UploadFile(string text)
 {
     GeminiFileUploadResponse response = await GeminiManager.Instance.Request<GeminiFileUploadResponse>(new GeminiFileUploadRequest(GeminiContentType.TextPlain.MimeType())
     {
@@ -529,26 +582,7 @@ public async void UploadFile(string text)
         RawData = Encoding.UTF8.GetBytes(text)
     });
     
-    Debug.Log($"Uploaded file: {FileToText(response.File)}");
-}
-
-// This method will be used in the examples multiple times.
-private string FileToText(GeminiFile file)
-{
-    return $"{nameof(GeminiFile)}(\n" +
-        $"\t{file.Name}\n" +
-        $"\t{file.DisplayName}\n" +
-        $"\t{file.MimeType}\n" +
-        $"\t{file.SizeBytes}\n" +
-        $"\t{file.CreateTime}\n" +
-        $"\t{file.UpdateTime}\n" +
-        $"\t{file.ExpirationTime}\n" +
-        $"\t{file.Sha256Hash}\n" +
-        $"\t{file.Uri}\n" +
-        $"\t{file.State}\n" +
-        $"\t{file.Status?.Message}\n" +
-        $"\t{file.VideoMetadata?.VideoDuration}\n" +
-        $")";
+    return response.File;
 }
 ```
 
@@ -566,7 +600,7 @@ Requests the metadata for all existing files uploaded to the File API by running
 using Uralstech.UGemini;
 using Uralstech.UGemini.FileAPI;
 
-public async void ListFiles(int maxFiles = 10, string pageToken = string.Empty)
+async Task<GeminiFile[]> ListFiles(int maxFiles = 10, string pageToken = string.Empty)
 {
     GeminiFileListResponse response = await GeminiManager.Instance.Request<GeminiFileListResponse>(new GeminiFileListRequest()
     {
@@ -574,15 +608,11 @@ public async void ListFiles(int maxFiles = 10, string pageToken = string.Empty)
         PageToken = string.IsNullOrWhiteSpace(pageToken) ? string.Empty : pageToken,
     });
 
-    Debug.Log($"Got file list response, next page token: {response?.NextPageToken}:");
-    for (int i = 0; i < (response?.Files?.Length ?? 0); i++)
-        Debug.Log($"File {i + 1}: {FileToText(response.Files[i])}");
-
-    Debug.Log($"File list page completed.");
+    return response?.Files;
 }
 ```
 
-`maxFiles` is the total number of pages you want to retrieve in each request, and `pageToken` is the 'identifier' for the current page
+`MaxResponseFiles` is the total number of pages you want to retrieve in each request, and `PageToken` is the 'identifier' for the requested page
 in the multiple pages of file metadata. You can leave it empty to get the first page, and use `response.NextPageToken` as the token for
 for the next page, and run the request again with it.
 
@@ -594,10 +624,9 @@ Requests metadata for a single file uploaded to the File API by running a `get` 
 using Uralstech.UGemini;
 using Uralstech.UGemini.FileAPI;
 
-public async void GetFile(string fileId)
+async Task<GeminiFile> GetFile(string fileId)
 {
-    GeminiFile file = await GeminiManager.Instance.Request<GeminiFile>(new GeminiFileGetRequest(fileId));
-    Debug.Log($"Got file: {FileToText(file)}");
+    return await GeminiManager.Instance.Request<GeminiFile>(new GeminiFileGetRequest(fileId));
 }
 ```
 
@@ -611,7 +640,7 @@ Deletes a file uploaded to the File API by running a `delete` request.
 using Uralstech.UGemini;
 using Uralstech.UGemini.FileAPI;
 
-public async void DeleteFile(string fileId)
+async void DeleteFile(string fileId)
 {
     await GeminiManager.Instance.Request(new GeminiFileDeleteRequest(fileId));
     Debug.Log("File deleted.");
@@ -643,6 +672,10 @@ A sample scene showing a system where Gemini responds in a specified JSON format
 #### Prompting with File API
 
 A sample scene with a system to create, delete, retrieve, list and prompt Gemini with files stored in the File/Media API endpoints. [***GitHub Source***](https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/FileAPISample)
+
+#### List and Get Model Metadata
+
+A sample scene with a system to list, get and chat with models using the models.get and models.list endpoints. [***GitHub Source***](https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/ModelMetadataRetrievalSample)
 
 #### Token Counting
 

@@ -9,7 +9,7 @@
     "AI",
     "Integration"
   ],
-  "version": "1.2.3",
+  "version": "1.3.0",
   "unity": "2022.3",
   "hideInEditor": false,
   "documentationUrl": "https://github.com/Uralstech/UGemini/blob/master/UGemini/Packages/com.uralstech.ugemini/Documentation~/README.md",
@@ -49,6 +49,11 @@
       "displayName": "Prompting with File API",
       "description": "A sample scene with a system to create, delete, retrieve, list and prompt Gemini with files stored in the File/Media API endpoints.",
       "path": "Samples~/FileAPISample"
+    },
+    {
+      "displayName": "List and Get Model Metadata",
+      "description": "A sample scene with a system to list, get and chat with models using the models.get and models.list endpoints.",
+      "path": "Samples~/ModelMetadataRetrievalSample"
     },
     {
       "displayName": "Token Counting",
