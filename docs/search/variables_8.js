@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['license_0',['License',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_citation_source.html#ae39e1d9cda0143bd98037b7ec6482884',1,'Uralstech::UGemini::Chat::GeminiCitationSource']]]
+  ['key_0',['Key',['../class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_metadata_filter.html#a17d0c7d13030bdb9adae727db0b357b3',1,'Uralstech::UGemini::Answer::GeminiMetadataFilter']]]
 ];

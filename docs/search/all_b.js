@@ -1,16 +1,12 @@
 var searchData=
 [
-  ['maxoutputtokens_0',['MaxOutputTokens',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_generation_configuration.html#a1953b24c83418d37f2471d94663a3f0f',1,'Uralstech::UGemini::Chat::GeminiGenerationConfiguration']]],
-  ['maxresponsefiles_1',['MaxResponseFiles',['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_list_request.html#a484597170d23fe2baa4d3da40c095f45',1,'Uralstech::UGemini::FileAPI::GeminiFileListRequest']]],
-  ['maxresponsemodels_2',['MaxResponseModels',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html#ab24ca9af778b20bfa22ddef97fc16d1a',1,'Uralstech::UGemini::Models::GeminiModelListRequest']]],
-  ['maxtokens_3',['MaxTokens',['../namespace_uralstech_1_1_u_gemini_1_1_chat.html#a9603a55c335ee57bbc71615ef6d6b8c9aaf0e6be419dc2af93d93caca768aed99',1,'Uralstech::UGemini::Chat']]],
-  ['medical_4',['Medical',['../namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea077262cc53a1fb1b5f651d31b6bf81ba',1,'Uralstech::UGemini']]],
-  ['medium_5',['Medium',['../namespace_uralstech_1_1_u_gemini_1_1_chat.html#a3dcb079ffbfc2850ff631583f8276dd7a87f8a6ab85c9ced3702b4ea641ad4bb5',1,'Uralstech::UGemini::Chat']]],
-  ['mediumandabove_6',['MediumAndAbove',['../namespace_uralstech_1_1_u_gemini_1_1_chat.html#ad78aa48b8df402d443f179e47f2ed083a4115c8b233f3f48c8716473bf12f7ceb',1,'Uralstech::UGemini::Chat']]],
-  ['message_7',['Message',['../class_uralstech_1_1_u_gemini_1_1_status_1_1_gemini_status.html#a2f08c8b6a0ad287add1530e1be176240',1,'Uralstech::UGemini::Status::GeminiStatus']]],
-  ['mimetype_8',['MimeType',['../class_uralstech_1_1_u_gemini_1_1_gemini_content_blob.html#a7a20a8a73ccf97071de20dca34c91767',1,'Uralstech.UGemini.GeminiContentBlob.MimeType'],['../class_uralstech_1_1_u_gemini_1_1_gemini_file_data.html#aa40c412bc4c6c8c2cda3056d86deb6ed',1,'Uralstech.UGemini.GeminiFileData.MimeType'],['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_upload_request.html#ab3d9a43d842aa220fde8ed386bfa6308',1,'Uralstech.UGemini.FileAPI.GeminiFileUploadRequest.MimeType'],['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file.html#a9cb80a8dbbf55410eaf72dea18c4c0f8',1,'Uralstech.UGemini.FileAPI.GeminiFile.MimeType'],['../class_uralstech_1_1_u_gemini_1_1_enum_extensions.html#af154ce36e01ae04cd063c3ae988b87b0',1,'Uralstech.UGemini.EnumExtensions.MimeType()']]],
-  ['mode_9',['Mode',['../class_uralstech_1_1_u_gemini_1_1_tools_1_1_declaration_1_1_gemini_function_calling_configuration.html#a1a449b063064c973eeb93e12f6bab937',1,'Uralstech::UGemini::Tools::Declaration::GeminiFunctionCallingConfiguration']]],
-  ['model_10',['Model',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html#a6774b2da0b9306f759a038e0b6f49c80',1,'Uralstech.UGemini.Chat.GeminiChatRequest.Model'],['../class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_request.html#a68400583a4bda023953c33ceb9815e1c',1,'Uralstech.UGemini.TokenCounting.GeminiTokenCountRequest.Model']]],
-  ['modelname_11',['ModelName',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_get_request.html#a62c29ec0e283e83881c4947c27228fce',1,'Uralstech::UGemini::Models::GeminiModelGetRequest']]],
-  ['models_12',['Models',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_response.html#a3b7f509989fe91bdc4325ae100e97963',1,'Uralstech::UGemini::Models::GeminiModelListResponse']]]
+  ['lessthan_0',['LessThan',['../namespace_uralstech_1_1_u_gemini_1_1_answer.html#a93e85c953c82663cf0411470324933a5ac6d9d7bb9939f62f01c80f8b1251501c',1,'Uralstech::UGemini::Answer']]],
+  ['lessthanorequal_1',['LessThanOrEqual',['../namespace_uralstech_1_1_u_gemini_1_1_answer.html#a93e85c953c82663cf0411470324933a5a4ab671acbbaacb0db7d8477cfe4f4e0b',1,'Uralstech::UGemini::Answer']]],
+  ['license_2',['License',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_citation_source.html#ae39e1d9cda0143bd98037b7ec6482884',1,'Uralstech::UGemini::Chat::GeminiCitationSource']]],
+  ['list_3',['Deprecated List',['../deprecated.html',1,'']]],
+  ['list_20and_20get_20model_20metadata_4',['List and Get Model Metadata',['../md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md28',1,'']]],
+  ['listing_20all_20files_5',['Listing All Files',['../md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md19',1,'']]],
+  ['long_6',['Long',['../namespace_uralstech_1_1_u_gemini_1_1_schema.html#abb0c9f7d6bbb1d4940ef8553d6377068a8394f0347c184cf156ac5924dccb773b',1,'Uralstech::UGemini::Schema']]],
+  ['low_7',['Low',['../namespace_uralstech_1_1_u_gemini_1_1_chat.html#a3dcb079ffbfc2850ff631583f8276dd7a28d0edd045e05cf5af64e35ae0c4c6ef',1,'Uralstech::UGemini::Chat']]],
+  ['lowandabove_8',['LowAndAbove',['../namespace_uralstech_1_1_u_gemini_1_1_chat.html#ad78aa48b8df402d443f179e47f2ed083ab38533abc7d7d3bf2661d78df74e0ba7',1,'Uralstech::UGemini::Chat']]]
 ];

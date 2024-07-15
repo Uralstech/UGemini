@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">UGemini<span id="projectnumber">&#160;1.3.0</span>
+   <div id="projectname">UGemini<span id="projectnumber">&#160;1.4.0-preview.1</span>
    </div>
    <div id="projectbrief">A C# wrapper for the Google Gemini API.</div>
   </td>
@@ -113,9 +113,12 @@ Inheritance diagram for Uralstech.UGemini.IGeminiPostRequest:</div>
  <div class="center">
   <img src="interface_uralstech_1_1_u_gemini_1_1_i_gemini_post_request.png" usemap="#Uralstech.UGemini.IGeminiPostRequest_map" alt=""/>
   <map id="Uralstech.UGemini.IGeminiPostRequest_map" name="Uralstech.UGemini.IGeminiPostRequest_map">
-<area href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_request.html" title="All Gemini API requests must inherit from this interface." alt="Uralstech.UGemini.IGeminiRequest" shape="rect" coords="193,0,570,24"/>
-<area href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html" title="All streamed Gemini API POST requests must inherit from this interface." alt="Uralstech.UGemini.IGeminiStreamablePostRequest&lt; TResponse &gt;" shape="rect" coords="0,112,377,136"/>
-<area href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_request.html" title="Request to count tokens in given content." alt="Uralstech.UGemini.TokenCounting.GeminiTokenCountRequest" shape="rect" coords="387,112,764,136"/>
+<area href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_request.html" title="All Gemini API requests must inherit from this interface." alt="Uralstech.UGemini.IGeminiRequest" shape="rect" coords="780,0,1160,24"/>
+<area href="class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_answer_request.html" title="Generates a grounded answer from the model." alt="Uralstech.UGemini.Answer.GeminiAnswerRequest" shape="rect" coords="0,112,380,136"/>
+<area href="class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_batch_embed_content_request.html" title="Generates multiple embeddings from the model given input text in a synchronous call." alt="Uralstech.UGemini.Embedding.GeminiBatchEmbedContentRequest" shape="rect" coords="390,112,770,136"/>
+<area href="class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_embed_content_request.html" title="Generates an embedding from the model." alt="Uralstech.UGemini.Embedding.GeminiEmbedContentRequest" shape="rect" coords="780,112,1160,136"/>
+<area href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html" title="All streamed Gemini API POST requests must inherit from this interface." alt="Uralstech.UGemini.IGeminiStreamablePostRequest&lt; TResponse &gt;" shape="rect" coords="1170,112,1550,136"/>
+<area href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_request.html" title="Request to count tokens in given content." alt="Uralstech.UGemini.TokenCounting.GeminiTokenCountRequest" shape="rect" coords="1560,112,1940,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -156,7 +159,7 @@ Properties</h2></td></tr>
 <p>Converts the request object to a UTF-8 encoded string. </p>
 <dl class="section return"><dt>Returns</dt><dd>The string data.</dd></dl>
 
-<p>Implemented in <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_request.html#a3a8bcfda86fe9b436994a01450a95ec0">Uralstech.UGemini.TokenCounting.GeminiTokenCountRequest</a>.</p>
+<p>Implemented in <a class="el" href="class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_answer_request.html#ac5e2e8d4a65254c88a7bcc1270401bc5">Uralstech.UGemini.Answer.GeminiAnswerRequest</a>, <a class="el" href="class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_batch_embed_content_request.html#a31f6b6928d1b39365bd0479c86c43818">Uralstech.UGemini.Embedding.GeminiBatchEmbedContentRequest</a>, <a class="el" href="class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_embed_content_request.html#a25708406b1ff390553011d338d293ef9">Uralstech.UGemini.Embedding.GeminiEmbedContentRequest</a>, and <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_request.html#a3a8bcfda86fe9b436994a01450a95ec0">Uralstech.UGemini.TokenCounting.GeminiTokenCountRequest</a>.</p>
 
 </div>
 </div>
@@ -183,7 +186,7 @@ Properties</h2></td></tr>
 
 <p>The MIME type of the request content. </p>
 
-<p>Implemented in <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_request.html#a4b65af5a5a1924aca5276b95f5aebf0b">Uralstech.UGemini.TokenCounting.GeminiTokenCountRequest</a>.</p>
+<p>Implemented in <a class="el" href="class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_answer_request.html#ad9d49da6d6e3e0eb55038102d1b48f6e">Uralstech.UGemini.Answer.GeminiAnswerRequest</a>, <a class="el" href="class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_batch_embed_content_request.html#a12f91201a8266154efbaab4ac81aaf9d">Uralstech.UGemini.Embedding.GeminiBatchEmbedContentRequest</a>, <a class="el" href="class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_embed_content_request.html#a40d85df8336bb6ccc4a8cf4f9536a1ac">Uralstech.UGemini.Embedding.GeminiEmbedContentRequest</a>, and <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_request.html#a4b65af5a5a1924aca5276b95f5aebf0b">Uralstech.UGemini.TokenCounting.GeminiTokenCountRequest</a>.</p>
 
 </div>
 </div>

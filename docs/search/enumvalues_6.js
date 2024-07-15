@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['harassment_0',['Harassment',['../namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea1bb7d92c816a9bebed2d7c998fec7564',1,'Uralstech::UGemini']]],
-  ['hatespeech_1',['HateSpeech',['../namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea6d92ab74bd52ac359f68e33d628805a0',1,'Uralstech::UGemini']]],
-  ['high_2',['High',['../namespace_uralstech_1_1_u_gemini_1_1_chat.html#a3dcb079ffbfc2850ff631583f8276dd7a655d20c1ca69519ca647684edbb2db35',1,'Uralstech::UGemini::Chat']]]
+  ['greaterthan_0',['GreaterThan',['../namespace_uralstech_1_1_u_gemini_1_1_answer.html#a93e85c953c82663cf0411470324933a5af6d044fe1f01fb0c956b80099e2a3072',1,'Uralstech::UGemini::Answer']]],
+  ['greaterthanorequal_1',['GreaterThanOrEqual',['../namespace_uralstech_1_1_u_gemini_1_1_answer.html#a93e85c953c82663cf0411470324933a5a25c44812e9d75f685d2a0b815dea1ebe',1,'Uralstech::UGemini::Answer']]]
 ];

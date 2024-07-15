@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "UGemini", "index.html", [
+    [ "QuickStart and Documentation", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html", null ],
     [ "Deprecated List", "deprecated.html", null ],
     [ "Packages", "namespaces.html", [
       [ "Package List", "namespaces.html", "namespaces_dup" ],
@@ -51,8 +52,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_upload_request.html",
-"class_uralstech_1_1_u_gemini_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html"
+"class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_embed_content_request.html#a25708406b1ff390553011d338d293ef9",
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#a938425a3f58815e97c72e40d50837641",
+"namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca0fd2e025338c0e9f1424bde1a8cf5ed4"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

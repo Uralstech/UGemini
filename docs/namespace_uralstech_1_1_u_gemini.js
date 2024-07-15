@@ -1,6 +1,8 @@
 var namespace_uralstech_1_1_u_gemini =
 [
+    [ "Answer", "namespace_uralstech_1_1_u_gemini_1_1_answer.html", "namespace_uralstech_1_1_u_gemini_1_1_answer" ],
     [ "Chat", "namespace_uralstech_1_1_u_gemini_1_1_chat.html", "namespace_uralstech_1_1_u_gemini_1_1_chat" ],
+    [ "Embedding", "namespace_uralstech_1_1_u_gemini_1_1_embedding.html", "namespace_uralstech_1_1_u_gemini_1_1_embedding" ],
     [ "Exceptions", "namespace_uralstech_1_1_u_gemini_1_1_exceptions.html", "namespace_uralstech_1_1_u_gemini_1_1_exceptions" ],
     [ "FileAPI", "namespace_uralstech_1_1_u_gemini_1_1_file_a_p_i.html", "namespace_uralstech_1_1_u_gemini_1_1_file_a_p_i" ],
     [ "Models", "namespace_uralstech_1_1_u_gemini_1_1_models.html", "namespace_uralstech_1_1_u_gemini_1_1_models" ],

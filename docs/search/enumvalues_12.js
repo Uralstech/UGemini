@@ -1,13 +1,15 @@
 var searchData=
 [
-  ['video3gpp_0',['Video3GPP',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca9ee7912972010776643b4255631c927d',1,'Uralstech::UGemini']]],
-  ['videoavi_1',['VideoAVI',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73caeed161c899c3f137cb9a46585ef91908',1,'Uralstech::UGemini']]],
-  ['videomov_2',['VideoMOV',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73cae5b46657a3970b015d78f4f9f38631d2',1,'Uralstech::UGemini']]],
-  ['videomp4_3',['VideoMP4',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73cac95300387e890a73004a6b036cd65949',1,'Uralstech::UGemini']]],
-  ['videompeg_4',['VideoMPEG',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca39f59a6211b515a41de3b2f4a1e310b0',1,'Uralstech::UGemini']]],
-  ['videompg_5',['VideoMPG',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73caa9f0fc5bbb5952bc0c413ec2d6bc291f',1,'Uralstech::UGemini']]],
-  ['videowebm_6',['VideoWebM',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca28401944e0d82b9cbbd1ba8dc6d92cad',1,'Uralstech::UGemini']]],
-  ['videowmv_7',['VideoWMV',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73cabecf04ace621185fdfcd6ff66ce0f8c0',1,'Uralstech::UGemini']]],
-  ['videoxflv_8',['VideoXFLV',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73cabcdd3bc83b74eb90c9ed0456b4eb116d',1,'Uralstech::UGemini']]],
-  ['violence_9',['Violence',['../namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea0ef93352ce96f36586f2a3cf3525ecca',1,'Uralstech::UGemini']]]
+  ['textcss_0',['TextCSS',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73cad601acb65e102a8ce83ef5f96d1e716c',1,'Uralstech::UGemini']]],
+  ['textcsv_1',['TextCSV',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca945322016ed527f2e00d8fe6ff2ee4e1',1,'Uralstech::UGemini']]],
+  ['texthtml_2',['TextHTML',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca710fc9ccd47b32eb181904ebc6d35997',1,'Uralstech::UGemini']]],
+  ['textjavascript_3',['TextJavaScript',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73cad46c2f540b49e9fdfc8dce7fbe9e21e9',1,'Uralstech::UGemini']]],
+  ['textmarkdown_4',['TextMarkdown',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca2b53a39268faaff01b72481a73977b1b',1,'Uralstech::UGemini']]],
+  ['textplain_5',['TextPlain',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca0b3618b56f5bcfe0dd4e0d75bb2c1c20',1,'Uralstech::UGemini']]],
+  ['textrtf_6',['TextRTF',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca75c457163a750d45442d42a2941ed968',1,'Uralstech::UGemini']]],
+  ['textxml_7',['TextXML',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73caf77fab54cfab903b4ff23c6a93eb86cf',1,'Uralstech::UGemini']]],
+  ['textxpython_8',['TextXPython',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca077005b32057d70b83b7b78172c70df8',1,'Uralstech::UGemini']]],
+  ['textxtypescript_9',['TextXTypeScript',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca4a07195344ee1042ff85164921294594',1,'Uralstech::UGemini']]],
+  ['toolresponse_10',['ToolResponse',['../namespace_uralstech_1_1_u_gemini.html#a0d462193ef311a2c0dcde6730b1cea52afde9e414e674f69454deb52a73765e62',1,'Uralstech::UGemini']]],
+  ['toxicity_11',['Toxicity',['../namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea6882500ce8663d315bd70a1a1c522fe6',1,'Uralstech::UGemini']]]
 ];
