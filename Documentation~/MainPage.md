@@ -1,46 +1,12 @@
-## UGemini Documentation
+# QuickStart and Documentation
 
-### Reference Manual
-
-See `refman.pdf` for the offline reference manual or go to <https://uralstech.github.io/UGemini/>.
-The reference manual also includes notices for all deprecations.
-
-### Table of Contents
-
-- [**Setup**](#setup)
-- [**Main API Interface (GeminiManager.cs)**](#geminimanager)
-    - [***Beta API Support***](#beta-api)
-    - [***Model Support***](#models)
-    - [***QuickStart: `generateContent` Request Through `GeminiChatRequest`***](#quickstart-generatecontent-chat-request)
-    - [***QuickStart: `generateContent` Request w/ Chat History***](#quickstart-multi-turn-generatecontent-request)
-- [**GeminiChatRequest, In-Depth**](#geminichatrequest-in-depth):
-    - [***Streaming Responses***](#streaming-responses)
-    - [***Including Additional Media to Requests***](#adding-media-content-to-requests)
-        - [*Content Utility Methods*](#utility-methods)
-    - [***Function Calling***](#function-calling)
-    - [***JSON Response Mode***](#json-response-mode)
-- [**Model Metadata Requests**](#model-metadata)
-    - [***GeminiModelGetRequest***](#geminimodelgetrequest)
-    - [***GeminiModelListRequest***](#geminimodellistrequest)
-- [**GeminiTokenCountRequest**](#geminitokencountrequest)
-- [**File API**](#file-api)
-    - [***Upload Files***](#uploading-files)
-    - [***List All Files***](#listing-all-files)
-    - [***Request Metadata for Single Files***](#retrieving-file-metadata)
-    - [***Deleting Files***](#deleting-a-file)
-- [**Samples**](#samples)
-    - [***Multi-turn Chat***](#mult-turn-chat)
-    - [***Function Calling***](#function-calling-1)
-    - [***Streaming Generated Content***](#streaming-generated-content)
-    - [***JSON Response***](#json-response)
-    - [***Prompting with File API***](#prompting-with-file-api)
-    - [***Token Counting***](#token-counting)
+[TOC]
 
 ### Setup
 
 Add an instance of `GeminiManager` to your scene, and set it up with your Gemini API key. You can get your API key from [*here*](https://makersuite.google.com/app/apikey).
 
-### `GeminiManager`
+### GeminiManager
 
 There are only two methods in `GeminiManager`:
 
@@ -75,7 +41,7 @@ need to use the Beta API. You can set the `useBetaApi` boolean parameter in the 
 You can provide the model ID as a `string` or as one of the `GeminiModel` statics to the `model`
 parameter in the request constructor.
 
-#### QuickStart: `generateContent` (Chat) Request
+#### QuickStart: generateContent (Chat) Request
 
 This is a simple request that asks Gemini a question and logs the response to the console.
 
@@ -104,7 +70,7 @@ async void QueryGemini()
 That's all! We give a request argument of type `GeminiChatRequest`, specify that we expect a response of type `GeminiChatResponse`, and voilà!
 We've got the response in `response.Parts[0].Text`!
 
-#### QuickStart: Multi-turn `generateContent` Request
+#### QuickStart: Multi-turn generateContent Request
 
 This is a simple method that maintains the user's chat history with Gemini.
 
@@ -133,7 +99,7 @@ async Task<string> OnChat(string text)
 Here, we simply have a list of `GeminiContent` objects, which tracks the messages of the conversation.
 Every time `OnChat` is called, the user's request and the model's reply are added the the list.
 
-### `GeminiChatRequest` In-Depth
+### GeminiChatRequest In-Depth
 
 Available in the `Uralstech.UGemini.Chat` namespace. Generates content from the given model by running a `generateContent` request.
 
@@ -485,7 +451,7 @@ JSON mode is also only available in the Beta API.
 
 The `Uralstech.UGemini.Models` namespace has request types to help retrieve metadata of Gemini models through `GeminiModelGetRequest` and `GeminiModelListRequest`.
 
-#### `GeminiModelGetRequest`
+#### GeminiModelGetRequest
 
 Gets information about a specific model by running a `get` request.
 
@@ -503,7 +469,7 @@ We just give the unique ID of the model, like `gemini-pro` or `gemini-1.5-flash`
 
 Just one thing to note: the newer models will not be recognized by the request if you're not using the Beta API.
 
-#### `GeminiModelListRequest`
+#### GeminiModelListRequest
 
 Gets information about all models by running a `list` request.
 
@@ -529,7 +495,7 @@ for the next page, and run the request again with it.
 
 Again, the newer models will not be recognized by the request if you're not using the Beta API.
 
-### `GeminiTokenCountRequest`
+### GeminiTokenCountRequest
 
 Available in the `Uralstech.UGemini.TokenCounting` namespace. Counts the number of tokens in the
 given request contents for the given model by running a `countTokens` request.

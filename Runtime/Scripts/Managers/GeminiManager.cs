@@ -124,7 +124,7 @@ namespace Uralstech.UGemini
 
             using UnityWebRequest webRequest = UnityWebRequest.Post(requestEndpoint, requestData, $"multipart/related; boundary={MultiPartFormDataSeperator}");
             webRequest.SetRequestHeader("X-Goog-Upload-Protocol", "multipart");
-            
+
             await ComputeRequest(webRequest);
 
             return JsonConvert.DeserializeObject<TResponse>(webRequest.downloadHandler.text);

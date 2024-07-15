@@ -44,7 +44,7 @@ namespace Uralstech.UGemini.Utils.Web
             UnityWebRequestAsyncOperation operation = webRequest.SendWebRequest();
             while (!operation.isDone)
                 await Task.Yield();
-            
+
             await SendServerEventCallback(true).ConfigureAwait(true);
 
             async void CheckServerEvents()
@@ -70,7 +70,7 @@ namespace Uralstech.UGemini.Utils.Web
 
                 if (allEventMessages[^1] != ']')
                     allEventMessages += ']';
-                
+
                 JArray data = JArray.Parse(allEventMessages);
                 int stride = isEnd ? 0 : 1;
 
