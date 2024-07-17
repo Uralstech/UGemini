@@ -200,6 +200,10 @@ namespace Uralstech.UGemini
         }
 #endif
 
+        /// <summary>
+        /// Sets up, sends and verifies a <see cref="UnityWebRequest"/>.
+        /// </summary>
+        /// <param name="webRequest">The <see cref="UnityWebRequest"/> to compute.</param>
         private async Task ComputeRequest(UnityWebRequest webRequest)
         {
             SetupWebRequest(webRequest);
@@ -211,6 +215,10 @@ namespace Uralstech.UGemini
             CheckWebRequest(webRequest);
         }
 
+        /// <summary>
+        /// Sets up the <see cref="UnityWebRequest"/> with API keys and disposal settings.
+        /// </summary>
+        /// <param name="webRequest">The request to set up.</param>
         private void SetupWebRequest(UnityWebRequest webRequest)
         {
             webRequest.SetRequestHeader("X-goog-api-key", _geminiApiKey);
@@ -218,6 +226,11 @@ namespace Uralstech.UGemini
             webRequest.disposeDownloadHandlerOnDispose = true;
         }
 
+        /// <summary>
+        /// Checks the given <see cref="UnityWebRequest"/> for errors.
+        /// </summary>
+        /// <param name="webRequest">The request to check.</param>
+        /// <exception cref="GeminiRequestException">Thrown if the request was not successful</exception>
         private void CheckWebRequest(UnityWebRequest webRequest)
         {
             if (webRequest.result != UnityWebRequest.Result.Success)
