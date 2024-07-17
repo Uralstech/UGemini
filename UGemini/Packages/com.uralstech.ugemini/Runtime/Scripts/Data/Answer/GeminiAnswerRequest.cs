@@ -47,7 +47,7 @@ namespace Uralstech.UGemini.Answer
         /// Passages provided inline with the request.
         /// </summary>
         /// <remarks>
-        /// If this is provided, DO NOT provide <see cref="SemanticRetriever"/>.
+        /// This or <see cref="SemanticRetriever"/> are must be provided at a time.
         /// </remarks>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiGroundingAttributions InlinePassages = null;
@@ -56,7 +56,7 @@ namespace Uralstech.UGemini.Answer
         /// Content retrieved from resources created via the Semantic Retriever API.
         /// </summary>
         /// <remarks>
-        /// If this is provided, DO NOT provide <see cref="InlinePassages"/>.
+        /// This or <see cref="InlinePassages"/> are must be provided at a time.
         /// </remarks>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiSemanticRetrieverConfig SemanticRetriever = null;
