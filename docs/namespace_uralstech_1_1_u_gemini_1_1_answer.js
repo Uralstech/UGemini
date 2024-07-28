@@ -3,6 +3,8 @@ var namespace_uralstech_1_1_u_gemini_1_1_answer =
     [ "GeminiAnswerRequest", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_answer_request.html", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_answer_request" ],
     [ "GeminiAnswerResponse", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_answer_response.html", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_answer_response" ],
     [ "GeminiGroundingAttributions", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_grounding_attributions.html", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_grounding_attributions" ],
+    [ "GeminiGroundingPassage", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_grounding_passage.html", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_grounding_passage" ],
+    [ "GeminiGroundingPassages", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_grounding_passages.html", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_grounding_passages" ],
     [ "GeminiMetadataCondition", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_metadata_condition.html", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_metadata_condition" ],
     [ "GeminiMetadataFilter", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_metadata_filter.html", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_metadata_filter" ],
     [ "GeminiSemanticRetrieverConfig", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_semantic_retriever_config.html", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_semantic_retriever_config" ],

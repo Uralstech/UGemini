@@ -52,9 +52,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_embed_content_request.html#a25708406b1ff390553011d338d293ef9",
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#a938425a3f58815e97c72e40d50837641",
-"namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca0fd2e025338c0e9f1424bde1a8cf5ed4"
+"class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_batch_embed_content_response.html#a179e55ec0ca7ec74e1b34d7515b3bdbb",
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#a44ece306510970a1a8505f756794c036",
+"namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea6882500ce8663d315bd70a1a1c522fe6"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

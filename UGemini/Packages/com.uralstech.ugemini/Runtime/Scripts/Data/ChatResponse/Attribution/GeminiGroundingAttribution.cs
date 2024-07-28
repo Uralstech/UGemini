@@ -12,6 +12,7 @@ namespace Uralstech.UGemini.Chat
         /// <summary>
         /// Identifier for the source contributing to this attribution.
         /// </summary>
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public GeminiAttributionSourceId SourceId;
 
         /// <summary>

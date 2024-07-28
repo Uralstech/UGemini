@@ -26,7 +26,9 @@ var hierarchy =
     [ "Uralstech.UGemini.Chat.GeminiGenerationConfiguration", "class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_generation_configuration.html", null ],
     [ "Uralstech.UGemini.Chat.GeminiGroundingAttribution", "class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_grounding_attribution.html", null ],
     [ "Uralstech.UGemini.Answer.GeminiGroundingAttributions", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_grounding_attributions.html", null ],
+    [ "Uralstech.UGemini.Answer.GeminiGroundingPassage", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_grounding_passage.html", null ],
     [ "Uralstech.UGemini.Chat.GeminiGroundingPassageId", "class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_grounding_passage_id.html", null ],
+    [ "Uralstech.UGemini.Answer.GeminiGroundingPassages", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_grounding_passages.html", null ],
     [ "Uralstech.UGemini.Answer.GeminiMetadataCondition", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_metadata_condition.html", null ],
     [ "Uralstech.UGemini.Answer.GeminiMetadataFilter", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_metadata_filter.html", null ],
     [ "Uralstech.UGemini.Models.GeminiModelId", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id.html", [
