@@ -33,6 +33,7 @@ namespace Uralstech.UGemini.Chat
         /// This field may be populated with recitation information for any text included in <see cref="Content"/>.<br/>
         /// These are passages that are "recited" from copyrighted material in the foundational LLM's training data.
         /// </remarks>
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public GeminiCitationMetadata CitationMetadata;
 
         /// <summary>
@@ -48,7 +49,8 @@ namespace Uralstech.UGemini.Chat
         /// <br/><br/>
         /// Only available in the beta API.
         /// </remarks>
-        public GeminiGroundingAttribution GroundingAttributions;
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public GeminiGroundingAttribution[] GroundingAttributions;
 
         /// <summary>
         /// Index of the candidate in the list of candidates.
