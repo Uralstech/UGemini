@@ -1858,7 +1858,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1083725453}
-  - component: {fileID: 1083725452}
+  - component: {fileID: 1083725454}
   m_Layer: 0
   m_Name: GeminiManager
   m_TagString: Untagged
@@ -1866,19 +1866,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1083725452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083725451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 082da32aa2c5b8243bfe608ff858f579, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _geminiApiKey: 
 --- !u!4 &1083725453
 Transform:
   m_ObjectHideFlags: 0
@@ -1894,6 +1881,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1083725454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083725451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082da32aa2c5b8243bfe608ff858f579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _geminiApiKey: 
 --- !u!1 &1103524871
 GameObject:
   m_ObjectHideFlags: 0
@@ -2760,7 +2760,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2068947955}
-        m_TargetAssemblyTypeName: ChatManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: Uralstech.UGemini.Samples.MultiTurnChatManager,
+          Assembly-CSharp
         m_MethodName: OnAddFile
         m_Mode: 0
         m_Arguments:
@@ -3427,7 +3428,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2068947955}
-        m_TargetAssemblyTypeName: ChatManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: Uralstech.UGemini.Samples.MultiTurnChatManager,
+          Assembly-CSharp
         m_MethodName: SetRole
         m_Mode: 0
         m_Arguments:
@@ -3865,7 +3867,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2068947955}
-        m_TargetAssemblyTypeName: ChatManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: Uralstech.UGemini.Samples.MultiTurnChatManager,
+          Assembly-CSharp
         m_MethodName: OnChat
         m_Mode: 1
         m_Arguments:
@@ -4418,7 +4421,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2068947950}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9eea13c9ef783743a88a3141629f018, type: 3}
+  m_Script: {fileID: 11500000, guid: 9477c2598a246134e99641b516bd5bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _useBeta: 1

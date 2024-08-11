@@ -9,7 +9,7 @@
     "AI",
     "Integration"
   ],
-  "version": "1.4.0-preview.3",
+  "version": "1.4.0-preview.4",
   "unity": "2022.3",
   "hideInEditor": false,
   "documentationUrl": "https://github.com/Uralstech/UGemini/blob/master/UGemini/Packages/com.uralstech.ugemini/Documentation~/README.md",
@@ -41,14 +41,19 @@
       "path": "Samples~/StreamedFunctionCallingSample"
     },
     {
-      "displayName": "JSON Response",
-      "description": "A sample scene showing a system where Gemini responds in a specified JSON format.",
-      "path": "Samples~/JSONResponseSample"
-    },
-    {
       "displayName": "Prompting with File API",
       "description": "A sample scene with a system to create, delete, retrieve, list and prompt Gemini with files stored in the File/Media API endpoints.",
       "path": "Samples~/FileAPISample"
+    },
+    {
+      "displayName": "Question Answering",
+      "description": "A sample scene with a system where Gemini answers questions based only on the given context.",
+      "path": "Samples~/QuestionAnsweringSample"
+    },
+    {
+      "displayName": "JSON Response",
+      "description": "A sample scene showing a system where Gemini responds in a specified JSON format.",
+      "path": "Samples~/JSONResponseSample"
     },
     {
       "displayName": "List and Get Model Metadata",

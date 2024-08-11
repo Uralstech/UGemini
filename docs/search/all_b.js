@@ -4,7 +4,7 @@ var searchData=
   ['lessthanorequal_1',['LessThanOrEqual',['../namespace_uralstech_1_1_u_gemini_1_1_answer.html#a93e85c953c82663cf0411470324933a5a4ab671acbbaacb0db7d8477cfe4f4e0b',1,'Uralstech::UGemini::Answer']]],
   ['license_2',['License',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_citation_source.html#ae39e1d9cda0143bd98037b7ec6482884',1,'Uralstech::UGemini::Chat::GeminiCitationSource']]],
   ['list_3',['Deprecated List',['../deprecated.html',1,'']]],
-  ['list_20and_20get_20model_20metadata_4',['List and Get Model Metadata',['../md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md28',1,'']]],
+  ['list_20and_20get_20model_20metadata_4',['List and Get Model Metadata',['../md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md29',1,'']]],
   ['listing_20all_20files_5',['Listing All Files',['../md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md19',1,'']]],
   ['long_6',['Long',['../namespace_uralstech_1_1_u_gemini_1_1_schema.html#abb0c9f7d6bbb1d4940ef8553d6377068a8394f0347c184cf156ac5924dccb773b',1,'Uralstech::UGemini::Schema']]],
   ['low_7',['Low',['../namespace_uralstech_1_1_u_gemini_1_1_chat.html#a3dcb079ffbfc2850ff631583f8276dd7a28d0edd045e05cf5af64e35ae0c4c6ef',1,'Uralstech::UGemini::Chat']]],

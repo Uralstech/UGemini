@@ -12,6 +12,7 @@ namespace Uralstech.UGemini.Chat
         /// <summary>
         /// Generated content returned from the model.
         /// </summary>
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public GeminiContent Content;
 
         /// <summary>

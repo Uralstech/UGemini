@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">UGemini<span id="projectnumber">&#160;1.4.0-preview.3</span>
+   <div id="projectname">UGemini<span id="projectnumber">&#160;1.4.0-preview.4</span>
    </div>
    <div id="projectbrief">A C# wrapper for the Google Gemini API.</div>
   </td>
@@ -130,10 +130,11 @@ $(function(){initNavTree('md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_doc
 <li class="level2"><a href="#autotoc_md22">Samples</a><ul><li class="level3"><a href="#autotoc_md23">Mult-turn Chat</a></li>
 <li class="level3"><a href="#autotoc_md24">Function Calling</a></li>
 <li class="level3"><a href="#autotoc_md25">Streaming Generated Content</a></li>
-<li class="level3"><a href="#autotoc_md26">JSON Response</a></li>
+<li class="level3"><a href="#autotoc_md26">Question Answering</a></li>
 <li class="level3"><a href="#autotoc_md27">Prompting with File API</a></li>
-<li class="level3"><a href="#autotoc_md28">List and Get Model Metadata</a></li>
-<li class="level3"><a href="#autotoc_md29">Token Counting</a></li>
+<li class="level3"><a href="#autotoc_md28">JSON Response</a></li>
+<li class="level3"><a href="#autotoc_md29">List and Get Model Metadata</a></li>
+<li class="level3"><a href="#autotoc_md30">Token Counting</a></li>
 </ul>
 </li>
 </ul>
@@ -173,8 +174,10 @@ Models</h3>
 <li>Gemini 1.0 Pro Vision is deprecated. Use Use 1.5 Flash (<code>Gemini1_5Flash</code>) or 1.5 Pro (<code>Gemini1_5Pro</code>) instead.</li>
 </ul>
 </li>
+<li><a href="https://ai.google.dev/gemini-api/docs/models/gemini#text-embedding"><code>TextEmbedding004</code></a></li>
+<li><a href="https://ai.google.dev/gemini-api/docs/models/gemini#aqa"><code>Aqa</code></a></li>
 </ul>
-<p>You can provide the model ID as a <code>string</code> or as one of the <code>GeminiModel</code> statics to the <code>model</code> parameter in the request constructor.</p>
+<p>You can provide these to the <code>model</code> parameter in the constructors for model-related requests. UGemini can also implicitly convert <code>string</code> model IDs to <code>GeminiModelId</code> objects.</p>
 <h3><a class="anchor" id="autotoc_md5"></a>
 QuickStart: generateContent (Chat) Request</h3>
 <p>This is a simple request that asks Gemini a question and logs the response to the console.</p>
@@ -205,7 +208,7 @@ QuickStart: generateContent (Chat) Request</h3>
 <div class="ttc" id="aclass_uralstech_1_1_u_gemini_1_1_gemini_content_part_html_af9e3d8f3de91a004055ee2599a1b75d4"><div class="ttname"><a href="class_uralstech_1_1_u_gemini_1_1_gemini_content_part.html#af9e3d8f3de91a004055ee2599a1b75d4">Uralstech.UGemini.GeminiContentPart.Text</a></div><div class="ttdeci">string Text</div><div class="ttdoc">Inline text.</div><div class="ttdef"><b>Definition</b> GeminiContentPart.cs:18</div></div>
 <div class="ttc" id="aclass_uralstech_1_1_u_gemini_1_1_gemini_manager_html"><div class="ttname"><a href="class_uralstech_1_1_u_gemini_1_1_gemini_manager.html">Uralstech.UGemini.GeminiManager</a></div><div class="ttdoc">The class for accessing the Gemini API!</div><div class="ttdef"><b>Definition</b> GeminiManager.cs:17</div></div>
 <div class="ttc" id="aclass_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_html"><div class="ttname"><a href="class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html">Uralstech.UGemini.Models.GeminiModel</a></div><div class="ttdoc">Information about a Generative Language Model.</div><div class="ttdef"><b>Definition</b> GeminiModel.cs:11</div></div>
-<div class="ttc" id="aclass_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_html_a3b0a0484e82dc1877abb45e3db5fe589"><div class="ttname"><a href="class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#a3b0a0484e82dc1877abb45e3db5fe589">Uralstech.UGemini.Models.GeminiModel.Gemini1_5Flash</a></div><div class="ttdeci">static readonly GeminiModelId Gemini1_5Flash</div><div class="ttdoc">Gemini 1.5 Flash is a fast and versatile multimodal model for scaling across diverse tasks....</div><div class="ttdef"><b>Definition</b> GeminiModel.cs:52</div></div>
+<div class="ttc" id="aclass_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_html_a3b0a0484e82dc1877abb45e3db5fe589"><div class="ttname"><a href="class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#a3b0a0484e82dc1877abb45e3db5fe589">Uralstech.UGemini.Models.GeminiModel.Gemini1_5Flash</a></div><div class="ttdeci">static readonly GeminiModelId Gemini1_5Flash</div><div class="ttdoc">Gemini 1.5 Flash is a fast and versatile multimodal model for scaling across diverse tasks.</div><div class="ttdef"><b>Definition</b> GeminiModel.cs:56</div></div>
 <div class="ttc" id="aclass_uralstech_1_1_u_gemini_1_1_utils_1_1_singleton_1_1_singleton_html_a84485d2d649cb79a823a37e96821067c"><div class="ttname"><a href="class_uralstech_1_1_u_gemini_1_1_utils_1_1_singleton_1_1_singleton.html#a84485d2d649cb79a823a37e96821067c">Uralstech.UGemini.Utils.Singleton.Singleton.Instance</a></div><div class="ttdeci">static T Instance</div><div class="ttdoc">The active instance of type T .</div><div class="ttdef"><b>Definition</b> Singleton.cs:18</div></div>
 <div class="ttc" id="anamespace_uralstech_1_1_u_gemini_1_1_chat_html"><div class="ttname"><a href="namespace_uralstech_1_1_u_gemini_1_1_chat.html">Uralstech.UGemini.Chat</a></div><div class="ttdef"><b>Definition</b> GeminiChatRequest.cs:12</div></div>
 <div class="ttc" id="anamespace_uralstech_1_1_u_gemini_1_1_models_html"><div class="ttname"><a href="namespace_uralstech_1_1_u_gemini_1_1_models.html">Uralstech.UGemini.Models</a></div><div class="ttdef"><b>Definition</b> GeminiModel.cs:5</div></div>
@@ -234,7 +237,7 @@ QuickStart: Multi-turn generateContent Request</h3>
 <div class="line">    _chatHistory.Add(response.<a class="code hl_variable" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_response.html#a55e6d4a65bd637dbfbb8db55b8433ea1">Candidates</a>[0].<a class="code hl_variable" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_candidate.html#ad3ed32bfdd202e0f6d193e30666a3a79">Content</a>);</div>
 <div class="line">    <span class="keywordflow">return</span> response.<a class="code hl_property" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_response.html#af1d3aa0f8c16eea71168233a6b1666c2">Parts</a>[0].<a class="code hl_variable" href="class_uralstech_1_1_u_gemini_1_1_gemini_content_part.html#af9e3d8f3de91a004055ee2599a1b75d4">Text</a>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclass_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_candidate_html_ad3ed32bfdd202e0f6d193e30666a3a79"><div class="ttname"><a href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_candidate.html#ad3ed32bfdd202e0f6d193e30666a3a79">Uralstech.UGemini.Chat.GeminiCandidate.Content</a></div><div class="ttdeci">GeminiContent Content</div><div class="ttdoc">Generated content returned from the model.</div><div class="ttdef"><b>Definition</b> GeminiCandidate.cs:15</div></div>
+<div class="ttc" id="aclass_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_candidate_html_ad3ed32bfdd202e0f6d193e30666a3a79"><div class="ttname"><a href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_candidate.html#ad3ed32bfdd202e0f6d193e30666a3a79">Uralstech.UGemini.Chat.GeminiCandidate.Content</a></div><div class="ttdeci">GeminiContent Content</div><div class="ttdoc">Generated content returned from the model.</div><div class="ttdef"><b>Definition</b> GeminiCandidate.cs:16</div></div>
 <div class="ttc" id="aclass_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_response_html_a55e6d4a65bd637dbfbb8db55b8433ea1"><div class="ttname"><a href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_response.html#a55e6d4a65bd637dbfbb8db55b8433ea1">Uralstech.UGemini.Chat.GeminiChatResponse.Candidates</a></div><div class="ttdeci">GeminiCandidate[] Candidates</div><div class="ttdoc">Candidate responses from the model.</div><div class="ttdef"><b>Definition</b> GeminiChatResponse.cs:24</div></div>
 </div><!-- fragment --><p>Here, we simply have a list of <code>GeminiContent</code> objects, which tracks the messages of the conversation. Every time <code>OnChat</code> is called, the user's request and the model's reply are added the the list.</p>
 <h2><a class="anchor" id="autotoc_md7"></a>
@@ -563,7 +566,7 @@ JSON Response Mode</h3>
 <div class="line">    <span class="keywordflow">return</span> response.<a class="code hl_property" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_response.html#af1d3aa0f8c16eea71168233a6b1666c2">Parts</a>[0].<a class="code hl_variable" href="class_uralstech_1_1_u_gemini_1_1_gemini_content_part.html#af9e3d8f3de91a004055ee2599a1b75d4">Text</a>;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclass_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_generation_configuration_html"><div class="ttname"><a href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_generation_configuration.html">Uralstech.UGemini.Chat.GeminiGenerationConfiguration</a></div><div class="ttdoc">Configuration options for model generation and outputs. Not all parameters may be configurable for ev...</div><div class="ttdef"><b>Definition</b> GeminiGenerationConfiguration.cs:13</div></div>
-<div class="ttc" id="aclass_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_html_adadc5fec3cd85e2d6965bf4de43bddc0"><div class="ttname"><a href="class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#adadc5fec3cd85e2d6965bf4de43bddc0">Uralstech.UGemini.Models.GeminiModel.Gemini1_5Pro</a></div><div class="ttdeci">static readonly GeminiModelId Gemini1_5Pro</div><div class="ttdoc">Gemini 1.5 Pro is a mid-size multimodal model that is optimized for a wide-range of reasoning tasks....</div><div class="ttdef"><b>Definition</b> GeminiModel.cs:43</div></div>
+<div class="ttc" id="aclass_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_html_adadc5fec3cd85e2d6965bf4de43bddc0"><div class="ttname"><a href="class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#adadc5fec3cd85e2d6965bf4de43bddc0">Uralstech.UGemini.Models.GeminiModel.Gemini1_5Pro</a></div><div class="ttdeci">static readonly GeminiModelId Gemini1_5Pro</div><div class="ttdoc">Gemini 1.5 Pro is a mid-size multimodal model that is optimized for a wide-range of reasoning tasks....</div><div class="ttdef"><b>Definition</b> GeminiModel.cs:46</div></div>
 <div class="ttc" id="anamespace_uralstech_1_1_u_gemini_1_1_chat_html_a9c2f503426f177d74c1c489e32bb4147"><div class="ttname"><a href="namespace_uralstech_1_1_u_gemini_1_1_chat.html#a9c2f503426f177d74c1c489e32bb4147">Uralstech.UGemini.Chat.GeminiResponseType</a></div><div class="ttdeci">GeminiResponseType</div><div class="ttdoc">The response type for Gemini model responses.</div><div class="ttdef"><b>Definition</b> GeminiResponseType.cs:12</div></div>
 </div><!-- fragment --><p>Here, we used a schema for an array of objects, which contain two parameters: <code>expression</code> and <code>explanation</code>. We have told Gemini to split the response into the parameters, where a mathematical expression and its explanation is given.</p>
 <p>The <code>GeminiSchema</code> object is the same type used for function calling.</p>
@@ -718,15 +721,18 @@ Function Calling</h3>
 Streaming Generated Content</h3>
 <p>A sample showing a system which streams Gemini's responses, including function calls. <a href="https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/StreamedFunctionCallingSample"><em><b>GitHub Source</b></em></a></p>
 <h3><a class="anchor" id="autotoc_md26"></a>
-JSON Response</h3>
-<p>A sample scene showing a system where Gemini responds in a specified JSON format. <a href="https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/JSONResponseSample"><em><b>GitHub Source</b></em></a></p>
+Question Answering</h3>
+<p>A sample scene with a system where Gemini answers questions based only on the given context. <a href="https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/QuestionAnsweringSample"><em><b>GitHub Source</b></em></a></p>
 <h3><a class="anchor" id="autotoc_md27"></a>
 Prompting with File API</h3>
 <p>A sample scene with a system to create, delete, retrieve, list and prompt Gemini with files stored in the File/Media API endpoints. <a href="https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/FileAPISample"><em><b>GitHub Source</b></em></a></p>
 <h3><a class="anchor" id="autotoc_md28"></a>
+JSON Response</h3>
+<p>A sample scene showing a system where Gemini responds in a specified JSON format. <a href="https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/JSONResponseSample"><em><b>GitHub Source</b></em></a></p>
+<h3><a class="anchor" id="autotoc_md29"></a>
 List and Get Model Metadata</h3>
 <p>A sample scene with a system to list, get and chat with models using the models.get and models.list endpoints. <a href="https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/ModelMetadataRetrievalSample"><em><b>GitHub Source</b></em></a></p>
-<h3><a class="anchor" id="autotoc_md29"></a>
+<h3><a class="anchor" id="autotoc_md30"></a>
 Token Counting</h3>
 <p>A sample scene showing a token counting system using the <code>countTokens</code> endpoint. <a href="https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/TokenCounterSample"><em><b>GitHub Source</b></em></a> </p>
 </div></div><!-- contents -->
