@@ -37,9 +37,11 @@ need to use the Beta API. You can set the `useBetaApi` boolean parameter in the 
 - [`Gemini1_0Pro`](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro)
 - [`Gemini1_0ProVision`](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro-vision)
     - Gemini 1.0 Pro Vision is deprecated. Use Use 1.5 Flash (`Gemini1_5Flash`) or 1.5 Pro (`Gemini1_5Pro`) instead.
+- [`TextEmbedding004`](https://ai.google.dev/gemini-api/docs/models/gemini#text-embedding)
+- [`Aqa`](https://ai.google.dev/gemini-api/docs/models/gemini#aqa)
 
-You can provide the model ID as a `string` or as one of the `GeminiModel` statics to the `model`
-parameter in the request constructor.
+You can provide these to the `model` parameter in the constructors for model-related requests.
+UGemini can also implicitly convert `string` model IDs to `GeminiModelId` objects.
 
 #### QuickStart: generateContent (Chat) Request
 
@@ -631,13 +633,17 @@ A sample scene showing a function calling system. [***GitHub Source***](https://
 
 A sample showing a system which streams Gemini's responses, including function calls. [***GitHub Source***](https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/StreamedFunctionCallingSample)
 
-#### JSON Response
+#### Question Answering
 
-A sample scene showing a system where Gemini responds in a specified JSON format. [***GitHub Source***](https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/JSONResponseSample)
+A sample scene with a system where Gemini answers questions based only on the given context. [***GitHub Source***](https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/QuestionAnsweringSample)
 
 #### Prompting with File API
 
 A sample scene with a system to create, delete, retrieve, list and prompt Gemini with files stored in the File/Media API endpoints. [***GitHub Source***](https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/FileAPISample)
+
+#### JSON Response
+
+A sample scene showing a system where Gemini responds in a specified JSON format. [***GitHub Source***](https://github.com/Uralstech/UGemini/tree/master/UGemini/Packages/com.uralstech.ugemini/Samples~/JSONResponseSample)
 
 #### List and Get Model Metadata
 

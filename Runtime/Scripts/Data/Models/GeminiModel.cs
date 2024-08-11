@@ -17,18 +17,20 @@ namespace Uralstech.UGemini.Models
         /// For example, 1.0 Pro Vision can generate image descriptions, identify objects present in images, provide<br/>
         /// information about places or objects present in images, and more.
         /// </a>
-        /// <br/><br/>
-        /// Supports image, video and text input.
         /// </summary>
+        /// <remarks>
+        /// Supports image, video and text input.
+        /// </remarks>
         public readonly static GeminiModelId Gemini1_0ProVision = "gemini-pro-vision";
 
         /// <summary>
         /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro">
         /// Gemini 1.0 Pro is an NLP model that handles tasks like multi-turn text and code chat, and code generation.
         /// </a>
-        /// <br/><br/>
-        /// Supports text input.
         /// </summary>
+        /// <remarks>
+        /// Supports text input.
+        /// </remarks>
         public readonly static GeminiModelId Gemini1_0Pro = "gemini-1.0-pro";
 
         /// <summary>
@@ -37,19 +39,42 @@ namespace Uralstech.UGemini.Models
         /// 1.5 Pro can process large amounts of data at once, including 2 hours of video, 19 hours of audio,<br/>
         /// codebases with 60,000 lines of code, or 2,000 pages of text.
         /// </a>
-        /// <br/><br/>
-        /// Supports audio, image, video and text input.
         /// </summary>
+        /// <remarks>
+        /// Supports audio, image, video and text input.
+        /// </remarks>
         public readonly static GeminiModelId Gemini1_5Pro = "gemini-1.5-pro";
 
         /// <summary>
         /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash">
         /// Gemini 1.5 Flash is a fast and versatile multimodal model for scaling across diverse tasks.
         /// </a>
-        /// <br/><br/>
-        /// Supports audio, image, video and text input.
         /// </summary>
+        /// <remarks>
+        /// Supports audio, image, video and text input.
+        /// </remarks>
         public readonly static GeminiModelId Gemini1_5Flash = "gemini-1.5-flash";
+
+        /// <summary>
+        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#text-embedding">
+        /// text-embedding-004 achieves a stronger retrieval performance and outperforms existing models with comparable dimensions, on the standard MTEB embedding benchmarks.
+        /// </a>
+        /// </summary>
+        /// <remarks>
+        /// Supports text input.
+        /// </remarks>
+        public readonly static GeminiModelId TextEmbedding004 = "text-embedding-004";
+
+        /// <summary>
+        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#aqa">
+        /// You can use the AQA model to perform Attributed Question-Answering (AQA)–related tasks over a document, corpus, or a set of passages. The AQA model returns answers
+        /// to questions that are grounded in provided sources, along with estimating answerable probability.
+        /// </a>
+        /// </summary>
+        /// <remarks>
+        /// Supports text input.
+        /// </remarks>
+        public readonly static GeminiModelId Aqa = "aqa";
 
         /// <summary>
         /// The version number of the model.
