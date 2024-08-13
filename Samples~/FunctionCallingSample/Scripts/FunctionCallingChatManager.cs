@@ -97,11 +97,10 @@ namespace Uralstech.UGemini.Samples
 
             do
             {
-                response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(GeminiModel.Gemini1_5Pro, true)
+                response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(GeminiModel.Gemini1_5Flash, true)
                 {
                     Contents = contents.ToArray(),
                     Tools = new GeminiTool[] { s_geminiFunctions },
-                    ToolConfig = GeminiToolConfiguration.GetConfiguration(GeminiFunctionCallingMode.Any),
                 });
 
                 contents.Add(response.Candidates[0].Content);
