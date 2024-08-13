@@ -2,6 +2,16 @@ var annotated_dup =
 [
     [ "Uralstech", "namespace_uralstech.html", [
       [ "UGemini", "namespace_uralstech_1_1_u_gemini.html", [
+        [ "Answer", "namespace_uralstech_1_1_u_gemini_1_1_answer.html", [
+          [ "GeminiAnswerRequest", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_answer_request.html", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_answer_request" ],
+          [ "GeminiAnswerResponse", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_answer_response.html", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_answer_response" ],
+          [ "GeminiGroundingAttributions", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_grounding_attributions.html", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_grounding_attributions" ],
+          [ "GeminiGroundingPassage", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_grounding_passage.html", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_grounding_passage" ],
+          [ "GeminiGroundingPassages", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_grounding_passages.html", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_grounding_passages" ],
+          [ "GeminiMetadataCondition", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_metadata_condition.html", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_metadata_condition" ],
+          [ "GeminiMetadataFilter", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_metadata_filter.html", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_metadata_filter" ],
+          [ "GeminiSemanticRetrieverConfig", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_semantic_retriever_config.html", "class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_semantic_retriever_config" ]
+        ] ],
         [ "Chat", "namespace_uralstech_1_1_u_gemini_1_1_chat.html", [
           [ "GeminiAttributionSourceId", "class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_attribution_source_id.html", "class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_attribution_source_id" ],
           [ "GeminiCandidate", "class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_candidate.html", "class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_candidate" ],
@@ -17,6 +27,13 @@ var annotated_dup =
           [ "GeminiSafetySettings", "class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_safety_settings.html", "class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_safety_settings" ],
           [ "GeminiSemanticRetrieverChunk", "class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_semantic_retriever_chunk.html", "class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_semantic_retriever_chunk" ],
           [ "GeminiUsageMetadata", "class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_usage_metadata.html", "class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_usage_metadata" ]
+        ] ],
+        [ "Embedding", "namespace_uralstech_1_1_u_gemini_1_1_embedding.html", [
+          [ "GeminiBatchEmbedContentRequest", "class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_batch_embed_content_request.html", "class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_batch_embed_content_request" ],
+          [ "GeminiBatchEmbedContentResponse", "class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_batch_embed_content_response.html", "class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_batch_embed_content_response" ],
+          [ "GeminiContentEmbedding", "class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_content_embedding.html", "class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_content_embedding" ],
+          [ "GeminiEmbedContentRequest", "class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_embed_content_request.html", "class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_embed_content_request" ],
+          [ "GeminiEmbedContentResponse", "class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_embed_content_response.html", "class_uralstech_1_1_u_gemini_1_1_embedding_1_1_gemini_embed_content_response" ]
         ] ],
         [ "Exceptions", "namespace_uralstech_1_1_u_gemini_1_1_exceptions.html", [
           [ "GeminiRequestException", "class_uralstech_1_1_u_gemini_1_1_exceptions_1_1_gemini_request_exception.html", "class_uralstech_1_1_u_gemini_1_1_exceptions_1_1_gemini_request_exception" ]
@@ -37,6 +54,7 @@ var annotated_dup =
           [ "GeminiModel", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model" ],
           [ "GeminiModelGetRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_get_request.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_get_request" ],
           [ "GeminiModelId", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id" ],
+          [ "GeminiModelIdStringConverter", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter" ],
           [ "GeminiModelListRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request" ],
           [ "GeminiModelListResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_response.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_response" ]
         ] ],

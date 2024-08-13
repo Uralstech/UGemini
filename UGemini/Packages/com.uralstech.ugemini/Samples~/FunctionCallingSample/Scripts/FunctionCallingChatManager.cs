@@ -40,7 +40,7 @@ namespace Uralstech.UGemini.Samples
                         Required = new string[] { "text" },
                     }
                 },
-    
+
                 new GeminiFunctionDeclaration()
                 {
                     Name = "changeTextColor",
@@ -73,6 +73,7 @@ namespace Uralstech.UGemini.Samples
             },
         };
 
+        [SerializeField] private int _maxFunctionCalls = 3;
         [SerializeField] private InputField _chatInput;
         [SerializeField] private Text _chatResponse;
 
@@ -92,13 +93,14 @@ namespace Uralstech.UGemini.Samples
 
             GeminiChatResponse response;
             GeminiFunctionCall functionCall;
+            int responseIterations = 0;
+
             do
             {
                 response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(GeminiModel.Gemini1_5Flash, true)
                 {
                     Contents = contents.ToArray(),
                     Tools = new GeminiTool[] { s_geminiFunctions },
-                    ToolConfig = GeminiToolConfiguration.GetConfiguration(GeminiFunctionCallingMode.Any),
                 });
 
                 contents.Add(response.Candidates[0].Content);
@@ -143,7 +145,9 @@ namespace Uralstech.UGemini.Samples
                         ["result"] = "Completed executing function successfully."
                     })));
                 }
-            } while (functionCall != null);
+
+                responseIterations++;
+            } while (functionCall != null && responseIterations <= _maxFunctionCalls);
         }
 
         private bool TryChangeTextColor(string color)

@@ -1,6 +1,6 @@
 ## UGemini
 
-A C# wrapper for the Google Gemini API.
+A Unity C# wrapper for the Google Gemini API.
 
 [![openupm](https://img.shields.io/npm/v/com.uralstech.ugemini?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.uralstech.ugemini/)
 [![openupm](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=downloads&query=%24.downloads&suffix=%2Fmonth&url=https%3A%2F%2Fpackage.openupm.com%2Fdownloads%2Fpoint%2Flast-month%2Fcom.uralstech.ugemini)](https://openupm.com/packages/com.uralstech.ugemini/)
@@ -38,7 +38,7 @@ Follow the steps detailed in the OpenUPM installation method and only install th
 1. Clone or download the repository from the desired branch (master, preview/unstable)
 2. Drag the package folder `UGemini/UGemini/Packages/com.uralstech.ugemini` into your Unity project's `Packages` folder
 3. In the `Packages` folder of your project, add the following line to the list in `manifest.json`:
-    `"com.uralstech.ugemini": "1.0.1",`
+    `"com.uralstech.ugemini": "1.x.x",`
 
 *Adding additional dependencies:*<br/>
 Follow the steps detailed in the OpenUPM installation method and only install the `Utilities.Async`* and `Utilities.Encoder.Wav`* packages.
@@ -47,19 +47,12 @@ Follow the steps detailed in the OpenUPM installation method and only install th
 
 ### Gemini API Support
 
-- [x] `models` endpoint ⚠️
-    - [ ] `batchEmbedContents` method
+- [x] `models` endpoint
+    - [x] `batchEmbedContents` method
     - [x] `countTokens` method
-    - [ ] `embedContent` method
-    - [ ] `generateAnswer` method 🧪
+    - [x] `embedContent` method
+    - [x] `generateAnswer` method 🧪
     - [x] `generateContent` method
-        - [x] JSON output 🧪
-        - [x] System instructions 🧪
-        - [x] Text generation
-        - [x] Vision
-        - [x] Function calling 🧪
-        - [x] Safety settings
-
     - [x] `get` method
     - [x] `list` method
     - [x] `streamGenerateContent` method
@@ -74,7 +67,9 @@ Follow the steps detailed in the OpenUPM installation method and only install th
 - [x] `media` endpoint 🧪
     - [x] `upload` method
     
-- [ ] `tunedModels` endpoint
+- [x] `tunedModels` endpoint ⚠️
+    - [x] `generateContent` method
+
 - [ ] `operations` endpoint
 
 ⚠️ - Not all methods/features are supported<br/>
@@ -83,6 +78,4 @@ Follow the steps detailed in the OpenUPM installation method and only install th
 
 ### Documentation
 
-See <https://github.com/Uralstech/UGemini/blob/master/UGemini/Packages/com.uralstech.ugemini/Documentation~/README.md>.
-
-See <https://uralstech.github.io/UGemini/> for reference manual.
+See <https://uralstech.github.io/UGemini/> or `refman.pdf` in the package documentation for reference manual w/ tutorial.

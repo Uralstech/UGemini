@@ -1,27 +1,8 @@
 var searchData=
 [
-  ['safety_0',['Safety',['../namespace_uralstech_1_1_u_gemini_1_1_chat.html#a9603a55c335ee57bbc71615ef6d6b8c9a6472ce41c26babff27b4c28028093d77',1,'Uralstech.UGemini.Chat.Safety'],['../namespace_uralstech_1_1_u_gemini_1_1_chat.html#a68f217c6b1966d1a17a15e676e951ec4a6472ce41c26babff27b4c28028093d77',1,'Uralstech.UGemini.Chat.Safety']]],
-  ['safetyratings_1',['SafetyRatings',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_candidate.html#ad1b077e8cb7bd94470bd9c1498e1da35',1,'Uralstech.UGemini.Chat.GeminiCandidate.SafetyRatings'],['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_prompt_feedback.html#ae392c914637c07a8a35c2ebfea9ee28a',1,'Uralstech.UGemini.Chat.GeminiPromptFeedback.SafetyRatings']]],
-  ['safetysettings_2',['SafetySettings',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html#a4684c03d7163a508080a2c490f77ba2f',1,'Uralstech::UGemini::Chat::GeminiChatRequest']]],
-  ['semanticretrieverchunk_3',['SemanticRetrieverChunk',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_attribution_source_id.html#a87af76d28574012a45db4938fac728fa',1,'Uralstech::UGemini::Chat::GeminiAttributionSourceId']]],
-  ['sendstreamingwebrequest_4',['SendStreamingWebRequest',['../class_uralstech_1_1_u_gemini_1_1_utils_1_1_web_1_1_web_request_helper.html#a2f450362364952d382417d14168a0368',1,'Uralstech::UGemini::Utils::Web::WebRequestHelper']]],
-  ['setapikey_5',['SetApiKey',['../class_uralstech_1_1_u_gemini_1_1_gemini_manager.html#ae7f3e2e264d1f48f2f85bfdfd0aa778a',1,'Uralstech::UGemini::GeminiManager']]],
-  ['sexual_6',['Sexual',['../namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea53257f3f3ac60dd1f6d686c4bfd61efc',1,'Uralstech::UGemini']]],
-  ['sexuallyexplicit_7',['SexuallyExplicit',['../namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7eaa1a132d2d12093f5cfeddf67393d2211',1,'Uralstech::UGemini']]],
-  ['sha256hash_8',['Sha256Hash',['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file.html#aae76c98f6875181cd090f2d94b42f1fa',1,'Uralstech::UGemini::FileAPI::GeminiFile']]],
-  ['singleton_9',['Singleton',['../class_uralstech_1_1_u_gemini_1_1_utils_1_1_singleton_1_1_singleton.html',1,'Uralstech::UGemini::Utils::Singleton']]],
-  ['singleton_3c_20geminimanager_20_3e_10',['Singleton&lt; GeminiManager &gt;',['../class_uralstech_1_1_u_gemini_1_1_utils_1_1_singleton_1_1_singleton.html',1,'Uralstech::UGemini::Utils::Singleton']]],
-  ['sizebytes_11',['SizeBytes',['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file.html#ae94aa21ac3e6bc39711d9ecbe801ff42',1,'Uralstech::UGemini::FileAPI::GeminiFile']]],
-  ['source_12',['Source',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_semantic_retriever_chunk.html#a28f1ab1196f724b1294d460cf8849f5b',1,'Uralstech::UGemini::Chat::GeminiSemanticRetrieverChunk']]],
-  ['sourceid_13',['SourceId',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_grounding_attribution.html#a0b36a4c9080e9a4559f6e7a3002f0bc5',1,'Uralstech::UGemini::Chat::GeminiGroundingAttribution']]],
-  ['startindex_14',['StartIndex',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_citation_source.html#a5b6603bb20d60d7c88d9def5b4b11cb7',1,'Uralstech::UGemini::Chat::GeminiCitationSource']]],
-  ['state_15',['State',['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file.html#aff3dcc16ced0439e2bfe77719bf62df8',1,'Uralstech::UGemini::FileAPI::GeminiFile']]],
-  ['status_16',['Status',['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file.html#ab5cee51acc7ec3a63508518f88c23ad7',1,'Uralstech::UGemini::FileAPI::GeminiFile']]],
-  ['stop_17',['Stop',['../namespace_uralstech_1_1_u_gemini_1_1_chat.html#a9603a55c335ee57bbc71615ef6d6b8c9a11a755d598c0c417f9a36758c3da7481',1,'Uralstech::UGemini::Chat']]],
-  ['stopsequences_18',['StopSequences',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_generation_configuration.html#ae2e96230a1c69091301d7ae3194a027a',1,'Uralstech::UGemini::Chat::GeminiGenerationConfiguration']]],
-  ['streamedresponse_19',['StreamedResponse',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html#a6467a93c2732daf1e0221d51655a1eea',1,'Uralstech.UGemini.Chat.GeminiChatRequest.StreamedResponse'],['../interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html#a0e1e3659222c4aa5f125521c50915412',1,'Uralstech.UGemini.IGeminiStreamablePostRequest.StreamedResponse']]],
-  ['streamrequest_3c_20tresponse_20_3e_20',['StreamRequest&lt; TResponse &gt;',['../class_uralstech_1_1_u_gemini_1_1_gemini_manager.html#aebd7e9c3ee0423260780ac32f834b1fc',1,'Uralstech::UGemini::GeminiManager']]],
-  ['string_21',['String',['../namespace_uralstech_1_1_u_gemini_1_1_schema.html#ad730020272e108c03945937e79a5055aa27118326006d3829667a400ad23d5d98',1,'Uralstech::UGemini::Schema']]],
-  ['supportedgenerationmethods_22',['SupportedGenerationMethods',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#a559ca297a6e50609fedaf816dc89a5e8',1,'Uralstech::UGemini::Models::GeminiModel']]],
-  ['systeminstruction_23',['SystemInstruction',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html#a701b2356cc58f68d3c916d5e98282adb',1,'Uralstech::UGemini::Chat::GeminiChatRequest']]]
+  ['query_0',['Query',['../class_uralstech_1_1_u_gemini_1_1_answer_1_1_gemini_semantic_retriever_config.html#ad78504e966e9dd0240dd8736b73f84f9',1,'Uralstech::UGemini::Answer::GeminiSemanticRetrieverConfig']]],
+  ['question_20answering_1',['Question Answering',['../md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md35',1,'']]],
+  ['questionanswering_2',['QuestionAnswering',['../namespace_uralstech_1_1_u_gemini_1_1_embedding.html#af4102a73694c553d3c13890c2edb77f5a74073d5c6a6067844a27ddf3d54c44bb',1,'Uralstech::UGemini::Embedding']]],
+  ['quickstart_20and_20documentation_3',['QuickStart and Documentation',['../md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html',1,'']]],
+  ['quickstart_3a_20multi_20turn_20chat_20request_4',['QuickStart: Multi-turn Chat Request',['../md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md6',1,'']]]
 ];
