@@ -47,7 +47,7 @@ namespace Uralstech.UGemini.Embedding
         /// <summary>
         /// The model to use.
         /// </summary>
-        [JsonIgnore]
+        [JsonConverter(typeof(GeminiModelIdStringConverter))]
         public GeminiModelId Model;
 
         /// <summary>

@@ -90,7 +90,8 @@ var hierarchy =
       [ "Uralstech.UGemini.Chat.GeminiChatRequest", "class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html", null ]
     ] ],
     [ "JsonConverter", null, [
-      [ "Uralstech.UGemini.FileAPI.GeminiTimeSpanJsonConverter", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_time_span_json_converter.html", null ]
+      [ "Uralstech.UGemini.FileAPI.GeminiTimeSpanJsonConverter", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_time_span_json_converter.html", null ],
+      [ "Uralstech.UGemini.Models.GeminiModelIdStringConverter", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html", null ]
     ] ],
     [ "MonoBehaviour", null, [
       [ "Uralstech.UGemini.Utils.Singleton.Singleton< T >", "class_uralstech_1_1_u_gemini_1_1_utils_1_1_singleton_1_1_singleton.html", null ]

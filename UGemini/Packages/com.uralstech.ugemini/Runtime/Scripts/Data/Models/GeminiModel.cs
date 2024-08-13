@@ -156,9 +156,11 @@ namespace Uralstech.UGemini.Models
             float temperature,
             float topP,
             int topK
-        ) : base(baseModelId)
+        ) : base(name, baseModelId)
         {
-            Name = name;
+            if (string.IsNullOrEmpty(BaseModelId))
+                BaseModelId = name.Split('/')[^1];
+
             Version = version;
             DisplayName = displayName;
             Description = description;

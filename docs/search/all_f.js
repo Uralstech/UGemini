@@ -11,7 +11,7 @@ var searchData=
   ['processing_8',['Processing',['../namespace_uralstech_1_1_u_gemini_1_1_file_a_p_i.html#a70714cf13354876d017e3c66f5060f40a643562a9ae7099c8aabfdc93478db117',1,'Uralstech::UGemini::FileAPI']]],
   ['processstreameddata_9',['ProcessStreamedData',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html#a9b45ad619aad82676587fb967652dea0',1,'Uralstech.UGemini.Chat.GeminiChatRequest.ProcessStreamedData()'],['../interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html#a3db97ecc85961d57c3a0ff9fc655ff5d',1,'Uralstech.UGemini.IGeminiStreamablePostRequest.ProcessStreamedData()']]],
   ['promptfeedback_10',['PromptFeedback',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_response.html#a175054395edfe11a3abaa4ed7895db16',1,'Uralstech::UGemini::Chat::GeminiChatResponse']]],
-  ['prompting_20with_20file_20api_11',['Prompting with File API',['../md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md27',1,'']]],
+  ['prompting_20with_20file_20api_11',['Prompting with File API',['../md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md36',1,'']]],
   ['prompttokencount_12',['PromptTokenCount',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_usage_metadata.html#a0c8d8f9a93e1253f61c54facc8c40c12',1,'Uralstech::UGemini::Chat::GeminiUsageMetadata']]],
   ['properties_13',['Properties',['../class_uralstech_1_1_u_gemini_1_1_schema_1_1_gemini_schema.html#a0b6f943d1680b2ad69255367a51e23d1',1,'Uralstech::UGemini::Schema::GeminiSchema']]]
 ];
