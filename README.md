@@ -52,7 +52,8 @@ Follow the steps detailed in the OpenUPM installation method and only install th
     - [x] `countTokens` method
     - [x] `embedContent` method
     - [x] `generateAnswer` method 🧪
-    - [x] `generateContent` method
+    - [x] `generateContent` method ⚠️
+        - [ ] Code execution 🧪
     - [x] `get` method
     - [x] `list` method
     - [x] `streamGenerateContent` method

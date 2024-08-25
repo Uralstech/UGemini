@@ -1,13 +1,13 @@
 {
   "dependencies": {
-    "com.unity.collab-proxy": "2.4.3",
+    "com.unity.collab-proxy": "2.4.4",
     "com.unity.feature.development": "1.0.1",
-    "com.unity.textmeshpro": "3.0.6",
+    "com.unity.textmeshpro": "3.0.9",
     "com.unity.timeline": "1.7.6",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.9.4",
     "com.uralstech.ugemini": "1.0.1",
-    "com.utilities.encoder.wav": "1.2.1",
+    "com.utilities.encoder.wav": "1.2.2",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",

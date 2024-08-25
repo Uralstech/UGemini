@@ -59,6 +59,12 @@ namespace Uralstech.UGemini.Schema
         public string[] Enum = null;
 
         /// <summary>
+        /// Optional. Maximum number of the elements for <see cref="GeminiSchemaDataType.Array"/>.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public long? MaxItems = null;
+
+        /// <summary>
         /// The properties of <see cref="GeminiSchemaDataType.Object"/>.
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
