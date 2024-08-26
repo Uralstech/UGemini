@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
-namespace Uralstech.UGemini.Models.Content
+namespace Uralstech.UGemini
 {
     /// <summary>
     /// Enum for the types of content able to be fed to the Gemini API.

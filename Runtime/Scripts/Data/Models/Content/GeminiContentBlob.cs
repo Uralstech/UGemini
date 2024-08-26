@@ -16,7 +16,7 @@ namespace Uralstech.UGemini.Models.Content
         /// The type of the data.
         /// </summary>
         /// <remarks>
-        /// You can use <see cref="EnumExtensions.ContentType(string)"/> to convert <see cref="string"/>
+        /// You can use <see cref="GeminiContentTypeExtensions.ContentType(string)"/> to convert <see cref="string"/>
         /// values to their <see cref="GeminiContentType"/> equivalents, like:
         /// <c>"image/png".ContentType()</c>
         /// </remarks>
