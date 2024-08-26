@@ -2,12 +2,12 @@
 using System.Reflection;
 using System.Runtime.Serialization;
 
-namespace Uralstech.UGemini.Models.Content
+namespace Uralstech.UGemini
 {
     /// <summary>
     /// Extensions for <see cref="Enum"/> type objects.
     /// </summary>
-    public static class EnumExtensions
+    public static class GeminiContentTypeExtensions
     {
         /// <summary>
         /// Converts a <see cref="GeminiContentType"/> to its <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">MIME type</a>.
