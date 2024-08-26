@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace Uralstech.UGemini.TokenCounting
+namespace Uralstech.UGemini.Models.CountTokens
 {
     /// <summary>
     /// A response from CountTokens.

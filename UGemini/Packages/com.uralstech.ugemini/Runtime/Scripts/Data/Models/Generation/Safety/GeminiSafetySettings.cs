@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace Uralstech.UGemini.Chat
+namespace Uralstech.UGemini.Models.Generation.Safety
 {
     /// <summary>
     /// Safety setting, affecting the safety-blocking behavior.

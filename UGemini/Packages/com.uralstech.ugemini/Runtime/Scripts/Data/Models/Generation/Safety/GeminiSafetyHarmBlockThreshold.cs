@@ -1,9 +1,8 @@
-﻿
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
-namespace Uralstech.UGemini.Chat
+namespace Uralstech.UGemini.Models.Generation.Safety
 {
     /// <summary>
     /// Block at and beyond a specified harm probability.

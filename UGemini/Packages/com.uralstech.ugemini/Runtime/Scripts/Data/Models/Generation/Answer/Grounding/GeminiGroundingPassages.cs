@@ -1,17 +1,17 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace Uralstech.UGemini.Models.Embedding
+namespace Uralstech.UGemini.Models.Generation.QuestionAnswering.Grounding
 {
     /// <summary>
-    /// A list of floats representing an embedding.
+    /// A repeated list of passages.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class GeminiContentEmbedding
+    public class GeminiGroundingPassages
     {
         /// <summary>
-        /// The embedding values.
+        /// List of passages.
         /// </summary>
-        public float[] Values;
+        public GeminiGroundingPassage[] Passages;
     }
 }

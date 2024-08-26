@@ -1,9 +1,8 @@
-﻿
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
-namespace Uralstech.UGemini
+namespace Uralstech.UGemini.Models.Generation.Safety
 {
     /// <summary>
     /// The category of a rating.

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace Uralstech.UGemini.Embedding
+namespace Uralstech.UGemini.Models.Embedding
 {
     /// <summary>
     /// The response to a <see cref="GeminiBatchEmbedContentRequest"/>.

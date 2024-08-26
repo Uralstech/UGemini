@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
-namespace Uralstech.UGemini.Embedding
+namespace Uralstech.UGemini.Models.Embedding
 {
     /// <summary>
     /// Type of task for which the embedding will be used.
