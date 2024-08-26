@@ -1,8 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using Uralstech.UGemini.Models;
 
-namespace Uralstech.UGemini.Embedding
+namespace Uralstech.UGemini.Models.Embedding
 {
     /// <summary>
     /// Generates multiple embeddings from the model given input text in a synchronous call.

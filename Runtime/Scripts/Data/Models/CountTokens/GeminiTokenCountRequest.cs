@@ -1,11 +1,10 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using System;
 using System.ComponentModel;
-using Uralstech.UGemini.Chat;
-using Uralstech.UGemini.Models;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation.Chat;
 
-namespace Uralstech.UGemini.TokenCounting
+namespace Uralstech.UGemini.Models.CountTokens
 {
     /// <summary>
     /// Request to count tokens in given content.

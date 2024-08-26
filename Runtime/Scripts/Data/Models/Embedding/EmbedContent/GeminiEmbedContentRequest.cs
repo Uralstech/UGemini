@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.ComponentModel;
-using Uralstech.UGemini.Models;
+using Uralstech.UGemini.Models.Content;
 
-namespace Uralstech.UGemini.Embedding
+namespace Uralstech.UGemini.Models.Embedding
 {
     /// <summary>
     /// Generates an embedding from the model.
