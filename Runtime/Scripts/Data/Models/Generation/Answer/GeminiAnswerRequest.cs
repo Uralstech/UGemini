@@ -30,14 +30,14 @@ namespace Uralstech.UGemini.Models.Generation.QuestionAnswering
         public GeminiAnswerStyle AnswerStyle;
 
         /// <summary>
-        /// A list of unique <see cref="Chat.GeminiSafetySettings"/> instances for blocking unsafe content.
+        /// A list of unique <see cref="GeminiSafetySettings"/> instances for blocking unsafe content.
         /// </summary>
         /// <remarks>
         /// This will be enforced on <see cref="Contents"/> and <see cref="GeminiAnswerResponse.Answer"/>.<br/>
         /// There should not be more than one setting for each <see cref="GeminiSafetyHarmCategory"/> type. The API will block any<br/>
         /// contents and responses that fail to meet the thresholds set by these settings. This list overrides the default<br/>
         /// settings for each <see cref="GeminiSafetyHarmCategory"/> specified in the <see cref="SafetySettings"/>. If there is<br/>
-        /// no <see cref="Chat.GeminiSafetySettings"/> for a given <see cref="GeminiSafetyHarmCategory"/> provided in the list, the API will use the<br/>
+        /// no <see cref="GeminiSafetySettings"/> for a given <see cref="GeminiSafetyHarmCategory"/> provided in the list, the API will use the<br/>
         /// default safety setting for that category. Harm categories <see cref="GeminiSafetyHarmCategory.HateSpeech"/>,<br/>
         /// <see cref="GeminiSafetyHarmCategory.SexuallyExplicit"/>, <see cref="GeminiSafetyHarmCategory.DangerousContent"/> and<br/>
         /// <see cref="GeminiSafetyHarmCategory.Harassment"/> are supported.

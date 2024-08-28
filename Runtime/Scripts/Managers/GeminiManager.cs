@@ -33,8 +33,8 @@ namespace Uralstech.UGemini
         /// 
         /// <typeparam name="TResponse">
         /// The response type. For example, a request of type <see cref="Models.Generation.Chat.GeminiChatRequest"/> corresponds
-        /// to a response type of <see cref="Chat.GeminiChatResponse"/>, and a request of type <see cref="Models.CountTokens.GeminiTokenCountRequest"/>
-        /// corresponds to a response of type <see cref="TokenCounting.GeminiTokenCountResponse"/>.
+        /// to a response type of <see cref="Models.Generation.Chat.GeminiChatResponse"/>, and a request of type <see cref="Models.CountTokens.GeminiTokenCountRequest"/>
+        /// corresponds to a response of type <see cref="Models.CountTokens.GeminiTokenCountResponse"/>.
         /// </typeparam>
         /// 
         /// <param name="request">The request object.</param>
@@ -57,8 +57,8 @@ namespace Uralstech.UGemini
         /// 
         /// <typeparam name="TResponse">
         /// The response type. For example, a request of type <see cref="Models.Generation.Chat.GeminiChatRequest"/> corresponds
-        /// to a response type of <see cref="Chat.GeminiChatResponse"/>, and a request of type <see cref="Models.CountTokens.GeminiTokenCountRequest"/>
-        /// corresponds to a response of type <see cref="TokenCounting.GeminiTokenCountResponse"/>.
+        /// to a response type of <see cref="Models.Generation.Chat.GeminiChatResponse"/>, and a request of type <see cref="Models.CountTokens.GeminiTokenCountRequest"/>
+        /// corresponds to a response of type <see cref="Models.CountTokens.GeminiTokenCountResponse"/>.
         /// </typeparam>
         /// 
         /// <param name="request">The request object.</param>
@@ -83,8 +83,8 @@ namespace Uralstech.UGemini
         /// 
         /// <typeparam name="TResponse">
         /// The response type. For example, a request of type <see cref="Models.Generation.Chat.GeminiChatRequest"/> corresponds
-        /// to a response type of <see cref="Chat.GeminiChatResponse"/>, and a request of type <see cref="Models.CountTokens.GeminiTokenCountRequest"/>
-        /// corresponds to a response of type <see cref="TokenCounting.GeminiTokenCountResponse"/>.
+        /// to a response type of <see cref="Models.Generation.Chat.GeminiChatResponse"/>, and a request of type <see cref="Models.CountTokens.GeminiTokenCountRequest"/>
+        /// corresponds to a response of type <see cref="Models.CountTokens.GeminiTokenCountResponse"/>.
         /// </typeparam>
         /// 
         /// <param name="request">The request object.</param>
@@ -122,8 +122,8 @@ namespace Uralstech.UGemini
         /// 
         /// <typeparam name="TResponse">
         /// The response type. For example, a request of type <see cref="Models.Generation.Chat.GeminiChatRequest"/> corresponds
-        /// to a response type of <see cref="Chat.GeminiChatResponse"/>, and a request of type <see cref="Models.CountTokens.GeminiTokenCountRequest"/>
-        /// corresponds to a response of type <see cref="TokenCounting.GeminiTokenCountResponse"/>.
+        /// to a response type of <see cref="Models.Generation.Chat.GeminiChatResponse"/>, and a request of type <see cref="Models.CountTokens.GeminiTokenCountRequest"/>
+        /// corresponds to a response of type <see cref="Models.CountTokens.GeminiTokenCountResponse"/>.
         /// </typeparam>
         /// 
         /// <param name="request">The request object.</param>

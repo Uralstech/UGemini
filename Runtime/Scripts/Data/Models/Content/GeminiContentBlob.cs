@@ -7,7 +7,7 @@ namespace Uralstech.UGemini.Models.Content
     /// <summary>
     /// Raw media bytes.
     /// 
-    /// Text should not be sent as raw bytes, use the <see cref="GeminiContentPart.Text"/>> field.
+    /// Text should not be sent as raw bytes, use the <see cref="GeminiContentPart.Text"/> field.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class GeminiContentBlob

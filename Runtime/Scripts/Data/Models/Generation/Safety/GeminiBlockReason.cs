@@ -17,7 +17,7 @@ namespace Uralstech.UGemini.Models.Generation.Safety
         Unspecified,
 
         /// <summary>
-        /// Prompt was blocked due to safety reasons. You can inspect <see cref="GeminiPromptFeedback.SafetyRatings"/> to understand which safety category blocked it.
+        /// Prompt was blocked due to safety reasons. You can inspect <see cref="Candidate.GeminiPromptFeedback.SafetyRatings"/> to understand which safety category blocked it.
         /// </summary>
         [EnumMember(Value = "SAFETY")]
         Safety,

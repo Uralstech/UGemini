@@ -5,7 +5,7 @@ using Uralstech.UGemini.Models.Generation.Safety;
 namespace Uralstech.UGemini.Models.Generation.Candidate
 {
     /// <summary>
-    /// A set of the feedback metadata the prompt specified in <see cref="GeminiChatResponse.Candidates"/>.
+    /// A set of the feedback metadata for the prompt specified in a generation request.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class GeminiPromptFeedback : IAppendableData<GeminiPromptFeedback>
