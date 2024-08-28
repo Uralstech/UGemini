@@ -10,6 +10,6 @@ var searchData=
   ['textxml_7',['TextXML',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73caf77fab54cfab903b4ff23c6a93eb86cf',1,'Uralstech::UGemini']]],
   ['textxpython_8',['TextXPython',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca077005b32057d70b83b7b78172c70df8',1,'Uralstech::UGemini']]],
   ['textxtypescript_9',['TextXTypeScript',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca4a07195344ee1042ff85164921294594',1,'Uralstech::UGemini']]],
-  ['toolresponse_10',['ToolResponse',['../namespace_uralstech_1_1_u_gemini.html#a0d462193ef311a2c0dcde6730b1cea52afde9e414e674f69454deb52a73765e62',1,'Uralstech::UGemini']]],
-  ['toxicity_11',['Toxicity',['../namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea6882500ce8663d315bd70a1a1c522fe6',1,'Uralstech::UGemini']]]
+  ['toolresponse_10',['ToolResponse',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_content.html#adfb4515f0bcf87f8c640ef363b6285dbafde9e414e674f69454deb52a73765e62',1,'Uralstech::UGemini::Models::Content']]],
+  ['toxicity_11',['Toxicity',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_safety.html#a857e0b9ffddf49934fd8d1dac801be51a6882500ce8663d315bd70a1a1c522fe6',1,'Uralstech::UGemini::Models::Generation::Safety']]]
 ];

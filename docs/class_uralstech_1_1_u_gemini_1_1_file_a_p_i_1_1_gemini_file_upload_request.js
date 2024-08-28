@@ -1,6 +1,7 @@
 var class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_upload_request =
 [
     [ "GeminiFileUploadRequest", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_upload_request.html#ac5a87a5b81f5b2adcda7cdf1027b98a4", null ],
+    [ "GeminiFileUploadRequest", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_upload_request.html#a8dcab845647e29b4ab5d682d0129a484", null ],
     [ "GetEndpointUri", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_upload_request.html#a72b2ec065988d18fa295e59108b74449", null ],
     [ "GetUtf8EncodedData", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_upload_request.html#a8a9a563f895ab297a2d4bdc22b5c1bc8", null ],
     [ "ApiVersion", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_upload_request.html#a402c8ca90f45bf25a980c0bb94736f4d", null ],

@@ -1,0 +1,5 @@
+var class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_attribution_1_1_gemini_attribution_source_id =
+[
+    [ "GroundingPassage", "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_attribution_1_1_gemini_attribution_source_id.html#a92ad083742ba12e4127ac367bffa0a96", null ],
+    [ "SemanticRetrieverChunk", "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_attribution_1_1_gemini_attribution_source_id.html#ab734c0b5b986264617195febcedde422", null ]
+];

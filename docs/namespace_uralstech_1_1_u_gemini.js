@@ -1,21 +1,11 @@
 var namespace_uralstech_1_1_u_gemini =
 [
-    [ "Answer", "namespace_uralstech_1_1_u_gemini_1_1_answer.html", "namespace_uralstech_1_1_u_gemini_1_1_answer" ],
-    [ "Chat", "namespace_uralstech_1_1_u_gemini_1_1_chat.html", "namespace_uralstech_1_1_u_gemini_1_1_chat" ],
-    [ "Embedding", "namespace_uralstech_1_1_u_gemini_1_1_embedding.html", "namespace_uralstech_1_1_u_gemini_1_1_embedding" ],
     [ "Exceptions", "namespace_uralstech_1_1_u_gemini_1_1_exceptions.html", "namespace_uralstech_1_1_u_gemini_1_1_exceptions" ],
     [ "FileAPI", "namespace_uralstech_1_1_u_gemini_1_1_file_a_p_i.html", "namespace_uralstech_1_1_u_gemini_1_1_file_a_p_i" ],
     [ "Models", "namespace_uralstech_1_1_u_gemini_1_1_models.html", "namespace_uralstech_1_1_u_gemini_1_1_models" ],
-    [ "Schema", "namespace_uralstech_1_1_u_gemini_1_1_schema.html", "namespace_uralstech_1_1_u_gemini_1_1_schema" ],
     [ "Status", "namespace_uralstech_1_1_u_gemini_1_1_status.html", "namespace_uralstech_1_1_u_gemini_1_1_status" ],
-    [ "TokenCounting", "namespace_uralstech_1_1_u_gemini_1_1_token_counting.html", "namespace_uralstech_1_1_u_gemini_1_1_token_counting" ],
-    [ "Tools", "namespace_uralstech_1_1_u_gemini_1_1_tools.html", "namespace_uralstech_1_1_u_gemini_1_1_tools" ],
     [ "Utils", "namespace_uralstech_1_1_u_gemini_1_1_utils.html", "namespace_uralstech_1_1_u_gemini_1_1_utils" ],
-    [ "EnumExtensions", "class_uralstech_1_1_u_gemini_1_1_enum_extensions.html", "class_uralstech_1_1_u_gemini_1_1_enum_extensions" ],
-    [ "GeminiContent", "class_uralstech_1_1_u_gemini_1_1_gemini_content.html", "class_uralstech_1_1_u_gemini_1_1_gemini_content" ],
-    [ "GeminiContentBlob", "class_uralstech_1_1_u_gemini_1_1_gemini_content_blob.html", "class_uralstech_1_1_u_gemini_1_1_gemini_content_blob" ],
-    [ "GeminiContentPart", "class_uralstech_1_1_u_gemini_1_1_gemini_content_part.html", "class_uralstech_1_1_u_gemini_1_1_gemini_content_part" ],
-    [ "GeminiFileData", "class_uralstech_1_1_u_gemini_1_1_gemini_file_data.html", "class_uralstech_1_1_u_gemini_1_1_gemini_file_data" ],
+    [ "GeminiContentTypeExtensions", "class_uralstech_1_1_u_gemini_1_1_gemini_content_type_extensions.html", "class_uralstech_1_1_u_gemini_1_1_gemini_content_type_extensions" ],
     [ "GeminiManager", "class_uralstech_1_1_u_gemini_1_1_gemini_manager.html", "class_uralstech_1_1_u_gemini_1_1_gemini_manager" ],
     [ "GeminiRequestMetadata", "class_uralstech_1_1_u_gemini_1_1_gemini_request_metadata.html", "class_uralstech_1_1_u_gemini_1_1_gemini_request_metadata" ],
     [ "IAppendableData", "interface_uralstech_1_1_u_gemini_1_1_i_appendable_data.html", "interface_uralstech_1_1_u_gemini_1_1_i_appendable_data" ],
@@ -25,7 +15,6 @@ var namespace_uralstech_1_1_u_gemini =
     [ "IGeminiPostRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_post_request.html", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_post_request" ],
     [ "IGeminiRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_request.html", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_request" ],
     [ "IGeminiStreamablePostRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request" ],
-    [ "UnityExtensions", "class_uralstech_1_1_u_gemini_1_1_unity_extensions.html", "class_uralstech_1_1_u_gemini_1_1_unity_extensions" ],
     [ "GeminiContentType", "namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73c", [
       [ "ImagePNG", "namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73cad7c57b5e17ed628c8de709ab1278065b", null ],
       [ "ImageJPEG", "namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca2671294ab6f72883a8cc5d767032878e", null ],
@@ -62,24 +51,5 @@ var namespace_uralstech_1_1_u_gemini =
       [ "ApplicationXPython", "namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca0fd2e025338c0e9f1424bde1a8cf5ed4", null ],
       [ "ApplicationJSON", "namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca7e7c4db28ee21e36d7f7d0ec839f7601", null ],
       [ "ApplicationRTF", "namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca8ab434228369f9059cc5f0955dbd2bb4", null ]
-    ] ],
-    [ "GeminiRole", "namespace_uralstech_1_1_u_gemini.html#a0d462193ef311a2c0dcde6730b1cea52", [
-      [ "Unspecified", "namespace_uralstech_1_1_u_gemini.html#a0d462193ef311a2c0dcde6730b1cea52a6fcdc090caeade09d0efd6253932b6f5", null ],
-      [ "User", "namespace_uralstech_1_1_u_gemini.html#a0d462193ef311a2c0dcde6730b1cea52a8f9bfe9d1345237cb3b2b205864da075", null ],
-      [ "Assistant", "namespace_uralstech_1_1_u_gemini.html#a0d462193ef311a2c0dcde6730b1cea52a9b1363da9503dbd4142c0274a88e8d4b", null ],
-      [ "ToolResponse", "namespace_uralstech_1_1_u_gemini.html#a0d462193ef311a2c0dcde6730b1cea52afde9e414e674f69454deb52a73765e62", null ]
-    ] ],
-    [ "GeminiSafetyHarmCategory", "namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7e", [
-      [ "Unspecified", "namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea6fcdc090caeade09d0efd6253932b6f5", null ],
-      [ "Derogatory", "namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7eae6ff0ff9621ddfb821303c01de15c217", null ],
-      [ "Toxicity", "namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea6882500ce8663d315bd70a1a1c522fe6", null ],
-      [ "Violence", "namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea0ef93352ce96f36586f2a3cf3525ecca", null ],
-      [ "Sexual", "namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea53257f3f3ac60dd1f6d686c4bfd61efc", null ],
-      [ "Medical", "namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea077262cc53a1fb1b5f651d31b6bf81ba", null ],
-      [ "Dangerous", "namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7eaf44f1629db33ba70816eb97d3c4e2282", null ],
-      [ "Harassment", "namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea1bb7d92c816a9bebed2d7c998fec7564", null ],
-      [ "HateSpeech", "namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7ea6d92ab74bd52ac359f68e33d628805a0", null ],
-      [ "SexuallyExplicit", "namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7eaa1a132d2d12093f5cfeddf67393d2211", null ],
-      [ "DangerousContent", "namespace_uralstech_1_1_u_gemini.html#a3c2ee248b83069ca63b22c3661629c7eac94148758d8111d82f63cae96d7b6e55", null ]
     ] ]
 ];
