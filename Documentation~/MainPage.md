@@ -55,9 +55,9 @@ using Uralstech.UGemini.Models;
 using Uralstech.UGemini.Models.Content;
 using Uralstech.UGemini.Models.Generation.Chat;
 
-List<GeminiContent> _chatHistory = new();
+private List<GeminiContent> _chatHistory = new();
 
-async Task<string> OnChat(string text)
+private async Task<string> OnChat(string text)
 {
     _chatHistory.Add(GeminiContent.GetContent(text, GeminiRole.User));
     GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(
@@ -108,7 +108,7 @@ Newer models will not be recognized by the request if you're not using the Beta 
 using Uralstech.UGemini;
 using Uralstech.UGemini.Models;
 
-async Task<GeminiModel[]> RunListModelsRequest(int maxModels = 50, string pageToken = null)
+private async Task<GeminiModel[]> RunListModelsRequest(int maxModels = 50, string pageToken = null)
 {
     GeminiModelListResponse response = await GeminiManager.Instance.Request<GeminiModelListResponse>(new GeminiModelListRequest()
     {
@@ -485,9 +485,9 @@ using Uralstech.UGemini.Models;
 using Uralstech.UGemini.Models.Content;
 using Uralstech.UGemini.Models.Generation.Chat;
 
-[SerializeField] Text _chatResponse;
+[SerializeField] private Text _chatResponse;
 
-async Task<string> OnChat(string text)
+private async Task<string> OnChat(string text)
 {
     GeminiChatResponse response = await GeminiManager.Instance.StreamRequest(new GeminiChatRequest(GeminiModel.Gemini1_5Flash)
     {
@@ -520,7 +520,7 @@ one type of data in each part, like one part of text, one part of an image, and 
 using Uralstech.UGemini;
 using Uralstech.UGemini.Models.Content;
 
-async Task<GeminiContent> GetFileContent(string filePath, GeminiContentType contentType)
+private async Task<GeminiContent> GetFileContent(string filePath, GeminiContentType contentType)
 {
     byte[] data;
     try
@@ -582,7 +582,7 @@ using Uralstech.UGemini.Models.Generation.Schema;
 using Uralstech.UGemini.Models.Generation.Tools;
 using Uralstech.UGemini.Models.Generation.Tools.Declaration;
 
-GeminiTool _geminiFunctions = new GeminiTool()
+private GeminiTool _geminiFunctions = new GeminiTool()
 {
     FunctionDeclarations = new GeminiFunctionDeclaration[]
     {
@@ -650,9 +650,9 @@ format, etc. of the parameter.
 Finally, we have the `Required` property which tells Gemini which fields are absolutely required in each call. Now, we can move on to the chat.
 
 ```csharp
-[SerializeField] Text _chatResponse;
+[SerializeField] private Text _chatResponse;
 
-async Task<string> OnChat(string text)
+private async Task<string> OnChat(string text)
 {
     List<GeminiContent> contents = new()
     {
@@ -721,7 +721,7 @@ async Task<string> OnChat(string text)
     return responseText;
 }
 
-bool TryChangeTextColor(string color)
+private bool TryChangeTextColor(string color)
 {
     switch (color)
     {
@@ -768,7 +768,7 @@ using Uralstech.UGemini.Models.Content;
 using Uralstech.UGemini.Models.Generation.Chat;
 using Uralstech.UGemini.Models.Generation.Schema;
 
-async Task<string> OnChat(string text)
+private async Task<string> OnChat(string text)
 {
     // Note: It seems GeminiModel.Gemini1_5Flash is not very good at JSON.
     GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(GeminiModel.Gemini1_5Pro, true)
