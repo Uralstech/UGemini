@@ -2,7 +2,7 @@ var searchData=
 [
   ['maxchunkscount_0',['MaxChunksCount',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_semantic_retri9b6dfd7c08de54b9ab12d2385e99f3cf.html#a40b7f8da9729ea5aa93c810b29836743',1,'Uralstech::UGemini::Models::Generation::QuestionAnswering::SemanticRetriever::GeminiSemanticRetrieverConfig']]],
   ['maxitems_1',['MaxItems',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_schema_1_1_gemini_schema.html#ab39d2670f7577d8b95703e17f58595d7',1,'Uralstech::UGemini::Models::Generation::Schema::GeminiSchema']]],
-  ['maxoutputtokens_2',['MaxOutputTokens',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_generation_configuration.html#ae964b6d074622f0b82b8d60f03d6d32d',1,'Uralstech::UGemini::Models::Generation::Chat::GeminiGenerationConfiguration']]],
+  ['maxoutputtokens_2',['MaxOutputTokens',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_gemini_generation_configuration.html#a9bbe8783f9b896e026cfd57bf0b8247c',1,'Uralstech::UGemini::Models::Generation::GeminiGenerationConfiguration']]],
   ['maxresponsefiles_3',['MaxResponseFiles',['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_list_request.html#a484597170d23fe2baa4d3da40c095f45',1,'Uralstech::UGemini::FileAPI::GeminiFileListRequest']]],
   ['maxresponsemodels_4',['MaxResponseModels',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html#ab24ca9af778b20bfa22ddef97fc16d1a',1,'Uralstech::UGemini::Models::GeminiModelListRequest']]],
   ['message_5',['Message',['../class_uralstech_1_1_u_gemini_1_1_status_1_1_gemini_status.html#a2f08c8b6a0ad287add1530e1be176240',1,'Uralstech::UGemini::Status::GeminiStatus']]],

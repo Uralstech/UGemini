@@ -23,7 +23,7 @@ var hierarchy =
     [ "Uralstech.UGemini.Models.Generation.Tools.Declaration.GeminiFunctionDeclaration", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html", null ],
     [ "Uralstech.UGemini.Models.Generation.Tools.GeminiFunctionResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_gemini_function_response.html", null ],
     [ "Uralstech.UGemini.Models.Generation.Tools.GeminiFunctionResponseContent", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_gemini_function_response_content.html", null ],
-    [ "Uralstech.UGemini.Models.Generation.Chat.GeminiGenerationConfiguration", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_generation_configuration.html", null ],
+    [ "Uralstech.UGemini.Models.Generation.GeminiGenerationConfiguration", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_gemini_generation_configuration.html", null ],
     [ "Uralstech.UGemini.Models.Content.Attribution.GeminiGroundingAttribution", "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_attribution_1_1_gemini_grounding_attribution.html", null ],
     [ "Uralstech.UGemini.Models.Generation.QuestionAnswering.Grounding.GeminiGroundingPassage", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_grounding_1_1_gemini_grounding_passage.html", null ],
     [ "Uralstech.UGemini.Models.Content.Attribution.GeminiGroundingPassageId", "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_attribution_1_1_gemini_grounding_passage_id.html", null ],

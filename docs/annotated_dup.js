@@ -54,8 +54,7 @@ var annotated_dup =
             ] ],
             [ "Chat", "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat.html", [
               [ "GeminiChatRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_request.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_request" ],
-              [ "GeminiChatResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_response.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_response" ],
-              [ "GeminiGenerationConfiguration", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_generation_configuration.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_generation_configuration" ]
+              [ "GeminiChatResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_response.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_response" ]
             ] ],
             [ "QuestionAnswering", "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering.html", [
               [ "Grounding", "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_grounding.html", [
@@ -87,7 +86,8 @@ var annotated_dup =
               [ "GeminiFunctionCall", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_gemini_function_call.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_gemini_function_call" ],
               [ "GeminiFunctionResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_gemini_function_response.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_gemini_function_response" ],
               [ "GeminiFunctionResponseContent", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_gemini_function_response_content.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_gemini_function_response_content" ]
-            ] ]
+            ] ],
+            [ "GeminiGenerationConfiguration", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_gemini_generation_configuration.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_gemini_generation_configuration" ]
           ] ],
           [ "GeminiModel", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model" ],
           [ "GeminiModelGetRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_get_request.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_get_request" ],

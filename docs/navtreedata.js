@@ -25,54 +25,55 @@
 var NAVTREE =
 [
   [ "UGemini", "index.html", [
+    [ "Breaking Changes Notice", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_runtime_2_breaking_01_changes.html", null ],
     [ "QuickStart and Documentation", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html", [
-      [ "Basics", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md1", [
-        [ "Setup", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md2", null ],
-        [ "GeminiManager", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md3", null ],
-        [ "Beta API", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md4", null ],
-        [ "Models", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md5", null ],
-        [ "QuickStart: Multi-turn Chat Request", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md6", null ]
+      [ "Basics", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md4", [
+        [ "Setup", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md5", null ],
+        [ "GeminiManager", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md6", null ],
+        [ "Beta API", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md7", null ],
+        [ "Models", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md8", null ],
+        [ "QuickStart: Multi-turn Chat Request", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md9", null ]
       ] ],
-      [ "All Supported Endpoints", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md7", [
-        [ "Models", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md8", [
-          [ "Get", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md9", null ],
-          [ "List", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md10", null ],
-          [ "EmbedContent", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md11", null ],
-          [ "BatchEmbedContents", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md12", null ],
-          [ "GenerateContent", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md13", null ],
-          [ "StreamGenerateContent", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md14", null ],
-          [ "GenerateAnswer (Beta API)", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md15", null ],
-          [ "CountTokens", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md16", null ]
+      [ "All Supported Endpoints", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md10", [
+        [ "Models", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md11", [
+          [ "Get", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md12", null ],
+          [ "List", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md13", null ],
+          [ "EmbedContent", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md14", null ],
+          [ "BatchEmbedContents", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md15", null ],
+          [ "GenerateContent", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md16", null ],
+          [ "StreamGenerateContent", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md17", null ],
+          [ "GenerateAnswer (Beta API)", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md18", null ],
+          [ "CountTokens", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md19", null ]
         ] ],
-        [ "TunedModels (Unstable)", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md17", [
-          [ "GenerateContent", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md18", null ]
+        [ "TunedModels (Unstable)", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md20", [
+          [ "GenerateContent", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md21", null ]
         ] ],
-        [ "Files (Beta API)", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md19", [
-          [ "Delete", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md20", null ],
-          [ "Get", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md21", null ],
-          [ "List", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md22", null ]
+        [ "Files (Beta API)", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md22", [
+          [ "Delete", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md23", null ],
+          [ "Get", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md24", null ],
+          [ "List", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md25", null ]
         ] ],
-        [ "Media (Beta API)", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md23", [
-          [ "Upload", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md24", null ]
+        [ "Media (Beta API)", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md26", [
+          [ "Upload", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md27", null ]
         ] ]
       ] ],
-      [ "GeminiChatRequest Features", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md25", [
-        [ "Streaming Responses", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md26", null ],
-        [ "Adding Media Content to Requests", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md27", [
-          [ "Utility Methods", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md28", null ]
+      [ "GeminiChatRequest Features", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md28", [
+        [ "Streaming Responses", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md29", null ],
+        [ "Adding Media Content to Requests", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md30", [
+          [ "Utility Methods", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md31", null ]
         ] ],
-        [ "Function Calling", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md29", null ],
-        [ "JSON Response Mode", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md30", null ]
+        [ "Function Calling", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md32", null ],
+        [ "JSON Response Mode", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md33", null ]
       ] ],
-      [ "Samples", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md31", [
-        [ "Mult-turn Chat", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md32", null ],
-        [ "Function Calling", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md33", null ],
-        [ "Streaming Generated Content", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md34", null ],
-        [ "Question Answering", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md35", null ],
-        [ "Prompting with File API", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md36", null ],
-        [ "JSON Response", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md37", null ],
-        [ "List and Get Model Metadata", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md38", null ],
-        [ "Token Counting", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md39", null ]
+      [ "Samples", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md34", [
+        [ "Mult-turn Chat", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md35", null ],
+        [ "Function Calling", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md36", null ],
+        [ "Streaming Generated Content", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md37", null ],
+        [ "Question Answering", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md38", null ],
+        [ "Prompting with File API", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md39", null ],
+        [ "JSON Response", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md40", null ],
+        [ "List and Get Model Metadata", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md41", null ],
+        [ "Token Counting", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md42", null ]
       ] ]
     ] ],
     [ "Packages", "namespaces.html", [
@@ -100,8 +101,8 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_request.html#a2b4f3c0c7575e66ef1a53e42e4326709",
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_generation_configuration.html#ae964b6d074622f0b82b8d60f03d6d32d",
-"md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md28"
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_gemini_generation_configuration.html#ab49c73af6adf36faee95920651d5f87f",
+"md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md30"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
