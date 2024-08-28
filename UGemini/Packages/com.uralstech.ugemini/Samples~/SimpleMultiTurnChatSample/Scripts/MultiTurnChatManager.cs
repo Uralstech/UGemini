@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
-using Uralstech.UGemini.Chat;
 using Uralstech.UGemini.Models;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation.Chat;
 
 namespace Uralstech.UGemini.Samples
 {

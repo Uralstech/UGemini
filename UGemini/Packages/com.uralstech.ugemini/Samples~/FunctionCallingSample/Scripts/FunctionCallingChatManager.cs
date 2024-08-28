@@ -3,11 +3,12 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Uralstech.UGemini.Chat;
 using Uralstech.UGemini.Models;
-using Uralstech.UGemini.Schema;
-using Uralstech.UGemini.Tools;
-using Uralstech.UGemini.Tools.Declaration;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation.Chat;
+using Uralstech.UGemini.Models.Generation.Schema;
+using Uralstech.UGemini.Models.Generation.Tools;
+using Uralstech.UGemini.Models.Generation.Tools.Declaration;
 
 #pragma warning disable IDE0090 // Use 'new(...)'
 
