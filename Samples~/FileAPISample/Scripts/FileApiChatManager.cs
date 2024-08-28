@@ -2,9 +2,10 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 using Uralstech.UGemini;
-using Uralstech.UGemini.Chat;
 using Uralstech.UGemini.FileAPI;
 using Uralstech.UGemini.Models;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation.Chat;
 
 public class FileApiChatManager : MonoBehaviour
 {

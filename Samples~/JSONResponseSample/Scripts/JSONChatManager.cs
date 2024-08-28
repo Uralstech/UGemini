@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Uralstech.UGemini.Chat;
 using Uralstech.UGemini.Models;
-using Uralstech.UGemini.Schema;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation.Chat;
+using Uralstech.UGemini.Models.Generation.Schema;
 
 namespace Uralstech.UGemini.Samples
 {

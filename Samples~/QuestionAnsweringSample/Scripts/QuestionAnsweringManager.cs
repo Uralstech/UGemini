@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
-using Uralstech.UGemini.Answer;
 using Uralstech.UGemini.Models;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation.QuestionAnswering;
+using Uralstech.UGemini.Models.Generation.QuestionAnswering.Grounding;
 using Newtonsoft.Json;
 
 namespace Uralstech.UGemini.Samples

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using Uralstech.UGemini.Models.Content;
 
 namespace Uralstech.UGemini.Samples
 {
