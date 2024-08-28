@@ -6,19 +6,19 @@
 
 ### Setup
 
-Add an instance of `GeminiManager` to your scene, and set it up with your Gemini API key. You can get your API key from [*here*](https://makersuite.google.com/app/apikey).
+Add an instance of `Uralstech.UGemini.GeminiManager` to your scene, and set it up with your Gemini API key. You can get your API key from [*here*](https://makersuite.google.com/app/apikey).
 
 ### GeminiManager
 
 There are only three methods in `GeminiManager`:
 
-| Method            | What it does                                      |
-| -------------     | -------------                                     |
-| `SetApiKey`       | Sets the Gemini API key through code              |
-| `Request`         | Computes a request on the Gemini API              |
-| `StreamRequest`*  | Computes a streaming request on the Gemini API    |
+| Method                | What it does                                      |
+| -------------         | -------------                                     |
+| `SetApiKey`           | Sets the Gemini API key through code              |
+| `Request`             | Computes a request on the Gemini API              |
+| `StreamRequest`\*     | Computes a streaming request on the Gemini API    |
 
-*Requires `Utilities.Async` package.
+\*Requires [*Utilities.Async*](https://openupm.com/packages/com.utilities.async/).
 
 All computations on the Gemini API are done through `GeminiManager.Request`, `GeminiManager.StreamRequest` and their variants.
 
@@ -32,7 +32,7 @@ need to use the Beta API. You can set the `useBetaApi` boolean parameter in the 
 
 ### Models
 
-`GeminiModel` from `Uralstech.UGemini.Models` has four static model IDs:
+`Uralstech.UGemini.Models.GeminiModel` has four static model IDs:
 
 - [`Gemini1_5Flash`](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash)
 - [`Gemini1_5Pro`](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro)
@@ -51,8 +51,9 @@ This is a simple script that maintains the user's chat history with Gemini.
 
 ```csharp
 using Uralstech.UGemini;
-using Uralstech.UGemini.Chat;
 using Uralstech.UGemini.Models;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation.Chat;
 
 List<GeminiContent> _chatHistory = new();
 
@@ -86,6 +87,9 @@ Every time `OnChat` is called, the user's request and the model's reply are adde
 > Gets information about a specific Model such as its version number, token limits, parameters and other metadata.
 
 ```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models;
+
 private async Task<GeminiModel> RunGetModelRequest(string modelId)
 {
     return await GeminiManager.Instance.Request<GeminiModel>(new GeminiModelGetRequest(modelId));
@@ -101,7 +105,10 @@ Newer models will not be recognized by the request if you're not using the Beta 
 > Lists the Models available through the Gemini API.
 
 ```csharp
-async Task<GeminiModel[]> RunListModelsRequest(int maxModels = 50, string pageToken = string.Empty)
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models;
+
+async Task<GeminiModel[]> RunListModelsRequest(int maxModels = 50, string pageToken = null)
 {
     GeminiModelListResponse response = await GeminiManager.Instance.Request<GeminiModelListResponse>(new GeminiModelListRequest()
     {
@@ -122,6 +129,11 @@ Newer models will not be recognized by the request if you're not using the Beta 
 > Generates a text embedding vector from the input Content using the specified Gemini Embedding model.
 
 ```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Embedding;
+
 private async void RunEmbedContentRequest()
 {
     Debug.Log("Running embedding request.");
@@ -137,13 +149,18 @@ private async void RunEmbedContentRequest()
 }
 ```
 
-See \ref Uralstech.UGemini.Embedding.GeminiEmbedContentResponse "GeminiEmbedContentResponse" and \ref Uralstech.UGemini.Embedding.GeminiEmbedContentRequest "GeminiEmbedContentRequest" for more details.
+See \ref Uralstech.UGemini.Models.Embedding.GeminiEmbedContentResponse "GeminiEmbedContentResponse" and \ref Uralstech.UGemini.Models.Embedding.GeminiEmbedContentRequest "GeminiEmbedContentRequest" for more details.
 
 #### BatchEmbedContents
 
 > Generates multiple embedding vectors from the input Content which consists of a batch of strings represented as EmbedContentRequest objects.
 
 ```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Embedding;
+
 private async void RunBatchEmbedContentRequest()
 {
     Debug.Log("Running batch embedding request.");
@@ -171,13 +188,18 @@ private async void RunBatchEmbedContentRequest()
 }
 ```
 
-See \ref Uralstech.UGemini.Embedding.GeminiBatchEmbedContentResponse "GeminiBatchEmbedContentResponse" and \ref Uralstech.UGemini.Embedding.GeminiBatchEmbedContentRequest "GeminiBatchEmbedContentRequest" for more details.
+See \ref Uralstech.UGemini.Models.Embedding.GeminiBatchEmbedContentResponse "GeminiBatchEmbedContentResponse" and \ref Uralstech.UGemini.Models.Embedding.GeminiBatchEmbedContentRequest "GeminiBatchEmbedContentRequest" for more details.
 
 #### GenerateContent
 
 > Generates a model response given an input GenerateContentRequest.
 
 ```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation.Chat;
+
 private async void RunChatRequest()
 {
     Debug.Log("Running chat request.");
@@ -196,13 +218,18 @@ private async void RunChatRequest()
 }
 ```
 
-See \ref Uralstech.UGemini.Chat.GeminiChatResponse "GeminiChatResponse" and \ref Uralstech.UGemini.Chat.GeminiChatRequest "GeminiChatRequest" for more details.
+See \ref Uralstech.UGemini.Models.Generation.Chat.GeminiChatResponse "GeminiChatResponse" and \ref Uralstech.UGemini.Models.Generation.Chat.GeminiChatRequest "GeminiChatRequest" for more details.
 
 #### StreamGenerateContent
 
 > Generates a streamed response from the model given an input GenerateContentRequest.
 
 ```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation.Chat;
+
 private async void RunStreamingChatRequest()
 {
     Debug.Log("Running streamed chat request.");
@@ -229,13 +256,20 @@ private async void RunStreamingChatRequest()
 }
 ```
 
-See \ref Uralstech.UGemini.Chat.GeminiChatResponse "GeminiChatResponse" and \ref Uralstech.UGemini.Chat.GeminiChatRequest "GeminiChatRequest" for more details.
+See \ref Uralstech.UGemini.Models.Generation.Chat.GeminiChatResponse "GeminiChatResponse" and \ref Uralstech.UGemini.Models.Generation.Chat.GeminiChatRequest "GeminiChatRequest" for more details.
 
 #### GenerateAnswer	(Beta API)
 
 > Generates a grounded answer from the model given an input GenerateAnswerRequest.
 
 ```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Content.Attribution;
+using Uralstech.UGemini.Models.Generation.QuestionAnswering;
+using Uralstech.UGemini.Models.Generation.QuestionAnswering.Grounding;
+
 private async void RunQuestionAnsweringRequest()
 {
     Debug.Log("Running Q/A request.");
@@ -280,13 +314,18 @@ private async void RunQuestionAnsweringRequest()
 }
 ```
 
-See \ref Uralstech.UGemini.Answer.GeminiAnswerResponse "GeminiAnswerResponse" and \ref Uralstech.UGemini.Answer.GeminiAnswerRequest "GeminiAnswerRequest" for more details.
+See \ref Uralstech.UGemini.Models.Generation.QuestionAnswering.GeminiAnswerResponse "GeminiAnswerResponse" and \ref Uralstech.UGemini.Models.Generation.QuestionAnswering.GeminiAnswerRequest "GeminiAnswerRequest" for more details.
 
 #### CountTokens
 
 > Runs a model's tokenizer on input Content and returns the token count.
 
 ```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.CountTokens;
+
 private async void RunTokenCountRequest()
 {
     Debug.Log("Running token counting request.");
@@ -305,7 +344,7 @@ private async void RunTokenCountRequest()
 }
 ```
 
-See \ref Uralstech.UGemini.TokenCounting.GeminiTokenCountResponse "GeminiTokenCountResponse" and \ref Uralstech.UGemini.TokenCounting.GeminiTokenCountRequest "GeminiTokenCountRequest" for more details.
+See \ref Uralstech.UGemini.Models.CountTokens.GeminiTokenCountResponse "GeminiTokenCountResponse" and \ref Uralstech.UGemini.Models.CountTokens.GeminiTokenCountRequest "GeminiTokenCountRequest" for more details.
 
 ### TunedModels (Unstable)
 
@@ -317,6 +356,10 @@ See \ref Uralstech.UGemini.TokenCounting.GeminiTokenCountResponse "GeminiTokenCo
 
 ```csharp
 // This is untested code.
+
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation.Chat;
 
 private async void RunTunedModelChatRequest()
 {
@@ -336,7 +379,7 @@ private async void RunTunedModelChatRequest()
 }
 ```
 
-See \ref Uralstech.UGemini.Chat.GeminiChatResponse "GeminiChatResponse" and \ref Uralstech.UGemini.Chat.GeminiChatRequest "GeminiChatRequest" for more details.
+See \ref Uralstech.UGemini.Models.Generation.Chat.GeminiChatResponse "GeminiChatResponse" and \ref Uralstech.UGemini.Models.Generation.Chat.GeminiChatRequest "GeminiChatRequest" for more details.
 
 ### Files (Beta API)
 
@@ -347,6 +390,9 @@ See \ref Uralstech.UGemini.Chat.GeminiChatResponse "GeminiChatResponse" and \ref
 > Deletes the File.
 
 ```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.FileAPI;
+
 private async void RunDeleteFileRequest(string fileId)
 {
     Debug.Log("Deleting file...");
@@ -362,6 +408,9 @@ See \ref Uralstech.UGemini.FileAPI.GeminiFileDeleteRequest "GeminiFileDeleteRequ
 > Gets the metadata for the given File.
 
 ```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.FileAPI;
+
 private async Task<GeminiFile> RunGetFileRequest(string fileId)
 {
     return await GeminiManager.Instance.Request<GeminiFile>(new GeminiFileGetRequest(fileId));
@@ -375,7 +424,10 @@ See \ref Uralstech.UGemini.FileAPI.GeminiFile "GeminiFile" and \ref Uralstech.UG
 > Lists the metadata for Files owned by the requesting project.
 
 ```csharp
-private async Task<GeminiFile[]> RunListFilesRequest(int maxFiles = 10, string pageToken = string.Empty)
+using Uralstech.UGemini;
+using Uralstech.UGemini.FileAPI;
+
+private async Task<GeminiFile[]> RunListFilesRequest(int maxFiles = 10, string pageToken = null)
 {
     GeminiFileListResponse response = await GeminiManager.Instance.Request<GeminiFileListResponse>(new GeminiFileListRequest()
     {
@@ -398,6 +450,9 @@ See \ref Uralstech.UGemini.FileAPI.GeminiFileListResponse "GeminiFileListRespons
 > Creates a File.
 
 ```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.FileAPI;
+
 private async Task<GeminiFile> RunUploadFileRequest(string text)
 {
     GeminiFileUploadResponse response = await GeminiManager.Instance.Request<GeminiFileUploadResponse>(new GeminiFileUploadRequest(GeminiContentType.TextPlain.MimeType())
@@ -426,8 +481,9 @@ You can even stream function calls! Check out the `Streaming Generated Content` 
 
 ```csharp
 using Uralstech.UGemini;
-using Uralstech.UGemini.Chat;
 using Uralstech.UGemini.Models;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation.Chat;
 
 [SerializeField] Text _chatResponse;
 
@@ -462,6 +518,7 @@ one type of data in each part, like one part of text, one part of an image, and 
 
 ```csharp
 using Uralstech.UGemini;
+using Uralstech.UGemini.Models.Content;
 
 async Task<GeminiContent> GetFileContent(string filePath, GeminiContentType contentType)
 {
@@ -505,12 +562,12 @@ Now, the `GeminiContent` returned by the method can be fed into a chat request!
 create them from Unity types like `AudioClip` or `Texture2D`:
 
 - `GeminiContent.GetContent`
-    - Can convert `string` messages, `Texture2D` images, `AudioClip`* audio and `GeminiFile` data to `GeminiContent` objects.
+    - Can convert `string` messages, `Texture2D` images, `AudioClip`\* audio and `GeminiFile` data to `GeminiContent` objects.
 
 - `GeminiContentBlob.GetContentBlob`
-    - Can convert `Texture2D` images and `AudioClip`* audio to `GeminiContentBlob` objects.
+    - Can convert `Texture2D` images and `AudioClip`\* audio to `GeminiContentBlob` objects.
 
-*Requires [*Utilities.Encoding.Wav*](https://openupm.com/packages/com.utilities.encoder.wav/).
+\*Requires [*Utilities.Encoding.Wav*](https://openupm.com/packages/com.utilities.encoder.wav/).
 
 ### Function Calling
 
@@ -518,11 +575,12 @@ First, we have to setup our tools and define our function schemas.
 
 ```csharp
 using Uralstech.UGemini;
-using Uralstech.UGemini.Chat;
 using Uralstech.UGemini.Models;
-using Uralstech.UGemini.Schema;
-using Uralstech.UGemini.Tools;
-using Uralstech.UGemini.Tools.Declaration;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation.Chat;
+using Uralstech.UGemini.Models.Generation.Schema;
+using Uralstech.UGemini.Models.Generation.Tools;
+using Uralstech.UGemini.Models.Generation.Tools.Declaration;
 
 GeminiTool _geminiFunctions = new GeminiTool()
 {
@@ -705,9 +763,10 @@ In JSON mode, Gemini will always respond in the specified JSON response schema.
 
 ```csharp
 using Uralstech.UGemini;
-using Uralstech.UGemini.Chat;
 using Uralstech.UGemini.Models;
-using Uralstech.UGemini.Schema;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation.Chat;
+using Uralstech.UGemini.Models.Generation.Schema;
 
 async Task<string> OnChat(string text)
 {

@@ -26,7 +26,7 @@ namespace Uralstech.UGemini.FileAPI
         /// MIME type of the file.
         /// </summary>
         /// <remarks>
-        /// You can use <see cref="EnumExtensions.ContentType(string)"/> to convert <see cref="string"/>
+        /// You can use <see cref="GeminiContentTypeExtensions.ContentType(string)"/> to convert <see cref="string"/>
         /// values to their <see cref="GeminiContentType"/> equivalents, like:
         /// <c>"image/png".ContentType()</c>
         /// </remarks>

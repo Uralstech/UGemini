@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Create a report to help UGemini improve
-title: "[BUG] (Summary of the bug goes here)"
+title: "(Summary of the bug)"
 labels: bug
 assignees: Uralstech
 
