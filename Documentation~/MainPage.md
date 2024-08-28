@@ -765,6 +765,7 @@ In JSON mode, Gemini will always respond in the specified JSON response schema.
 using Uralstech.UGemini;
 using Uralstech.UGemini.Models;
 using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation;
 using Uralstech.UGemini.Models.Generation.Chat;
 using Uralstech.UGemini.Models.Generation.Schema;
 

@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
-namespace Uralstech.UGemini.Models.Generation.Chat
+namespace Uralstech.UGemini.Models.Generation
 {
     /// <summary>
     /// The response type for Gemini model responses.

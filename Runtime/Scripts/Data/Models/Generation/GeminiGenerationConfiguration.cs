@@ -3,7 +3,7 @@ using Newtonsoft.Json.Serialization;
 using System.ComponentModel;
 using Uralstech.UGemini.Models.Generation.Schema;
 
-namespace Uralstech.UGemini.Models.Generation.Chat
+namespace Uralstech.UGemini.Models.Generation
 {
     /// <summary>
     /// Configuration options for model generation and outputs. Not all parameters may be configurable for every model.
