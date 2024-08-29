@@ -28,5 +28,11 @@ namespace Uralstech.UGemini.Models.Generation.Tools.Declaration
         /// </remarks>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiFunctionDeclaration[] FunctionDeclarations = null;
+
+        /// <summary>
+        /// Enables the model to execute code as part of generation.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public GeminiCodeExecution CodeExecution = null;
     }
 }
