@@ -14,5 +14,6 @@ var searchData=
   ['promptfeedback_11',['PromptFeedback',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_response.html#af20ca00041cca3729b0d1637a262f5c1',1,'Uralstech::UGemini::Models::Generation::Chat::GeminiChatResponse']]],
   ['prompting_20with_20file_20api_12',['Prompting with File API',['../md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md39',1,'']]],
   ['prompttokencount_13',['PromptTokenCount',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate_1_1_gemini_usage_metadata.html#a7301c1376aa4d9fdbe49fedd862aa3d9',1,'Uralstech::UGemini::Models::Generation::Candidate::GeminiUsageMetadata']]],
-  ['properties_14',['Properties',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_schema_1_1_gemini_schema.html#a505c6aa39014e9dd85ed496b3f35b981',1,'Uralstech::UGemini::Models::Generation::Schema::GeminiSchema']]]
+  ['properties_14',['Properties',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_schema_1_1_gemini_schema.html#a505c6aa39014e9dd85ed496b3f35b981',1,'Uralstech::UGemini::Models::Generation::Schema::GeminiSchema']]],
+  ['python_15',['Python',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_code_execution.html#a89d25a7a3f5b622af4b50b576197afd0aa7f5f35426b927411fc9231b56382173',1,'Uralstech::UGemini::Models::Generation::Tools::CodeExecution']]]
 ];

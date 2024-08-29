@@ -19,9 +19,10 @@ var searchData=
   ['uralstech_3a_3augemini_3a_3amodels_3a_3ageneration_3a_3asafety_16',['Safety',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_safety.html',1,'Uralstech::UGemini::Models::Generation']]],
   ['uralstech_3a_3augemini_3a_3amodels_3a_3ageneration_3a_3aschema_17',['Schema',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_schema.html',1,'Uralstech::UGemini::Models::Generation']]],
   ['uralstech_3a_3augemini_3a_3amodels_3a_3ageneration_3a_3atools_18',['Tools',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools.html',1,'Uralstech::UGemini::Models::Generation']]],
-  ['uralstech_3a_3augemini_3a_3amodels_3a_3ageneration_3a_3atools_3a_3adeclaration_19',['Declaration',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration.html',1,'Uralstech::UGemini::Models::Generation::Tools']]],
-  ['uralstech_3a_3augemini_3a_3astatus_20',['Status',['../namespace_uralstech_1_1_u_gemini_1_1_status.html',1,'Uralstech::UGemini']]],
-  ['uralstech_3a_3augemini_3a_3autils_21',['Utils',['../namespace_uralstech_1_1_u_gemini_1_1_utils.html',1,'Uralstech::UGemini']]],
-  ['uralstech_3a_3augemini_3a_3autils_3a_3asingleton_22',['Singleton',['../namespace_uralstech_1_1_u_gemini_1_1_utils_1_1_singleton.html',1,'Uralstech::UGemini::Utils']]],
-  ['uralstech_3a_3augemini_3a_3autils_3a_3aweb_23',['Web',['../namespace_uralstech_1_1_u_gemini_1_1_utils_1_1_web.html',1,'Uralstech::UGemini::Utils']]]
+  ['uralstech_3a_3augemini_3a_3amodels_3a_3ageneration_3a_3atools_3a_3acodeexecution_19',['CodeExecution',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_code_execution.html',1,'Uralstech::UGemini::Models::Generation::Tools']]],
+  ['uralstech_3a_3augemini_3a_3amodels_3a_3ageneration_3a_3atools_3a_3adeclaration_20',['Declaration',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration.html',1,'Uralstech::UGemini::Models::Generation::Tools']]],
+  ['uralstech_3a_3augemini_3a_3astatus_21',['Status',['../namespace_uralstech_1_1_u_gemini_1_1_status.html',1,'Uralstech::UGemini']]],
+  ['uralstech_3a_3augemini_3a_3autils_22',['Utils',['../namespace_uralstech_1_1_u_gemini_1_1_utils.html',1,'Uralstech::UGemini']]],
+  ['uralstech_3a_3augemini_3a_3autils_3a_3asingleton_23',['Singleton',['../namespace_uralstech_1_1_u_gemini_1_1_utils_1_1_singleton.html',1,'Uralstech::UGemini::Utils']]],
+  ['uralstech_3a_3augemini_3a_3autils_3a_3aweb_24',['Web',['../namespace_uralstech_1_1_u_gemini_1_1_utils_1_1_web.html',1,'Uralstech::UGemini::Utils']]]
 ];

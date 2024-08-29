@@ -77,7 +77,12 @@ var annotated_dup =
               [ "GeminiSchema", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_schema_1_1_gemini_schema.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_schema_1_1_gemini_schema" ]
             ] ],
             [ "Tools", "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools.html", [
+              [ "CodeExecution", "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_code_execution.html", [
+                [ "GeminiCodeExecutionResult", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_code_execution_1_1_gemini_code_execution_result.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_code_execution_1_1_gemini_code_execution_result" ],
+                [ "GeminiExecutableCode", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_code_execution_1_1_gemini_executable_code.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_code_execution_1_1_gemini_executable_code" ]
+              ] ],
               [ "Declaration", "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration.html", [
+                [ "GeminiCodeExecution", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_code_execution.html", null ],
                 [ "GeminiFunctionCallingConfiguration", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_calling_configuration.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_calling_configuration" ],
                 [ "GeminiFunctionDeclaration", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration" ],
                 [ "GeminiTool", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_tool.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_tool" ],
