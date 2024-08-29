@@ -5,6 +5,7 @@ refer to the following list and table of changes:
 
 ### General Changes
 - `EnumExtensions` is now `GeminiContentTypeExtensions`.
+- The `fileId` field in the constructors for `GeminiFileDeleteRequest` and `GeminiFileGetRequest` has been renamed to `fileNameOrId`.
 - All code previously marked as "deprecated" has been removed.
 
 ### Namespace Changes
