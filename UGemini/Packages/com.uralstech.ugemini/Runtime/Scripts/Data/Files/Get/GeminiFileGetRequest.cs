@@ -24,11 +24,11 @@
         /// <summary>
         /// Creates a new <see cref="GeminiFileGetRequest"/>.
         /// </summary>
-        /// <param name="fileId">The ID of the file to get.</param>
+        /// <param name="fileNameOrId">The name (format 'files/{fileId}') or ID of the file to get.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiFileGetRequest(string fileId, bool useBetaApi = true)
+        public GeminiFileGetRequest(string fileNameOrId, bool useBetaApi = true)
         {
-            FileId = fileId;
+            FileId = fileNameOrId.Split('/')[^1];
             ApiVersion = useBetaApi ? "v1beta" : "v1";
         }
     }

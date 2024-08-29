@@ -22,13 +22,13 @@
         }
 
         /// <summary>
-        /// Creates a new <see cref="GeminiFileGetRequest"/>.
+        /// Creates a new <see cref="GeminiFileDeleteRequest"/>.
         /// </summary>
-        /// <param name="fileId">The ID of the file to delete.</param>
+        /// <param name="fileNameOrId">The name (format 'files/{fileId}') or ID of the file to delete.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiFileDeleteRequest(string fileId, bool useBetaApi = true)
+        public GeminiFileDeleteRequest(string fileNameOrId, bool useBetaApi = true)
         {
-            FileId = fileId;
+            FileId = fileNameOrId.Split('/')[^1];
             ApiVersion = useBetaApi ? "v1beta" : "v1";
         }
     }

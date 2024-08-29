@@ -29,7 +29,7 @@
         }
 
         /// <summary>
-        /// Creates a new <see cref="GeminiFileGetRequest"/>.
+        /// Creates a new <see cref="GeminiFileListRequest"/>.
         /// </summary>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
         public GeminiFileListRequest(bool useBetaApi = true)
