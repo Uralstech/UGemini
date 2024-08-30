@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -109,6 +110,23 @@ namespace Uralstech.UGemini
             string requestEndpoint = request.GetEndpointUri(null);
             using UnityWebRequest webRequest = UnityWebRequest.Delete(requestEndpoint);
 
+            await ComputeRequest(webRequest);
+        }
+
+        /// <summary>
+        /// Computes a PATCH request on the Gemini API.
+        /// </summary>
+        /// <param name="request">The request object.</param>
+        /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
+        public async Task Request(IGeminiPatchRequest request)
+        {
+            string utf8RequestData = request.GetUtf8EncodedData();
+            string requestEndpoint = request.GetEndpointUri(null);
+
+            using UnityWebRequest webRequest = new(requestEndpoint, "PATCH");
+
+            webRequest.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(utf8RequestData));
+            webRequest.SetRequestHeader("Content-Type", request.ContentType);
             await ComputeRequest(webRequest);
         }
 
