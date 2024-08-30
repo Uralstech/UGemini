@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 namespace Uralstech.UGemini.Models.Caching
 {
     /// <summary>
-    /// Patches a <see cref="GeminiCachedContent"/> resource.
+    /// Patches a <see cref="GeminiCachedContent"/> resource. Response type is <see cref="GeminiCachedContent"/>.
     /// </summary>
     /// <remarks>
     /// Only available in the beta API.
@@ -11,9 +11,9 @@ namespace Uralstech.UGemini.Models.Caching
     public class GeminiCachedContentPatchRequest : IGeminiPatchRequest
     {
         /// <summary>
-        /// The patch content.
+        /// The patch data.
         /// </summary>
-        public GeminiCachedContent Content;
+        public GeminiCachedContentPatchData Patch;
 
         /// <summary>
         /// The ID of the cached content.
@@ -40,12 +40,12 @@ namespace Uralstech.UGemini.Models.Caching
         /// <remarks>
         /// Only available in the beta API.
         /// </remarks>
-        /// <param name="content">The patch content.</param>
+        /// <param name="patch">The patch data.</param>
         /// <param name="cachedContentIdOrName">The ID or name (format cachedContents/{contentId}) of the cached content to patch.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiCachedContentPatchRequest(GeminiCachedContent content, string cachedContentIdOrName, bool useBetaApi = true)
+        public GeminiCachedContentPatchRequest(GeminiCachedContentPatchData patch, string cachedContentIdOrName, bool useBetaApi = true)
         {
-            Content = content;
+            Patch = patch;
             ContentId = cachedContentIdOrName.Split('/')[^1];
             ApiVersion = useBetaApi ? "v1beta" : "v1";
         }
@@ -53,7 +53,7 @@ namespace Uralstech.UGemini.Models.Caching
         /// <inheritdoc/>
         public string GetUtf8EncodedData()
         {
-            return JsonConvert.SerializeObject(Content);
+            return JsonConvert.SerializeObject(Patch);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Uralstech.UGemini.FileAPI
     public class GeminiFileUploadMetaData
     {
         /// <summary>
-        /// The <see cref="GeminiFileUploadRequest"/> resource name. This does not work right now.
+        /// The <see cref="GeminiFileUploadRequest"/> resource name, in format "files/{fileId}".
         /// </summary>
         /// <remarks>
         /// The ID (name excluding the "files/" prefix) can contain up to 40 characters that are lowercase alphanumeric or dashes (-).<br/>
