@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">UGemini<span id="projectnumber">&#160;2.0.0-preview.4</span>
+   <div id="projectname">UGemini<span id="projectnumber">&#160;2.0.0-preview.5</span>
    </div>
    <div id="projectbrief">A C# wrapper for the Google Gemini API.</div>
   </td>
@@ -130,9 +130,9 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The URI.</dd></dl>
   <br /></td></tr>
 <tr class="separator:a919d4a421db49df44497c1e7ba2f68cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8be2315525c347288afc04df1ce88ac2" id="r_a8be2315525c347288afc04df1ce88ac2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8be2315525c347288afc04df1ce88ac2">GeminiCachedContentGetRequest</a> (string cachedContentIdOrName, bool useBetaApi=false)</td></tr>
-<tr class="memdesc:a8be2315525c347288afc04df1ce88ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_get_request.html" title="Requests metadata cached content. Return type is GeminiCachedContent.">GeminiCachedContentGetRequest</a>.  <br /></td></tr>
-<tr class="separator:a8be2315525c347288afc04df1ce88ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add549ebadae8356f19bd4559f007cf56" id="r_add549ebadae8356f19bd4559f007cf56"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add549ebadae8356f19bd4559f007cf56">GeminiCachedContentGetRequest</a> (string cachedContentIdOrName, bool useBetaApi=true)</td></tr>
+<tr class="memdesc:add549ebadae8356f19bd4559f007cf56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_get_request.html" title="Requests metadata cached content. Return type is GeminiCachedContent.">GeminiCachedContentGetRequest</a>.  <br /></td></tr>
+<tr class="separator:add549ebadae8356f19bd4559f007cf56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -147,9 +147,10 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>ContentId</b></td><
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Requests metadata cached content. Return type is <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content.html" title="Content that has been preprocessed and can be used in subsequent request to GenerativeService.">GeminiCachedContent</a>. </p>
+<p>Only available in the beta API. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a8be2315525c347288afc04df1ce88ac2" name="a8be2315525c347288afc04df1ce88ac2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8be2315525c347288afc04df1ce88ac2">&#9670;&#160;</a></span>GeminiCachedContentGetRequest()</h2>
+<a id="add549ebadae8356f19bd4559f007cf56" name="add549ebadae8356f19bd4559f007cf56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add549ebadae8356f19bd4559f007cf56">&#9670;&#160;</a></span>GeminiCachedContentGetRequest()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,12 +163,13 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>ContentId</b></td><
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>useBetaApi</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>useBetaApi</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Creates a new <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_get_request.html" title="Requests metadata cached content. Return type is GeminiCachedContent.">GeminiCachedContentGetRequest</a>. </p>
+<p>Only available in the beta API. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cachedContentIdOrName</td><td>The ID or name (format cachedContents/{contentId}) of the cached content to get.</td></tr>

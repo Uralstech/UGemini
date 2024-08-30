@@ -1,5 +1,13 @@
 var NAVTREEINDEX4 =
 {
+"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate.html#aff961a95f07e5ba39878f306c400eaa3a6b0f23249b46eb0c01e6659299d66b8b":[2,0,0,0,2,4,0,3,7],
+"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate.html#aff961a95f07e5ba39878f306c400eaa3a6fcdc090caeade09d0efd6253932b6f5":[2,0,0,0,2,4,0,3,0],
+"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate.html#aff961a95f07e5ba39878f306c400eaa3a7a5fd1c6fb926ffc941f1793f46ca958":[2,0,0,0,2,4,0,3,9],
+"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate.html#aff961a95f07e5ba39878f306c400eaa3aaf0e6be419dc2af93d93caca768aed99":[2,0,0,0,2,4,0,3,2],
+"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate.html#aff961a95f07e5ba39878f306c400eaa3ab978c2bce7d543f3141b73423f7531ac":[2,0,0,0,2,4,0,3,8],
+"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate.html#aff961a95f07e5ba39878f306c400eaa3ad3a9b13d5048a26687e92197ed538ee6":[2,0,0,0,2,4,0,3,4],
+"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate.html#aff961a95f07e5ba39878f306c400eaa3aec3bc9dd0da332d732a6cdf0e202aecc":[2,0,0,0,2,4,0,3,6],
+"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat.html":[2,0,0,0,2,4,1],
 "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering.html":[2,0,0,0,2,4,2],
 "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering.html#aba7a30a5833a9c301357ad7d579ac90d":[2,0,0,0,2,4,2,4],
 "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering.html#aba7a30a5833a9c301357ad7d579ac90da3643ff82b614f00244c6d39459e473d4":[2,0,0,0,2,4,2,4,1],

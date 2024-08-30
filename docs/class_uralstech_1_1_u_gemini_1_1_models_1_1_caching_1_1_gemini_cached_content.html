@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">UGemini<span id="projectnumber">&#160;2.0.0-preview.4</span>
+   <div id="projectname">UGemini<span id="projectnumber">&#160;2.0.0-preview.5</span>
    </div>
    <div id="projectbrief">A C# wrapper for the Google Gemini API.</div>
   </td>
@@ -109,14 +109,6 @@ $(function(){initNavTree('class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ad173297d48d798495dac35f70241671f" id="r_ad173297d48d798495dac35f70241671f"><td class="memItemLeft" align="right" valign="top"><a id="ad173297d48d798495dac35f70241671f" name="ad173297d48d798495dac35f70241671f"></a>
-<a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_gemini_content.html">GeminiContent</a>[]&#160;</td><td class="memItemRight" valign="bottom"><b>Contents</b> = null</td></tr>
-<tr class="memdesc:ad173297d48d798495dac35f70241671f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Immutable. The content to cache. <br /></td></tr>
-<tr class="separator:ad173297d48d798495dac35f70241671f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9e642abee4f89207efe26f86d9ce4ff" id="r_aa9e642abee4f89207efe26f86d9ce4ff"><td class="memItemLeft" align="right" valign="top"><a id="aa9e642abee4f89207efe26f86d9ce4ff" name="aa9e642abee4f89207efe26f86d9ce4ff"></a>
-<a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_tool.html">GeminiTool</a>[]&#160;</td><td class="memItemRight" valign="bottom"><b>Tools</b> = null</td></tr>
-<tr class="memdesc:aa9e642abee4f89207efe26f86d9ce4ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Immutable. A list of Tools the model may use to generate the next response. <br /></td></tr>
-<tr class="separator:aa9e642abee4f89207efe26f86d9ce4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a246b4d168e41a5ccee76cce771285a08" id="r_a246b4d168e41a5ccee76cce771285a08"><td class="memItemLeft" align="right" valign="top"><a id="a246b4d168e41a5ccee76cce771285a08" name="a246b4d168e41a5ccee76cce771285a08"></a>
 DateTime&#160;</td><td class="memItemRight" valign="bottom"><b>CreateTime</b></td></tr>
 <tr class="memdesc:a246b4d168e41a5ccee76cce771285a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creation time of the cache entry. <br /></td></tr>
@@ -131,32 +123,20 @@ DateTime&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateTime</b></t
 <tr class="separator:a2f4b466968d640b74e9a663c35435ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a806860a9ed8ede3bfee20ee2db065adf" id="r_a806860a9ed8ede3bfee20ee2db065adf"><td class="memItemLeft" align="right" valign="top"><a id="a806860a9ed8ede3bfee20ee2db065adf" name="a806860a9ed8ede3bfee20ee2db065adf"></a>
 DateTime&#160;</td><td class="memItemRight" valign="bottom"><b>ExpireTime</b></td></tr>
-<tr class="memdesc:a806860a9ed8ede3bfee20ee2db065adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestamp in UTC of when this resource is considered expired. This is always provided on output, regardless of what was sent on input. <br /></td></tr>
+<tr class="memdesc:a806860a9ed8ede3bfee20ee2db065adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestamp in UTC of when this resource is considered expired. <br /></td></tr>
 <tr class="separator:a806860a9ed8ede3bfee20ee2db065adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53a2343e6bcf51f91b45cba734393a3e" id="r_a53a2343e6bcf51f91b45cba734393a3e"><td class="memItemLeft" align="right" valign="top"><a id="a53a2343e6bcf51f91b45cba734393a3e" name="a53a2343e6bcf51f91b45cba734393a3e"></a>
-DateTime&#160;</td><td class="memItemRight" valign="bottom"><b>TimeToLive</b></td></tr>
-<tr class="memdesc:a53a2343e6bcf51f91b45cba734393a3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input only. New TTL for this resource, input only. <br /></td></tr>
-<tr class="separator:a53a2343e6bcf51f91b45cba734393a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1a2f7ecd223d3a3c16f2e29342ae00d" id="r_ab1a2f7ecd223d3a3c16f2e29342ae00d"><td class="memItemLeft" align="right" valign="top"><a id="ab1a2f7ecd223d3a3c16f2e29342ae00d" name="ab1a2f7ecd223d3a3c16f2e29342ae00d"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>Name</b> = null</td></tr>
-<tr class="memdesc:ab1a2f7ecd223d3a3c16f2e29342ae00d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional. Identifier. The resource name referring to the cached content. Format: cachedContents/{id}. <br /></td></tr>
+<tr class="memdesc:ab1a2f7ecd223d3a3c16f2e29342ae00d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The resource name referring to the cached content. Format: cachedContents/{contentId}. <br /></td></tr>
 <tr class="separator:ab1a2f7ecd223d3a3c16f2e29342ae00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9abd35b9fd0f473615ab93645820b7a5" id="r_a9abd35b9fd0f473615ab93645820b7a5"><td class="memItemLeft" align="right" valign="top"><a id="a9abd35b9fd0f473615ab93645820b7a5" name="a9abd35b9fd0f473615ab93645820b7a5"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>DisplayName</b> = null</td></tr>
-<tr class="memdesc:a9abd35b9fd0f473615ab93645820b7a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional. Immutable. The user-generated meaningful display name of the cached content. Maximum 128 Unicode characters. <br /></td></tr>
+<tr class="memdesc:a9abd35b9fd0f473615ab93645820b7a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user-generated meaningful display name of the cached content. Maximum 128 Unicode characters. <br /></td></tr>
 <tr class="separator:a9abd35b9fd0f473615ab93645820b7a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86a2cec3632e1ddcaf8f71975a16d5d1" id="r_a86a2cec3632e1ddcaf8f71975a16d5d1"><td class="memItemLeft" align="right" valign="top"><a id="a86a2cec3632e1ddcaf8f71975a16d5d1" name="a86a2cec3632e1ddcaf8f71975a16d5d1"></a>
 <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id.html">GeminiModelId</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Model</b></td></tr>
-<tr class="memdesc:a86a2cec3632e1ddcaf8f71975a16d5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Immutable. The name of the Model to use for cached content Format: mod. <br /></td></tr>
+<tr class="memdesc:a86a2cec3632e1ddcaf8f71975a16d5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the Model to use for cached content Format: mod. <br /></td></tr>
 <tr class="separator:a86a2cec3632e1ddcaf8f71975a16d5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a517dfb2544d414e4031353d30227af4c" id="r_a517dfb2544d414e4031353d30227af4c"><td class="memItemLeft" align="right" valign="top"><a id="a517dfb2544d414e4031353d30227af4c" name="a517dfb2544d414e4031353d30227af4c"></a>
-<a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_gemini_content.html">GeminiContent</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SystemInstruction</b> = null</td></tr>
-<tr class="memdesc:a517dfb2544d414e4031353d30227af4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Immutable. Developer set system instruction. Currently text only. <br /></td></tr>
-<tr class="separator:a517dfb2544d414e4031353d30227af4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05bc20fff0d6fe3581611678da305148" id="r_a05bc20fff0d6fe3581611678da305148"><td class="memItemLeft" align="right" valign="top"><a id="a05bc20fff0d6fe3581611678da305148" name="a05bc20fff0d6fe3581611678da305148"></a>
-<a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_tool_configuration.html">GeminiToolConfiguration</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ToolConfig</b> = null</td></tr>
-<tr class="memdesc:a05bc20fff0d6fe3581611678da305148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Immutable. Tool config. This config is shared for all tools. <br /></td></tr>
-<tr class="separator:a05bc20fff0d6fe3581611678da305148"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="namespace_uralstech_1_1_u_gemini_1_1_models_1_1_content.html">Content</a> that has been preprocessed and can be used in subsequent request to GenerativeService. </p>

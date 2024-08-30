@@ -1,6 +1,6 @@
 var class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_request =
 [
-    [ "GeminiCachedContentPatchRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_request.html#accae8f8ffc779e011023868d90b03994", null ],
+    [ "GeminiCachedContentPatchRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_request.html#a09cbbfca4f09a3ed7eea7ce64b9523e1", null ],
     [ "GetEndpointUri", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_request.html#a6822678bfa8b106e049b994b76233afa", null ],
     [ "GetUtf8EncodedData", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_request.html#a3f77546f9ab0033553781e72670457dc", null ],
     [ "ApiVersion", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_request.html#a92bcaa8bb6eb6ae447c0d2b9cfff96d5", null ],
