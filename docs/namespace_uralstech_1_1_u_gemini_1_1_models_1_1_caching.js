@@ -7,6 +7,7 @@ var namespace_uralstech_1_1_u_gemini_1_1_models_1_1_caching =
     [ "GeminiCachedContentGetRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_get_request.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_get_request" ],
     [ "GeminiCachedContentListRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_list_request.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_list_request" ],
     [ "GeminiCachedContentListResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_list_response.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_list_response" ],
+    [ "GeminiCachedContentPatchData", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_data.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_data" ],
     [ "GeminiCachedContentPatchRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_request.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_request" ],
     [ "GeminiCachedContentUsageMetadata", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_usage_metadata.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_usage_metadata" ]
 ];

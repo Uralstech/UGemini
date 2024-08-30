@@ -1,5 +1,11 @@
 var NAVTREEINDEX2 =
 {
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html#a7782edbcbb98de81e6456a845fec628d":[3,0,0,0,2,8,1],
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html":[2,0,0,0,2,9],
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html":[3,0,0,0,2,9],
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html#a2c153494da8b5d3992b5c741fa498914":[2,0,0,0,2,9,2],
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html#a2c153494da8b5d3992b5c741fa498914":[3,0,0,0,2,9,2],
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html#aa89ea4cdd060f9efe1e8a9aa8ff3054f":[2,0,0,0,2,9,4],
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html#aa89ea4cdd060f9efe1e8a9aa8ff3054f":[3,0,0,0,2,9,4],
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html#aaf930bf273f73e99e16049b267423ed9":[2,0,0,0,2,9,1],
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html#aaf930bf273f73e99e16049b267423ed9":[3,0,0,0,2,9,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX2 =
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html":[3,0,0,0,2,4,5,1,2],
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html#a250f92e3c4759e165cb442152ab864bc":[2,0,0,0,2,4,5,1,2,2],
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html#a250f92e3c4759e165cb442152ab864bc":[3,0,0,0,2,4,5,1,2,2],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html#a96b827958b1123d5d8295729ec1e4bb3":[2,0,0,0,2,4,5,1,2,0],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html#a96b827958b1123d5d8295729ec1e4bb3":[3,0,0,0,2,4,5,1,2,0],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html#ad38d6a53484be75f28b840c814aa3769":[2,0,0,0,2,4,5,1,2,1],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html#ad38d6a53484be75f28b840c814aa3769":[3,0,0,0,2,4,5,1,2,1],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_tool.html":[2,0,0,0,2,4,5,1,3],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_tool.html":[3,0,0,0,2,4,5,1,3],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_tool.html#a00c9511961cc5480b36bf3e98902abb9":[2,0,0,0,2,4,5,1,3,0]
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html#a96b827958b1123d5d8295729ec1e4bb3":[2,0,0,0,2,4,5,1,2,0]
 };

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UGemini: Uralstech.UGemini.Models.Generation.QuestionAnswering.Grounding.GeminiGroundingPassage Class Reference</title>
+<title>UGemini: Uralstech.UGemini.Models.Caching.GeminiCachedContentPatchData Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,7 +71,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_grounding_1_1_gemini_grounding_passage.html',''); initResizable(true); });
+$(function(){initNavTree('class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_data.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -99,36 +99,69 @@ $(function(){initNavTree('class_uralstech_1_1_u_gemini_1_1_models_1_1_generation
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_grounding_1_1_e8e301a42c505929743c3ac903ea4edb.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Uralstech.UGemini.Models.Generation.QuestionAnswering.Grounding.GeminiGroundingPassage Class Reference</div></div>
+<a href="class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_data-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Uralstech.UGemini.Models.Caching.GeminiCachedContentPatchData Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Passage included inline with a grounding configuration.  
+<p>Data to patch an existing cached content resource with new data.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:abb6797aa76882041c4e9fe71fef89a66" id="r_abb6797aa76882041c4e9fe71fef89a66"><td class="memItemLeft" align="right" valign="top"><a id="abb6797aa76882041c4e9fe71fef89a66" name="abb6797aa76882041c4e9fe71fef89a66"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>Id</b></td></tr>
-<tr class="memdesc:abb6797aa76882041c4e9fe71fef89a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifier for the passage for attributing this passage in grounded answers. <br /></td></tr>
-<tr class="separator:abb6797aa76882041c4e9fe71fef89a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e85c91ca161d560beea00bca3487b29" id="r_a7e85c91ca161d560beea00bca3487b29"><td class="memItemLeft" align="right" valign="top"><a id="a7e85c91ca161d560beea00bca3487b29" name="a7e85c91ca161d560beea00bca3487b29"></a>
-<a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_gemini_content.html">GeminiContent</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Content</b></td></tr>
-<tr class="memdesc:a7e85c91ca161d560beea00bca3487b29"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_uralstech_1_1_u_gemini_1_1_models_1_1_content.html">Content</a> of the passage. <br /></td></tr>
-<tr class="separator:a7e85c91ca161d560beea00bca3487b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6607251dbe87b790e104817ce30feb75" id="r_a6607251dbe87b790e104817ce30feb75"><td class="memItemLeft" align="right" valign="top">DateTime?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6607251dbe87b790e104817ce30feb75">ExpireTime</a> = null</td></tr>
+<tr class="memdesc:a6607251dbe87b790e104817ce30feb75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestamp in UTC of when this resource is considered expired.  <br /></td></tr>
+<tr class="separator:a6607251dbe87b790e104817ce30feb75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ee3934e24f243254324361fe97c4917" id="r_a5ee3934e24f243254324361fe97c4917"><td class="memItemLeft" align="right" valign="top">TimeSpan?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ee3934e24f243254324361fe97c4917">TimeToLive</a> = null</td></tr>
+<tr class="memdesc:a5ee3934e24f243254324361fe97c4917"><td class="mdescLeft">&#160;</td><td class="mdescRight">New TTL for this resource.  <br /></td></tr>
+<tr class="separator:a5ee3934e24f243254324361fe97c4917"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Passage included inline with a grounding configuration. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>UGemini/Packages/com.uralstech.ugemini/Runtime/Scripts/Data/Models/Generation/Answer/Grounding/<b>GeminiGroundingPassage.cs</b></li>
+<div class="textblock"><p>Data to patch an existing cached content resource with new data. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6607251dbe87b790e104817ce30feb75" name="a6607251dbe87b790e104817ce30feb75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6607251dbe87b790e104817ce30feb75">&#9670;&#160;</a></span>ExpireTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime? Uralstech.UGemini.Models.Caching.GeminiCachedContentPatchData.ExpireTime = null</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Timestamp in UTC of when this resource is considered expired. </p>
+<p>If not provided, <a class="el" href="#a5ee3934e24f243254324361fe97c4917" title="New TTL for this resource.">TimeToLive</a> must be provided. </p>
+
+</div>
+</div>
+<a id="a5ee3934e24f243254324361fe97c4917" name="a5ee3934e24f243254324361fe97c4917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ee3934e24f243254324361fe97c4917">&#9670;&#160;</a></span>TimeToLive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TimeSpan? Uralstech.UGemini.Models.Caching.GeminiCachedContentPatchData.TimeToLive = null</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>New TTL for this resource. </p>
+<p>If not provided, <a class="el" href="#a6607251dbe87b790e104817ce30feb75" title="Timestamp in UTC of when this resource is considered expired.">ExpireTime</a> must be provided. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>UGemini/Packages/com.uralstech.ugemini/Runtime/Scripts/Data/Models/Caching/Patch/<b>GeminiCachedContentPatchData.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespace_uralstech.html">Uralstech</a></li><li class="navelem"><a class="el" href="namespace_uralstech_1_1_u_gemini.html">UGemini</a></li><li class="navelem"><a class="el" href="namespace_uralstech_1_1_u_gemini_1_1_models.html">Models</a></li><li class="navelem"><a class="el" href="namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation.html">Generation</a></li><li class="navelem"><a class="el" href="namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering.html">QuestionAnswering</a></li><li class="navelem"><a class="el" href="namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_grounding.html">Grounding</a></li><li class="navelem"><a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_grounding_1_1_gemini_grounding_passage.html">GeminiGroundingPassage</a></li>
+    <li class="navelem"><a class="el" href="namespace_uralstech.html">Uralstech</a></li><li class="navelem"><a class="el" href="namespace_uralstech_1_1_u_gemini.html">UGemini</a></li><li class="navelem"><a class="el" href="namespace_uralstech_1_1_u_gemini_1_1_models.html">Models</a></li><li class="navelem"><a class="el" href="namespace_uralstech_1_1_u_gemini_1_1_models_1_1_caching.html">Caching</a></li><li class="navelem"><a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_data.html">GeminiCachedContentPatchData</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>

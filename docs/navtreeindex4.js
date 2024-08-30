@@ -1,5 +1,11 @@
 var NAVTREEINDEX4 =
 {
+"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation.html#ae457ab25019d52b3adf32d4c5688791daeed8d85b888a6c015834240885ee6333":[2,0,0,0,2,4,7,2],
+"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate.html":[2,0,0,0,2,4,0],
+"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate.html#aff961a95f07e5ba39878f306c400eaa3":[2,0,0,0,2,4,0,3],
+"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate.html#aff961a95f07e5ba39878f306c400eaa3a11a755d598c0c417f9a36758c3da7481":[2,0,0,0,2,4,0,3,1],
+"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate.html#aff961a95f07e5ba39878f306c400eaa3a6311ae17c1ee52b36e68aaf4ad066387":[2,0,0,0,2,4,0,3,5],
+"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate.html#aff961a95f07e5ba39878f306c400eaa3a6472ce41c26babff27b4c28028093d77":[2,0,0,0,2,4,0,3,3],
 "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate.html#aff961a95f07e5ba39878f306c400eaa3a6b0f23249b46eb0c01e6659299d66b8b":[2,0,0,0,2,4,0,3,7],
 "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate.html#aff961a95f07e5ba39878f306c400eaa3a6fcdc090caeade09d0efd6253932b6f5":[2,0,0,0,2,4,0,3,0],
 "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate.html#aff961a95f07e5ba39878f306c400eaa3a7a5fd1c6fb926ffc941f1793f46ca958":[2,0,0,0,2,4,0,3,9],

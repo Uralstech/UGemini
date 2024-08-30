@@ -9,6 +9,7 @@ var hierarchy =
     [ "Uralstech.UGemini.Models.Caching.GeminiCachedContent", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content.html", null ],
     [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentCreationData", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_creation_data.html", null ],
     [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentListResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_list_response.html", null ],
+    [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentPatchData", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_data.html", null ],
     [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentUsageMetadata", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_usage_metadata.html", null ],
     [ "Uralstech.UGemini.Models.Content.Citation.GeminiCitationMetadata", "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_citation_1_1_gemini_citation_metadata.html", null ],
     [ "Uralstech.UGemini.Models.Content.Citation.GeminiCitationSource", "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_citation_1_1_gemini_citation_source.html", null ],

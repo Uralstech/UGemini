@@ -1,5 +1,11 @@
 var NAVTREEINDEX1 =
 {
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_request.html#af4f5e6219ac95d3416c563bff90f385b":[3,0,0,0,2,0,8,4],
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_usage_metadata.html":[2,0,0,0,2,0,9],
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_usage_metadata.html":[3,0,0,0,2,0,9],
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_usage_metadata.html#a7abad5301498779f246a9c04e5c5b99f":[2,0,0,0,2,0,9,0],
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_usage_metadata.html#a7abad5301498779f246a9c04e5c5b99f":[3,0,0,0,2,0,9,0],
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_attribution_1_1_gemini_attribution_source_id.html":[2,0,0,0,2,1,0,0],
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_attribution_1_1_gemini_attribution_source_id.html":[3,0,0,0,2,1,0,0],
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_attribution_1_1_gemini_attribution_source_id.html#a92ad083742ba12e4127ac367bffa0a96":[2,0,0,0,2,1,0,0,0],
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_attribution_1_1_gemini_attribution_source_id.html#a92ad083742ba12e4127ac367bffa0a96":[3,0,0,0,2,1,0,0,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX1 =
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html":[3,0,0,0,2,8],
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html#a46a38c50eddc40e47c26e0ce2d618c74":[2,0,0,0,2,8,0],
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html#a46a38c50eddc40e47c26e0ce2d618c74":[3,0,0,0,2,8,0],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html#a7782edbcbb98de81e6456a845fec628d":[2,0,0,0,2,8,1],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html#a7782edbcbb98de81e6456a845fec628d":[3,0,0,0,2,8,1],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html":[2,0,0,0,2,9],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html":[3,0,0,0,2,9],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html#a2c153494da8b5d3992b5c741fa498914":[2,0,0,0,2,9,2],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html#a2c153494da8b5d3992b5c741fa498914":[3,0,0,0,2,9,2],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html#aa89ea4cdd060f9efe1e8a9aa8ff3054f":[2,0,0,0,2,9,4]
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html#a7782edbcbb98de81e6456a845fec628d":[2,0,0,0,2,8,1]
 };
