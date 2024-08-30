@@ -3,6 +3,9 @@
     /// <summary>
     /// Requests metadata for all existing cached content. Return type is <see cref="GeminiCachedContentListResponse"/>.
     /// </summary>
+    /// <remarks>
+    /// Only available in the beta API.
+    /// </remarks>
     public class GeminiCachedContentListRequest : IGeminiGetRequest
     {
         /// <summary>
@@ -34,8 +37,11 @@
         /// <summary>
         /// Creates a new <see cref="GeminiCachedContentListRequest"/>.
         /// </summary>
+        /// <remarks>
+        /// Only available in the beta API.
+        /// </remarks>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiCachedContentListRequest(bool useBetaApi = false)
+        public GeminiCachedContentListRequest(bool useBetaApi = true)
         {
             ApiVersion = useBetaApi ? "v1beta" : "v1";
         }

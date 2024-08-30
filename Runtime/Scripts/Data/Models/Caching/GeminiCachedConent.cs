@@ -2,8 +2,6 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.ComponentModel;
-using Uralstech.UGemini.Models.Content;
-using Uralstech.UGemini.Models.Generation.Tools.Declaration;
 
 namespace Uralstech.UGemini.Models.Caching
 {
@@ -16,18 +14,6 @@ namespace Uralstech.UGemini.Models.Caching
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class GeminiCachedContent
     {
-        /// <summary>
-        /// Immutable. The content to cache.
-        /// </summary>
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
-        public GeminiContent[] Contents = null;
-
-        /// <summary>
-        /// Immutable. A list of Tools the model may use to generate the next response
-        /// </summary>
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
-        public GeminiTool[] Tools = null;
-
         /// <summary>
         /// Creation time of the cache entry.
         /// </summary>
@@ -44,44 +30,25 @@ namespace Uralstech.UGemini.Models.Caching
         public GeminiCachedContentUsageMetadata UsageMetadata;
 
         /// <summary>
-        /// Timestamp in UTC of when this resource is considered expired. This is always provided on output, regardless of what was sent on input.
+        /// Timestamp in UTC of when this resource is considered expired.
         /// </summary>
         public DateTime ExpireTime;
 
         /// <summary>
-        /// Input only. New TTL for this resource, input only.
+        /// The resource name referring to the cached content. Format: cachedContents/{contentId}.
         /// </summary>
-        [JsonProperty("ttl"), JsonConverter(typeof(GeminiSecondsToTimeSpanJsonConverter))]
-        public DateTime TimeToLive;
-
-        /// <summary>
-        /// Optional. Identifier. The resource name referring to the cached content. Format: cachedContents/{id}
-        /// </summary>
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public string Name = null;
 
         /// <summary>
-        /// Optional. Immutable. The user-generated meaningful display name of the cached content. Maximum 128 Unicode characters.
+        /// The user-generated meaningful display name of the cached content. Maximum 128 Unicode characters.
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public string DisplayName = null;
 
         /// <summary>
-        /// Immutable. The name of the Model to use for cached content Format: mod
+        /// The name of the Model to use for cached content Format: mod
         /// </summary>
         [JsonConverter(typeof(GeminiModelIdStringConverter))]
         public GeminiModelId Model;
-
-        /// <summary>
-        /// Immutable. Developer set system instruction. Currently text only.
-        /// </summary>
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
-        public GeminiContent SystemInstruction = null;
-
-        /// <summary>
-        /// Immutable. Tool config. This config is shared for all tools.
-        /// </summary>
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
-        public GeminiToolConfiguration ToolConfig = null;
     }
 }

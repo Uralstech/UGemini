@@ -3,6 +3,9 @@
     /// <summary>
     /// Requests the deletion of a file.
     /// </summary>
+    /// <remarks>
+    /// Only available in the beta API.
+    /// </remarks>
     public class GeminiFileDeleteRequest : IGeminiDeleteRequest
     {
         /// <summary>
@@ -24,6 +27,9 @@
         /// <summary>
         /// Creates a new <see cref="GeminiFileDeleteRequest"/>.
         /// </summary>
+        /// <remarks>
+        /// Only available in the beta API.
+        /// </remarks>
         /// <param name="fileNameOrId">The name (format 'files/{fileId}') or ID of the file to delete.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
         public GeminiFileDeleteRequest(string fileNameOrId, bool useBetaApi = true)

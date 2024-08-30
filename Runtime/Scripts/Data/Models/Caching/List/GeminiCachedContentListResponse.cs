@@ -13,12 +13,12 @@ namespace Uralstech.UGemini.Models.Caching
         /// The list of cached contents.
         /// </summary>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public GeminiCachedContent[] CachedContents;
+        public GeminiCachedContent[] CachedContents = null;
 
         /// <summary>
         /// A token that can be sent as a <see cref="GeminiCachedContentListRequest.PageToken"/> into a subsequent <see cref="GeminiCachedContentListRequest"/> call.
         /// </summary>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public string NextPageToken;
+        public string NextPageToken = null;
     }
 }
