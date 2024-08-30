@@ -11,6 +11,9 @@ namespace Uralstech.UGemini.Models.Generation.QuestionAnswering
     /// <summary>
     /// Generates a grounded answer from the model.
     /// </summary>
+    /// <remarks>
+    /// Only available in the beta API.
+    /// </remarks>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class GeminiAnswerRequest : IGeminiPostRequest
     {
@@ -99,6 +102,9 @@ namespace Uralstech.UGemini.Models.Generation.QuestionAnswering
         /// <summary>
         /// Creates a new <see cref="GeminiAnswerRequest"/>.
         /// </summary>
+        /// <remarks>
+        /// Only available in the beta API.
+        /// </remarks>
         /// <param name="model">The model to use.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
         public GeminiAnswerRequest(GeminiModelId model, bool useBetaApi = true)

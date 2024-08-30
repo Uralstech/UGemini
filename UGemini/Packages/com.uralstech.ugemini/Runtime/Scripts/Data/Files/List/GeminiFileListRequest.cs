@@ -3,6 +3,9 @@
     /// <summary>
     /// Requests metadata for all existing files. Return type is <see cref="GeminiFileListResponse"/>.
     /// </summary>
+    /// <remarks>
+    /// Only available in the beta API.
+    /// </remarks>
     public class GeminiFileListRequest : IGeminiGetRequest
     {
         /// <summary>
@@ -31,6 +34,9 @@
         /// <summary>
         /// Creates a new <see cref="GeminiFileListRequest"/>.
         /// </summary>
+        /// <remarks>
+        /// Only available in the beta API.
+        /// </remarks>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
         public GeminiFileListRequest(bool useBetaApi = true)
         {

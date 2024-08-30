@@ -3,6 +3,9 @@ namespace Uralstech.UGemini.Models.Caching
     /// <summary>
     /// Requests metadata cached content. Return type is <see cref="GeminiCachedContent"/>.
     /// </summary>
+    /// <remarks>
+    /// Only available in the beta API.
+    /// </remarks>
     public class GeminiCachedContentGetRequest : IGeminiGetRequest
     {
         /// <summary>
@@ -24,9 +27,12 @@ namespace Uralstech.UGemini.Models.Caching
         /// <summary>
         /// Creates a new <see cref="GeminiCachedContentGetRequest"/>.
         /// </summary>
+        /// <remarks>
+        /// Only available in the beta API.
+        /// </remarks>
         /// <param name="cachedContentIdOrName">The ID or name (format cachedContents/{contentId}) of the cached content to get.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiCachedContentGetRequest(string cachedContentIdOrName, bool useBetaApi = false)
+        public GeminiCachedContentGetRequest(string cachedContentIdOrName, bool useBetaApi = true)
         {
             ContentId = cachedContentIdOrName.Split('/')[^1];
             ApiVersion = useBetaApi ? "v1beta" : "v1";

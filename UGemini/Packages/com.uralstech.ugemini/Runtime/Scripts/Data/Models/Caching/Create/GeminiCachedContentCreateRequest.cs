@@ -6,12 +6,15 @@ namespace Uralstech.UGemini.Models.Caching
     /// <summary>
     /// Creates a <see cref="GeminiCachedContent"/> resource. Response type is <see cref="GeminiCachedContent"/>.
     /// </summary>
+    /// <remarks>
+    /// Only available in the beta API.
+    /// </remarks>
     public class GeminiCachedContentCreateRequest : IGeminiPostRequest
     {
         /// <summary>
         /// The content to be cached.
         /// </summary>
-        public GeminiCachedContent Content;
+        public GeminiCachedContentCreationData Content;
 
         /// <summary>
         /// The API version to use.
@@ -30,9 +33,12 @@ namespace Uralstech.UGemini.Models.Caching
         /// <summary>
         /// Creates a new <see cref="GeminiCachedContentCreateRequest"/>.
         /// </summary>
+        /// <remarks>
+        /// Only available in the beta API.
+        /// </remarks>
         /// <param name="content">The content to cache.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiCachedContentCreateRequest(GeminiCachedContent content, bool useBetaApi = false)
+        public GeminiCachedContentCreateRequest(GeminiCachedContentCreationData content, bool useBetaApi = true)
         {
             Content = content;
             ApiVersion = useBetaApi ? "v1beta" : "v1";

@@ -8,6 +8,9 @@ namespace Uralstech.UGemini.FileAPI
     /// <summary>
     /// Uploads a file to the Gemini File API. Response type is <see cref="GeminiFileUploadResponse"/>.
     /// </summary>
+    /// <remarks>
+    /// Only available in the beta API.
+    /// </remarks>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class GeminiFileUploadRequest : IGeminiMultiPartPostRequest
     {
@@ -48,6 +51,9 @@ namespace Uralstech.UGemini.FileAPI
         /// <summary>
         /// Creates a new <see cref="GeminiFileUploadRequest"/>.
         /// </summary>
+        /// <remarks>
+        /// Only available in the beta API.
+        /// </remarks>
         /// <param name="contentType">The content type of the data.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
         public GeminiFileUploadRequest(string contentType, bool useBetaApi = true)
@@ -59,6 +65,9 @@ namespace Uralstech.UGemini.FileAPI
         /// <summary>
         /// Creates a new <see cref="GeminiFileUploadRequest"/>.
         /// </summary>
+        /// <remarks>
+        /// Only available in the beta API.
+        /// </remarks>
         /// <param name="contentType">The content type of the data.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
         public GeminiFileUploadRequest(GeminiContentType contentType, bool useBetaApi = true)

@@ -5,6 +5,9 @@ namespace Uralstech.UGemini.Models.Caching
     /// <summary>
     /// Patches a <see cref="GeminiCachedContent"/> resource.
     /// </summary>
+    /// <remarks>
+    /// Only available in the beta API.
+    /// </remarks>
     public class GeminiCachedContentPatchRequest : IGeminiPatchRequest
     {
         /// <summary>
@@ -34,10 +37,13 @@ namespace Uralstech.UGemini.Models.Caching
         /// <summary>
         /// Creates a new <see cref="GeminiCachedContentPatchRequest"/>.
         /// </summary>
+        /// <remarks>
+        /// Only available in the beta API.
+        /// </remarks>
         /// <param name="content">The patch content.</param>
         /// <param name="cachedContentIdOrName">The ID or name (format cachedContents/{contentId}) of the cached content to patch.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiCachedContentPatchRequest(GeminiCachedContent content, string cachedContentIdOrName, bool useBetaApi = false)
+        public GeminiCachedContentPatchRequest(GeminiCachedContent content, string cachedContentIdOrName, bool useBetaApi = true)
         {
             Content = content;
             ContentId = cachedContentIdOrName.Split('/')[^1];
