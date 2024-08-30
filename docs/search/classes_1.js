@@ -10,8 +10,9 @@ var searchData=
   ['igeminideleterequest_7',['IGeminiDeleteRequest',['../interface_uralstech_1_1_u_gemini_1_1_i_gemini_delete_request.html',1,'Uralstech::UGemini']]],
   ['igeminigetrequest_8',['IGeminiGetRequest',['../interface_uralstech_1_1_u_gemini_1_1_i_gemini_get_request.html',1,'Uralstech::UGemini']]],
   ['igeminimultipartpostrequest_9',['IGeminiMultiPartPostRequest',['../interface_uralstech_1_1_u_gemini_1_1_i_gemini_multi_part_post_request.html',1,'Uralstech::UGemini']]],
-  ['igeminipostrequest_10',['IGeminiPostRequest',['../interface_uralstech_1_1_u_gemini_1_1_i_gemini_post_request.html',1,'Uralstech::UGemini']]],
-  ['igeminirequest_11',['IGeminiRequest',['../interface_uralstech_1_1_u_gemini_1_1_i_gemini_request.html',1,'Uralstech::UGemini']]],
-  ['igeministreamablepostrequest_12',['IGeminiStreamablePostRequest',['../interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html',1,'Uralstech::UGemini']]],
-  ['igeministreamablepostrequest_3c_20geminichatresponse_20_3e_13',['IGeminiStreamablePostRequest&lt; GeminiChatResponse &gt;',['../interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html',1,'Uralstech::UGemini']]]
+  ['igeminipatchrequest_10',['IGeminiPatchRequest',['../interface_uralstech_1_1_u_gemini_1_1_i_gemini_patch_request.html',1,'Uralstech::UGemini']]],
+  ['igeminipostrequest_11',['IGeminiPostRequest',['../interface_uralstech_1_1_u_gemini_1_1_i_gemini_post_request.html',1,'Uralstech::UGemini']]],
+  ['igeminirequest_12',['IGeminiRequest',['../interface_uralstech_1_1_u_gemini_1_1_i_gemini_request.html',1,'Uralstech::UGemini']]],
+  ['igeministreamablepostrequest_13',['IGeminiStreamablePostRequest',['../interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html',1,'Uralstech::UGemini']]],
+  ['igeministreamablepostrequest_3c_20geminichatresponse_20_3e_14',['IGeminiStreamablePostRequest&lt; GeminiChatResponse &gt;',['../interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html',1,'Uralstech::UGemini']]]
 ];

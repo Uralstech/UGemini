@@ -90,7 +90,7 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ],
+        [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Properties", "functions_prop.html", null ]
       ] ]
     ] ]
@@ -100,9 +100,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_unity_extensions.html#af2cd8196d267384760311d94bd995f0f",
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_gemini_generation_configuration.html#a9bbe8783f9b896e026cfd57bf0b8247c",
-"md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md10"
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_attribution_1_1_gemini_grounding_attribution.html#a685a70851ccb656a5896cac9a52b0fbd",
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_response.html",
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_tool_configuration.html#a8a854448cde37229c8173a5a90bccf4e",
+"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

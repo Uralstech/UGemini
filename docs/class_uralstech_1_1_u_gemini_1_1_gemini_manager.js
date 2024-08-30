@@ -1,6 +1,7 @@
 var class_uralstech_1_1_u_gemini_1_1_gemini_manager =
 [
     [ "Request", "class_uralstech_1_1_u_gemini_1_1_gemini_manager.html#ab540f88449967ebfc8f67e1bb5101d75", null ],
+    [ "Request", "class_uralstech_1_1_u_gemini_1_1_gemini_manager.html#a2e48697e0da0f9bf2767dc836bfec2d8", null ],
     [ "Request< TResponse >", "class_uralstech_1_1_u_gemini_1_1_gemini_manager.html#abd5a1056444e232ec19f662db30e0756", null ],
     [ "Request< TResponse >", "class_uralstech_1_1_u_gemini_1_1_gemini_manager.html#a9c0a36c0676665ba04a27ce95348eebe", null ],
     [ "Request< TResponse >", "class_uralstech_1_1_u_gemini_1_1_gemini_manager.html#adc073fccf089ba4c89b6c1730deef63c", null ],

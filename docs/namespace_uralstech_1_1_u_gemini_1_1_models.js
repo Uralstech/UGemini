@@ -1,5 +1,6 @@
 var namespace_uralstech_1_1_u_gemini_1_1_models =
 [
+    [ "Caching", "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_caching.html", "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_caching" ],
     [ "Content", "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_content.html", "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_content" ],
     [ "CountTokens", "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens.html", "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens" ],
     [ "Embedding", "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_embedding.html", "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_embedding" ],

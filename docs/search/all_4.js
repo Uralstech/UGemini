@@ -10,5 +10,6 @@ var searchData=
   ['excludes_7',['Excludes',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_semantic_retriever.html#a9b71bd58def275f208642864ab020ceba9c996acd3d07c857bf343151d04f6c00',1,'Uralstech::UGemini::Models::Generation::QuestionAnswering::SemanticRetriever']]],
   ['executablecode_8',['ExecutableCode',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_gemini_content_part.html#a2569e5f827a4add0a35baffbf7496893',1,'Uralstech::UGemini::Models::Content::GeminiContentPart']]],
   ['expirationtime_9',['ExpirationTime',['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file.html#a7a61ce06b675869d0e1dbab8ed116676',1,'Uralstech::UGemini::FileAPI::GeminiFile']]],
-  ['extractive_10',['Extractive',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering.html#aba7a30a5833a9c301357ad7d579ac90daffc23b7f16cd5183b6304160942cc572',1,'Uralstech::UGemini::Models::Generation::QuestionAnswering']]]
+  ['expiretime_10',['ExpireTime',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content.html#a806860a9ed8ede3bfee20ee2db065adf',1,'Uralstech::UGemini::Models::Caching::GeminiCachedContent']]],
+  ['extractive_11',['Extractive',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering.html#aba7a30a5833a9c301357ad7d579ac90daffc23b7f16cd5183b6304160942cc572',1,'Uralstech::UGemini::Models::Generation::QuestionAnswering']]]
 ];

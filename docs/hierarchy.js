@@ -6,6 +6,9 @@ var hierarchy =
     [ "Uralstech.UGemini.Models.Generation.QuestionAnswering.GeminiAnswerResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_gemini_answer_response.html", null ],
     [ "Uralstech.UGemini.Models.Content.Attribution.GeminiAttributionSourceId", "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_attribution_1_1_gemini_attribution_source_id.html", null ],
     [ "Uralstech.UGemini.Models.Embedding.GeminiBatchEmbedContentResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_embedding_1_1_gemini_batch_embed_content_response.html", null ],
+    [ "Uralstech.UGemini.Models.Caching.GeminiCachedContent", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content.html", null ],
+    [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentListResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_list_response.html", null ],
+    [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentUsageMetadata", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_usage_metadata.html", null ],
     [ "Uralstech.UGemini.Models.Content.Citation.GeminiCitationMetadata", "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_citation_1_1_gemini_citation_metadata.html", null ],
     [ "Uralstech.UGemini.Models.Content.Citation.GeminiCitationSource", "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_citation_1_1_gemini_citation_source.html", null ],
     [ "Uralstech.UGemini.Models.Generation.Tools.Declaration.GeminiCodeExecution", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_code_execution.html", null ],
@@ -69,19 +72,26 @@ var hierarchy =
     ] ],
     [ "Uralstech.UGemini.IGeminiRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_request.html", [
       [ "Uralstech.UGemini.IGeminiDeleteRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_delete_request.html", [
-        [ "Uralstech.UGemini.FileAPI.GeminiFileDeleteRequest", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_delete_request.html", null ]
+        [ "Uralstech.UGemini.FileAPI.GeminiFileDeleteRequest", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_delete_request.html", null ],
+        [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentDeleteRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_delete_request.html", null ]
       ] ],
       [ "Uralstech.UGemini.IGeminiGetRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_get_request.html", [
         [ "Uralstech.UGemini.FileAPI.GeminiFileGetRequest", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_get_request.html", null ],
         [ "Uralstech.UGemini.FileAPI.GeminiFileListRequest", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_list_request.html", null ],
+        [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentGetRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_get_request.html", null ],
+        [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentListRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_list_request.html", null ],
         [ "Uralstech.UGemini.Models.GeminiModelGetRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_get_request.html", null ],
         [ "Uralstech.UGemini.Models.GeminiModelListRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html", null ]
       ] ],
       [ "Uralstech.UGemini.IGeminiMultiPartPostRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_multi_part_post_request.html", [
         [ "Uralstech.UGemini.FileAPI.GeminiFileUploadRequest", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_upload_request.html", null ]
       ] ],
+      [ "Uralstech.UGemini.IGeminiPatchRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_patch_request.html", [
+        [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentPatchRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_request.html", null ]
+      ] ],
       [ "Uralstech.UGemini.IGeminiPostRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_post_request.html", [
         [ "Uralstech.UGemini.IGeminiStreamablePostRequest< TResponse >", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html", null ],
+        [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentCreateRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_create_request.html", null ],
         [ "Uralstech.UGemini.Models.CountTokens.GeminiTokenCountRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_request.html", null ],
         [ "Uralstech.UGemini.Models.Embedding.GeminiBatchEmbedContentRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_embedding_1_1_gemini_batch_embed_content_request.html", null ],
         [ "Uralstech.UGemini.Models.Embedding.GeminiEmbedContentRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_embedding_1_1_gemini_embed_content_request.html", null ],
@@ -92,7 +102,7 @@ var hierarchy =
       [ "Uralstech.UGemini.Models.Generation.Chat.GeminiChatRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_request.html", null ]
     ] ],
     [ "JsonConverter", null, [
-      [ "Uralstech.UGemini.FileAPI.GeminiTimeSpanJsonConverter", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_time_span_json_converter.html", null ],
+      [ "Uralstech.UGemini.GeminiSecondsToTimeSpanJsonConverter", "class_uralstech_1_1_u_gemini_1_1_gemini_seconds_to_time_span_json_converter.html", null ],
       [ "Uralstech.UGemini.Models.GeminiModelIdStringConverter", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html", null ]
     ] ],
     [ "MonoBehaviour", null, [
