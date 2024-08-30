@@ -89,6 +89,7 @@ namespace Uralstech.UGemini
         /// </typeparam>
         /// 
         /// <param name="request">The request object.</param>
+        /// <returns>The computed response.</returns>
         /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
         public async Task<TResponse> Request<TResponse>(IGeminiGetRequest request)
         {
@@ -116,18 +117,34 @@ namespace Uralstech.UGemini
         /// <summary>
         /// Computes a PATCH request on the Gemini API.
         /// </summary>
+        /// 
+        /// <typeparam name="TResponse">
+        /// The response type. For example, a request of type <see cref="Models.Generation.Chat.GeminiChatRequest"/> corresponds
+        /// to a response type of <see cref="Models.Generation.Chat.GeminiChatResponse"/>, and a request of type <see cref="Models.CountTokens.GeminiTokenCountRequest"/>
+        /// corresponds to a response of type <see cref="Models.CountTokens.GeminiTokenCountResponse"/>.
+        /// </typeparam>
+        /// 
         /// <param name="request">The request object.</param>
+        /// <returns>The computed response.</returns>
         /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
-        public async Task Request(IGeminiPatchRequest request)
+        public async Task<TResponse> Request<TResponse>(IGeminiPatchRequest request)
         {
             string utf8RequestData = request.GetUtf8EncodedData();
             string requestEndpoint = request.GetEndpointUri(null);
 
-            using UnityWebRequest webRequest = new(requestEndpoint, "PATCH");
+            using UnityWebRequest webRequest = new(
+                requestEndpoint, "PATCH",
+                new DownloadHandlerBuffer(),
+                new UploadHandlerRaw(Encoding.UTF8.GetBytes(utf8RequestData))
+                {
+                    contentType = request.ContentType
+                }
+            );
 
-            webRequest.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(utf8RequestData));
             webRequest.SetRequestHeader("Content-Type", request.ContentType);
             await ComputeRequest(webRequest);
+
+            return JsonConvert.DeserializeObject<TResponse>(webRequest.downloadHandler.text);
         }
 
 #if UTILITIES_ASYNC_1_0_0_OR_GREATER
@@ -145,6 +162,7 @@ namespace Uralstech.UGemini
         /// </typeparam>
         /// 
         /// <param name="request">The request object.</param>
+        /// <returns>The computed response.</returns>
         /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
         public async Task<TResponse> StreamRequest<TResponse>(IGeminiStreamablePostRequest<TResponse> request)
             where TResponse : IAppendableData<TResponse>
