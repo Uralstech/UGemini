@@ -19,7 +19,7 @@
         public int MaxResponseModels = 50;
 
         /// <summary>
-        /// A page token from a previous models.list call.
+        /// A page token from a previous <see cref="GeminiModelListRequest"/> call.
         /// </summary>
         public string PageToken = string.Empty;
 

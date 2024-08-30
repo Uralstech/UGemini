@@ -16,7 +16,7 @@
         public int MaxResponseFiles = 10;
 
         /// <summary>
-        /// A page token from a previous files.list call.
+        /// A page token from a previous <see cref="GeminiFileListRequest"/> call.
         /// </summary>
         public string PageToken = string.Empty;
 

@@ -13,7 +13,7 @@ namespace Uralstech.UGemini.FileAPI
         /// <summary>
         /// Duration of the video.
         /// </summary>
-        [JsonConverter(typeof(GeminiTimeSpanJsonConverter))]
+        [JsonConverter(typeof(GeminiSecondsToTimeSpanJsonConverter))]
         public TimeSpan VideoDuration;
     }
 }
