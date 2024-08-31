@@ -11,13 +11,6 @@ namespace Uralstech.UGemini.Exceptions
         /// <summary>
         /// The endpoint of the failed request.
         /// </summary>
-        /// \deprecated Use <see cref="RequestEndPoint"/> as this property is only for the deprecated <see cref="GeminiManager.Compute{TRequest, TResponse}(TRequest, GeminiManager.RequestEndPoint, string, bool)"/> method.
-        [Obsolete("Use GeminiRequestException.RequestEndpoint as this property is only for the deprecated GeminiManager.Compute method.")]
-        public GeminiManager.RequestEndPoint RequestEndPoint;
-
-        /// <summary>
-        /// The endpoint of the failed request.
-        /// </summary>
         public Uri RequestEndpoint;
 
         /// <summary>
@@ -36,35 +29,9 @@ namespace Uralstech.UGemini.Exceptions
         public string RequestErrorMessage;
 
         /// <summary>
-        /// The request's API version as a string.
-        /// </summary>
-        /// \deprecated Use <see cref="IsBetaApi"/> as this property is only for the deprecated <see cref="GeminiManager.Compute{TRequest, TResponse}(TRequest, GeminiManager.RequestEndPoint, string, bool)"/> method.
-        [Obsolete("Use GeminiRequestException.IsBetaApi as this property is only for the deprecated GeminiManager.Compute method.")]
-        public string ApiVersionString;
-
-        /// <summary>
         /// Was the request on a beta API?
         /// </summary>
         public bool IsBetaApi;
-
-        [Obsolete]
-        internal GeminiRequestException(GeminiManager.RequestEndPoint requestEndPoint, UnityWebRequest request, string apiVersion)
-            : base($"Failed Gemini request: " +
-                  $"Request API version: {apiVersion} | " +
-                  $"Request Endpoint: {requestEndPoint} | " +
-                  $"Request Error Code: {request.responseCode} | " +
-                  $"Request Error: {request.error} | " +
-                  $"Details:\n{request.downloadHandler.text}")
-        {
-            RequestEndPoint = requestEndPoint;
-
-            RequestError = request.error;
-            RequestErrorCode = request.responseCode;
-            RequestErrorMessage = request.downloadHandler.text;
-
-            ApiVersionString = apiVersion;
-            IsBetaApi = apiVersion.Contains("beta");
-        }
 
         internal GeminiRequestException(UnityWebRequest webRequest)
             : base($"Failed Gemini request: " +

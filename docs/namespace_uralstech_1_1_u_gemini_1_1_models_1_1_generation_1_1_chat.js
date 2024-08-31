@@ -1,0 +1,5 @@
+var namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat =
+[
+    [ "GeminiChatRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_request.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_request" ],
+    [ "GeminiChatResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_response.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_response" ]
+];

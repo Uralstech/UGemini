@@ -9,7 +9,6 @@ var namespace_uralstech_1_1_u_gemini_1_1_file_a_p_i =
     [ "GeminiFileUploadRequest", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_upload_request.html", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_upload_request" ],
     [ "GeminiFileUploadResponse", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_upload_response.html", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_upload_response" ],
     [ "GeminiFileVideoMetaData", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_video_meta_data.html", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_video_meta_data" ],
-    [ "GeminiTimeSpanJsonConverter", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_time_span_json_converter.html", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_time_span_json_converter" ],
     [ "GeminiFileState", "namespace_uralstech_1_1_u_gemini_1_1_file_a_p_i.html#a70714cf13354876d017e3c66f5060f40", [
       [ "Unspecified", "namespace_uralstech_1_1_u_gemini_1_1_file_a_p_i.html#a70714cf13354876d017e3c66f5060f40a6fcdc090caeade09d0efd6253932b6f5", null ],
       [ "Processing", "namespace_uralstech_1_1_u_gemini_1_1_file_a_p_i.html#a70714cf13354876d017e3c66f5060f40a643562a9ae7099c8aabfdc93478db117", null ],

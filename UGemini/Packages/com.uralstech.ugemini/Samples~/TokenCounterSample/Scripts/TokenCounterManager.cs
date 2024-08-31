@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Uralstech.UGemini.Models;
-using Uralstech.UGemini.TokenCounting;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.CountTokens;
 
 namespace Uralstech.UGemini.Samples
 {

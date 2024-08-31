@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">UGemini<span id="projectnumber">&#160;1.4.0</span>
+   <div id="projectname">UGemini<span id="projectnumber">&#160;2.0.0</span>
    </div>
    <div id="projectbrief">A C# wrapper for the Google Gemini API.</div>
   </td>
@@ -131,7 +131,7 @@ Public Member Functions</h2></td></tr>
   <br /></td></tr>
 <tr class="separator:a802d42b80a0de901c1b68e49f58d0b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab842bf8b727a0291d9729cb1004b8333" id="r_ab842bf8b727a0291d9729cb1004b8333"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab842bf8b727a0291d9729cb1004b8333">GeminiFileListRequest</a> (bool useBetaApi=true)</td></tr>
-<tr class="memdesc:ab842bf8b727a0291d9729cb1004b8333"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_get_request.html" title="Requests metadata for an existing file. Return type is GeminiFile.">GeminiFileGetRequest</a>.  <br /></td></tr>
+<tr class="memdesc:ab842bf8b727a0291d9729cb1004b8333"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_list_request.html" title="Requests metadata for all existing files. Return type is GeminiFileListResponse.">GeminiFileListRequest</a>.  <br /></td></tr>
 <tr class="separator:ab842bf8b727a0291d9729cb1004b8333"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -146,11 +146,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxResponseFiles</b> =
 <tr class="separator:a484597170d23fe2baa4d3da40c095f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade0f44344f990a15d67e2b83c02f5ea2" id="r_ade0f44344f990a15d67e2b83c02f5ea2"><td class="memItemLeft" align="right" valign="top"><a id="ade0f44344f990a15d67e2b83c02f5ea2" name="ade0f44344f990a15d67e2b83c02f5ea2"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>PageToken</b> = string.Empty</td></tr>
-<tr class="memdesc:ade0f44344f990a15d67e2b83c02f5ea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A page token from a previous files.list call. <br /></td></tr>
+<tr class="memdesc:ade0f44344f990a15d67e2b83c02f5ea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A page token from a previous <a class="el" href="class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_list_request.html" title="Requests metadata for all existing files. Return type is GeminiFileListResponse.">GeminiFileListRequest</a> call. <br /></td></tr>
 <tr class="separator:ade0f44344f990a15d67e2b83c02f5ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Requests metadata for all existing files. Return type is <a class="el" href="class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_list_response.html" title="The response for a GeminiFileListRequest call.">GeminiFileListResponse</a>. </p>
+<p>Only available in the beta API. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab842bf8b727a0291d9729cb1004b8333" name="ab842bf8b727a0291d9729cb1004b8333"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab842bf8b727a0291d9729cb1004b8333">&#9670;&#160;</a></span>GeminiFileListRequest()</h2>
@@ -167,7 +168,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>PageToken</b> = str
       </table>
 </div><div class="memdoc">
 
-<p>Creates a new <a class="el" href="class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_get_request.html" title="Requests metadata for an existing file. Return type is GeminiFile.">GeminiFileGetRequest</a>. </p>
+<p>Creates a new <a class="el" href="class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_list_request.html" title="Requests metadata for all existing files. Return type is GeminiFileListResponse.">GeminiFileListRequest</a>. </p>
+<p>Only available in the beta API. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">useBetaApi</td><td>Should the request use the Beta API?</td></tr>
@@ -207,7 +209,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>PageToken</b> = str
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>UGemini/Packages/com.uralstech.ugemini/Runtime/Scripts/Data/FileAPI/FileList/<b>GeminiFileListRequest.cs</b></li>
+<li>UGemini/Packages/com.uralstech.ugemini/Runtime/Scripts/Data/Files/List/<b>GeminiFileListRequest.cs</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

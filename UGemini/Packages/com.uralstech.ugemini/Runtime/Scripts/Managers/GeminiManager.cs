@@ -1,5 +1,5 @@
 using Newtonsoft.Json;
-using System;
+using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -17,58 +17,6 @@ namespace Uralstech.UGemini
     {
         private const string MultiPartFormDataSeperator = "xxxxxxxxxx";
 
-        #region Obsolete
-        /// <summary>
-        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro-vision">
-        /// Note: Gemini 1.0 Pro Vision is deprecated. Use 1.5 Flash or 1.5 Pro instead.
-        /// <br/><br/>
-        /// Gemini 1.0 Pro Vision is a performance-optimized multimodal model that can perform visual-related tasks.<br/>
-        /// For example, 1.0 Pro Vision can generate image descriptions, identify objects present in images, provide<br/>
-        /// information about places or objects present in images, and more.
-        /// </a>
-        /// <br/><br/>
-        /// Supports image, video and text input.
-        /// </summary>
-        /// \deprecated Use <see cref="Models.GeminiModel.Gemini1_0ProVision"/> instead.
-        [Obsolete("Use UGemini.Models.GeminiModel.Gemini1_0ProVision instead.")]
-        public const string Gemini1_0ProVision = "gemini-pro-vision";
-
-        /// <summary>
-        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro">
-        /// Gemini 1.0 Pro is an NLP model that handles tasks like multi-turn text and code chat, and code generation.
-        /// </a>
-        /// <br/><br/>
-        /// Supports text input.
-        /// </summary>
-        /// \deprecated Use <see cref="Models.GeminiModel.Gemini1_0Pro"/> instead.
-        [Obsolete("Use UGemini.Models.GeminiModel.Gemini1_0Pro instead.")]
-        public const string Gemini1_0Pro = "gemini-1.0-pro";
-
-        /// <summary>
-        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro">
-        /// Gemini 1.5 Pro is a mid-size multimodal model that is optimized for a wide-range of reasoning tasks.<br/>
-        /// 1.5 Pro can process large amounts of data at once, including 2 hours of video, 19 hours of audio,<br/>
-        /// codebases with 60,000 lines of code, or 2,000 pages of text.
-        /// </a>
-        /// <br/><br/>
-        /// Supports audio, image, video and text input.
-        /// </summary>
-        /// \deprecated Use <see cref="Models.GeminiModel.Gemini1_5Pro"/> instead.
-        [Obsolete("Use UGemini.Models.GeminiModel.Gemini1_5Pro instead.")]
-        public const string Gemini1_5Pro = "gemini-1.5-pro";
-
-        /// <summary>
-        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash">
-        /// Gemini 1.5 Flash is a fast and versatile multimodal model for scaling across diverse tasks.
-        /// </a>
-        /// <br/><br/>
-        /// Supports audio, image, video and text input.
-        /// </summary>
-        /// \deprecated Use <see cref="Models.GeminiModel.Gemini1_5Flash"/> instead.
-        [Obsolete("Use UGemini.Models.GeminiModel.Gemini1_5Flash instead.")]
-        public const string Gemini1_5Flash = "gemini-1.5-flash";
-        #endregion
-
         [SerializeField, Tooltip("Your Gemini API key.")] private string _geminiApiKey;
 
         /// <summary>
@@ -81,13 +29,13 @@ namespace Uralstech.UGemini
         }
 
         /// <summary>
-        /// Computes a request on the Gemini API.
+        /// Computes a POST request on the Gemini API.
         /// </summary>
         /// 
         /// <typeparam name="TResponse">
-        /// The response type. For example, a request of type <see cref="Chat.GeminiChatRequest"/> corresponds
-        /// to a response type of <see cref="Chat.GeminiChatResponse"/>, and a request of type <see cref="TokenCounting.GeminiTokenCountRequest"/>
-        /// corresponds to a response of type <see cref="TokenCounting.GeminiTokenCountResponse"/>.
+        /// The response type. For example, a request of type <see cref="Models.Generation.Chat.GeminiChatRequest"/> corresponds
+        /// to a response type of <see cref="Models.Generation.Chat.GeminiChatResponse"/>, and a request of type <see cref="Models.CountTokens.GeminiTokenCountRequest"/>
+        /// corresponds to a response of type <see cref="Models.CountTokens.GeminiTokenCountResponse"/>.
         /// </typeparam>
         /// 
         /// <param name="request">The request object.</param>
@@ -105,13 +53,13 @@ namespace Uralstech.UGemini
         }
 
         /// <summary>
-        /// Computes a request on the Gemini API.
+        /// Computes a multi-part POST request on the Gemini API.
         /// </summary>
         /// 
         /// <typeparam name="TResponse">
-        /// The response type. For example, a request of type <see cref="Chat.GeminiChatRequest"/> corresponds
-        /// to a response type of <see cref="Chat.GeminiChatResponse"/>, and a request of type <see cref="TokenCounting.GeminiTokenCountRequest"/>
-        /// corresponds to a response of type <see cref="TokenCounting.GeminiTokenCountResponse"/>.
+        /// The response type. For example, a request of type <see cref="Models.Generation.Chat.GeminiChatRequest"/> corresponds
+        /// to a response type of <see cref="Models.Generation.Chat.GeminiChatResponse"/>, and a request of type <see cref="Models.CountTokens.GeminiTokenCountRequest"/>
+        /// corresponds to a response of type <see cref="Models.CountTokens.GeminiTokenCountResponse"/>.
         /// </typeparam>
         /// 
         /// <param name="request">The request object.</param>
@@ -131,16 +79,17 @@ namespace Uralstech.UGemini
         }
 
         /// <summary>
-        /// Computes a request on the Gemini API.
+        /// Computes a GET request on the Gemini API.
         /// </summary>
         /// 
         /// <typeparam name="TResponse">
-        /// The response type. For example, a request of type <see cref="Chat.GeminiChatRequest"/> corresponds
-        /// to a response type of <see cref="Chat.GeminiChatResponse"/>, and a request of type <see cref="TokenCounting.GeminiTokenCountRequest"/>
-        /// corresponds to a response of type <see cref="TokenCounting.GeminiTokenCountResponse"/>.
+        /// The response type. For example, a request of type <see cref="Models.Generation.Chat.GeminiChatRequest"/> corresponds
+        /// to a response type of <see cref="Models.Generation.Chat.GeminiChatResponse"/>, and a request of type <see cref="Models.CountTokens.GeminiTokenCountRequest"/>
+        /// corresponds to a response of type <see cref="Models.CountTokens.GeminiTokenCountResponse"/>.
         /// </typeparam>
         /// 
         /// <param name="request">The request object.</param>
+        /// <returns>The computed response.</returns>
         /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
         public async Task<TResponse> Request<TResponse>(IGeminiGetRequest request)
         {
@@ -153,7 +102,7 @@ namespace Uralstech.UGemini
         }
 
         /// <summary>
-        /// Computes a request on the Gemini API.
+        /// Computes a DELETE request on the Gemini API.
         /// </summary>
         /// <param name="request">The request object.</param>
         /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
@@ -165,21 +114,55 @@ namespace Uralstech.UGemini
             await ComputeRequest(webRequest);
         }
 
+        /// <summary>
+        /// Computes a PATCH request on the Gemini API.
+        /// </summary>
+        /// 
+        /// <typeparam name="TResponse">
+        /// The response type. For example, a request of type <see cref="Models.Generation.Chat.GeminiChatRequest"/> corresponds
+        /// to a response type of <see cref="Models.Generation.Chat.GeminiChatResponse"/>, and a request of type <see cref="Models.CountTokens.GeminiTokenCountRequest"/>
+        /// corresponds to a response of type <see cref="Models.CountTokens.GeminiTokenCountResponse"/>.
+        /// </typeparam>
+        /// 
+        /// <param name="request">The request object.</param>
+        /// <returns>The computed response.</returns>
+        /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
+        public async Task<TResponse> Request<TResponse>(IGeminiPatchRequest request)
+        {
+            string utf8RequestData = request.GetUtf8EncodedData();
+            string requestEndpoint = request.GetEndpointUri(null);
+
+            using UnityWebRequest webRequest = new(
+                requestEndpoint, "PATCH",
+                new DownloadHandlerBuffer(),
+                new UploadHandlerRaw(Encoding.UTF8.GetBytes(utf8RequestData))
+                {
+                    contentType = request.ContentType
+                }
+            );
+
+            webRequest.SetRequestHeader("Content-Type", request.ContentType);
+            await ComputeRequest(webRequest);
+
+            return JsonConvert.DeserializeObject<TResponse>(webRequest.downloadHandler.text);
+        }
+
 #if UTILITIES_ASYNC_1_0_0_OR_GREATER
         /// <summary>
-        /// Computes a streaming request on the Gemini API.
+        /// Computes a streaming POST request on the Gemini API.
         /// </summary>
         /// <remarks>
         /// Use callbacks in the request object to receive the streamed data.
         /// </remarks>
         /// 
         /// <typeparam name="TResponse">
-        /// The response type. For example, a request of type <see cref="Chat.GeminiChatRequest"/> corresponds
-        /// to a response type of <see cref="Chat.GeminiChatResponse"/>, and a request of type <see cref="TokenCounting.GeminiTokenCountRequest"/>
-        /// corresponds to a response of type <see cref="TokenCounting.GeminiTokenCountResponse"/>.
+        /// The response type. For example, a request of type <see cref="Models.Generation.Chat.GeminiChatRequest"/> corresponds
+        /// to a response type of <see cref="Models.Generation.Chat.GeminiChatResponse"/>, and a request of type <see cref="Models.CountTokens.GeminiTokenCountRequest"/>
+        /// corresponds to a response of type <see cref="Models.CountTokens.GeminiTokenCountResponse"/>.
         /// </typeparam>
         /// 
         /// <param name="request">The request object.</param>
+        /// <returns>The computed response.</returns>
         /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
         public async Task<TResponse> StreamRequest<TResponse>(IGeminiStreamablePostRequest<TResponse> request)
             where TResponse : IAppendableData<TResponse>
@@ -238,85 +221,5 @@ namespace Uralstech.UGemini
 
             Debug.Log("Gemini API computation succeeded.");
         }
-
-        #region Obsolete
-        /// <summary>
-        /// The request endpoint.
-        /// </summary>
-        /// \deprecated Use <see cref="Request{TResponse}(IGeminiPostRequest)"/> instead, as it is more generic and supports more request types.
-        [Obsolete("Use GeminiManager.Request instead of GeminiManager.Compute, as it is more generic and supports more request types.")]
-        public enum RequestEndPoint
-        {
-            /// <summary>The chat endpoint.</summary>
-            /// \deprecated
-            Chat,
-
-            /// <summary>The token counting endpoint.</summary>
-            /// \deprecated
-            CountTokens,
-        }
-
-        /// <summary>
-        /// Computes a request in the Gemini API.
-        /// </summary>
-        /// 
-        /// <typeparam name="TRequest">
-        /// The request type (like <see cref="Chat.GeminiChatRequest">GeminiChatRequest</see>
-        /// or <see cref="TokenCounting.GeminiTokenCountResponse">GeminiCountRequest</see>).
-        /// <br/><br/>
-        /// This should correspond with <typeparamref name="TResponse"/>, like:<br/>
-        /// <see cref="Chat.GeminiChatRequest">GeminiChatRequest</see> with <see cref="Chat.GeminiChatResponse">GeminiChatResponse</see><br/>
-        /// <see cref="TokenCounting.GeminiTokenCountRequest">GeminiCountRequest</see> with <see cref="TokenCounting.GeminiTokenCountResponse">GeminiCountResponse</see>
-        /// </typeparam>
-        /// 
-        /// <typeparam name="TResponse">
-        /// The response type (like <see cref="Chat.GeminiChatResponse">GeminiChatResponse</see>
-        /// or <see cref="TokenCounting.GeminiTokenCountResponse">GeminiCountResponse</see>).
-        /// <br/><br/>
-        /// This should correspond with <typeparamref name="TRequest"/>, like:<br/>
-        /// <see cref="Chat.GeminiChatRequest">GeminiChatRequest</see> with <see cref="Chat.GeminiChatResponse">GeminiChatResponse</see><br/>
-        /// <see cref="TokenCounting.GeminiTokenCountRequest">GeminiCountRequest</see> with <see cref="TokenCounting.GeminiTokenCountResponse">GeminiCountResponse</see>
-        /// </typeparam>
-        /// 
-        /// <param name="request">The request data.</param>
-        /// <param name="endpoint">The request endpoint.</param>
-        /// <param name="model">The model to use.</param>
-        /// <param name="useBeta">Use the beta API?</param>
-        /// <returns>The computed request.</returns>
-        /// <exception cref="ArgumentException">Thrown if unexpected arguments are encountered.</exception>
-        /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
-        /// \deprecated Use <see cref="Request{TResponse}(IGeminiPostRequest)"/> instead, as it is more generic and supports more request types.
-        [Obsolete("Use GeminiManager.Request instead, as it is more generic and supports more request types.")]
-        public async Task<TResponse> Compute<TRequest, TResponse>(TRequest request, RequestEndPoint endpoint, string model = Gemini1_5Flash, bool useBeta = false)
-        {
-            Debug.Log("Computing request on Gemini API.");
-            string endpointFunction = endpoint switch
-            {
-                RequestEndPoint.Chat => "generateContent",
-                RequestEndPoint.CountTokens => "countTokens",
-                _ => throw new ArgumentException($"Unknown request endpoint \"{endpoint}\"!", nameof(endpoint))
-            };
-
-            string apiVersion = useBeta ? "v1beta" : "v1";
-
-            string requestJson = JsonConvert.SerializeObject(request);
-            using UnityWebRequest webRequest = UnityWebRequest.Post(
-                $"https://generativelanguage.googleapis.com/{apiVersion}/models/{model}:{endpointFunction}",
-                requestJson, "application/json; charset=utf-8"
-            );
-
-            webRequest.SetRequestHeader("X-goog-api-key", _geminiApiKey);
-
-            UnityWebRequestAsyncOperation operation = webRequest.SendWebRequest();
-            while (!operation.isDone)
-                await Task.Yield();
-
-            if (webRequest.result != UnityWebRequest.Result.Success)
-                throw new GeminiRequestException(endpoint, webRequest, apiVersion);
-
-            Debug.Log("Gemini API computation succeeded.");
-            return JsonConvert.DeserializeObject<TResponse>(webRequest.downloadHandler.text);
-        }
-        #endregion
     }
 }

@@ -1,7 +1,7 @@
 ---
 name: Question
 about: Ask a question about UGemini
-title: "[QUESTION] (Summary of the question goes here)"
+title: "(Summary of the question)"
 labels: question
 assignees: Uralstech
 

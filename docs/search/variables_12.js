@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['updatetime_0',['UpdateTime',['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file.html#af39741bd636285a2b08a67b35bd31d81',1,'Uralstech::UGemini::FileAPI::GeminiFile']]],
-  ['uri_1',['Uri',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_citation_source.html#ac90c61d67254d5ef8b15ded2161f8d22',1,'Uralstech.UGemini.Chat.GeminiCitationSource.Uri'],['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file.html#a4716c3b7accff3019b88ce98b7e556e7',1,'Uralstech.UGemini.FileAPI.GeminiFile.Uri']]],
-  ['usagemetadata_2',['UsageMetadata',['../class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_response.html#a9c1c2b5bcba02fa675c473c6a0bc0c24',1,'Uralstech::UGemini::Chat::GeminiChatResponse']]]
+  ['updatetime_0',['UpdateTime',['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file.html#af39741bd636285a2b08a67b35bd31d81',1,'Uralstech.UGemini.FileAPI.GeminiFile.UpdateTime'],['../class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content.html#a23532382228cd32e5adcc636627fe524',1,'Uralstech.UGemini.Models.Caching.GeminiCachedContent.UpdateTime']]],
+  ['uri_1',['Uri',['../class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file.html#a4716c3b7accff3019b88ce98b7e556e7',1,'Uralstech.UGemini.FileAPI.GeminiFile.Uri'],['../class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_citation_1_1_gemini_citation_source.html#a377145c17dbd869d3d18dbb04cbcad67',1,'Uralstech.UGemini.Models.Content.Citation.GeminiCitationSource.Uri']]],
+  ['usagemetadata_2',['UsageMetadata',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content.html#a2f4b466968d640b74e9a663c35435ddd',1,'Uralstech.UGemini.Models.Caching.GeminiCachedContent.UsageMetadata'],['../class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_response.html#ab82cb5b1f23d0317081c6a8bc847b419',1,'Uralstech.UGemini.Models.Generation.Chat.GeminiChatResponse.UsageMetadata']]]
 ];

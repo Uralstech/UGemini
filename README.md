@@ -38,12 +38,16 @@ Follow the steps detailed in the OpenUPM installation method and only install th
 1. Clone or download the repository from the desired branch (master, preview/unstable)
 2. Drag the package folder `UGemini/UGemini/Packages/com.uralstech.ugemini` into your Unity project's `Packages` folder
 3. In the `Packages` folder of your project, add the following line to the list in `manifest.json`:
-    `"com.uralstech.ugemini": "1.x.x",`
+    `"com.uralstech.ugemini": "2.x.x",`
 
 *Adding additional dependencies:*<br/>
 Follow the steps detailed in the OpenUPM installation method and only install the `Utilities.Async`* and `Utilities.Encoder.Wav`* packages.
 
 *Optional, but `Utilities.Async` is required for streaming content and `Utilities.Encoder.Wav` is recommended if you don't want to bother with encoding your AudioClips into Base64 strings manually.
+
+### Preview Versions
+
+Do not use preview versions (i.e. versions that end with "-preview") for production use as they are unstable and untested.
 
 ### Gemini API Support
 
@@ -57,7 +61,13 @@ Follow the steps detailed in the OpenUPM installation method and only install th
     - [x] `list` method
     - [x] `streamGenerateContent` method
     
-- [ ] `cachedContents` endpoint 🧪
+- [x] `cachedContents` endpoint 🧪
+    - [x] `create` method
+    - [x] `delete` method
+    - [x] `get` method
+    - [x] `list` method
+    - [x] `patch` method
+
 - [ ] `corpora` endpoint 🧪
 - [x] `files` endpoint 🧪
     - [x] `delete` method
@@ -70,10 +80,7 @@ Follow the steps detailed in the OpenUPM installation method and only install th
 - [x] `tunedModels` endpoint ⚠️
     - [x] `generateContent` method
 
-- [ ] `operations` endpoint
-
 ⚠️ - Not all methods/features are supported<br/>
-🚧 - The feature is being worked on and is unstable<br/>
 🧪 - Using the v1beta API
 
 ### Documentation

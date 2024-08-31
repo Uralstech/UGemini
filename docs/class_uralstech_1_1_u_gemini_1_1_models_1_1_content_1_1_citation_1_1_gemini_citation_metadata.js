@@ -1,0 +1,4 @@
+var class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_citation_1_1_gemini_citation_metadata =
+[
+    [ "CitationSources", "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_citation_1_1_gemini_citation_metadata.html#ac0cb8cf030f2ec61e7eff67880791a6a", null ]
+];

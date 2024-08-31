@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">UGemini<span id="projectnumber">&#160;1.4.0</span>
+   <div id="projectname">UGemini<span id="projectnumber">&#160;2.0.0</span>
    </div>
    <div id="projectbrief">A C# wrapper for the Google Gemini API.</div>
   </td>
@@ -98,9 +98,7 @@ $(function(){initNavTree('class_uralstech_1_1_u_gemini_1_1_gemini_manager.html',
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="class_uralstech_1_1_u_gemini_1_1_gemini_manager-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Uralstech.UGemini.GeminiManager Class Reference</div></div>
 </div><!--header-->
@@ -118,66 +116,29 @@ Inheritance diagram for Uralstech.UGemini.GeminiManager:</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a425aa6a4ccc3d1a7ebf9d83ee2050782" id="r_a425aa6a4ccc3d1a7ebf9d83ee2050782"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a425aa6a4ccc3d1a7ebf9d83ee2050782">RequestEndPoint</a> { <a class="el" href="#a425aa6a4ccc3d1a7ebf9d83ee2050782a55dcdf017b51fc96f7b5f9d63013b95d">Chat</a>
-, <a class="el" href="#a425aa6a4ccc3d1a7ebf9d83ee2050782a85a63de01cd75e7a87a44cc632a045c5">CountTokens</a>
- }</td></tr>
-<tr class="memdesc:a425aa6a4ccc3d1a7ebf9d83ee2050782"><td class="mdescLeft">&#160;</td><td class="mdescRight">The request endpoint.  <a href="#a425aa6a4ccc3d1a7ebf9d83ee2050782">More...</a><br /></td></tr>
-<tr class="separator:a425aa6a4ccc3d1a7ebf9d83ee2050782"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae7f3e2e264d1f48f2f85bfdfd0aa778a" id="r_ae7f3e2e264d1f48f2f85bfdfd0aa778a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7f3e2e264d1f48f2f85bfdfd0aa778a">SetApiKey</a> (string apiKey)</td></tr>
 <tr class="memdesc:ae7f3e2e264d1f48f2f85bfdfd0aa778a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Gemini API key.  <br /></td></tr>
 <tr class="separator:ae7f3e2e264d1f48f2f85bfdfd0aa778a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc073fccf089ba4c89b6c1730deef63c" id="r_adc073fccf089ba4c89b6c1730deef63c"><td class="memItemLeft" align="right" valign="top">async Task&lt; TResponse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc073fccf089ba4c89b6c1730deef63c">Request&lt; TResponse &gt;</a> (<a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_post_request.html">IGeminiPostRequest</a> request)</td></tr>
-<tr class="memdesc:adc073fccf089ba4c89b6c1730deef63c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a request on the Gemini API.  <br /></td></tr>
+<tr class="memdesc:adc073fccf089ba4c89b6c1730deef63c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a POST request on the Gemini API.  <br /></td></tr>
 <tr class="separator:adc073fccf089ba4c89b6c1730deef63c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c0a36c0676665ba04a27ce95348eebe" id="r_a9c0a36c0676665ba04a27ce95348eebe"><td class="memItemLeft" align="right" valign="top">async Task&lt; TResponse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c0a36c0676665ba04a27ce95348eebe">Request&lt; TResponse &gt;</a> (<a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_multi_part_post_request.html">IGeminiMultiPartPostRequest</a> request)</td></tr>
-<tr class="memdesc:a9c0a36c0676665ba04a27ce95348eebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a request on the Gemini API.  <br /></td></tr>
+<tr class="memdesc:a9c0a36c0676665ba04a27ce95348eebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a multi-part POST request on the Gemini API.  <br /></td></tr>
 <tr class="separator:a9c0a36c0676665ba04a27ce95348eebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd5a1056444e232ec19f662db30e0756" id="r_abd5a1056444e232ec19f662db30e0756"><td class="memItemLeft" align="right" valign="top">async Task&lt; TResponse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd5a1056444e232ec19f662db30e0756">Request&lt; TResponse &gt;</a> (<a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_get_request.html">IGeminiGetRequest</a> request)</td></tr>
-<tr class="memdesc:abd5a1056444e232ec19f662db30e0756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a request on the Gemini API.  <br /></td></tr>
+<tr class="memdesc:abd5a1056444e232ec19f662db30e0756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a GET request on the Gemini API.  <br /></td></tr>
 <tr class="separator:abd5a1056444e232ec19f662db30e0756"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab540f88449967ebfc8f67e1bb5101d75" id="r_ab540f88449967ebfc8f67e1bb5101d75"><td class="memItemLeft" align="right" valign="top">async Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab540f88449967ebfc8f67e1bb5101d75">Request</a> (<a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_delete_request.html">IGeminiDeleteRequest</a> request)</td></tr>
-<tr class="memdesc:ab540f88449967ebfc8f67e1bb5101d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a request on the Gemini API.  <br /></td></tr>
+<tr class="memdesc:ab540f88449967ebfc8f67e1bb5101d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a DELETE request on the Gemini API.  <br /></td></tr>
 <tr class="separator:ab540f88449967ebfc8f67e1bb5101d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04f9ccdd66f94a07cb41b320f87b461b" id="r_a04f9ccdd66f94a07cb41b320f87b461b"><td class="memItemLeft" align="right" valign="top">async Task&lt; TResponse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04f9ccdd66f94a07cb41b320f87b461b">Request&lt; TResponse &gt;</a> (<a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_patch_request.html">IGeminiPatchRequest</a> request)</td></tr>
+<tr class="memdesc:a04f9ccdd66f94a07cb41b320f87b461b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a PATCH request on the Gemini API.  <br /></td></tr>
+<tr class="separator:a04f9ccdd66f94a07cb41b320f87b461b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebd7e9c3ee0423260780ac32f834b1fc" id="r_aebd7e9c3ee0423260780ac32f834b1fc"><td class="memItemLeft" align="right" valign="top">async Task&lt; TResponse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebd7e9c3ee0423260780ac32f834b1fc">StreamRequest&lt; TResponse &gt;</a> (<a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html">IGeminiStreamablePostRequest</a>&lt; TResponse &gt; request)</td></tr>
-<tr class="memdesc:aebd7e9c3ee0423260780ac32f834b1fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a streaming request on the Gemini API.  <br /></td></tr>
+<tr class="memdesc:aebd7e9c3ee0423260780ac32f834b1fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a streaming POST request on the Gemini API.  <br /></td></tr>
 <tr class="separator:aebd7e9c3ee0423260780ac32f834b1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89b800c896b599e48e247ab98a58b088" id="r_a89b800c896b599e48e247ab98a58b088"><td class="memItemLeft" align="right" valign="top">async Task&lt; TResponse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89b800c896b599e48e247ab98a58b088">Compute&lt; TRequest, TResponse &gt;</a> (TRequest request, <a class="el" href="#a425aa6a4ccc3d1a7ebf9d83ee2050782">RequestEndPoint</a> endpoint, string model=<a class="el" href="#a4c1005ecacfe4dcc078de5b1538fdc6f">Gemini1_5Flash</a>, bool useBeta=false)</td></tr>
-<tr class="memdesc:a89b800c896b599e48e247ab98a58b088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a request in the Gemini API.  <br /></td></tr>
-<tr class="separator:a89b800c896b599e48e247ab98a58b088"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a041763144e2402bb9d8e53152956553f" id="r_a041763144e2402bb9d8e53152956553f"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a041763144e2402bb9d8e53152956553f">Gemini1_0ProVision</a> = &quot;gemini-pro-vision&quot;</td></tr>
-<tr class="memdesc:a041763144e2402bb9d8e53152956553f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro-vision">Note: Gemini 1.0 Pro Vision is deprecated. Use 1.5 Flash or 1.5 Pro instead. <br  />
-<br  />
- Gemini 1.0 Pro Vision is a performance-optimized multimodal model that can perform visual-related tasks.<br  />
- For example, 1.0 Pro Vision can generate image descriptions, identify objects present in images, provide<br  />
- information about places or objects present in images, and more. </a> <br  />
-<br  />
- Supports image, video and text input.  <br /></td></tr>
-<tr class="separator:a041763144e2402bb9d8e53152956553f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a756739fea8919da8ab6d56c5c10dc370" id="r_a756739fea8919da8ab6d56c5c10dc370"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a756739fea8919da8ab6d56c5c10dc370">Gemini1_0Pro</a> = &quot;gemini-1.0-pro&quot;</td></tr>
-<tr class="memdesc:a756739fea8919da8ab6d56c5c10dc370"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro">Gemini 1.0 Pro is an NLP model that handles tasks like multi-turn text and code chat, and code generation. </a> <br  />
-<br  />
- Supports text input.  <br /></td></tr>
-<tr class="separator:a756739fea8919da8ab6d56c5c10dc370"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0718ada289434a1fdd702eac7e5c870a" id="r_a0718ada289434a1fdd702eac7e5c870a"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0718ada289434a1fdd702eac7e5c870a">Gemini1_5Pro</a> = &quot;gemini-1.5-pro&quot;</td></tr>
-<tr class="memdesc:a0718ada289434a1fdd702eac7e5c870a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro">Gemini 1.5 Pro is a mid-size multimodal model that is optimized for a wide-range of reasoning tasks.<br  />
- 1.5 Pro can process large amounts of data at once, including 2 hours of video, 19 hours of audio,<br  />
- codebases with 60,000 lines of code, or 2,000 pages of text. </a> <br  />
-<br  />
- Supports audio, image, video and text input.  <br /></td></tr>
-<tr class="separator:a0718ada289434a1fdd702eac7e5c870a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c1005ecacfe4dcc078de5b1538fdc6f" id="r_a4c1005ecacfe4dcc078de5b1538fdc6f"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c1005ecacfe4dcc078de5b1538fdc6f">Gemini1_5Flash</a> = &quot;gemini-1.5-flash&quot;</td></tr>
-<tr class="memdesc:a4c1005ecacfe4dcc078de5b1538fdc6f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash">Gemini 1.5 Flash is a fast and versatile multimodal model for scaling across diverse tasks. </a> <br  />
-<br  />
- Supports audio, image, video and text input.  <br /></td></tr>
-<tr class="separator:a4c1005ecacfe4dcc078de5b1538fdc6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -189,104 +150,7 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The class for accessing the Gemini API! </p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a425aa6a4ccc3d1a7ebf9d83ee2050782" name="a425aa6a4ccc3d1a7ebf9d83ee2050782"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a425aa6a4ccc3d1a7ebf9d83ee2050782">&#9670;&#160;</a></span>RequestEndPoint</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="#a425aa6a4ccc3d1a7ebf9d83ee2050782">Uralstech.UGemini.GeminiManager.RequestEndPoint</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The request endpoint. </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated</a></b></dt><dd>Use <a class="el" href="#adc073fccf089ba4c89b6c1730deef63c" title="Computes a request on the Gemini API.">Request&lt;TResponse&gt;(IGeminiPostRequest)</a> instead, as it is more generic and supports more request types. </dd></dl>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a425aa6a4ccc3d1a7ebf9d83ee2050782a55dcdf017b51fc96f7b5f9d63013b95d" name="a425aa6a4ccc3d1a7ebf9d83ee2050782a55dcdf017b51fc96f7b5f9d63013b95d"></a>Chat&#160;</td><td class="fielddoc"><p>The chat endpoint. </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated</a></b></dt><dd></dd></dl>
-</td></tr>
-<tr><td class="fieldname"><a id="a425aa6a4ccc3d1a7ebf9d83ee2050782a85a63de01cd75e7a87a44cc632a045c5" name="a425aa6a4ccc3d1a7ebf9d83ee2050782a85a63de01cd75e7a87a44cc632a045c5"></a>CountTokens&#160;</td><td class="fielddoc"><p>The token counting endpoint. </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated</a></b></dt><dd></dd></dl>
-</td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a89b800c896b599e48e247ab98a58b088" name="a89b800c896b599e48e247ab98a58b088"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89b800c896b599e48e247ab98a58b088">&#9670;&#160;</a></span>Compute&lt; TRequest, TResponse &gt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">async Task&lt; TResponse &gt; Uralstech.UGemini.GeminiManager.Compute&lt; TRequest, TResponse &gt; </td>
-          <td>(</td>
-          <td class="paramtype">TRequest</td>          <td class="paramname"><span class="paramname"><em>request</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a425aa6a4ccc3d1a7ebf9d83ee2050782">RequestEndPoint</a></td>          <td class="paramname"><span class="paramname"><em>endpoint</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>model</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a4c1005ecacfe4dcc078de5b1538fdc6f">Gemini1_5Flash</a></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>useBeta</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Computes a request in the Gemini API. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">TRequest</td><td>The request type (like <a class="el" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html">GeminiChatRequest</a> or <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_response.html">GeminiCountRequest</a>). <br  />
-<br  />
- This should correspond with <em>TResponse</em> , like:<br  />
- <a class="el" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html">GeminiChatRequest</a> with <a class="el" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_response.html">GeminiChatResponse</a><br  />
- <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_request.html">GeminiCountRequest</a> with <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_response.html">GeminiCountResponse</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">TResponse</td><td>The response type (like <a class="el" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_response.html">GeminiChatResponse</a> or <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_response.html">GeminiCountResponse</a>). <br  />
-<br  />
- This should correspond with <em>TRequest</em> , like:<br  />
- <a class="el" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html">GeminiChatRequest</a> with <a class="el" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_response.html">GeminiChatResponse</a><br  />
- <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_request.html">GeminiCountRequest</a> with <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_response.html">GeminiCountResponse</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">request</td><td>The request data.</td></tr>
-    <tr><td class="paramname">endpoint</td><td>The request endpoint.</td></tr>
-    <tr><td class="paramname">model</td><td>The model to use.</td></tr>
-    <tr><td class="paramname">useBeta</td><td>Use the beta API?</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The computed request.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">ArgumentException</td><td>Thrown if unexpected arguments are encountered.</td></tr>
-    <tr><td class="paramname">GeminiRequestException</td><td>Thrown when the API request fails.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated</a></b></dt><dd>Use <a class="el" href="#adc073fccf089ba4c89b6c1730deef63c" title="Computes a request on the Gemini API.">Request&lt;TResponse&gt;(IGeminiPostRequest)</a> instead, as it is more generic and supports more request types. </dd></dl>
-
-</div>
-</div>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab540f88449967ebfc8f67e1bb5101d75" name="ab540f88449967ebfc8f67e1bb5101d75"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab540f88449967ebfc8f67e1bb5101d75">&#9670;&#160;</a></span>Request()</h2>
 
@@ -302,7 +166,7 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
       </table>
 </div><div class="memdoc">
 
-<p>Computes a request on the Gemini API. </p>
+<p>Computes a DELETE request on the Gemini API. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">request</td><td>The request object.</td></tr>
@@ -319,7 +183,7 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
 </div>
 </div>
 <a id="abd5a1056444e232ec19f662db30e0756" name="abd5a1056444e232ec19f662db30e0756"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd5a1056444e232ec19f662db30e0756">&#9670;&#160;</a></span>Request&lt; TResponse &gt;() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abd5a1056444e232ec19f662db30e0756">&#9670;&#160;</a></span>Request&lt; TResponse &gt;() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -333,10 +197,10 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
       </table>
 </div><div class="memdoc">
 
-<p>Computes a request on the Gemini API. </p>
+<p>Computes a GET request on the Gemini API. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">TResponse</td><td>The response type. For example, a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html" title="Request to generate a response from the model.">Chat.GeminiChatRequest</a> corresponds to a response type of <a class="el" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_response.html" title="Response from the model supporting multiple candidates.">Chat.GeminiChatResponse</a>, and a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_request.html" title="Request to count tokens in given content.">TokenCounting.GeminiTokenCountRequest</a> corresponds to a response of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_response.html" title="A response from CountTokens.">TokenCounting.GeminiTokenCountResponse</a>. </td></tr>
+    <tr><td class="paramname">TResponse</td><td>The response type. For example, a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_request.html" title="Request to generate a response from the model.">Models.Generation.Chat.GeminiChatRequest</a> corresponds to a response type of <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_response.html" title="Response from the model supporting multiple candidates.">Models.Generation.Chat.GeminiChatResponse</a>, and a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_request.html" title="Request to count tokens in given content.">Models.CountTokens.GeminiTokenCountRequest</a> corresponds to a response of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_response.html" title="A response from CountTokens.">Models.CountTokens.GeminiTokenCountResponse</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -346,6 +210,7 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>The computed response.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">GeminiRequestException</td><td>Thrown when the API request fails.</td></tr>
@@ -356,7 +221,7 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
 </div>
 </div>
 <a id="a9c0a36c0676665ba04a27ce95348eebe" name="a9c0a36c0676665ba04a27ce95348eebe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c0a36c0676665ba04a27ce95348eebe">&#9670;&#160;</a></span>Request&lt; TResponse &gt;() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c0a36c0676665ba04a27ce95348eebe">&#9670;&#160;</a></span>Request&lt; TResponse &gt;() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -370,10 +235,48 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
       </table>
 </div><div class="memdoc">
 
-<p>Computes a request on the Gemini API. </p>
+<p>Computes a multi-part POST request on the Gemini API. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">TResponse</td><td>The response type. For example, a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html" title="Request to generate a response from the model.">Chat.GeminiChatRequest</a> corresponds to a response type of <a class="el" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_response.html" title="Response from the model supporting multiple candidates.">Chat.GeminiChatResponse</a>, and a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_request.html" title="Request to count tokens in given content.">TokenCounting.GeminiTokenCountRequest</a> corresponds to a response of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_response.html" title="A response from CountTokens.">TokenCounting.GeminiTokenCountResponse</a>. </td></tr>
+    <tr><td class="paramname">TResponse</td><td>The response type. For example, a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_request.html" title="Request to generate a response from the model.">Models.Generation.Chat.GeminiChatRequest</a> corresponds to a response type of <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_response.html" title="Response from the model supporting multiple candidates.">Models.Generation.Chat.GeminiChatResponse</a>, and a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_request.html" title="Request to count tokens in given content.">Models.CountTokens.GeminiTokenCountRequest</a> corresponds to a response of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_response.html" title="A response from CountTokens.">Models.CountTokens.GeminiTokenCountResponse</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>The request object.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The computed response.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">GeminiRequestException</td><td>Thrown when the API request fails.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a04f9ccdd66f94a07cb41b320f87b461b" name="a04f9ccdd66f94a07cb41b320f87b461b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04f9ccdd66f94a07cb41b320f87b461b">&#9670;&#160;</a></span>Request&lt; TResponse &gt;() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task&lt; TResponse &gt; <a class="el" href="#ab540f88449967ebfc8f67e1bb5101d75">Uralstech.UGemini.GeminiManager.Request</a>&lt; TResponse &gt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_patch_request.html">IGeminiPatchRequest</a></td>          <td class="paramname"><span class="paramname"><em>request</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes a PATCH request on the Gemini API. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TResponse</td><td>The response type. For example, a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_request.html" title="Request to generate a response from the model.">Models.Generation.Chat.GeminiChatRequest</a> corresponds to a response type of <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_response.html" title="Response from the model supporting multiple candidates.">Models.Generation.Chat.GeminiChatResponse</a>, and a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_request.html" title="Request to count tokens in given content.">Models.CountTokens.GeminiTokenCountRequest</a> corresponds to a response of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_response.html" title="A response from CountTokens.">Models.CountTokens.GeminiTokenCountResponse</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -394,7 +297,7 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
 </div>
 </div>
 <a id="adc073fccf089ba4c89b6c1730deef63c" name="adc073fccf089ba4c89b6c1730deef63c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc073fccf089ba4c89b6c1730deef63c">&#9670;&#160;</a></span>Request&lt; TResponse &gt;() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adc073fccf089ba4c89b6c1730deef63c">&#9670;&#160;</a></span>Request&lt; TResponse &gt;() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -408,10 +311,10 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
       </table>
 </div><div class="memdoc">
 
-<p>Computes a request on the Gemini API. </p>
+<p>Computes a POST request on the Gemini API. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">TResponse</td><td>The response type. For example, a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html" title="Request to generate a response from the model.">Chat.GeminiChatRequest</a> corresponds to a response type of <a class="el" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_response.html" title="Response from the model supporting multiple candidates.">Chat.GeminiChatResponse</a>, and a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_request.html" title="Request to count tokens in given content.">TokenCounting.GeminiTokenCountRequest</a> corresponds to a response of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_response.html" title="A response from CountTokens.">TokenCounting.GeminiTokenCountResponse</a>. </td></tr>
+    <tr><td class="paramname">TResponse</td><td>The response type. For example, a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_request.html" title="Request to generate a response from the model.">Models.Generation.Chat.GeminiChatRequest</a> corresponds to a response type of <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_response.html" title="Response from the model supporting multiple candidates.">Models.Generation.Chat.GeminiChatResponse</a>, and a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_request.html" title="Request to count tokens in given content.">Models.CountTokens.GeminiTokenCountRequest</a> corresponds to a response of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_response.html" title="A response from CountTokens.">Models.CountTokens.GeminiTokenCountResponse</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -471,11 +374,11 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
       </table>
 </div><div class="memdoc">
 
-<p>Computes a streaming request on the Gemini API. </p>
+<p>Computes a streaming POST request on the Gemini API. </p>
 <p>Use callbacks in the request object to receive the streamed data. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">TResponse</td><td>The response type. For example, a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_request.html" title="Request to generate a response from the model.">Chat.GeminiChatRequest</a> corresponds to a response type of <a class="el" href="class_uralstech_1_1_u_gemini_1_1_chat_1_1_gemini_chat_response.html" title="Response from the model supporting multiple candidates.">Chat.GeminiChatResponse</a>, and a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_request.html" title="Request to count tokens in given content.">TokenCounting.GeminiTokenCountRequest</a> corresponds to a response of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_token_counting_1_1_gemini_token_count_response.html" title="A response from CountTokens.">TokenCounting.GeminiTokenCountResponse</a>. </td></tr>
+    <tr><td class="paramname">TResponse</td><td>The response type. For example, a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_request.html" title="Request to generate a response from the model.">Models.Generation.Chat.GeminiChatRequest</a> corresponds to a response type of <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_chat_1_1_gemini_chat_response.html" title="Response from the model supporting multiple candidates.">Models.Generation.Chat.GeminiChatResponse</a>, and a request of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_request.html" title="Request to count tokens in given content.">Models.CountTokens.GeminiTokenCountRequest</a> corresponds to a response of type <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_response.html" title="A response from CountTokens.">Models.CountTokens.GeminiTokenCountResponse</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -485,6 +388,7 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>The computed response.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">GeminiRequestException</td><td>Thrown when the API request fails.</td></tr>
@@ -499,121 +403,6 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
 </dd>
 </dl>
 </div>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a756739fea8919da8ab6d56c5c10dc370" name="a756739fea8919da8ab6d56c5c10dc370"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a756739fea8919da8ab6d56c5c10dc370">&#9670;&#160;</a></span>Gemini1_0Pro</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const string Uralstech.UGemini.GeminiManager.Gemini1_0Pro = &quot;gemini-1.0-pro&quot;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro">Gemini 1.0 Pro is an NLP model that handles tasks like multi-turn text and code chat, and code generation. </a> <br  />
-<br  />
- Supports text input. </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated</a></b></dt><dd>Use <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#a8cf014ae3cac1b512d34ad88b4b3ec86" title="Gemini 1.0 Pro is an NLP model that handles tasks like multi-turn text and code chat,...">Models.GeminiModel.Gemini1_0Pro</a> instead. </dd></dl>
-
-</div>
-</div>
-<a id="a041763144e2402bb9d8e53152956553f" name="a041763144e2402bb9d8e53152956553f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a041763144e2402bb9d8e53152956553f">&#9670;&#160;</a></span>Gemini1_0ProVision</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const string Uralstech.UGemini.GeminiManager.Gemini1_0ProVision = &quot;gemini-pro-vision&quot;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro-vision">Note: Gemini 1.0 Pro Vision is deprecated. Use 1.5 Flash or 1.5 Pro instead. <br  />
-<br  />
- Gemini 1.0 Pro Vision is a performance-optimized multimodal model that can perform visual-related tasks.<br  />
- For example, 1.0 Pro Vision can generate image descriptions, identify objects present in images, provide<br  />
- information about places or objects present in images, and more. </a> <br  />
-<br  />
- Supports image, video and text input. </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated</a></b></dt><dd>Use <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#a639af8e6822eda8126e4b4971cf64664" title="Note: Gemini 1.0 Pro Vision is deprecated. Use 1.5 Flash or 1.5 Pro instead.    Gemini 1....">Models.GeminiModel.Gemini1_0ProVision</a> instead. </dd></dl>
-
-</div>
-</div>
-<a id="a4c1005ecacfe4dcc078de5b1538fdc6f" name="a4c1005ecacfe4dcc078de5b1538fdc6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c1005ecacfe4dcc078de5b1538fdc6f">&#9670;&#160;</a></span>Gemini1_5Flash</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const string Uralstech.UGemini.GeminiManager.Gemini1_5Flash = &quot;gemini-1.5-flash&quot;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash">Gemini 1.5 Flash is a fast and versatile multimodal model for scaling across diverse tasks. </a> <br  />
-<br  />
- Supports audio, image, video and text input. </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated</a></b></dt><dd>Use <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#a3b0a0484e82dc1877abb45e3db5fe589" title="Gemini 1.5 Flash is a fast and versatile multimodal model for scaling across diverse tasks.">Models.GeminiModel.Gemini1_5Flash</a> instead. </dd></dl>
-
-</div>
-</div>
-<a id="a0718ada289434a1fdd702eac7e5c870a" name="a0718ada289434a1fdd702eac7e5c870a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0718ada289434a1fdd702eac7e5c870a">&#9670;&#160;</a></span>Gemini1_5Pro</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const string Uralstech.UGemini.GeminiManager.Gemini1_5Pro = &quot;gemini-1.5-pro&quot;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro">Gemini 1.5 Pro is a mid-size multimodal model that is optimized for a wide-range of reasoning tasks.<br  />
- 1.5 Pro can process large amounts of data at once, including 2 hours of video, 19 hours of audio,<br  />
- codebases with 60,000 lines of code, or 2,000 pages of text. </a> <br  />
-<br  />
- Supports audio, image, video and text input. </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated</a></b></dt><dd>Use <a class="el" href="class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html#adadc5fec3cd85e2d6965bf4de43bddc0" title="Gemini 1.5 Pro is a mid-size multimodal model that is optimized for a wide-range of reasoning tasks....">Models.GeminiModel.Gemini1_5Pro</a> instead. </dd></dl>
 
 </div>
 </div>
