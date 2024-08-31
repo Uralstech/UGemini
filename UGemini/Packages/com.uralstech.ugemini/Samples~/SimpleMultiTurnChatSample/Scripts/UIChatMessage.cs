@@ -13,6 +13,12 @@ namespace Uralstech.UGemini.Samples
     
         public void Setup(GeminiContent content, bool isSystemPrompt)
         {
+            if (content.Parts == null)
+            {
+                Debug.LogError("Content does not contain any parts!");
+                return;
+            }
+
             Texture2D image = new(1, 1);
             foreach (GeminiContentPart part in content.Parts)
             {

@@ -2,6 +2,8 @@
 
 [TOC]
 
+Please note that the code provided in this page is *purely* for learning purposes and is far from perfect. Remember to null-check all responses!
+
 ## Basics
 
 ### Setup
