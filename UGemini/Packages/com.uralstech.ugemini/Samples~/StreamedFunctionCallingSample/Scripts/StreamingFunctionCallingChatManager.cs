@@ -73,7 +73,8 @@ namespace Uralstech.UGemini.Samples
 
                     OnPartialResponseReceived = streamedResponse =>
                     {
-                        _chatResponse.text = Array.Find(streamedResponse.Parts, part => !string.IsNullOrEmpty(part.Text))?.Text;
+                        if (streamedResponse.Parts != null)
+                            _chatResponse.text = Array.Find(streamedResponse.Parts, part => !string.IsNullOrEmpty(part.Text))?.Text;
                         return Task.CompletedTask;
                     }
                 });

@@ -59,8 +59,8 @@ namespace Uralstech.UGemini.Samples
             });
 #pragma warning restore IDE0090 // Use 'new(...)'
 
-            if (response.Answer.Content != null)
-                _answerText.text = response.Answer.Content.Parts[0].Text;
+            if (response?.Answer?.Content?.Parts != null && response.Answer.Content.Parts.Length > 0)
+                _answerText.text = response.Answer.Content.Parts[0]?.Text;
         }
     }
 }
