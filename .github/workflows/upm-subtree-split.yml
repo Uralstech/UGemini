@@ -9,8 +9,6 @@ on:
 
 jobs:
   upm-subtree-split:
-    env:
-      package-root: /UGemini/Packages/com.uralstech.ugemini
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -18,5 +16,6 @@ jobs:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
+        package-root: /UGemini/Packages/com.uralstech.ugemini
 
     - uses: RageAgainstThePixel/upm-subtree-split@v1.1
