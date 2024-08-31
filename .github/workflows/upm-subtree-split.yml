@@ -9,6 +9,8 @@ on:
 
 jobs:
   upm-subtree-split:
+    env:
+      package-root: /UGemini/Packages/com.uralstech.ugemini
     permissions:
       contents: write
     runs-on: ubuntu-latest
