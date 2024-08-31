@@ -39,7 +39,7 @@ namespace Uralstech.UGemini.Models.Generation.Chat
         /// The parts of the <see cref="GeminiChatResponse"/> message.
         /// </summary>
         [JsonIgnore]
-        public GeminiContentPart[] Parts => Candidates[0].Content.Parts;
+        public GeminiContentPart[] Parts => Candidates.Length > 0 ? Candidates[0]?.Content?.Parts : null;
 
         /// <inheritdoc/>
         public void Append(GeminiChatResponse data)

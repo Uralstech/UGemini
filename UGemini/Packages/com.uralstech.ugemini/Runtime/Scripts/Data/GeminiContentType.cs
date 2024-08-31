@@ -219,5 +219,11 @@ namespace Uralstech.UGemini
         /// </summary>
         [EnumMember(Value = "application/rtf")]
         ApplicationRTF,
+
+        /// <summary>
+        /// (File API) Application PDF content.
+        /// </summary>
+        [EnumMember(Value = "application/pdf")]
+        ApplicationPDF,
     }
 }

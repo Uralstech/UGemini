@@ -78,6 +78,95 @@ Every time `OnChat` is called, the user's request and the model's reply are adde
 
 ## All Supported Endpoints
 
+### CachedContents (Beta API)
+
+> Context caching allows you to save and reuse precomputed input tokens that you wish to use repeatedly, for example when asking different questions about the same media file.
+
+#### Create
+
+> Creates CachedContent resource.
+
+```csharp
+private async Task<GeminiCachedContent> RunCreateCachedContentRequest()
+{
+    // Content must be at least 32,768 tokens.
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < 1800; i++)
+        sb.Append("(*)#$*OIJIR$U(IJT^(U$*I%O$#@");
+
+
+    return await GeminiManager.Instance.Request<GeminiCachedContent>(new GeminiCachedContentCreateRequest(new GeminiCachedContentCreationData
+    {
+        Contents = new[]
+        {
+            GeminiContent.GetContent(sb.ToString(), GeminiRole.User),
+        },
+        ExpireTime = DateTime.UtcNow.AddDays(1),
+        Model = "gemini-1.5-flash-001", // Make sure the model you use supports caching!
+    }));
+}
+```
+
+See \ref Uralstech.UGemini.Models.Caching.GeminiCachedContent "GeminiCachedContent" and \ref Uralstech.UGemini.Models.Caching.GeminiCachedContentCreateRequest "GeminiCachedContentCreateRequest" for more details.
+
+#### Delete
+
+> Deletes CachedContent resource.
+
+```csharp
+private async Task RunDeleteCachedContentRequest(GeminiCachedContent content)
+{
+    Debug.Log("Deleting cached content...");
+    await GeminiManager.Instance.Request(new GeminiCachedContentDeleteRequest(content.Name));
+    Debug.Log("Content deleted.");
+}
+```
+
+See \ref Uralstech.UGemini.Models.Caching.GeminiCachedContentDeleteRequest "GeminiCachedContentDeleteRequest" for more details.
+
+#### Get
+
+> Reads CachedContent resource.
+
+```csharp
+private async Task<GeminiCachedContent> RunGetCachedContentRequest(string contentName)
+{
+    return await GeminiManager.Instance.Request<GeminiCachedContent>(new GeminiCachedContentGetRequest(contentName));
+}
+```
+
+See \ref Uralstech.UGemini.Models.Caching.GeminiCachedContent "GeminiCachedContent" and \ref Uralstech.UGemini.Models.Caching.GeminiCachedContentGetRequest "GeminiCachedContentGetRequest" for more details.
+
+#### List
+
+> Lists CachedContents.
+
+```csharp
+private async Task<GeminiCachedContent[]> RunListCachedContentRequest()
+{
+    GeminiCachedContentListResponse response = await GeminiManager.Instance.Request<GeminiCachedContentListResponse>(new GeminiCachedContentListRequest());
+    return response.CachedContents;
+}
+```
+
+See \ref Uralstech.UGemini.Models.Caching.GeminiCachedContentListResponse "GeminiCachedContentListResponse" and \ref Uralstech.UGemini.Models.Caching.GeminiCachedContentListRequest "GeminiCachedContentListRequest" for more details.
+
+#### Patch
+
+> Updates CachedContent resource (only expiration is updatable).
+
+```csharp
+private async Task<GeminiCachedContent> RunPatchCachedContentRequest(string contentName)
+{
+    return await GeminiManager.Instance.Request<GeminiCachedContent>(new GeminiCachedContentPatchRequest(new GeminiCachedContentPatchData
+    {
+        ExpireTime = DateTime.UtcNow.AddYears(1),
+    }, contentName));
+}
+```
+
+See \ref Uralstech.UGemini.Models.Caching.GeminiCachedContent "GeminiCachedContent" and \ref Uralstech.UGemini.Models.Caching.GeminiCachedContentPatchRequest "GeminiCachedContentPatchRequest" for more details.
+
 ### Models
 
 > The Models endpoint contains methods that allow you to access and inference Gemini models.
@@ -641,6 +730,9 @@ private GeminiTool _geminiFunctions = new GeminiTool()
 };
 ```
 
+To use Gemini Tools, we need to declare each tool to use. So, we have created a declaration for function calling.
+Each *tool* must be declared separately but every *function* must be declared in a single *tool* declaration.
+
 For each function, we need a declaration with a name and description. The parameters are an object of type `GeminiSchema`, which defines the
 schema of each of the parameters. The type is of `GeminiSchemaDataType.Object`, and contains the dictionary of parameter schemas.
 
@@ -668,7 +760,7 @@ private async Task<string> OnChat(string text)
         {
             Contents = contents.ToArray(),
             Tools = new GeminiTool[] { _geminiFunctions },
-            ToolConfig = GeminiToolConfiguration.GetConfiguration(GeminiFunctionCallingMode.Any),
+            ToolConfig = GeminiToolConfiguration.GetConfiguration(GeminiFunctionCallingMode.Auto),
         });
 
         // Don't forget to do this! If the function call is not added to the chat
@@ -749,13 +841,63 @@ private bool TryChangeTextColor(string color)
 Here, we are going through each response, checking if a function was called, and calling the requested function.
 
 The response is a JSON object, which is optional, but it is recommended to include. Note the use of `GeminiToolConfiguration.GetConfiguration`,
-which is a utility method to create a `GeminiToolConfiguration` with the given `GeminiFunctionCallingMode`. Here, it is `GeminiFunctionCallingMode.Any`,
-which means Gemini will always call at least one function in each conversation.
+which is a utility method to create a `GeminiToolConfiguration` with the given `GeminiFunctionCallingMode`. `GeminiFunctionCallingMode.Any`
+means Gemini will always call at least one function in each *request*, `Auto` means the model will call the functions when it thinks it needs
+to, and `None` means no functions can be called.
 
 After the function is called, we respond by adding the calls and responses to the history. We use the `GetResponse` utility method to get a
 `GeminiFunctionResponse` object with the response JSON.
 
 Function calling is, as of writing, only available in the Beta API.
+
+### Code Execution
+
+Code execution is also a Tool, so it is similar to function calling:
+
+```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models;
+using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation.Chat;
+using Uralstech.UGemini.Models.Generation.Tools.Declaration;
+
+private GeminiTool _geminiCodeExecution = new GeminiTool()
+{
+    CodeExecution = new GeminiCodeExecution()
+};
+
+[SerializeField] private Text _chatResponse;
+
+private async Task<string> OnChat(string text)
+{
+    List<GeminiContent> contents = new()
+    {
+        GeminiContent.GetContent(text, GeminiRole.User),
+    };
+
+    GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(new GeminiChatRequest(GeminiModel.Gemini1_5Flash, true)
+    {
+        Contents = contents.ToArray(),
+        Tools = new GeminiTool[] { _geminiCodeExecution },
+    });
+
+    string responseText = string.Join(", ", Array.ConvertAll(response.Parts, part => $"(Text={part.Text}, Code={part.ExecutableCode?.Code}, ExecutionResult={part.CodeExecutionResult?.Output})"));
+
+    _chatResponse.text = responseText;
+    return responseText;
+}
+```
+
+That's it! Now, when code execution is used, the response should be something like this:
+
+```
+> Make a simple python program to print hello world and use code execution for that.
+Result: (Text=, Code=, ExecutionResult=), (Text=, Code=print("Hello world!"), ExecutionResult=), (Text=, Code=, ExecutionResult=Hello world!),
+(Text=I have created a simple Python program that prints "Hello world!".  I used the `print()` function to achieve this. The code was executed
+using the `tool_code` block., Code=, ExecutionResult=)
+```
+
+Code execution is also, as of writing, only available in the Beta API.
 
 ### JSON Response Mode
 
