@@ -16,6 +16,7 @@ jobs:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
-        package-root: /UGemini/Packages/com.uralstech.ugemini
 
     - uses: RageAgainstThePixel/upm-subtree-split@v1.1
+      with:
+        package-root: **/Packages/com.uralstech.ugemini
