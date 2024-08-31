@@ -52,6 +52,7 @@ var namespace_uralstech_1_1_u_gemini =
       [ "ApplicationXTypeScript", "namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca10f1dbc6812321daa1682d6d63ce968f", null ],
       [ "ApplicationXPython", "namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca0fd2e025338c0e9f1424bde1a8cf5ed4", null ],
       [ "ApplicationJSON", "namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca7e7c4db28ee21e36d7f7d0ec839f7601", null ],
-      [ "ApplicationRTF", "namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca8ab434228369f9059cc5f0955dbd2bb4", null ]
+      [ "ApplicationRTF", "namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca8ab434228369f9059cc5f0955dbd2bb4", null ],
+      [ "ApplicationPDF", "namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73cac0e3d26aad10e9f7e2ac26ab05f1f503", null ]
     ] ]
 ];
