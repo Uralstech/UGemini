@@ -1,9 +1,9 @@
-﻿namespace Uralstech.UGemini.Models
+﻿namespace Uralstech.UGemini.Models.Tuning
 {
     /// <summary>
-    /// Requests metadata for all existing models. Return type is <see cref="GeminiModelListResponse"/>.
+    /// Requests metadata for all existing tuned models. Return type is <see cref="GeminiTunedModelListResponse"/>.
     /// </summary>
-    public class GeminiModelListRequest : IGeminiGetRequest
+    public class GeminiTunedModelListRequest : IGeminiGetRequest
     {
         /// <summary>
         /// The API version to use.
@@ -11,7 +11,7 @@
         public string ApiVersion;
 
         /// <summary>
-        /// The maximum number of <see cref="GeminiModel"/>s to return (per page).
+        /// The maximum number of <see cref="GeminiTunedModel"/>s to return (per page).
         /// </summary>
         /// <remarks>
         /// This method returns at most 1000 models per page, even if you pass a larger <see cref="MaxResponseModels"/>.
@@ -19,7 +19,7 @@
         public int MaxResponseModels = 50;
 
         /// <summary>
-        /// A page token from a previous <see cref="GeminiModelListRequest"/> call.
+        /// A page token from a previous <see cref="GeminiTunedModelListRequest"/> call.
         /// </summary>
         public string PageToken = string.Empty;
 
@@ -27,18 +27,15 @@
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return string.IsNullOrEmpty(PageToken)
-                ? $"https://generativelanguage.googleapis.com/{ApiVersion}/models?pageSize={MaxResponseModels}"
-                : $"https://generativelanguage.googleapis.com/{ApiVersion}/models?pageSize={MaxResponseModels}&pageToken={PageToken}";
+                ? $"https://generativelanguage.googleapis.com/{ApiVersion}/tunedModels?pageSize={MaxResponseModels}"
+                : $"https://generativelanguage.googleapis.com/{ApiVersion}/tunedModels?pageSize={MaxResponseModels}&pageToken={PageToken}";
         }
 
         /// <summary>
-        /// Creates a new <see cref="GeminiModelListRequest"/>.
+        /// Creates a new <see cref="GeminiTunedModelListRequest"/>.
         /// </summary>
-        /// <remarks>
-        /// Some newer models do not work with this request unless through the Beta API.
-        /// </remarks>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiModelListRequest(bool useBetaApi = false)
+        public GeminiTunedModelListRequest(bool useBetaApi = false)
         {
             ApiVersion = useBetaApi ? "v1beta" : "v1";
         }

@@ -24,7 +24,7 @@ namespace Uralstech.UGemini.Models
         public string Name;
 
         /// <summary>
-        /// The ID of the base model, pass this to the generation request.
+        /// The ID of the base model, not very useful for <see cref="Tuning.GeminiTunedModel"/>s.
         /// </summary>
         [JsonProperty(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
         public string BaseModelId;
