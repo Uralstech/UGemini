@@ -1,4 +1,6 @@
-﻿namespace Uralstech.UGemini.Models
+﻿using System;
+
+namespace Uralstech.UGemini.Models
 {
     /// <summary>
     /// Gets information about a specific model. Return type is <see cref="GeminiModel"/>.
@@ -11,14 +13,25 @@
         public string ApiVersion;
 
         /// <summary>
+        /// The ID of the <see cref="GeminiModel"/> to get.
+        /// </summary>
+        public GeminiModelId Model;
+
+        /// <summary>
         /// The resource name of the model to get, in the format models/{model}.
         /// </summary>
-        public string ModelName;
+        /// \deprecated This has been deprecated, please use <see cref="Model"/> instead.
+        [Obsolete("This has been deprecated, please use GeminiModelGetRequest.Model instead.")]
+        public string ModelName
+        {
+            get => Model.Name;
+            set => Model = new GeminiModelId(value);
+        }
 
         /// <inheritdoc>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"https://generativelanguage.googleapis.com/{ApiVersion}/{ModelName}";
+            return $"https://generativelanguage.googleapis.com/{ApiVersion}/{Model.Name}";
         }
 
         /// <summary>
@@ -31,7 +44,7 @@
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
         public GeminiModelGetRequest(GeminiModelId modelId, bool useBetaApi = false)
         {
-            ModelName = modelId.Name;
+            Model = modelId;
             ApiVersion = useBetaApi ? "v1beta" : "v1";
         }
     }
