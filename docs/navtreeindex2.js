@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html":[4,0,0,0,2,9],
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html#a46a38c50eddc40e47c26e0ce2d618c74":[3,0,0,0,2,9,0],
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html#a46a38c50eddc40e47c26e0ce2d618c74":[4,0,0,0,2,9,0],
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html#a7782edbcbb98de81e6456a845fec628d":[3,0,0,0,2,9,1],
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html#a7782edbcbb98de81e6456a845fec628d":[4,0,0,0,2,9,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_calling_configuration.html#a00536163ab10230dc6b211d317b90385":[4,0,0,0,2,4,5,1,1,1],
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_calling_configuration.html#aa41c3ba57030b6ed7b8851cdf71b58df":[3,0,0,0,2,4,5,1,1,0],
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_calling_configuration.html#aa41c3ba57030b6ed7b8851cdf71b58df":[4,0,0,0,2,4,5,1,1,0],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html":[3,0,0,0,2,4,5,1,2],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html":[4,0,0,0,2,4,5,1,2],
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html#a250f92e3c4759e165cb442152ab864bc":[3,0,0,0,2,4,5,1,2,2]
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html":[3,0,0,0,2,4,5,1,2]
 };

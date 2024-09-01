@@ -82,12 +82,15 @@ var searchData=
   ['geminitunedmodelgetrequest_79',['GeminiTunedModelGetRequest',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_get_request.html',1,'Uralstech::UGemini::Models::Tuning']]],
   ['geminitunedmodellistrequest_80',['GeminiTunedModelListRequest',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_list_request.html',1,'Uralstech::UGemini::Models::Tuning']]],
   ['geminitunedmodellistresponse_81',['GeminiTunedModelListResponse',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_list_response.html',1,'Uralstech::UGemini::Models::Tuning']]],
-  ['geminitunedmodelsource_82',['GeminiTunedModelSource',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_source.html',1,'Uralstech::UGemini::Models::Tuning']]],
-  ['geminituningdataset_83',['GeminiTuningDataset',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_dataset.html',1,'Uralstech::UGemini::Models::Tuning']]],
-  ['geminituningexample_84',['GeminiTuningExample',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_example.html',1,'Uralstech::UGemini::Models::Tuning']]],
-  ['geminituningexamples_85',['GeminiTuningExamples',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_examples.html',1,'Uralstech::UGemini::Models::Tuning']]],
-  ['geminituninghyperparameters_86',['GeminiTuningHyperparameters',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_hyperparameters.html',1,'Uralstech::UGemini::Models::Tuning']]],
-  ['geminituningsnapshot_87',['GeminiTuningSnapshot',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_snapshot.html',1,'Uralstech::UGemini::Models::Tuning']]],
-  ['geminituningtask_88',['GeminiTuningTask',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_task.html',1,'Uralstech::UGemini::Models::Tuning']]],
-  ['geminiusagemetadata_89',['GeminiUsageMetadata',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate_1_1_gemini_usage_metadata.html',1,'Uralstech::UGemini::Models::Generation::Candidate']]]
+  ['geminitunedmodelpatchdata_82',['GeminiTunedModelPatchData',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_patch_data.html',1,'Uralstech::UGemini::Models::Tuning']]],
+  ['geminitunedmodelpatchrequest_83',['GeminiTunedModelPatchRequest',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_patch_request.html',1,'Uralstech::UGemini::Models::Tuning']]],
+  ['geminitunedmodelsource_84',['GeminiTunedModelSource',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_source.html',1,'Uralstech::UGemini::Models::Tuning']]],
+  ['geminitunedmodeltransferownershiprequest_85',['GeminiTunedModelTransferOwnershipRequest',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_transfer_ownership_request.html',1,'Uralstech::UGemini::Models::Tuning']]],
+  ['geminituningdataset_86',['GeminiTuningDataset',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_dataset.html',1,'Uralstech::UGemini::Models::Tuning']]],
+  ['geminituningexample_87',['GeminiTuningExample',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_example.html',1,'Uralstech::UGemini::Models::Tuning']]],
+  ['geminituningexamples_88',['GeminiTuningExamples',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_examples.html',1,'Uralstech::UGemini::Models::Tuning']]],
+  ['geminituninghyperparameters_89',['GeminiTuningHyperparameters',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_hyperparameters.html',1,'Uralstech::UGemini::Models::Tuning']]],
+  ['geminituningsnapshot_90',['GeminiTuningSnapshot',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_snapshot.html',1,'Uralstech::UGemini::Models::Tuning']]],
+  ['geminituningtask_91',['GeminiTuningTask',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_task.html',1,'Uralstech::UGemini::Models::Tuning']]],
+  ['geminiusagemetadata_92',['GeminiUsageMetadata',['../class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate_1_1_gemini_usage_metadata.html',1,'Uralstech::UGemini::Models::Generation::Candidate']]]
 ];

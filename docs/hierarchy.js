@@ -57,6 +57,7 @@ var hierarchy =
     [ "Uralstech.UGemini.Models.Generation.Tools.Declaration.GeminiToolConfiguration", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_tool_configuration.html", null ],
     [ "Uralstech.UGemini.Models.Tuning.GeminiTunedModelCreationData", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_creation_data.html", null ],
     [ "Uralstech.UGemini.Models.Tuning.GeminiTunedModelListResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_list_response.html", null ],
+    [ "Uralstech.UGemini.Models.Tuning.GeminiTunedModelPatchData", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_patch_data.html", null ],
     [ "Uralstech.UGemini.Models.Tuning.GeminiTunedModelSource", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_source.html", null ],
     [ "Uralstech.UGemini.Models.Tuning.GeminiTuningDataset", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_dataset.html", null ],
     [ "Uralstech.UGemini.Models.Tuning.GeminiTuningExample", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_example.html", null ],
@@ -103,7 +104,8 @@ var hierarchy =
         [ "Uralstech.UGemini.FileAPI.GeminiFileUploadRequest", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_upload_request.html", null ]
       ] ],
       [ "Uralstech.UGemini.IGeminiPatchRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_patch_request.html", [
-        [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentPatchRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_request.html", null ]
+        [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentPatchRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_request.html", null ],
+        [ "Uralstech.UGemini.Models.Tuning.GeminiTunedModelPatchRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_patch_request.html", null ]
       ] ],
       [ "Uralstech.UGemini.IGeminiPostRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_post_request.html", [
         [ "Uralstech.UGemini.IGeminiStreamablePostRequest< TResponse >", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html", null ],
@@ -112,7 +114,8 @@ var hierarchy =
         [ "Uralstech.UGemini.Models.Embedding.GeminiBatchEmbedContentRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_embedding_1_1_gemini_batch_embed_content_request.html", null ],
         [ "Uralstech.UGemini.Models.Embedding.GeminiEmbedContentRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_embedding_1_1_gemini_embed_content_request.html", null ],
         [ "Uralstech.UGemini.Models.Generation.QuestionAnswering.GeminiAnswerRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_gemini_answer_request.html", null ],
-        [ "Uralstech.UGemini.Models.Tuning.GeminiTunedModelCreateRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_create_request.html", null ]
+        [ "Uralstech.UGemini.Models.Tuning.GeminiTunedModelCreateRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_create_request.html", null ],
+        [ "Uralstech.UGemini.Models.Tuning.GeminiTunedModelTransferOwnershipRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_transfer_ownership_request.html", null ]
       ] ]
     ] ],
     [ "Uralstech.UGemini.IGeminiStreamablePostRequest< GeminiChatResponse >", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html", [

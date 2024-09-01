@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">UGemini<span id="projectnumber">&#160;2.1.0-preview.1</span>
+   <div id="projectname">UGemini<span id="projectnumber">&#160;2.1.0-preview.2</span>
    </div>
    <div id="projectbrief">A C# wrapper for the Google Gemini API.</div>
   </td>
@@ -124,6 +124,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adc073fccf089ba4c89b6c1730deef63c" id="r_adc073fccf089ba4c89b6c1730deef63c"><td class="memItemLeft" align="right" valign="top">async Task&lt; TResponse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc073fccf089ba4c89b6c1730deef63c">Request&lt; TResponse &gt;</a> (<a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_post_request.html">IGeminiPostRequest</a> request)</td></tr>
 <tr class="memdesc:adc073fccf089ba4c89b6c1730deef63c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a POST request on the Gemini API.  <br /></td></tr>
 <tr class="separator:adc073fccf089ba4c89b6c1730deef63c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23f2865cf300c2508bcc6867882594dd" id="r_a23f2865cf300c2508bcc6867882594dd"><td class="memItemLeft" align="right" valign="top">async Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23f2865cf300c2508bcc6867882594dd">Request</a> (<a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_post_request.html">IGeminiPostRequest</a> request)</td></tr>
+<tr class="memdesc:a23f2865cf300c2508bcc6867882594dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a POST request on the Gemini API.  <br /></td></tr>
+<tr class="separator:a23f2865cf300c2508bcc6867882594dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c0a36c0676665ba04a27ce95348eebe" id="r_a9c0a36c0676665ba04a27ce95348eebe"><td class="memItemLeft" align="right" valign="top">async Task&lt; TResponse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c0a36c0676665ba04a27ce95348eebe">Request&lt; TResponse &gt;</a> (<a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_multi_part_post_request.html">IGeminiMultiPartPostRequest</a> request)</td></tr>
 <tr class="memdesc:a9c0a36c0676665ba04a27ce95348eebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a multi-part POST request on the Gemini API.  <br /></td></tr>
 <tr class="separator:a9c0a36c0676665ba04a27ce95348eebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,7 +155,7 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
 <div class="textblock"><p>The class for accessing the Gemini API! </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab540f88449967ebfc8f67e1bb5101d75" name="ab540f88449967ebfc8f67e1bb5101d75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab540f88449967ebfc8f67e1bb5101d75">&#9670;&#160;</a></span>Request()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab540f88449967ebfc8f67e1bb5101d75">&#9670;&#160;</a></span>Request() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -182,6 +185,37 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
 
 </div>
 </div>
+<a id="a23f2865cf300c2508bcc6867882594dd" name="a23f2865cf300c2508bcc6867882594dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23f2865cf300c2508bcc6867882594dd">&#9670;&#160;</a></span>Request() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task Uralstech.UGemini.GeminiManager.Request </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_post_request.html">IGeminiPostRequest</a></td>          <td class="paramname"><span class="paramname"><em>request</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes a POST request on the Gemini API. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>The request object.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">GeminiRequestException</td><td>Thrown when the API request fails.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="abd5a1056444e232ec19f662db30e0756" name="abd5a1056444e232ec19f662db30e0756"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abd5a1056444e232ec19f662db30e0756">&#9670;&#160;</a></span>Request&lt; TResponse &gt;() <span class="overload">[1/4]</span></h2>
 
@@ -189,7 +223,7 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">async Task&lt; TResponse &gt; <a class="el" href="#ab540f88449967ebfc8f67e1bb5101d75">Uralstech.UGemini.GeminiManager.Request</a>&lt; TResponse &gt; </td>
+          <td class="memname">async Task&lt; TResponse &gt; <a class="el" href="#a23f2865cf300c2508bcc6867882594dd">Uralstech.UGemini.GeminiManager.Request</a>&lt; TResponse &gt; </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_get_request.html">IGeminiGetRequest</a></td>          <td class="paramname"><span class="paramname"><em>request</em></span></td><td>)</td>
           <td></td>
@@ -227,7 +261,7 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">async Task&lt; TResponse &gt; <a class="el" href="#ab540f88449967ebfc8f67e1bb5101d75">Uralstech.UGemini.GeminiManager.Request</a>&lt; TResponse &gt; </td>
+          <td class="memname">async Task&lt; TResponse &gt; <a class="el" href="#a23f2865cf300c2508bcc6867882594dd">Uralstech.UGemini.GeminiManager.Request</a>&lt; TResponse &gt; </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_multi_part_post_request.html">IGeminiMultiPartPostRequest</a></td>          <td class="paramname"><span class="paramname"><em>request</em></span></td><td>)</td>
           <td></td>
@@ -265,7 +299,7 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">async Task&lt; TResponse &gt; <a class="el" href="#ab540f88449967ebfc8f67e1bb5101d75">Uralstech.UGemini.GeminiManager.Request</a>&lt; TResponse &gt; </td>
+          <td class="memname">async Task&lt; TResponse &gt; <a class="el" href="#a23f2865cf300c2508bcc6867882594dd">Uralstech.UGemini.GeminiManager.Request</a>&lt; TResponse &gt; </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_patch_request.html">IGeminiPatchRequest</a></td>          <td class="paramname"><span class="paramname"><em>request</em></span></td><td>)</td>
           <td></td>
@@ -303,7 +337,7 @@ static T&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b><code
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">async Task&lt; TResponse &gt; <a class="el" href="#ab540f88449967ebfc8f67e1bb5101d75">Uralstech.UGemini.GeminiManager.Request</a>&lt; TResponse &gt; </td>
+          <td class="memname">async Task&lt; TResponse &gt; <a class="el" href="#a23f2865cf300c2508bcc6867882594dd">Uralstech.UGemini.GeminiManager.Request</a>&lt; TResponse &gt; </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="interface_uralstech_1_1_u_gemini_1_1_i_gemini_post_request.html">IGeminiPostRequest</a></td>          <td class="paramname"><span class="paramname"><em>request</em></span></td><td>)</td>
           <td></td>
