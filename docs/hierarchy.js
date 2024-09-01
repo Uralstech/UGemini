@@ -36,10 +36,12 @@ var hierarchy =
     [ "Uralstech.UGemini.Models.Generation.QuestionAnswering.Grounding.GeminiGroundingPassage", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_grounding_1_1_gemini_grounding_passage.html", null ],
     [ "Uralstech.UGemini.Models.Content.Attribution.GeminiGroundingPassageId", "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_attribution_1_1_gemini_grounding_passage_id.html", null ],
     [ "Uralstech.UGemini.Models.Generation.QuestionAnswering.Grounding.GeminiGroundingPassages", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_grounding_1_1_gemini_grounding_passages.html", null ],
+    [ "Uralstech.UGemini.Models.Tuning.GeminiInitialTuningTask", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_initial_tuning_task.html", null ],
     [ "Uralstech.UGemini.Models.Generation.QuestionAnswering.SemanticRetriever.GeminiMetadataCondition", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_semantic_retri0c9a2baaae3a05ecf32bae131f9ac187.html", null ],
     [ "Uralstech.UGemini.Models.Generation.QuestionAnswering.SemanticRetriever.GeminiMetadataFilter", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_semantic_retriever_1_1_gemini_metadata_filter.html", null ],
     [ "Uralstech.UGemini.Models.GeminiModelId", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id.html", [
-      [ "Uralstech.UGemini.Models.GeminiModel", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html", null ]
+      [ "Uralstech.UGemini.Models.GeminiModel", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html", null ],
+      [ "Uralstech.UGemini.Models.Tuning.GeminiTunedModel", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model.html", null ]
     ] ],
     [ "Uralstech.UGemini.Models.GeminiModelListResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_response.html", null ],
     [ "Uralstech.UGemini.GeminiRequestMetadata", "class_uralstech_1_1_u_gemini_1_1_gemini_request_metadata.html", null ],
@@ -53,6 +55,15 @@ var hierarchy =
     [ "Uralstech.UGemini.Models.CountTokens.GeminiTokenCountResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_response.html", null ],
     [ "Uralstech.UGemini.Models.Generation.Tools.Declaration.GeminiTool", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_tool.html", null ],
     [ "Uralstech.UGemini.Models.Generation.Tools.Declaration.GeminiToolConfiguration", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_tool_configuration.html", null ],
+    [ "Uralstech.UGemini.Models.Tuning.GeminiTunedModelCreationData", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_creation_data.html", null ],
+    [ "Uralstech.UGemini.Models.Tuning.GeminiTunedModelListResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_list_response.html", null ],
+    [ "Uralstech.UGemini.Models.Tuning.GeminiTunedModelSource", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_source.html", null ],
+    [ "Uralstech.UGemini.Models.Tuning.GeminiTuningDataset", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_dataset.html", null ],
+    [ "Uralstech.UGemini.Models.Tuning.GeminiTuningExample", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_example.html", null ],
+    [ "Uralstech.UGemini.Models.Tuning.GeminiTuningExamples", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_examples.html", null ],
+    [ "Uralstech.UGemini.Models.Tuning.GeminiTuningHyperparameters", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_hyperparameters.html", null ],
+    [ "Uralstech.UGemini.Models.Tuning.GeminiTuningSnapshot", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_snapshot.html", null ],
+    [ "Uralstech.UGemini.Models.Tuning.GeminiTuningTask", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_task.html", null ],
     [ "Uralstech.UGemini.IAppendableData< T >", "interface_uralstech_1_1_u_gemini_1_1_i_appendable_data.html", null ],
     [ "Uralstech.UGemini.IAppendableData< GeminiCandidate >", "interface_uralstech_1_1_u_gemini_1_1_i_appendable_data.html", [
       [ "Uralstech.UGemini.Models.Generation.Candidate.GeminiCandidate", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_candidate_1_1_gemini_candidate.html", null ]
@@ -75,7 +86,8 @@ var hierarchy =
     [ "Uralstech.UGemini.IGeminiRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_request.html", [
       [ "Uralstech.UGemini.IGeminiDeleteRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_delete_request.html", [
         [ "Uralstech.UGemini.FileAPI.GeminiFileDeleteRequest", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_delete_request.html", null ],
-        [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentDeleteRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_delete_request.html", null ]
+        [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentDeleteRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_delete_request.html", null ],
+        [ "Uralstech.UGemini.Models.Tuning.GeminiTunedModelDeleteRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_delete_request.html", null ]
       ] ],
       [ "Uralstech.UGemini.IGeminiGetRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_get_request.html", [
         [ "Uralstech.UGemini.FileAPI.GeminiFileGetRequest", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_get_request.html", null ],
@@ -83,7 +95,9 @@ var hierarchy =
         [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentGetRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_get_request.html", null ],
         [ "Uralstech.UGemini.Models.Caching.GeminiCachedContentListRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_list_request.html", null ],
         [ "Uralstech.UGemini.Models.GeminiModelGetRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_get_request.html", null ],
-        [ "Uralstech.UGemini.Models.GeminiModelListRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html", null ]
+        [ "Uralstech.UGemini.Models.GeminiModelListRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_list_request.html", null ],
+        [ "Uralstech.UGemini.Models.Tuning.GeminiTunedModelGetRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_get_request.html", null ],
+        [ "Uralstech.UGemini.Models.Tuning.GeminiTunedModelListRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_list_request.html", null ]
       ] ],
       [ "Uralstech.UGemini.IGeminiMultiPartPostRequest", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_multi_part_post_request.html", [
         [ "Uralstech.UGemini.FileAPI.GeminiFileUploadRequest", "class_uralstech_1_1_u_gemini_1_1_file_a_p_i_1_1_gemini_file_upload_request.html", null ]
@@ -97,7 +111,8 @@ var hierarchy =
         [ "Uralstech.UGemini.Models.CountTokens.GeminiTokenCountRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_request.html", null ],
         [ "Uralstech.UGemini.Models.Embedding.GeminiBatchEmbedContentRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_embedding_1_1_gemini_batch_embed_content_request.html", null ],
         [ "Uralstech.UGemini.Models.Embedding.GeminiEmbedContentRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_embedding_1_1_gemini_embed_content_request.html", null ],
-        [ "Uralstech.UGemini.Models.Generation.QuestionAnswering.GeminiAnswerRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_gemini_answer_request.html", null ]
+        [ "Uralstech.UGemini.Models.Generation.QuestionAnswering.GeminiAnswerRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_gemini_answer_request.html", null ],
+        [ "Uralstech.UGemini.Models.Tuning.GeminiTunedModelCreateRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_create_request.html", null ]
       ] ]
     ] ],
     [ "Uralstech.UGemini.IGeminiStreamablePostRequest< GeminiChatResponse >", "interface_uralstech_1_1_u_gemini_1_1_i_gemini_streamable_post_request.html", [

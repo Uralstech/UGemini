@@ -1,7 +1,7 @@
 var searchData=
 [
   ['abstractive_0',['Abstractive',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering.html#aba7a30a5833a9c301357ad7d579ac90da3643ff82b614f00244c6d39459e473d4',1,'Uralstech::UGemini::Models::Generation::QuestionAnswering']]],
-  ['active_1',['Active',['../namespace_uralstech_1_1_u_gemini_1_1_file_a_p_i.html#a70714cf13354876d017e3c66f5060f40a4d3d769b812b6faa6b76e1a8abaece2d',1,'Uralstech::UGemini::FileAPI']]],
+  ['active_1',['Active',['../namespace_uralstech_1_1_u_gemini_1_1_file_a_p_i.html#a70714cf13354876d017e3c66f5060f40a4d3d769b812b6faa6b76e1a8abaece2d',1,'Uralstech.UGemini.FileAPI.Active'],['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_tuning.html#a48767ee443c748500e4520a618fc455da4d3d769b812b6faa6b76e1a8abaece2d',1,'Uralstech.UGemini.Models.Tuning.Active']]],
   ['any_2',['Any',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration.html#a7f72d6854163adac959ccd5875257727aed36a1ef76a59ee3f15180e0441188ad',1,'Uralstech::UGemini::Models::Generation::Tools::Declaration']]],
   ['applicationjson_3',['ApplicationJSON',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73ca7e7c4db28ee21e36d7f7d0ec839f7601',1,'Uralstech::UGemini']]],
   ['applicationpdf_4',['ApplicationPDF',['../namespace_uralstech_1_1_u_gemini.html#a9a890005b5ee88d5fe8e33a592f1c73cac0e3d26aad10e9f7e2ac26ab05f1f503',1,'Uralstech::UGemini']]],

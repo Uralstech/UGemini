@@ -105,6 +105,23 @@ var annotated_dup =
             ] ],
             [ "GeminiGenerationConfiguration", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_gemini_generation_configuration.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_gemini_generation_configuration" ]
           ] ],
+          [ "Tuning", "namespace_uralstech_1_1_u_gemini_1_1_models_1_1_tuning.html", [
+            [ "GeminiInitialTuningTask", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_initial_tuning_task.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_initial_tuning_task" ],
+            [ "GeminiTunedModel", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model" ],
+            [ "GeminiTunedModelCreateRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_create_request.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_create_request" ],
+            [ "GeminiTunedModelCreationData", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_creation_data.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_creation_data" ],
+            [ "GeminiTunedModelDeleteRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_delete_request.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_delete_request" ],
+            [ "GeminiTunedModelGetRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_get_request.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_get_request" ],
+            [ "GeminiTunedModelListRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_list_request.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_list_request" ],
+            [ "GeminiTunedModelListResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_list_response.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_list_response" ],
+            [ "GeminiTunedModelSource", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_source.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuned_model_source" ],
+            [ "GeminiTuningDataset", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_dataset.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_dataset" ],
+            [ "GeminiTuningExample", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_example.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_example" ],
+            [ "GeminiTuningExamples", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_examples.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_examples" ],
+            [ "GeminiTuningHyperparameters", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_hyperparameters.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_hyperparameters" ],
+            [ "GeminiTuningSnapshot", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_snapshot.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_snapshot" ],
+            [ "GeminiTuningTask", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_task.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_tuning_1_1_gemini_tuning_task" ]
+          ] ],
           [ "GeminiModel", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model" ],
           [ "GeminiModelGetRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_get_request.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_get_request" ],
           [ "GeminiModelId", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id" ],

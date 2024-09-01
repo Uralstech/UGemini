@@ -84,6 +84,7 @@ var NAVTREE =
         [ "Token Counting", "md__u_gemini_2_packages_2com_8uralstech_8ugemini_2_documentation_0i_2_main_page.html#autotoc_md49", null ]
       ] ]
     ] ],
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Packages", "namespaces.html", [
       [ "Package List", "namespaces.html", "namespaces_dup" ],
       [ "Package Members", "namespacemembers.html", [
@@ -109,9 +110,10 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_patch_request.html#af4f5e6219ac95d3416c563bff90f385b",
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html#a7782edbcbb98de81e6456a845fec628d",
-"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html#a96b827958b1123d5d8295729ec1e4bb3",
-"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_embedding.html#ae3804817dea7f45d50155e713d4df3d4a5c9335b28e6277ddbe0137f04e5e58a7"
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_gemini_model_id_string_converter.html#a46a38c50eddc40e47c26e0ce2d618c74",
+"class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_declaration.html#a250f92e3c4759e165cb442152ab864bc",
+"functions_vars_n.html",
+"namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_code_execution.html#a89d25a7a3f5b622af4b50b576197afd0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

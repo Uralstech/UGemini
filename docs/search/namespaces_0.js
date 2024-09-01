@@ -22,8 +22,9 @@ var searchData=
   ['uralstech_3a_3augemini_3a_3amodels_3a_3ageneration_3a_3atools_19',['Tools',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools.html',1,'Uralstech::UGemini::Models::Generation']]],
   ['uralstech_3a_3augemini_3a_3amodels_3a_3ageneration_3a_3atools_3a_3acodeexecution_20',['CodeExecution',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_code_execution.html',1,'Uralstech::UGemini::Models::Generation::Tools']]],
   ['uralstech_3a_3augemini_3a_3amodels_3a_3ageneration_3a_3atools_3a_3adeclaration_21',['Declaration',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration.html',1,'Uralstech::UGemini::Models::Generation::Tools']]],
-  ['uralstech_3a_3augemini_3a_3astatus_22',['Status',['../namespace_uralstech_1_1_u_gemini_1_1_status.html',1,'Uralstech::UGemini']]],
-  ['uralstech_3a_3augemini_3a_3autils_23',['Utils',['../namespace_uralstech_1_1_u_gemini_1_1_utils.html',1,'Uralstech::UGemini']]],
-  ['uralstech_3a_3augemini_3a_3autils_3a_3asingleton_24',['Singleton',['../namespace_uralstech_1_1_u_gemini_1_1_utils_1_1_singleton.html',1,'Uralstech::UGemini::Utils']]],
-  ['uralstech_3a_3augemini_3a_3autils_3a_3aweb_25',['Web',['../namespace_uralstech_1_1_u_gemini_1_1_utils_1_1_web.html',1,'Uralstech::UGemini::Utils']]]
+  ['uralstech_3a_3augemini_3a_3amodels_3a_3atuning_22',['Tuning',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_tuning.html',1,'Uralstech::UGemini::Models']]],
+  ['uralstech_3a_3augemini_3a_3astatus_23',['Status',['../namespace_uralstech_1_1_u_gemini_1_1_status.html',1,'Uralstech::UGemini']]],
+  ['uralstech_3a_3augemini_3a_3autils_24',['Utils',['../namespace_uralstech_1_1_u_gemini_1_1_utils.html',1,'Uralstech::UGemini']]],
+  ['uralstech_3a_3augemini_3a_3autils_3a_3asingleton_25',['Singleton',['../namespace_uralstech_1_1_u_gemini_1_1_utils_1_1_singleton.html',1,'Uralstech::UGemini::Utils']]],
+  ['uralstech_3a_3augemini_3a_3autils_3a_3aweb_26',['Web',['../namespace_uralstech_1_1_u_gemini_1_1_utils_1_1_web.html',1,'Uralstech::UGemini::Utils']]]
 ];

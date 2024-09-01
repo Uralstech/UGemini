@@ -16,5 +16,6 @@ var searchData=
   ['geminisafetyharmblockthreshold_13',['GeminiSafetyHarmBlockThreshold',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_safety.html#a42cb3ebdb11a450e2bd2c557f4acad65',1,'Uralstech::UGemini::Models::Generation::Safety']]],
   ['geminisafetyharmcategory_14',['GeminiSafetyHarmCategory',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_safety.html#a857e0b9ffddf49934fd8d1dac801be51',1,'Uralstech::UGemini::Models::Generation::Safety']]],
   ['geminischemadataformat_15',['GeminiSchemaDataFormat',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_schema.html#a4178e8f8544954c85d1c9249e8238764',1,'Uralstech::UGemini::Models::Generation::Schema']]],
-  ['geminischemadatatype_16',['GeminiSchemaDataType',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_schema.html#ae671d3dddc6cd918d4dd4966bee019ef',1,'Uralstech::UGemini::Models::Generation::Schema']]]
+  ['geminischemadatatype_16',['GeminiSchemaDataType',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_schema.html#ae671d3dddc6cd918d4dd4966bee019ef',1,'Uralstech::UGemini::Models::Generation::Schema']]],
+  ['geminitunedmodelstate_17',['GeminiTunedModelState',['../namespace_uralstech_1_1_u_gemini_1_1_models_1_1_tuning.html#a48767ee443c748500e4520a618fc455d',1,'Uralstech::UGemini::Models::Tuning']]]
 ];
