@@ -53,6 +53,20 @@ namespace Uralstech.UGemini
         }
 
         /// <summary>
+        /// Computes a POST request on the Gemini API.
+        /// </summary>
+        /// <param name="request">The request object.</param>
+        /// <exception cref="GeminiRequestException">Thrown when the API request fails.</exception>
+        public async Task Request(IGeminiPostRequest request)
+        {
+            string utf8RequestData = request.GetUtf8EncodedData();
+            string requestEndpoint = request.GetEndpointUri(null);
+
+            using UnityWebRequest webRequest = UnityWebRequest.Post(requestEndpoint, utf8RequestData, request.ContentType);
+            await ComputeRequest(webRequest);
+        }
+
+        /// <summary>
         /// Computes a multi-part POST request on the Gemini API.
         /// </summary>
         /// 

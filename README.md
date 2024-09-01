@@ -77,16 +77,15 @@ Do not use preview versions (i.e. versions that end with "-preview") for product
 - [x] `media` endpoint 🧪
     - [x] `upload` method
     
-- [x] `tunedModels` endpoint ⚠️
+- [x] `tunedModels` endpoint (Unstable)
     - [x] `create` method
     - [x] `delete` method
     - [x] `generateContent` method
     - [x] `get` method
     - [x] `list` method
-    - [ ] `patch` method
-    - [ ] `transferOwnership` method
+    - [x] `patch` method
+    - [x] `transferOwnership` method
 
-⚠️ - Not all methods/features are supported<br/>
 🧪 - Using the v1beta API
 
 ### Documentation
