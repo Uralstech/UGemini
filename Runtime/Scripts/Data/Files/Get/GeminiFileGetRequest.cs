@@ -18,7 +18,7 @@
         /// </summary>
         public string FileId;
 
-        /// <inheritdoc>
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return $"https://generativelanguage.googleapis.com/{ApiVersion}/files/{FileId}";

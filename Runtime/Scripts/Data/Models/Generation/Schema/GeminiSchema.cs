@@ -29,7 +29,7 @@ namespace Uralstech.UGemini.Models.Generation.Schema
         public string Description = null;
 
         /// <summary>
-        /// Indicates if the value may be <see cref="null"/>.
+        /// Indicates if the value may be <see langword="null"/>.
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public bool? Nullable = null;

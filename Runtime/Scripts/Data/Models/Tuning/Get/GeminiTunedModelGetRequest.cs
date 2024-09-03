@@ -15,7 +15,7 @@
         /// </summary>
         public GeminiModelId TunedModel;
 
-        /// <inheritdoc>
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return $"https://generativelanguage.googleapis.com/{ApiVersion}/{TunedModel.Name}";

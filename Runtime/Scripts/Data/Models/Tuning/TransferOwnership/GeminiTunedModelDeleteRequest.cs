@@ -26,11 +26,11 @@ namespace Uralstech.UGemini.Models.Tuning
         [JsonIgnore]
         public GeminiModelId TunedModel;
 
-        /// <inheritdoc>
+        /// <inheritdoc/>
         [JsonIgnore]
         public string ContentType => GeminiContentType.ApplicationJSON.MimeType();
 
-        /// <inheritdoc>
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return $"https://generativelanguage.googleapis.com/{ApiVersion}/{TunedModel.Name}:transferOwnership";
@@ -47,7 +47,7 @@ namespace Uralstech.UGemini.Models.Tuning
             ApiVersion = useBetaApi ? "v1beta" : "v1";
         }
 
-        /// <inheritdoc>
+        /// <inheritdoc/>
         public string GetUtf8EncodedData()
         {
             return JsonConvert.SerializeObject(this);

@@ -8,13 +8,13 @@ namespace Uralstech.UGemini.Models
     /// </summary>
     public class GeminiModelIdStringConverter : JsonConverter<GeminiModelId>
     {
-        /// <inheritdoc>/>
+        /// <inheritdoc/>/>
         public override GeminiModelId ReadJson(JsonReader reader, Type objectType, GeminiModelId existingValue, bool hasExistingValue, JsonSerializer serializer)
         {
             return new GeminiModelId((string)reader.Value);
         }
 
-        /// <inheritdoc>/>
+        /// <inheritdoc/>/>
         public override void WriteJson(JsonWriter writer, GeminiModelId value, JsonSerializer serializer)
         {
             writer.WriteValue(value.Name);
