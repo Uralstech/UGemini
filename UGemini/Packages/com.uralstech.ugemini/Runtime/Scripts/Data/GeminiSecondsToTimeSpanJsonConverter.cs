@@ -8,13 +8,13 @@ namespace Uralstech.UGemini
     /// </summary>
     public class GeminiSecondsToTimeSpanJsonConverter : JsonConverter<TimeSpan>
     {
-        /// <inheritdoc>/>
+        /// <inheritdoc/>/>
         public override TimeSpan ReadJson(JsonReader reader, Type objectType, TimeSpan existingValue, bool hasExistingValue, JsonSerializer serializer)
         {
             return TimeSpan.FromSeconds(double.Parse(((string)reader.Value).TrimEnd('s')));
         }
 
-        /// <inheritdoc>/>
+        /// <inheritdoc/>/>
         public override void WriteJson(JsonWriter writer, TimeSpan value, JsonSerializer serializer)
         {
             writer.WriteValue($"{value.TotalSeconds:F9}s");

@@ -17,7 +17,7 @@ namespace Uralstech.UGemini.Models.Tuning
         /// </summary>
         /// <remarks>
         /// This value should be up to 40 characters, the first character must be a letter, the last could<br/>
-        /// be a letter or a number. The id must match the regular expression: <c>[a-z]([a-z0-9-]{0,38}[a-z0-9])?</c>.
+        /// be a letter or a number.
         /// </remarks>
         public GeminiModelId ModelId = string.Empty;
 

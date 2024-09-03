@@ -26,7 +26,7 @@
         /// </summary>
         public string PageToken = string.Empty;
 
-        /// <inheritdoc>
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return string.IsNullOrEmpty(PageToken)

@@ -82,6 +82,7 @@ namespace Uralstech.UGemini.Models.Tuning
         /// </remarks>
         public int TopK;
 
+        /// <exclude />
         [JsonConstructor]
         internal GeminiTunedModel(
             string name,

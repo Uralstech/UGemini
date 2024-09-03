@@ -20,7 +20,6 @@ namespace Uralstech.UGemini.Models
         /// <summary>
         /// The resource name of the model to get, in the format models/{model}.
         /// </summary>
-        /// \deprecated This has been deprecated, please use <see cref="Model"/> instead.
         [Obsolete("This has been deprecated, please use GeminiModelGetRequest.Model instead.")]
         public string ModelName
         {
@@ -28,7 +27,7 @@ namespace Uralstech.UGemini.Models
             set => Model = new GeminiModelId(value);
         }
 
-        /// <inheritdoc>
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return $"https://generativelanguage.googleapis.com/{ApiVersion}/{Model.Name}";

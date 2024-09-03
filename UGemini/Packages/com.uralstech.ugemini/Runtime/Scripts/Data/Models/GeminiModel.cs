@@ -143,6 +143,7 @@ namespace Uralstech.UGemini.Models
         /// </remarks>
         public int TopK;
 
+        /// <exclude />
         [JsonConstructor]
         internal GeminiModel(
             string name,

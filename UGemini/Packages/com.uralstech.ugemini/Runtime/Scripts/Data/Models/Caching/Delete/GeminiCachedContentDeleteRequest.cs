@@ -18,7 +18,7 @@ namespace Uralstech.UGemini.Models.Caching
         /// </summary>
         public string ContentId;
 
-        /// <inheritdoc>
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return $"https://generativelanguage.googleapis.com/{ApiVersion}/cachedContents/{ContentId}";

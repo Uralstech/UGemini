@@ -168,7 +168,7 @@ namespace Uralstech.UGemini.Models.Generation.Chat
             }
             catch (Exception e)
             {
-                Debug.LogError($"Failed to process streamed data: {e.Message}");
+                Debug.LogError($"Failed to process streamed data:\n{e}");
             }
         }
     }

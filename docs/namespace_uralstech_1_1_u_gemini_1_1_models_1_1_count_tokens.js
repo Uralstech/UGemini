@@ -1,5 +1,0 @@
-var namespace_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens =
-[
-    [ "GeminiTokenCountRequest", "class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_request.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_request" ],
-    [ "GeminiTokenCountResponse", "class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_response.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_count_tokens_1_1_gemini_token_count_response" ]
-];

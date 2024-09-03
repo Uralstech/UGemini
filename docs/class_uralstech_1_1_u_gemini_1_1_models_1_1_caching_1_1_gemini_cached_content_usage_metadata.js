@@ -1,4 +1,0 @@
-var class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_usage_metadata =
-[
-    [ "TotalTokenCount", "class_uralstech_1_1_u_gemini_1_1_models_1_1_caching_1_1_gemini_cached_content_usage_metadata.html#a7abad5301498779f246a9c04e5c5b99f", null ]
-];

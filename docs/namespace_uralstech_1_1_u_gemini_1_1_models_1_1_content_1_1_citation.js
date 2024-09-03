@@ -1,5 +1,0 @@
-var namespace_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_citation =
-[
-    [ "GeminiCitationMetadata", "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_citation_1_1_gemini_citation_metadata.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_citation_1_1_gemini_citation_metadata" ],
-    [ "GeminiCitationSource", "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_citation_1_1_gemini_citation_source.html", "class_uralstech_1_1_u_gemini_1_1_models_1_1_content_1_1_citation_1_1_gemini_citation_source" ]
-];
