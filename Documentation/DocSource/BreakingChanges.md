@@ -1,15 +1,15 @@
-## Breaking Changes Notice
+# Breaking Changes Notice
 
 UGemini v2.0.0 contains many breaking changes. To update your code to use UGemini 2.0.0,
 refer to the following list and table of changes:
 
-### General Changes
+## General Changes
 - `EnumExtensions` is now `GeminiContentTypeExtensions`.
 - `GeminiTimeSpanJsonConverter` is now `GeminiSecondsToTimeSpanJsonConverter` in `Uralstech.UGemini`.
 - The `fileId` field in the constructors for `GeminiFileDeleteRequest` and `GeminiFileGetRequest` has been renamed to `fileNameOrId`.
 - All code previously marked as "deprecated" has been removed.
 
-### Namespace Changes
+## Namespace Changes
 
 | Class                                 | Old Namespace                             | New Namespace                                                             |
 |-----------                            |---------------                            |---------------                                                            |
