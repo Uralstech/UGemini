@@ -3,8 +3,11 @@ using Newtonsoft.Json;
 namespace Uralstech.UGemini.Models.Tuning
 {
     /// <summary>
-    /// Creates a tuned model. Response type is <see cref="GeminiTunedModel"/>.
+    /// Creates a tuned model. Response type is <see cref="GeminiTunedModelCreateResponse"/>.
     /// </summary>
+    /// <remarks>
+    /// Only available in the beta API.
+    /// </remarks>
     public class GeminiTunedModelCreateRequest : IGeminiPostRequest
     {
         /// <summary>
@@ -30,6 +33,12 @@ namespace Uralstech.UGemini.Models.Tuning
         public string ContentType => GeminiContentType.ApplicationJSON.MimeType();
 
         /// <inheritdoc/>
+        public GeminiAuthMethod AuthMethod { get; set; } = GeminiAuthMethod.OAuthAccessToken;
+
+        /// <inheritdoc/>
+        public string OAuthAccessToken { get; set; } = string.Empty;
+
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return !string.IsNullOrEmpty(ModelId)
@@ -40,9 +49,12 @@ namespace Uralstech.UGemini.Models.Tuning
         /// <summary>
         /// Creates a new <see cref="GeminiTunedModelCreateRequest"/>.
         /// </summary>
+        /// <remarks>
+        /// Only available in the beta API.
+        /// </remarks>
         /// <param name="model">The tuned model to be created.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiTunedModelCreateRequest(GeminiTunedModelCreationData model, bool useBetaApi = false)
+        public GeminiTunedModelCreateRequest(GeminiTunedModelCreationData model, bool useBetaApi = true)
         {
             Model = model;
             ApiVersion = useBetaApi ? "v1beta" : "v1";

@@ -42,6 +42,14 @@ namespace Uralstech.UGemini.FileAPI
         [JsonIgnore]
         public string ContentType { get; }
 
+        [JsonIgnore]
+        /// <inheritdoc/>
+        public GeminiAuthMethod AuthMethod { get; set; } = GeminiAuthMethod.APIKey;
+
+        [JsonIgnore]
+        /// <inheritdoc/>
+        public string OAuthAccessToken { get; set; } = string.Empty;
+
         /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
