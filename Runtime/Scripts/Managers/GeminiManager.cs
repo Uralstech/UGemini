@@ -49,7 +49,7 @@ namespace Uralstech.UGemini
             string requestEndpoint = request.GetEndpointUri(null);
 
             using UnityWebRequest webRequest = UnityWebRequest.Post(requestEndpoint, utf8RequestData, request.ContentType);
-            await ComputeRequest(webRequest);
+            await ComputeRequest(request, webRequest);
 
             return ConfirmResponse<TResponse>(webRequest);
         }
@@ -66,7 +66,7 @@ namespace Uralstech.UGemini
             string requestEndpoint = request.GetEndpointUri(null);
 
             using UnityWebRequest webRequest = UnityWebRequest.Post(requestEndpoint, utf8RequestData, request.ContentType);
-            await ComputeRequest(webRequest);
+            await ComputeRequest(request, webRequest);
 
             ConfirmResponse(webRequest);
         }
@@ -93,7 +93,7 @@ namespace Uralstech.UGemini
             using UnityWebRequest webRequest = UnityWebRequest.Post(requestEndpoint, requestData, $"multipart/related; boundary={MultiPartFormDataSeperator}");
             webRequest.SetRequestHeader("X-Goog-Upload-Protocol", "multipart");
 
-            await ComputeRequest(webRequest);
+            await ComputeRequest(request, webRequest);
             return ConfirmResponse<TResponse>(webRequest);
         }
 
@@ -116,7 +116,7 @@ namespace Uralstech.UGemini
             string requestEndpoint = request.GetEndpointUri(null);
 
             using UnityWebRequest webRequest = UnityWebRequest.Get(requestEndpoint);
-            await ComputeRequest(webRequest);
+            await ComputeRequest(request, webRequest);
 
             return ConfirmResponse<TResponse>(webRequest);
         }
@@ -132,7 +132,7 @@ namespace Uralstech.UGemini
             string requestEndpoint = request.GetEndpointUri(null);
             using UnityWebRequest webRequest = UnityWebRequest.Delete(requestEndpoint);
 
-            await ComputeRequest(webRequest);
+            await ComputeRequest(request, webRequest);
             ConfirmResponse(webRequest);
         }
 
@@ -165,7 +165,7 @@ namespace Uralstech.UGemini
             );
 
             webRequest.SetRequestHeader("Content-Type", request.ContentType);
-            await ComputeRequest(webRequest);
+            await ComputeRequest(request, webRequest);
 
             return ConfirmResponse<TResponse>(webRequest);
         }
@@ -197,7 +197,7 @@ namespace Uralstech.UGemini
             });
 
             using UnityWebRequest webRequest = UnityWebRequest.Post(requestEndpoint, utf8RequestData, request.ContentType);
-            SetupWebRequest(webRequest);
+            SetupWebRequest(request, webRequest);
 
             await webRequest.SendStreamingWebRequest(request.ProcessStreamedData);
             CheckWebRequest(webRequest);
@@ -209,10 +209,11 @@ namespace Uralstech.UGemini
         /// <summary>
         /// Sets up, sends and verifies a <see cref="UnityWebRequest"/>.
         /// </summary>
+        /// <param name="request">The request data.</param>
         /// <param name="webRequest">The <see cref="UnityWebRequest"/> to compute.</param>
-        private async Task ComputeRequest(UnityWebRequest webRequest)
+        private async Task ComputeRequest(IGeminiRequest request, UnityWebRequest webRequest)
         {
-            SetupWebRequest(webRequest);
+            SetupWebRequest(request, webRequest);
 
             UnityWebRequestAsyncOperation operation = webRequest.SendWebRequest();
             while (!operation.isDone)
@@ -224,10 +225,27 @@ namespace Uralstech.UGemini
         /// <summary>
         /// Sets up the <see cref="UnityWebRequest"/> with API keys and disposal settings.
         /// </summary>
+        /// <param name="request">The request data.</param>
         /// <param name="webRequest">The request to set up.</param>
-        private void SetupWebRequest(UnityWebRequest webRequest)
+        /// <exception cref="GeminiOAuthException">Thrown if the request could not be authenticated.</exception>
+        private void SetupWebRequest(IGeminiRequest request, UnityWebRequest webRequest)
         {
-            webRequest.SetRequestHeader("X-goog-api-key", _geminiApiKey);
+            switch (request.AuthMethod)
+            {
+                case GeminiAuthMethod.APIKey:
+                    webRequest.SetRequestHeader("X-goog-api-key", _geminiApiKey); break;
+                
+                case GeminiAuthMethod.OAuthAccessToken:
+                    if (string.IsNullOrWhiteSpace(request.OAuthAccessToken))
+                        throw new GeminiOAuthException(webRequest, $"Authentication method was set to {request.AuthMethod} but the provided access token was empty!");
+
+                    webRequest.SetRequestHeader("Authorization", $"Bearer {request.OAuthAccessToken}"); break;
+                
+                default:
+                    throw new GeminiOAuthException(webRequest, $"Unknown authentication method {request.AuthMethod}.");
+            }
+
+
             webRequest.disposeUploadHandlerOnDispose = true;
             webRequest.disposeDownloadHandlerOnDispose = true;
         }
@@ -236,7 +254,7 @@ namespace Uralstech.UGemini
         /// Checks the given <see cref="UnityWebRequest"/> for errors.
         /// </summary>
         /// <param name="webRequest">The request to check.</param>
-        /// <exception cref="GeminiRequestException">Thrown if the request was not successful</exception>
+        /// <exception cref="GeminiRequestException">Thrown if the request was not successful.</exception>
         private void CheckWebRequest(UnityWebRequest webRequest)
         {
             if (webRequest.result != UnityWebRequest.Result.Success)

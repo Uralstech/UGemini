@@ -24,6 +24,12 @@
         public string PageToken = string.Empty;
 
         /// <inheritdoc/>
+        public GeminiAuthMethod AuthMethod { get; set; } = GeminiAuthMethod.APIKey;
+
+        /// <inheritdoc/>
+        public string OAuthAccessToken { get; set; } = string.Empty;
+
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return string.IsNullOrEmpty(PageToken)

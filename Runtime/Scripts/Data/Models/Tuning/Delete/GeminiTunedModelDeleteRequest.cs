@@ -3,6 +3,9 @@ namespace Uralstech.UGemini.Models.Tuning
     /// <summary>
     /// Requests for deletion of a tuned model.
     /// </summary>
+    /// <remarks>
+    /// Only available in the beta API.
+    /// </remarks>
     public class GeminiTunedModelDeleteRequest : IGeminiDeleteRequest
     {
         /// <summary>
@@ -16,6 +19,12 @@ namespace Uralstech.UGemini.Models.Tuning
         public GeminiModelId TunedModel;
 
         /// <inheritdoc/>
+        public GeminiAuthMethod AuthMethod { get; set; } = GeminiAuthMethod.OAuthAccessToken;
+
+        /// <inheritdoc/>
+        public string OAuthAccessToken { get; set; } = string.Empty;
+
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return $"https://generativelanguage.googleapis.com/{ApiVersion}/{TunedModel.Name}";
@@ -24,9 +33,12 @@ namespace Uralstech.UGemini.Models.Tuning
         /// <summary>
         /// Creates a new <see cref="GeminiTunedModelDeleteRequest"/>.
         /// </summary>
+        /// <remarks>
+        /// Only available in the beta API.
+        /// </remarks>
         /// <param name="tunedModel">The ID of the tuned model to delete.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiTunedModelDeleteRequest(GeminiModelId tunedModel, bool useBetaApi = false)
+        public GeminiTunedModelDeleteRequest(GeminiModelId tunedModel, bool useBetaApi = true)
         {
             TunedModel = tunedModel;
             ApiVersion = useBetaApi ? "v1beta" : "v1";

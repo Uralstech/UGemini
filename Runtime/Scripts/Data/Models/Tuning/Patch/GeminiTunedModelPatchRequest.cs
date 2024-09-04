@@ -5,6 +5,9 @@ namespace Uralstech.UGemini.Models.Tuning
     /// <summary>
     /// Updates a tuned model. Response type is <see cref="GeminiTunedModel"/>.
     /// </summary>
+    /// <remarks>
+    /// Only available in the beta API.
+    /// </remarks>
     public class GeminiTunedModelPatchRequest : IGeminiPatchRequest
     {
         /// <summary>
@@ -26,6 +29,12 @@ namespace Uralstech.UGemini.Models.Tuning
         public string ContentType => GeminiContentType.ApplicationJSON.MimeType();
 
         /// <inheritdoc/>
+        public GeminiAuthMethod AuthMethod { get; set; } = GeminiAuthMethod.OAuthAccessToken;
+
+        /// <inheritdoc/>
+        public string OAuthAccessToken { get; set; } = string.Empty;
+
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return $"https://generativelanguage.googleapis.com/{ApiVersion}/{TunedModel.Name}";
@@ -34,10 +43,13 @@ namespace Uralstech.UGemini.Models.Tuning
         /// <summary>
         /// Creates a new <see cref="GeminiTunedModelPatchRequest"/>.
         /// </summary>
+        /// <remarks>
+        /// Only available in the beta API.
+        /// </remarks>
         /// <param name="patch">The patch data.</param>
         /// <param name="tunedModel">The ID of the tuned model to patch.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiTunedModelPatchRequest(GeminiTunedModelPatchData patch, GeminiModelId tunedModel, bool useBetaApi = false)
+        public GeminiTunedModelPatchRequest(GeminiTunedModelPatchData patch, GeminiModelId tunedModel, bool useBetaApi = true)
         {
             Patch = patch;
             TunedModel = tunedModel;

@@ -6,6 +6,9 @@ namespace Uralstech.UGemini.Models.Tuning
     /// <summary>
     /// Transfers ownership of the tuned model. This is the only way to change ownership of the tuned model. The current owner will be downgraded to writer role. Does not return anything.
     /// </summary>
+    /// <remarks>
+    /// Only available in the beta API.
+    /// </remarks>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class GeminiTunedModelTransferOwnershipRequest : IGeminiPostRequest
     {
@@ -31,6 +34,12 @@ namespace Uralstech.UGemini.Models.Tuning
         public string ContentType => GeminiContentType.ApplicationJSON.MimeType();
 
         /// <inheritdoc/>
+        public GeminiAuthMethod AuthMethod { get; set; } = GeminiAuthMethod.OAuthAccessToken;
+
+        /// <inheritdoc/>
+        public string OAuthAccessToken { get; set; } = string.Empty;
+
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return $"https://generativelanguage.googleapis.com/{ApiVersion}/{TunedModel.Name}:transferOwnership";
@@ -39,9 +48,12 @@ namespace Uralstech.UGemini.Models.Tuning
         /// <summary>
         /// Creates a new <see cref="GeminiTunedModelTransferOwnershipRequest"/>.
         /// </summary>
+        /// <remarks>
+        /// Only available in the beta API.
+        /// </remarks>
         /// <param name="tunedModel">The ID of the tuned model to transfer.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiTunedModelTransferOwnershipRequest(GeminiModelId tunedModel, bool useBetaApi = false)
+        public GeminiTunedModelTransferOwnershipRequest(GeminiModelId tunedModel, bool useBetaApi = true)
         {
             TunedModel = tunedModel;
             ApiVersion = useBetaApi ? "v1beta" : "v1";
