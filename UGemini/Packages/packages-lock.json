@@ -149,12 +149,23 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.uralstech.ucloud.operations": {
+      "version": "1.0.0-preview.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.uralstech.utils.singleton": "1.0.1",
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      },
+      "url": "https://package.openupm.com"
+    },
     "com.uralstech.ugemini": {
       "version": "file:com.uralstech.ugemini",
       "depth": 0,
       "source": "embedded",
       "dependencies": {
         "com.uralstech.utils.singleton": "1.0.1",
+        "com.uralstech.ucloud.operations": "1.0.0-preview.1",
         "com.unity.nuget.newtonsoft-json": "3.2.1"
       }
     },

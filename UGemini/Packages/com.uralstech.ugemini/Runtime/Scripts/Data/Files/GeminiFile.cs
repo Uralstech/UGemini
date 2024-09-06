@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
-using Uralstech.UGemini.Status;
+using Uralstech.UCloud.Operations;
 
 namespace Uralstech.UGemini.FileAPI
 {
@@ -71,7 +71,7 @@ namespace Uralstech.UGemini.FileAPI
         /// Error status if <see cref="GeminiFile"/> processing failed.
         /// </summary>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public GeminiStatus Status;
+        public OperationStatus Status;
 
         /// <summary>
         /// Metadata for a video.
