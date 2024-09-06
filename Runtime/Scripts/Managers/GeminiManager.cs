@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
 using Uralstech.UGemini.Exceptions;
-using Uralstech.UGemini.Utils.Singleton;
 using Uralstech.UGemini.Utils.Web;
+using Uralstech.Utils.Singleton;
 
 namespace Uralstech.UGemini
 {
