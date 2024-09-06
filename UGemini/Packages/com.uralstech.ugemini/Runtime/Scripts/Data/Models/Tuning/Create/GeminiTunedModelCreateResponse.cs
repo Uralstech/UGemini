@@ -28,7 +28,7 @@ namespace Uralstech.UGemini.Models.Tuning
         /// "id" as a field in <see cref="GeminiStatusDetails.Data"/>.
         /// </remarks>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public GeminiStatusDetails Metadata = null;
+        public GeminiTunedModelCreationOperationMetadata Metadata = null;
 
         /// <summary>
         /// If the value is false, it means the operation is still in progress. If true, the operation is completed, and either error or response is available.
