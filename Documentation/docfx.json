@@ -5,13 +5,14 @@
         {
           "src": "../UGemini",
           "files": [
-            "**/*.csproj"
+            "Packages/com.uralstech.ugemini/Runtime/**/*.cs"
           ]
         }
       ],
       "dest": "api",
       "filter": "filterConfig.yml",
-      "includePrivateMembers": true
+      "includePrivateMembers": true,
+      "allowCompilationErrors": true
     }
   ],
   "build": {
