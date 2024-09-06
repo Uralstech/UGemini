@@ -90,4 +90,4 @@ Do not use preview versions (i.e. versions that end with "-preview") for product
 
 ### Documentation
 
-See <https://uralstech.github.io/UGemini/> or `refman.pdf` in the package documentation for reference manual w/ tutorial.
+See <https://uralstech.github.io/UGemini/DocSource/QuickStart.html> or `refman.pdf` in the package documentation for reference manual w/ tutorial.
