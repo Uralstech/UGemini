@@ -77,7 +77,7 @@ Do not use preview versions (i.e. versions that end with "-preview") for product
 - [x] `media` endpoint 🧪
     - [x] `upload` method
     
-- [x] `tunedModels` endpoint (Unstable)
+- [x] `tunedModels` endpoint 🧪 (Unstable)
     - [x] `create` method
     - [x] `delete` method
     - [x] `generateContent` method
@@ -85,6 +85,15 @@ Do not use preview versions (i.e. versions that end with "-preview") for product
     - [x] `list` method
     - [x] `patch` method
     - [x] `transferOwnership` method
+
+- [x] `tunedModels.operations` endpoint (Unstable)
+    - [x] `cancel` method
+    - [x] `get` method
+    - [x] `list` method
+    
+- [x] `operations` endpoint (Unstable)
+    - [x] `delete` method
+    - [x] `list` method
 
 🧪 - Using the v1beta API
 
