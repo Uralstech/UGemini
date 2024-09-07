@@ -10,12 +10,6 @@ namespace Uralstech.UGemini.Models.Tuning
     public class GeminiTunedModelCreationOperationMetadata
     {
         /// <summary>
-        /// Contains a URI identifying the type.
-        /// </summary>
-        [JsonProperty("@type")]
-        public string Type;
-
-        /// <summary>
         /// The ID of the model being tuned.
         /// </summary>
         [JsonConverter(typeof(GeminiModelIdStringConverter))]
