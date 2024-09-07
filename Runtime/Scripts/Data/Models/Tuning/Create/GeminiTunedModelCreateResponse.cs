@@ -1,6 +1,5 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using Uralstech.UCloud;
 using Uralstech.UCloud.Operations.Generic;
 
 namespace Uralstech.UGemini.Models.Tuning
@@ -9,5 +8,5 @@ namespace Uralstech.UGemini.Models.Tuning
     /// The response type for a <see cref="GeminiTunedModelCreateRequest"/>.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class GeminiTunedModelCreateResponse : Operation<GeminiTunedModelCreationOperationMetadata, ProtobufObject> { }
+    public class GeminiTunedModelCreateResponse : Operation<GeminiTunedModelCreationOperationMetadata, GeminiTunedModel> { }
 }

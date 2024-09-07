@@ -26,6 +26,11 @@ namespace Uralstech.UGemini
         /// </summary>
         private const string MultiPartFormDataSeperator = "xxxxxxxxxx";
 
+        /// <summary>
+        /// An empty JSON object.
+        /// </summary>
+        private const string EmptyJsonObject = "{}";
+
         [SerializeField, Tooltip("Your Gemini API key.")] private string _geminiApiKey;
 
         /// <summary>
@@ -297,7 +302,7 @@ namespace Uralstech.UGemini
         /// <exception cref="GeminiResponseParsingException">Thrown if the response was not empty.</exception>
         private void ConfirmResponse(UnityWebRequest request)
         {
-            if (!string.IsNullOrEmpty(request.downloadHandler?.text))
+            if (!string.IsNullOrEmpty(request.downloadHandler?.text) || request.downloadHandler.text.Trim() == EmptyJsonObject)
             {
                 Debug.LogError($"Failed to confirm successful API response:\n{request.downloadHandler?.text}");
                 throw new GeminiResponseParsingException(request);
