@@ -42,7 +42,7 @@ namespace Uralstech.UGemini.Models.Tuning
         /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"https://generativelanguage.googleapis.com/{ApiVersion}/{TunedModel.Name}:transferOwnership";
+            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{TunedModel.Name}:transferOwnership";
         }
 
         /// <summary>

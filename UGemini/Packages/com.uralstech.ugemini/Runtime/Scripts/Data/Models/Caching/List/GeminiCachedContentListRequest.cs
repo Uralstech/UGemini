@@ -36,8 +36,8 @@
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return string.IsNullOrEmpty(PageToken)
-                ? $"https://generativelanguage.googleapis.com/{ApiVersion}/cachedContents?pageSize={MaxResponseContents}"
-                : $"https://generativelanguage.googleapis.com/{ApiVersion}/cachedContents?pageSize={MaxResponseContents}&pageToken={PageToken}";
+                ? $"{GeminiManager.BaseServiceUri}/{ApiVersion}/cachedContents?pageSize={MaxResponseContents}"
+                : $"{GeminiManager.BaseServiceUri}/{ApiVersion}/cachedContents?pageSize={MaxResponseContents}&pageToken={PageToken}";
         }
 
         /// <summary>

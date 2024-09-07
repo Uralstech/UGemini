@@ -16,6 +16,14 @@ namespace Uralstech.UGemini
     [AddComponentMenu("Uralstech/UGemini/Gemini API Manager")]
     public class GeminiManager : Singleton<GeminiManager>
     {
+        /// <summary>
+        /// The base URI for the Generative Language service.
+        /// </summary>
+        public const string BaseServiceUri = "https://generativelanguage.googleapis.com";
+
+        /// <summary>
+        /// Seperator for Multi-Part Form Data.
+        /// </summary>
         private const string MultiPartFormDataSeperator = "xxxxxxxxxx";
 
         [SerializeField, Tooltip("Your Gemini API key.")] private string _geminiApiKey;

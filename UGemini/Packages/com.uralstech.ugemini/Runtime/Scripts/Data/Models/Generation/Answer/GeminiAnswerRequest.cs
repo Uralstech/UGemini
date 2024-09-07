@@ -104,7 +104,7 @@ namespace Uralstech.UGemini.Models.Generation.QuestionAnswering
         /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"https://generativelanguage.googleapis.com/{ApiVersion}/{Model.Name}:generateAnswer";
+            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{Model.Name}:generateAnswer";
         }
 
         /// <summary>

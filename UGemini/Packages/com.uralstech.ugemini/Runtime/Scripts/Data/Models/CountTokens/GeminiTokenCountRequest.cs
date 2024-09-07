@@ -51,7 +51,7 @@ namespace Uralstech.UGemini.Models.CountTokens
         /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"https://generativelanguage.googleapis.com/{ApiVersion}/{Model.Name}:countTokens";
+            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{Model.Name}:countTokens";
         }
 
         /// <summary>
