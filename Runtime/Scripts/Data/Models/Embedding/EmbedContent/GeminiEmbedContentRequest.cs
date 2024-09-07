@@ -71,7 +71,7 @@ namespace Uralstech.UGemini.Models.Embedding
         /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"https://generativelanguage.googleapis.com/{ApiVersion}/{Model.Name}:embedContent";
+            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{Model.Name}:embedContent";
         }
 
         /// <summary>

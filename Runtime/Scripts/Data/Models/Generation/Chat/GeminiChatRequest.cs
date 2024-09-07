@@ -126,8 +126,8 @@ namespace Uralstech.UGemini.Models.Generation.Chat
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return metadata?.IsStreaming == true
-                ? $"https://generativelanguage.googleapis.com/{ApiVersion}/{Model.Name}:streamGenerateContent"
-                : $"https://generativelanguage.googleapis.com/{ApiVersion}/{Model.Name}:generateContent";
+                ? $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{Model.Name}:streamGenerateContent"
+                : $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{Model.Name}:generateContent";
         }
 
         /// <summary>

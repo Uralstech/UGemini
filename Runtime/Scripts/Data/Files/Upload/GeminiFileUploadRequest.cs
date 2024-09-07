@@ -53,7 +53,7 @@ namespace Uralstech.UGemini.FileAPI
         /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"https://generativelanguage.googleapis.com/upload/{ApiVersion}/files";
+            return $"{GeminiManager.BaseServiceUri}/upload/{ApiVersion}/files";
         }
 
         /// <summary>

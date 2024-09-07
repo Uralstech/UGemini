@@ -68,7 +68,7 @@
   ],
   "dependencies": {
     "com.uralstech.utils.singleton": "1.0.1",
-    "com.uralstech.ucloud.operations": "1.0.0-preview.2",
+    "com.uralstech.ucloud.operations": "1.0.0",
     "com.unity.nuget.newtonsoft-json": "3.2.1"
   }
 }

@@ -33,8 +33,8 @@
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return string.IsNullOrEmpty(PageToken)
-                ? $"https://generativelanguage.googleapis.com/{ApiVersion}/models?pageSize={MaxResponseModels}"
-                : $"https://generativelanguage.googleapis.com/{ApiVersion}/models?pageSize={MaxResponseModels}&pageToken={PageToken}";
+                ? $"{GeminiManager.BaseServiceUri}/{ApiVersion}/models?pageSize={MaxResponseModels}"
+                : $"{GeminiManager.BaseServiceUri}/{ApiVersion}/models?pageSize={MaxResponseModels}&pageToken={PageToken}";
         }
 
         /// <summary>

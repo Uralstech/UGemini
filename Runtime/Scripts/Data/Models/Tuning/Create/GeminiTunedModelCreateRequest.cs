@@ -42,8 +42,8 @@ namespace Uralstech.UGemini.Models.Tuning
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return !string.IsNullOrEmpty(ModelId)
-                ? $"https://generativelanguage.googleapis.com/{ApiVersion}/tunedModels?tunedModelId={ModelId.BaseModelId}"
-                : $"https://generativelanguage.googleapis.com/{ApiVersion}/tunedModels";
+                ? $"{GeminiManager.BaseServiceUri}/{ApiVersion}/tunedModels?tunedModelId={ModelId.BaseModelId}"
+                : $"{GeminiManager.BaseServiceUri}/{ApiVersion}/tunedModels";
         }
 
         /// <summary>
