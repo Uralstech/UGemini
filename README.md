@@ -92,7 +92,6 @@ Do not use preview versions (i.e. versions that end with "-preview") for product
     - [x] `list` method
     
 - [x] `operations` endpoint\*
-    - [x] `delete` method
     - [x] `list` method
 
 🧪 - Using the v1beta API
