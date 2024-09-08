@@ -9,7 +9,7 @@
     "AI",
     "Integration"
   ],
-  "version": "2.1.0-preview.5",
+  "version": "2.1.0-preview.6",
   "unity": "2022.3",
   "hideInEditor": false,
   "documentationUrl": "https://uralstech.github.io/UGemini/",
@@ -68,7 +68,7 @@
   ],
   "dependencies": {
     "com.uralstech.utils.singleton": "1.0.1",
-    "com.uralstech.ucloud.operations": "1.1.0",
+    "com.uralstech.ucloud.operations": "1.1.1",
     "com.unity.nuget.newtonsoft-json": "3.2.1"
   }
 }
