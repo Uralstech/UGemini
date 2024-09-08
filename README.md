@@ -5,11 +5,11 @@ A Unity C# wrapper for the Google Gemini API.
 [![openupm](https://img.shields.io/npm/v/com.uralstech.ugemini?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.uralstech.ugemini/)
 [![openupm](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=downloads&query=%24.downloads&suffix=%2Fmonth&url=https%3A%2F%2Fpackage.openupm.com%2Fdownloads%2Fpoint%2Flast-month%2Fcom.uralstech.ugemini)](https://openupm.com/packages/com.uralstech.ugemini/)
 
-### Installation
+## Installation
 
 This *should* work on any reasonably modern Unity version. Built and tested in Unity 2022.3.29f1.
 
-#### From OpenUPM Through Unity Package Manager
+### OpenUPM
 
 1. Open project settings
 2. Select `Package Manager`
@@ -18,12 +18,12 @@ This *should* work on any reasonably modern Unity version. Built and tested in U
     - URL: `https://package.openupm.com`
     - Scope(s)
         - `com.uralstech`
-        - `com.utilities`*
+        - `com.utilities`\*
 4. Open the Unity Package Manager window (`Window` -> `Package Manager`)
 5. Change the registry from `Unity` to `My Registries`
-6. Add the `UGemini`, `Utilities.Async`* and `Utilities.Encoder.Wav`* packages
+6. Add the `UGemini`, `Utilities.Async`\* and `Utilities.Encoder.Wav`\* packages
 
-#### From GitHub Through Unity Package Manager
+### Unity Package Manager
 
 1. Open the Unity Package Manager window (`Window` -> `Package Manager`)
 2. Select the `+` icon and `Add package from git URL...`
@@ -31,9 +31,9 @@ This *should* work on any reasonably modern Unity version. Built and tested in U
     - `https://github.com/Uralstech/UGemini.git#upm`
 
 *Adding additional dependencies:*<br/>
-Follow the steps detailed in the OpenUPM installation method and only install the `Utilities.Async`* and `Utilities.Encoder.Wav`* packages.
+See the installation steps for the [Utilities.Async](https://github.com/rageAgainstThePixel/com.utilities.async)\* and [Utilities.Encoder.Wav](https://github.com/rageAgainstThePixel/com.utilities.encoder.wav)\* packages.
 
-#### From GitHub Clone/Download
+### GitHub Clone
 
 1. Clone or download the repository from the desired branch (master, preview/unstable)
 2. Drag the package folder `UGemini/UGemini/Packages/com.uralstech.ugemini` into your Unity project's `Packages` folder
@@ -41,9 +41,9 @@ Follow the steps detailed in the OpenUPM installation method and only install th
     `"com.uralstech.ugemini": "2.x.x",`
 
 *Adding additional dependencies:*<br/>
-Follow the steps detailed in the OpenUPM installation method and only install the `Utilities.Async`* and `Utilities.Encoder.Wav`* packages.
+See the installation steps for the [Utilities.Async](https://github.com/rageAgainstThePixel/com.utilities.async)\* and [Utilities.Encoder.Wav](https://github.com/rageAgainstThePixel/com.utilities.encoder.wav)\* packages.
 
-*Optional, but `Utilities.Async` is required for streaming content and `Utilities.Encoder.Wav` is recommended if you don't want to bother with encoding your AudioClips into Base64 strings manually.
+\*Optional, but `Utilities.Async` is required for streaming content and `Utilities.Encoder.Wav` is recommended if you don't want to bother with encoding your AudioClips into Base64 strings manually.
 
 ### Preview Versions
 
@@ -86,17 +86,19 @@ Do not use preview versions (i.e. versions that end with "-preview") for product
     - [x] `patch` method
     - [x] `transferOwnership` method
 
-- [x] `tunedModels.operations` endpoint (Unstable)
+- [x] `tunedModels.operations` endpoint\*
     - [x] `cancel` method
     - [x] `get` method
     - [x] `list` method
     
-- [x] `operations` endpoint (Unstable)
+- [x] `operations` endpoint\*
     - [x] `delete` method
     - [x] `list` method
 
 🧪 - Using the v1beta API
 
+\*Through package dependency [UCloud.Operations](https://github.com/Uralstech/UCloud.Operations).
+
 ### Documentation
 
-See <https://uralstech.github.io/UGemini/DocSource/QuickStart.html> or `refman.pdf` in the package documentation for reference manual w/ tutorial.
+See <https://uralstech.github.io/UGemini/DocSource/QuickStart.html> or `APIReferenceManual.pdf` and `Documentation.pdf` in the package documentation for the reference manual and tutorial.

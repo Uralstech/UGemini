@@ -92,7 +92,18 @@ Do not use preview versions (i.e. versions that end with "-preview") for product
     - ✔️ `patch` method
     - ✔️ `transferOwnership` method
 
+- ✔️ `tunedModels.operations` endpoint\*
+    - ✔️ `cancel` method
+    - ✔️ `get` method
+    - ✔️ `list` method
+    
+- ✔️ `operations` endpoint\*
+    - ✔️ `delete` method
+    - ✔️ `list` method
+
 🧪 - Using the v1beta API
+
+\*Through package dependency [UCloud.Operations](https://github.com/Uralstech/UCloud.Operations).
 
 ## Documentation
 
