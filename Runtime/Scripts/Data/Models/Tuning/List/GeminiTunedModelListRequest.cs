@@ -14,6 +14,11 @@
         public string ApiVersion;
 
         /// <summary>
+        /// Simple filter to get models by account authorizations.
+        /// </summary>
+        public GeminiTunedModelListFilter Filter;
+
+        /// <summary>
         /// The maximum number of <see cref="GeminiTunedModel"/>s to return (per page).
         /// </summary>
         /// <remarks>
@@ -35,9 +40,13 @@
         /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return string.IsNullOrEmpty(PageToken)
+            string uri = Filter == GeminiTunedModelListFilter.None
                 ? $"{GeminiManager.BaseServiceUri}/{ApiVersion}/tunedModels?pageSize={MaxResponseModels}"
-                : $"{GeminiManager.BaseServiceUri}/{ApiVersion}/tunedModels?pageSize={MaxResponseModels}&pageToken={PageToken}";
+                : $"{GeminiManager.BaseServiceUri}/{ApiVersion}/tunedModels?filter={Filter.EnumMemberValue()}&pageSize={MaxResponseModels}";
+
+            if (!string.IsNullOrEmpty(PageToken))
+                uri += $"&pageToken={PageToken}";
+            return uri;
         }
 
         /// <summary>

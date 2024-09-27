@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 namespace Uralstech.UGemini
 {
     /// <summary>
-    /// Extensions for <see cref="Enum"/> type objects.
+    /// Extensions for <see cref="GeminiContentType"/>.
     /// </summary>
     public static class GeminiContentTypeExtensions
     {
@@ -17,19 +17,7 @@ namespace Uralstech.UGemini
         /// <exception cref="NotImplementedException">Thrown if the MIME type of the enum value could not be found.</exception>
         public static string MimeType(this GeminiContentType enumValue)
         {
-            Type type = typeof(GeminiContentType);
-            MemberInfo[] memberInfo = type.GetMember(enumValue.ToString());
-
-            if (memberInfo != null && memberInfo.Length > 0)
-            {
-                object[] attributes = memberInfo[0].GetCustomAttributes(typeof(EnumMemberAttribute), false);
-
-                if (attributes != null && attributes.Length > 0)
-                    return ((EnumMemberAttribute)attributes[0]).Value;
-            }
-
-            // Throw error if no EnumMember attribute is found.
-            throw new NotImplementedException($"No {nameof(EnumMemberAttribute)} found for content type \"{enumValue}\"!");
+            return enumValue.EnumMemberValue();
         }
 
         /// <summary>
