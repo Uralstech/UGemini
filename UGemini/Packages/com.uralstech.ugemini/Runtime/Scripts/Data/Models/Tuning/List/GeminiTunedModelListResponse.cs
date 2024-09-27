@@ -13,7 +13,7 @@ namespace Uralstech.UGemini.Models.Tuning
         /// The list of tuned models.
         /// </summary>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public GeminiTunedModel[] Models;
+        public GeminiTunedModel[] TunedModels;
 
         /// <summary>
         /// A token that can be sent as a <see cref="GeminiModelListRequest.PageToken"/> into a subsequent <see cref="GeminiModelListRequest"/> call.
