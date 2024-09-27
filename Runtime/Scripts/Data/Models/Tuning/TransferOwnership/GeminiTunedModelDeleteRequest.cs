@@ -34,9 +34,11 @@ namespace Uralstech.UGemini.Models.Tuning
         public string ContentType => GeminiContentType.ApplicationJSON.MimeType();
 
         /// <inheritdoc/>
+        [JsonIgnore]
         public GeminiAuthMethod AuthMethod { get; set; } = GeminiAuthMethod.OAuthAccessToken;
 
         /// <inheritdoc/>
+        [JsonIgnore]
         public string OAuthAccessToken { get; set; } = string.Empty;
 
         /// <inheritdoc/>
