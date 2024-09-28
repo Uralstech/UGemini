@@ -30,15 +30,12 @@ need to use the Beta API. You can set the `useBetaApi` boolean parameter in the 
 
 ## Models
 
-`Uralstech.UGemini.Models.GeminiModel` has four static model IDs:
+`Uralstech.UGemini.Models.GeminiModel` has multiple static model IDs:
 
 - [`Gemini1_5Flash`](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash)
 - [`Gemini1_5Pro`](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro)
 - [`Gemini1_0Pro`](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro)
-- [`Gemini1_0ProVision`](https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro-vision)
-    - Gemini 1.0 Pro Vision is deprecated. Use Use 1.5 Flash (`Gemini1_5Flash`) or 1.5 Pro (`Gemini1_5Pro`) instead.
-- [`TextEmbedding004`](https://ai.google.dev/gemini-api/docs/models/gemini#text-embedding)
-- [`Aqa`](https://ai.google.dev/gemini-api/docs/models/gemini#aqa)
+- And so on...
 
 You can provide these to the `model` parameter in the constructors for model-related requests.
 UGemini can also implicitly convert `string` model IDs to `GeminiModelId` objects.

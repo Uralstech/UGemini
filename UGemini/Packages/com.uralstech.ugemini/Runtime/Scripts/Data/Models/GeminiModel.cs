@@ -34,6 +34,17 @@ namespace Uralstech.UGemini.Models
         public readonly static GeminiModelId Gemini1_0Pro = "gemini-1.0-pro";
 
         /// <summary>
+        /// Finetuning-supported version of <see cref="Gemini1_0Pro"/>.
+        /// </summary>
+        /// <remarks>
+        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro">
+        /// Gemini 1.0 Pro is an NLP model that handles tasks like multi-turn text and code chat, and code generation.
+        /// </a>
+        /// Supports text input.
+        /// </remarks>
+        public readonly static GeminiModelId Gemini1_0ProTuning = "gemini-1.0-pro-001";
+
+        /// <summary>
         /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro">
         /// Gemini 1.5 Pro is a mid-size multimodal model that is optimized for a wide-range of reasoning tasks.<br/>
         /// 1.5 Pro can process large amounts of data at once, including 2 hours of video, 19 hours of audio,<br/>
@@ -54,6 +65,17 @@ namespace Uralstech.UGemini.Models
         /// Supports audio, image, video and text input.
         /// </remarks>
         public readonly static GeminiModelId Gemini1_5Flash = "gemini-1.5-flash";
+
+        /// <summary>
+        /// Finetuning-supported version of <see cref="Gemini1_5Flash"/>.
+        /// </summary>
+        /// <remarks>
+        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash">
+        /// Gemini 1.5 Flash is a fast and versatile multimodal model for scaling across diverse tasks.
+        /// </a>
+        /// Supports audio, image, video and text input.
+        /// </remarks>
+        public readonly static GeminiModelId Gemini1_5FlashTuning = "gemini-1.5-flash-001-tuning";
 
         /// <summary>
         /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#text-embedding">

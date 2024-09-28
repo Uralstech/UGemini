@@ -77,7 +77,7 @@ Do not use preview versions (i.e. versions that end with "-preview") for product
 - [x] `media` endpoint 🧪
     - [x] `upload` method
     
-- [x] `tunedModels` endpoint 🧪 (Unstable)
+- [x] `tunedModels` endpoint 🧪
     - [x] `create` method
     - [x] `delete` method
     - [x] `generateContent` method

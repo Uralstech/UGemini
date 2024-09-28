@@ -358,31 +358,111 @@ private async void RunTokenCountRequest()
 
 See [GeminiTokenCountResponse](~/api/Uralstech.UGemini.Models.CountTokens.GeminiTokenCountResponse.yml) and [GeminiTokenCountRequest](~/api/Uralstech.UGemini.Models.CountTokens.GeminiTokenCountRequest.yml) for more details.
 
-## TunedModels (Unstable)
+## TunedModels (Beta API)
 
 > The TunedModels endpoint contains methods that allow you to access and inference fine-tuned Gemini models.
+> 
+> You will have to use [*OAuth*](https://ai.google.dev/gemini-api/docs/oauth) authorization to access a lot of these endpoints, with permissions like:
+> - `https://www.googleapis.com/auth/generative-language.tuning`
+> - `https://www.googleapis.com/auth/cloud-platform`
+
+### Create
+
+> Creates a tuned model. Check intermediate tuning progress (if any) through the google.longrunning.Operations service with the [*UCloud.Operations*](https://github.com/Uralstech/UCloud.Operations/) plugin.
+
+```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models;
+using Uralstech.UGemini.Models.Tuning;
+
+private async void RunTunedModelCreateRequest(string oauthAccessToken)
+{
+    Debug.Log("Creating tuned model.");
+
+    GeminiTuningExample[] examples = new GeminiTuningExample[20];
+    for (int i = 0; i < examples.Length; i++)
+    {
+        examples[i] = new GeminiTuningExample
+        {
+            TextInput = "What is your name?",
+            Output = "My name is [insert name here].",
+        };
+    }
+
+    GeminiTunedModelCreateResponse response = await GeminiManager.Instance.Request<GeminiTunedModelCreateResponse>(
+        new GeminiTunedModelCreateRequest(
+            new GeminiTunedModelCreationData
+            {
+                BaseModel = GeminiModel.Gemini1_5FlashTuning,
+                DisplayName = "Test Model",
+                Description = "This is a test model",
+                TuningTask = new GeminiInitialTuningTask
+                {
+                    TrainingData = new GeminiTuningDataset
+                    {
+                        Examples = new GeminiTuningExamples
+                        {
+                            Examples = examples,
+                        },
+                    },
+                },
+            }, true)
+        {
+            ModelId = "tunedModels/mynameis",
+            OAuthAccessToken = oauthAccessToken,
+        });
+
+    Debug.Log($"Tuned model created (JSON): {JsonConvert.SerializeObject(response)}");
+}
+```
+
+See [GeminiTunedModelCreateResponse](~/api/Uralstech.UGemini.Models.Tuning.GeminiTunedModelCreateResponse.yml) and [GeminiTunedModelCreateRequest](~/api/Uralstech.UGemini.Models.Tuning.GeminiTunedModelCreateRequest.yml) for more details.
+
+### Delete
+
+> Deletes a tuned model.
+
+```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models.Tuning;
+
+private async void RunTunedModelDeleteRequest(string oauthAccessToken)
+{
+    Debug.Log("Deleting tuned model.");
+
+    await GeminiManager.Instance.Request(
+        new GeminiTunedModelDeleteRequest("tunedModels/mynameis")
+        {
+            OAuthAccessToken = oauthAccessToken
+        });
+
+    Debug.Log("Tuned model deleted.");
+}
+```
+
+See [GeminiTunedModelDeleteRequest](~/api/Uralstech.UGemini.Models.Tuning.GeminiTunedModelDeleteRequest.yml) for more details.
 
 ### GenerateContent
 
 > Generates a model response given an input GenerateContentRequest.
 
 ```csharp
-// This is untested code.
-
 using Uralstech.UGemini;
 using Uralstech.UGemini.Models.Content;
 using Uralstech.UGemini.Models.Generation.Chat;
 
-private async void RunTunedModelChatRequest()
+private async void RunTunedModelChatRequest(string oauthAccessToken)
 {
     Debug.Log("Running chat request on tuned model.");
 
     GeminiChatResponse response = await GeminiManager.Instance.Request<GeminiChatResponse>(
-        new GeminiChatRequest("tunedModels/modelname")
+        new GeminiChatRequest("tunedModels/mynameis")
         {
+            AuthMethod = GeminiAuthMethod.OAuthAccessToken,
+            OAuthAccessToken = oauthAccessToken,
             Contents = new GeminiContent[]
             {
-                GeminiContent.GetContent("What's up?")
+                GeminiContent.GetContent("Who are you?")
             },
         }
     );
@@ -392,6 +472,106 @@ private async void RunTunedModelChatRequest()
 ```
 
 See [GeminiChatResponse](~/api/Uralstech.UGemini.Models.Generation.Chat.GeminiChatResponse.yml) and [GeminiChatRequest](~/api/Uralstech.UGemini.Models.Generation.Chat.GeminiChatRequest.yml) for more details.
+
+### Get
+
+> Gets information about a specific TunedModel.
+
+```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models.Tuning;
+
+private async void RunTunedModelGetRequest(string oauthAccessToken)
+{
+    Debug.Log("Getting tuned model.");
+
+    GeminiTunedModel response = await GeminiManager.Instance.Request<GeminiTunedModel>(
+        new GeminiTunedModelGetRequest("tunedModels/mynameis")
+        {
+            OAuthAccessToken = oauthAccessToken
+        });
+
+    Debug.Log($"Got tuned model (JSON): {JsonConvert.SerializeObject(response)}");
+}
+```
+
+See [GeminiTunedModel](~/api/Uralstech.UGemini.Models.Tuning.GeminiTunedModel.yml) and [GeminiTunedModelGetRequest](~/api/Uralstech.UGemini.Models.Tuning.GeminiTunedModelGetRequest.yml) for more details.
+
+### List
+
+> Lists created tuned models.
+
+```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models.Tuning;
+
+private async void RunTunedModelListRequest(string oauthAccessToken)
+{
+    Debug.Log("Listing tuned models.");
+
+    GeminiTunedModelListResponse response = await GeminiManager.Instance.Request<GeminiTunedModelListResponse>(
+        new GeminiTunedModelListRequest()
+        {
+            OAuthAccessToken = oauthAccessToken
+        });
+
+    Debug.Log($"Got tuned models (JSON): {JsonConvert.SerializeObject(response)}");
+}
+```
+
+See [GeminiTunedModelListResponse](~/api/Uralstech.UGemini.Models.Tuning.GeminiTunedModelListResponse.yml) and [GeminiTunedModelListRequest](~/api/Uralstech.UGemini.Models.Tuning.GeminiTunedModelListRequest.yml) for more details.
+
+### Patch
+
+> Updates a tuned model.
+
+```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models.Tuning;
+
+private async void RunTunedModelPatchRequest(string oauthAccessToken)
+{
+    Debug.Log("Patching tuned model.");
+
+    GeminiTunedModelPatchData response = await GeminiManager.Instance.Request<GeminiTunedModelPatchData>(
+        new GeminiTunedModelPatchRequest(
+            new GeminiTunedModelPatchData
+            {
+                DisplayName = "This has been changed!",
+            }, "tunedModels/mynameis")
+            {
+                OAuthAccessToken = oauthAccessToken,
+            });
+
+    Debug.Log($"Patched tuned model (JSON): {JsonConvert.SerializeObject(response)}");
+}
+```
+
+See [GeminiTunedModelPatchData](~/api/Uralstech.UGemini.Models.Tuning.GeminiTunedModelPatchData.yml) and [GeminiTunedModelPatchRequest](~/api/Uralstech.UGemini.Models.Tuning.GeminiTunedModelPatchRequest.yml) for more details.
+
+### TransferOwnership
+
+> Transfers ownership of the tuned model. This is the only way to change ownership of the tuned model. The current owner will be downgraded to writer role.
+
+```csharp
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models.Tuning;
+
+private async void RunTunedModelTransferOwnershipRequest(string oauthAccessToken)
+{
+    Debug.Log("Transferring tuned model.");
+
+    await GeminiManager.Instance.Request(new GeminiTunedModelTransferOwnershipRequest("tunedModels/mynameis")
+    {
+        EmailAddress = "SomeGuy@SomeMail.com",
+        OAuthAccessToken = oauthAccessToken,
+    });
+
+    Debug.Log("Tuned model transferred.");
+}
+```
+
+See [GeminiTunedModelTransferOwnershipRequest](~/api/Uralstech.UGemini.Models.Tuning.GeminiTunedModelTransferOwnershipRequest.yml) for more details.
 
 ## Files (Beta API)
 
@@ -481,3 +661,5 @@ private async Task<GeminiFile> RunUploadFileRequest(string text)
 ```
 
 See [GeminiFileUploadResponse](~/api/Uralstech.UGemini.FileAPI.GeminiFileUploadResponse.yml) and [GeminiFileUploadRequest](~/api/Uralstech.UGemini.FileAPI.GeminiFileUploadRequest.yml) for more details.
+
+## TunedModels.Operations 

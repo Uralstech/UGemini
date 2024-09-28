@@ -1,7 +1,7 @@
 # Breaking Changes Notice
 
-UGemini v2.0.0 contains many breaking changes. To update your code to use UGemini 2.0.0,
-refer to the following list and table of changes:
+UGemini v2.0.0 contains many breaking changes. For breaking changes in newer versions, check the release's changelogs at <https://github.com/Uralstech/UGemini/releases>.
+To update your code to use UGemini 2.0.0, refer to the following list and table of changes:
 
 ## General Changes
 - `EnumExtensions` is now `GeminiContentTypeExtensions`.
