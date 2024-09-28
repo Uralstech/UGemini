@@ -31,10 +31,9 @@ namespace Uralstech.UGemini.Models
         {
             Type type = typeof(T);
 
-            Attribute attribute = type.GetCustomAttribute(typeof(JsonObjectAttribute));
-            if (attribute is not JsonObjectAttribute jsonObjectAttribute)
-                throw new NotImplementedException($"Cannot get field mask for object of type {type.Name} as it does not implement {nameof(JsonObjectAttribute)}!");
-
+            JsonObjectAttribute jsonObjectAttribute = type.GetCustomAttribute<JsonObjectAttribute>()
+                ?? throw new NotImplementedException($"Cannot get field mask for object of type {type.Name} as it does not implement {nameof(JsonObjectAttribute)}!");
+            
             if (jsonObjectAttribute.NamingStrategyType is not Type namingStrategyType)
                 throw new NotImplementedException($"Cannot get field mask for object of type {type.Name} as it has no defined {nameof(NamingStrategy)}.");
 
@@ -44,13 +43,25 @@ namespace Uralstech.UGemini.Models
 
             IEnumerable<string> filledProperties = from property in properties
                                                    where property.GetValue(thiz) != null
-                                                   select namingStrategy.GetPropertyName(property.Name, false);
+                                                   select GetJsonMemberName(property, namingStrategy);
 
             IEnumerable<string> filledFields = from field in fields
                                                where field.GetValue(thiz) != null
-                                               select namingStrategy.GetPropertyName(field.Name, false);
+                                               select GetJsonMemberName(field, namingStrategy);
 
             return string.Join(",", filledProperties.Concat(filledFields));
+        }
+
+        /// <summary>
+        /// Gets the JSON name of a type member as defined in its <see cref="JsonPropertyAttribute"/>, or uses a <see cref="NamingStrategy"/> to convert its name.
+        /// </summary>
+        /// <param name="member">The member.</param>
+        /// <param name="namingStrategy">The naming strategy to use if a defined JSON name was not found.</param>
+        /// <returns>The JSON name of the member.</returns>
+        private static string GetJsonMemberName(MemberInfo member, NamingStrategy namingStrategy)
+        {
+            JsonPropertyAttribute jsonPropertyAttribute = member.GetCustomAttribute<JsonPropertyAttribute>();
+            return jsonPropertyAttribute != null ? jsonPropertyAttribute.PropertyName : namingStrategy.GetPropertyName(member.Name, false);
         }
     }
 }
