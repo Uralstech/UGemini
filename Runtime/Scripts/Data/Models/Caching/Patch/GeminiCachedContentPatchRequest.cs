@@ -37,7 +37,7 @@ namespace Uralstech.UGemini.Models.Caching
         /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/cachedContents/{ContentId}";
+            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/cachedContents/{ContentId}?updateMask={Patch.GetFieldMask()}";
         }
 
         /// <summary>

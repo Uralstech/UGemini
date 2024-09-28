@@ -22,10 +22,9 @@ namespace Uralstech.UGemini
 
             if (memberInfo != null && memberInfo.Length > 0)
             {
-                object[] attributes = memberInfo[0].GetCustomAttributes(typeof(EnumMemberAttribute), false);
-
-                if (attributes != null && attributes.Length > 0)
-                    return ((EnumMemberAttribute)attributes[0]).Value;
+                Attribute attribute = memberInfo[0].GetCustomAttribute(typeof(EnumMemberAttribute));
+                if (attribute is EnumMemberAttribute enumMemberAttribute)
+                    return enumMemberAttribute.Value;
             }
 
             // Throw error if no EnumMember attribute is found.

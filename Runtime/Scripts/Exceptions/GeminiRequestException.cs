@@ -39,7 +39,7 @@ namespace Uralstech.UGemini.Exceptions
         /// <param name="webRequest">The request that caused the exception.</param>
         internal GeminiRequestException(UnityWebRequest webRequest)
             : base($"Failed Gemini API request: " +
-                  $"Request Endpoint: {webRequest.uri.AbsolutePath} | " +
+                  $"Request Endpoint: {webRequest.uri.AbsoluteUri} | " +
                   $"Request Error Code: {webRequest.responseCode} | " +
                   $"Request Error: {webRequest.error} | " +
                   $"Details:\n{webRequest.downloadHandler?.text}")
