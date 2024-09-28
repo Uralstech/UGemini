@@ -421,7 +421,7 @@ See [GeminiTunedModelCreateResponse](~/api/Uralstech.UGemini.Models.Tuning.Gemin
 
 ### Delete
 
-> Deletes a tuned model.
+> Deletes a tuned model. This will also delete the operations associated with it.
 
 ```csharp
 using Uralstech.UGemini;
