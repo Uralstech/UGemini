@@ -29,7 +29,7 @@ namespace Uralstech.UGemini.Exceptions
         /// <param name="webRequest">The request that caused the exception.</param>
         internal GeminiOAuthException(UnityWebRequest webRequest, string reason)
             : base($"Failed to authenticate Gemini API request: " +
-                  $"Request Endpoint: {webRequest.uri.AbsolutePath} | " +
+                  $"Request Endpoint: {webRequest.uri.AbsoluteUri} | " +
                   $"Reason:\n{reason}")
         {
             RequestEndpoint = webRequest.uri;

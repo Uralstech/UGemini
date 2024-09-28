@@ -29,7 +29,7 @@ namespace Uralstech.UGemini.Exceptions
         /// <param name="webRequest">The request that caused the exception.</param>
         internal GeminiResponseParsingException(UnityWebRequest webRequest)
             : base($"Failed to parse Gemini API response: " +
-                  $"Request Endpoint: {webRequest.uri.AbsolutePath} | " +
+                  $"Request Endpoint: {webRequest.uri.AbsoluteUri} | " +
                   $"Downloaded Text:\n{webRequest.downloadHandler?.text}")
         {
             RequestEndpoint = webRequest.uri;
@@ -45,7 +45,7 @@ namespace Uralstech.UGemini.Exceptions
         /// <param name="innerException">The inner exception that caused this one.</param>
         internal GeminiResponseParsingException(UnityWebRequest webRequest, Exception innerException)
             : base($"Failed to parse Gemini API response: " +
-                  $"Request Endpoint: {webRequest.uri.AbsolutePath} | " +
+                  $"Request Endpoint: {webRequest.uri.AbsoluteUri} | " +
                   $"Downloaded Text:\n{webRequest.downloadHandler?.text}", innerException)
         {
             RequestEndpoint = webRequest.uri;

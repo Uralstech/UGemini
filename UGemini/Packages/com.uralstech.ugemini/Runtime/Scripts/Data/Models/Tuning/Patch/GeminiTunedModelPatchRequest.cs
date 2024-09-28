@@ -37,7 +37,7 @@ namespace Uralstech.UGemini.Models.Tuning
         /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{TunedModel.Name}";
+            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{TunedModel.Name}?updateMask={Patch.GetFieldMask()}";
         }
 
         /// <summary>
