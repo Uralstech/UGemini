@@ -35,6 +35,9 @@ namespace Uralstech.UGemini.Models
         /// <param name="nameOrBaseModelId">The full name of the model resource (see <see cref="Name"/>) or the unique ID of the base model.</param>
         public GeminiModelId(string nameOrBaseModelId)
         {
+            if (string.IsNullOrEmpty(nameOrBaseModelId))
+                return;
+
             int index = nameOrBaseModelId.IndexOf('/');
             if (index < 0)
             {
