@@ -4,7 +4,7 @@ using UnityEngine.Networking;
 namespace Uralstech.UGemini.Exceptions
 {
     /// <summary>
-    /// Thrown when a Gemini API request fails.
+    /// Thrown if a Gemini API request fails.
     /// </summary>
     public class GeminiRequestException : Exception
     {
@@ -33,9 +33,13 @@ namespace Uralstech.UGemini.Exceptions
         /// </summary>
         public bool IsBetaApi;
 
+        /// <summary>
+        /// Creates a new <see cref="GeminiRequestException"/>.
+        /// </summary>
+        /// <param name="webRequest">The request that caused the exception.</param>
         internal GeminiRequestException(UnityWebRequest webRequest)
-            : base($"Failed Gemini request: " +
-                  $"Request Endpoint: {webRequest.uri.AbsolutePath} | " +
+            : base($"Failed Gemini API request: " +
+                  $"Request Endpoint: {webRequest.uri.AbsoluteUri} | " +
                   $"Request Error Code: {webRequest.responseCode} | " +
                   $"Request Error: {webRequest.error} | " +
                   $"Details:\n{webRequest.downloadHandler?.text}")

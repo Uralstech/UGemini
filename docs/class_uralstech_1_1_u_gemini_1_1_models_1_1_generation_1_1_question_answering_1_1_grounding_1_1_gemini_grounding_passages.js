@@ -1,4 +1,0 @@
-var class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_grounding_1_1_gemini_grounding_passages =
-[
-    [ "Passages", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_grounding_1_1_gemini_grounding_passages.html#af1fc6a76edaa955413ffaaaeb6876d64", null ]
-];

@@ -24,7 +24,7 @@ namespace Uralstech.UGemini.Models
         public string Name;
 
         /// <summary>
-        /// The ID of the base model, pass this to the generation request.
+        /// The ID of the base model, not very useful for <see cref="Tuning.GeminiTunedModel"/>s.
         /// </summary>
         [JsonProperty(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
         public string BaseModelId;
@@ -35,6 +35,9 @@ namespace Uralstech.UGemini.Models
         /// <param name="nameOrBaseModelId">The full name of the model resource (see <see cref="Name"/>) or the unique ID of the base model.</param>
         public GeminiModelId(string nameOrBaseModelId)
         {
+            if (string.IsNullOrEmpty(nameOrBaseModelId))
+                return;
+
             int index = nameOrBaseModelId.IndexOf('/');
             if (index < 0)
             {
@@ -60,16 +63,18 @@ namespace Uralstech.UGemini.Models
         }
 
         /// <summary>
-        /// Gets the base model ID of the <see cref="GeminiModelId"/>.
+        /// Gets the full name of the model resource of the <see cref="GeminiModelId"/>.
         /// </summary>
+        /// <param name="model">The <see cref="GeminiModelId"/>.</param>
         public static implicit operator string(GeminiModelId model)
         {
             return model?.Name;
         }
 
         /// <summary>
-        /// Creates a new <see cref="GeminiModelId"/> with the full name of the model resource (see <see cref="Name"/>) or the unique ID of the base model.</param>
+        /// Creates a new <see cref="GeminiModelId"/> with the full name of the model resource (see <see cref="Name"/>) or the unique ID of the base model.
         /// </summary>
+        /// <param name="nameOrBaseModelId">The full name of the model resource or the unique ID of the base model.</param>
         public static implicit operator GeminiModelId(string nameOrBaseModelId)
         {
             return new GeminiModelId(nameOrBaseModelId);

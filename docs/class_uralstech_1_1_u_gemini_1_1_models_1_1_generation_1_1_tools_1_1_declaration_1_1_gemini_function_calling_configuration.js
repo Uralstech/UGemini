@@ -1,5 +1,0 @@
-var class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_calling_configuration =
-[
-    [ "AllowedFunctionNames", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_calling_configuration.html#aa41c3ba57030b6ed7b8851cdf71b58df", null ],
-    [ "Mode", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_declaration_1_1_gemini_function_calling_configuration.html#a00536163ab10230dc6b211d317b90385", null ]
-];

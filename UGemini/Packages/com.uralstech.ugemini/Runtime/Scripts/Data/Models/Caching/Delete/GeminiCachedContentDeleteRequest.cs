@@ -18,10 +18,16 @@ namespace Uralstech.UGemini.Models.Caching
         /// </summary>
         public string ContentId;
 
-        /// <inheritdoc>
+        /// <inheritdoc/>
+        public GeminiAuthMethod AuthMethod { get; set; } = GeminiAuthMethod.APIKey;
+
+        /// <inheritdoc/>
+        public string OAuthAccessToken { get; set; } = string.Empty;
+
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"https://generativelanguage.googleapis.com/{ApiVersion}/cachedContents/{ContentId}";
+            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/cachedContents/{ContentId}";
         }
 
         /// <summary>

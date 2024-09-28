@@ -43,9 +43,17 @@ namespace Uralstech.UGemini.FileAPI
         public string ContentType { get; }
 
         /// <inheritdoc/>
+        [JsonIgnore]
+        public GeminiAuthMethod AuthMethod { get; set; } = GeminiAuthMethod.APIKey;
+
+        /// <inheritdoc/>
+        [JsonIgnore]
+        public string OAuthAccessToken { get; set; } = string.Empty;
+
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"https://generativelanguage.googleapis.com/upload/{ApiVersion}/files";
+            return $"{GeminiManager.BaseServiceUri}/upload/{ApiVersion}/files";
         }
 
         /// <summary>

@@ -1,5 +1,0 @@
-var class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_code_execution_1_1_gemini_executable_code =
-[
-    [ "Code", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_code_execution_1_1_gemini_executable_code.html#adc29a3d6bf2b07c6ba6406720b5ed0aa", null ],
-    [ "Language", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_tools_1_1_code_execution_1_1_gemini_executable_code.html#a52aa95da8c6f757247582d1bb3dfc183", null ]
-];

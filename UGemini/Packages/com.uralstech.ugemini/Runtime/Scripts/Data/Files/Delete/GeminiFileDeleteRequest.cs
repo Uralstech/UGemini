@@ -18,10 +18,16 @@
         /// </summary>
         public string FileId;
 
-        /// <inheritdoc>
+        /// <inheritdoc/>
+        public GeminiAuthMethod AuthMethod { get; set; } = GeminiAuthMethod.APIKey;
+
+        /// <inheritdoc/>
+        public string OAuthAccessToken { get; set; } = string.Empty;
+
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"https://generativelanguage.googleapis.com/{ApiVersion}/files/{FileId}";
+            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/files/{FileId}";
         }
 
         /// <summary>

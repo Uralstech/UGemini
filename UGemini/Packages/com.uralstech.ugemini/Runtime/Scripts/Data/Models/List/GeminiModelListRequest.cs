@@ -11,7 +11,7 @@
         public string ApiVersion;
 
         /// <summary>
-        /// The maximum number of Models to return (per page).
+        /// The maximum number of <see cref="GeminiModel"/>s to return (per page).
         /// </summary>
         /// <remarks>
         /// This method returns at most 1000 models per page, even if you pass a larger <see cref="MaxResponseModels"/>.
@@ -23,12 +23,18 @@
         /// </summary>
         public string PageToken = string.Empty;
 
-        /// <inheritdoc>
+        /// <inheritdoc/>
+        public GeminiAuthMethod AuthMethod { get; set; } = GeminiAuthMethod.APIKey;
+
+        /// <inheritdoc/>
+        public string OAuthAccessToken { get; set; } = string.Empty;
+
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return string.IsNullOrEmpty(PageToken)
-                ? $"https://generativelanguage.googleapis.com/{ApiVersion}/models?pageSize={MaxResponseModels}"
-                : $"https://generativelanguage.googleapis.com/{ApiVersion}/models?pageSize={MaxResponseModels}&pageToken={PageToken}";
+                ? $"{GeminiManager.BaseServiceUri}/{ApiVersion}/models?pageSize={MaxResponseModels}"
+                : $"{GeminiManager.BaseServiceUri}/{ApiVersion}/models?pageSize={MaxResponseModels}&pageToken={PageToken}";
         }
 
         /// <summary>

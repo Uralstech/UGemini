@@ -123,9 +123,9 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {
+        "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.director": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
-        "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -149,13 +149,32 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.uralstech.ucloud.operations": {
+      "version": "1.1.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.uralstech.utils.singleton": "1.0.1",
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      },
+      "url": "https://package.openupm.com"
+    },
     "com.uralstech.ugemini": {
       "version": "file:com.uralstech.ugemini",
       "depth": 0,
       "source": "embedded",
       "dependencies": {
+        "com.uralstech.utils.singleton": "1.0.1",
+        "com.uralstech.ucloud.operations": "1.1.2",
         "com.unity.nuget.newtonsoft-json": "3.2.1"
       }
+    },
+    "com.uralstech.utils.singleton": {
+      "version": "1.0.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
     },
     "com.utilities.async": {
       "version": "2.1.7",

@@ -1,0 +1,14 @@
+pdfFileName: Documentation.pdf
+pdfTocPage: true
+pdf: true
+pdfPrintBackground: true
+
+items:
+- name: Quick Start
+  href: QuickStart.md
+- name: GeminiChatRequest Features
+  href: GeminiChatRequestFeatures.md
+- name: All Endpoints
+  href: AllEndpoints.md
+- name: UGemini v2 Breaking Changes
+  href: BreakingChanges.md

@@ -23,12 +23,18 @@
         /// </summary>
         public string PageToken = string.Empty;
 
-        /// <inheritdoc>
+        /// <inheritdoc/>
+        public GeminiAuthMethod AuthMethod { get; set; } = GeminiAuthMethod.APIKey;
+
+        /// <inheritdoc/>
+        public string OAuthAccessToken { get; set; } = string.Empty;
+
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             return string.IsNullOrEmpty(PageToken)
-                ? $"https://generativelanguage.googleapis.com/{ApiVersion}/files?pageSize={MaxResponseFiles}"
-                : $"https://generativelanguage.googleapis.com/{ApiVersion}/files?pageSize={MaxResponseFiles}&pageToken={PageToken}";
+                ? $"{GeminiManager.BaseServiceUri}/{ApiVersion}/files?pageSize={MaxResponseFiles}"
+                : $"{GeminiManager.BaseServiceUri}/{ApiVersion}/files?pageSize={MaxResponseFiles}&pageToken={PageToken}";
         }
 
         /// <summary>

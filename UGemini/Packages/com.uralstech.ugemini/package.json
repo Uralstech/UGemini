@@ -9,10 +9,10 @@
     "AI",
     "Integration"
   ],
-  "version": "2.0.1",
+  "version": "2.1.0",
   "unity": "2022.3",
   "hideInEditor": false,
-  "documentationUrl": "https://github.com/Uralstech/UGemini/blob/master/UGemini/Packages/com.uralstech.ugemini/Documentation~/README.md",
+  "documentationUrl": "https://uralstech.github.io/UGemini/",
   "changelogUrl": "https://github.com/Uralstech/UGemini/releases",
   "licensesUrl": "https://github.com/Uralstech/UGemini/blob/master/LICENSE",
   "license": "Apache-2.0",
@@ -67,6 +67,8 @@
     }
   ],
   "dependencies": {
+    "com.uralstech.utils.singleton": "1.0.1",
+    "com.uralstech.ucloud.operations": "1.1.2",
     "com.unity.nuget.newtonsoft-json": "3.2.1"
   }
 }

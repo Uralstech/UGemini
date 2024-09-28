@@ -1,5 +1,0 @@
-var class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_grounding_1_1_gemini_grounding_passage =
-[
-    [ "Content", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_grounding_1_1_gemini_grounding_passage.html#a7e85c91ca161d560beea00bca3487b29", null ],
-    [ "Id", "class_uralstech_1_1_u_gemini_1_1_models_1_1_generation_1_1_question_answering_1_1_grounding_1_1_gemini_grounding_passage.html#abb6797aa76882041c4e9fe71fef89a66", null ]
-];

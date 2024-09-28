@@ -61,9 +61,17 @@ namespace Uralstech.UGemini.Models.Embedding
         public string ContentType => GeminiContentType.ApplicationJSON.MimeType();
 
         /// <inheritdoc/>
+        [JsonIgnore]
+        public GeminiAuthMethod AuthMethod { get; set; } = GeminiAuthMethod.APIKey;
+
+        /// <inheritdoc/>
+        [JsonIgnore]
+        public string OAuthAccessToken { get; set; } = string.Empty;
+
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"https://generativelanguage.googleapis.com/{ApiVersion}/{Model.Name}:embedContent";
+            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{Model.Name}:embedContent";
         }
 
         /// <summary>

@@ -41,9 +41,17 @@ namespace Uralstech.UGemini.Models.CountTokens
         public string ContentType => GeminiContentType.ApplicationJSON.MimeType();
 
         /// <inheritdoc/>
+        [JsonIgnore]
+        public GeminiAuthMethod AuthMethod { get; set; } = GeminiAuthMethod.APIKey;
+
+        /// <inheritdoc/>
+        [JsonIgnore]
+        public string OAuthAccessToken { get; set; } = string.Empty;
+
+        /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"https://generativelanguage.googleapis.com/{ApiVersion}/{Model.Name}:countTokens";
+            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{Model.Name}:countTokens";
         }
 
         /// <summary>
