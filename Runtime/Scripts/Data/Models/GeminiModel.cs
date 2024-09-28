@@ -159,7 +159,7 @@ namespace Uralstech.UGemini.Models
             int topK
         ) : base(name, baseModelId)
         {
-            if (string.IsNullOrEmpty(BaseModelId))
+            if (string.IsNullOrEmpty(BaseModelId) && !string.IsNullOrEmpty(name))
                 BaseModelId = name.Split('/')[^1];
 
             Version = version;
