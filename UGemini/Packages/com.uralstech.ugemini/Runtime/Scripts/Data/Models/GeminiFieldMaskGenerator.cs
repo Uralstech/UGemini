@@ -61,7 +61,7 @@ namespace Uralstech.UGemini.Models
         private static string GetJsonMemberName(MemberInfo member, NamingStrategy namingStrategy)
         {
             JsonPropertyAttribute jsonPropertyAttribute = member.GetCustomAttribute<JsonPropertyAttribute>();
-            return jsonPropertyAttribute != null ? jsonPropertyAttribute.PropertyName : namingStrategy.GetPropertyName(member.Name, false);
+            return jsonPropertyAttribute != null && !string.IsNullOrEmpty(jsonPropertyAttribute.PropertyName) ? jsonPropertyAttribute.PropertyName : namingStrategy.GetPropertyName(member.Name, false);
         }
     }
 }
