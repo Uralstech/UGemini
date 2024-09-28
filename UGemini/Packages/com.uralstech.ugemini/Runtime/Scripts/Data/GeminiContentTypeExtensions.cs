@@ -34,8 +34,8 @@ namespace Uralstech.UGemini
                 MemberInfo[] memberInfo = type.GetMember(name);
                 if (memberInfo != null && memberInfo.Length > 0)
                 {
-                    Attribute attribute = memberInfo[0].GetCustomAttribute(typeof(EnumMemberAttribute));
-                    if (attribute is EnumMemberAttribute enumMemberAttribute && enumMemberAttribute.Value == mimeType)
+                    EnumMemberAttribute enumMemberAttribute = memberInfo[0].GetCustomAttribute<EnumMemberAttribute>();
+                    if (enumMemberAttribute != null && enumMemberAttribute.Value == mimeType)
                         return (GeminiContentType)Enum.Parse(type, name);
                 }
             }
