@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 namespace Uralstech.UGemini.Models.Tuning
 {
     /// <summary>
-    /// Updates a tuned model. Response type is <see cref="GeminiTunedModel"/>.
+    /// Updates a tuned model. Response type is <see cref="GeminiTunedModelPatchData"/>.
     /// </summary>
     /// <remarks>
     /// Only available in the beta API.
