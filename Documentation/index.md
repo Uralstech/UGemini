@@ -22,10 +22,10 @@ This *should* work on any reasonably modern Unity version. Built and tested in U
     - URL: `https://package.openupm.com`
     - Scope(s)
         - `com.uralstech`
-        - `com.utilities`*
+        - `com.utilities`\*
 4. Open the Unity Package Manager window (`Window` -> `Package Manager`)
 5. Change the registry from `Unity` to `My Registries`
-6. Add the `UGemini`, `Utilities.Async`* and `Utilities.Encoder.Wav`* packages
+6. Add the `UGemini`, `Utilities.Async`\* and `Utilities.Encoder.Wav`\* packages
 
 # [Unity Package Manager](#tab/upm)
 
@@ -49,7 +49,7 @@ See the installation steps for the [Utilities.Async](https://github.com/rageAgai
 
 ---
 
-*Optional, but `Utilities.Async` is required for streaming content and `Utilities.Encoder.Wav` is recommended if you don't want to bother with encoding your AudioClips into Base64 strings manually.
+\*Optional, but `Utilities.Async` is required for streaming content and `Utilities.Encoder.Wav` is recommended if you don't want to bother with encoding your AudioClips into Base64 strings manually.
 
 ## Preview Versions
 
@@ -83,7 +83,7 @@ Do not use preview versions (i.e. versions that end with "-preview") for product
 - ✔️ `media` endpoint 🧪
     - ✔️ `upload` method
     
-- ✔️ `tunedModels` endpoint (Unstable)
+- ✔️ `tunedModels` endpoint 🧪
     - ✔️ `create` method
     - ✔️ `delete` method
     - ✔️ `generateContent` method
