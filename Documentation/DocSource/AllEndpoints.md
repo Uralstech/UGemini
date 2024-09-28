@@ -369,6 +369,7 @@ See [GeminiTokenCountResponse](~/api/Uralstech.UGemini.Models.CountTokens.Gemini
 ### Create
 
 > Creates a tuned model. Check intermediate tuning progress (if any) through the google.longrunning.Operations service with the [*UCloud.Operations*](https://github.com/Uralstech/UCloud.Operations/) plugin.
+> See [Operations Endpoints](#operations-endpoints) for more details and code examples.
 
 ```csharp
 using Uralstech.UGemini;
@@ -662,4 +663,124 @@ private async Task<GeminiFile> RunUploadFileRequest(string text)
 
 See [GeminiFileUploadResponse](~/api/Uralstech.UGemini.FileAPI.GeminiFileUploadResponse.yml) and [GeminiFileUploadRequest](~/api/Uralstech.UGemini.FileAPI.GeminiFileUploadRequest.yml) for more details.
 
-## TunedModels.Operations 
+## Operations Endpoints
+
+> The operations endpoint allows you to view the status of long-running processes.
+> 
+> This functionality is not part of UGemini, but its sister plugin [UCloud.Operations](https://github.com/Uralstech/UCloud.Operations/).
+> More general documentation about UCloud.Operations can be found [here](https://uralstech.github.io/UCloud.Operations/)
+> 
+> UCloud.Operations uses OAuth authorization to access and edit running operations. The following permissions may or may not be required
+> depending on the type of operations that you access or edit in the Gemini API:
+> - `https://www.googleapis.com/auth/generative-language.tuning`
+> - `https://www.googleapis.com/auth/cloud-platform`
+
+### List
+
+> Lists all long-running operations in the Gemini API.
+
+```csharp
+using Uralstech.UCloud.Operations;
+using Uralstech.UGemini;
+
+private async void RunOperationsListRequest(string oauthAccessToken)
+{
+    Debug.Log("Listing all operations.");
+
+    OperationsListResponse response = await OperationsManager.Instance.Request<OperationsListResponse>(oauthAccessToken,
+        new OperationsListRequest(
+            new OperationFilterConditions()
+            {
+                OperandA = new OperationFilterConditionOperand { Field = FilteringField.Status },
+                Operator = OperationFilterOperator.EqualTo,
+                OperandB = new OperationFilterConditions
+                {
+                    OperandA = new OperationFilterConditionOperand { Status = OperationRunningStatus.Finished }
+                }
+            })
+        {
+            BaseServiceUri = GeminiManager.ProductionApiUri,
+        });
+
+    Debug.Log($"All operations: {JsonConvert.SerializeObject(response)}");
+}
+```
+
+### TunedModels.Operations.Cancel
+
+> Cancels a long-running tuned model creation operation in the Gemini API.
+
+```csharp
+using Uralstech.UCloud.Operations;
+using Uralstech.UGemini;
+
+private async void RunTunedModelOperationsCancelRequest(string oauthAccessToken, string operationResourceName)
+{
+    Debug.Log("Cancelling tuned model operation.");
+
+    await OperationsManager.Instance.Request(oauthAccessToken,
+        new OperationCancelRequest(operationResourceName)
+        {
+            BaseServiceUri = GeminiManager.ProductionApiUri
+        });
+
+    Debug.Log("Tuned model operation cancelled.");
+}
+```
+
+### TunedModels.Operations.Get
+
+> Gets a long-running tuned model creation operation in the Gemini API.
+
+```csharp
+using Uralstech.UCloud.Operations;
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models.Tuning;
+
+private async void RunTunedModelOperationsGetRequest(string oauthAccessToken, string operationResourceName)
+{
+    Debug.Log("Getting tuned model operation.");
+
+    GeminiTunedModelCreateResponse response = await OperationsManager.Instance.Request<GeminiTunedModelCreateResponse>(oauthAccessToken,
+        new OperationGetRequest(operationResourceName)
+        {
+            BaseServiceUri = GeminiManager.ProductionApiUri
+        });
+
+    Debug.Log($"Got tuned model operation: {JsonConvert.SerializeObject(response)}");
+}
+```
+
+### TunedModels.Operations.List
+
+> Lists all long-running operations of the specified tuned model in the Gemini API.
+
+```csharp
+using Uralstech.UCloud.Operations;
+using Uralstech.UCloud.Operations.Generic;
+using Uralstech.UGemini;
+using Uralstech.UGemini.Models;
+using Uralstech.UGemini.Models.Tuning;
+
+private async void RunTunedModelOperationsListRequest(string oauthAccessToken, GeminiModelId model)
+{
+    Debug.Log($"Listing all operations of tuned model: {model.Name}");
+
+    OperationsListResponse<GeminiTunedModelCreateResponse> response = await OperationsManager.Instance.Request<OperationsListResponse<GeminiTunedModelCreateResponse>>(oauthAccessToken,
+        new OperationsListRequest(
+            new OperationFilterConditions()
+            {
+                OperandA = new OperationFilterConditionOperand { Field = FilteringField.Status },
+                Operator = OperationFilterOperator.EqualTo,
+                OperandB = new OperationFilterConditions
+                {
+                    OperandA = new OperationFilterConditionOperand { Status = OperationRunningStatus.Finished }
+                }
+            })
+        {
+            BaseServiceUri = $"{GeminiManager.ProductionApiUri}/{model.Name}",
+        });
+
+    Debug.Log($"All operations of model \"{model.Name}\": {JsonConvert.SerializeObject(response)}");
+}
+```

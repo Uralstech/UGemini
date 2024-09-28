@@ -17,9 +17,19 @@ namespace Uralstech.UGemini
     public class GeminiManager : Singleton<GeminiManager>
     {
         /// <summary>
-        /// The base URI for the Generative Language service.
+        /// The base URI to the Generative Language service.
         /// </summary>
         public const string BaseServiceUri = "https://generativelanguage.googleapis.com";
+
+        /// <summary>
+        /// The production v1 API URI to the Generative Language service.
+        /// </summary>
+        public const string ProductionApiUri = "https://generativelanguage.googleapis.com/v1";
+
+        /// <summary>
+        /// The v1 beta API URI to the Generative Language service.
+        /// </summary>
+        public const string BetaApiUri = "https://generativelanguage.googleapis.com/v1beta";
 
         /// <summary>
         /// Seperator for Multi-Part Form Data.
