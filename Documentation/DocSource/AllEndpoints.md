@@ -688,16 +688,7 @@ private async void RunOperationsListRequest(string oauthAccessToken)
     Debug.Log("Listing all operations.");
 
     OperationsListResponse response = await OperationsManager.Instance.Request<OperationsListResponse>(oauthAccessToken,
-        new OperationsListRequest(
-            new OperationFilterConditions()
-            {
-                OperandA = new OperationFilterConditionOperand { Field = FilteringField.Status },
-                Operator = OperationFilterOperator.EqualTo,
-                OperandB = new OperationFilterConditions
-                {
-                    OperandA = new OperationFilterConditionOperand { Status = OperationRunningStatus.Finished }
-                }
-            })
+        new OperationsListRequest()
         {
             BaseServiceUri = GeminiManager.ProductionApiUri,
         });
@@ -767,16 +758,7 @@ private async void RunTunedModelOperationsListRequest(string oauthAccessToken, G
     Debug.Log($"Listing all operations of tuned model: {model.Name}");
 
     OperationsListResponse<GeminiTunedModelCreateResponse> response = await OperationsManager.Instance.Request<OperationsListResponse<GeminiTunedModelCreateResponse>>(oauthAccessToken,
-        new OperationsListRequest(
-            new OperationFilterConditions()
-            {
-                OperandA = new OperationFilterConditionOperand { Field = FilteringField.Status },
-                Operator = OperationFilterOperator.EqualTo,
-                OperandB = new OperationFilterConditions
-                {
-                    OperandA = new OperationFilterConditionOperand { Status = OperationRunningStatus.Finished }
-                }
-            })
+        new OperationsListRequest()
         {
             BaseServiceUri = $"{GeminiManager.ProductionApiUri}/{model.Name}",
         });
