@@ -10,11 +10,11 @@ namespace Uralstech.UGemini
     public static class EnumExtensions
     {
         /// <summary>
-        /// Converts an <see cref="Enum"/> to the value defined in its <see cref="EnumMemberAttribute">
+        /// Converts an <see cref="Enum"/> to the value defined in its <see cref="EnumMemberAttribute"/>.
         /// </summary>
         /// <param name="enumValue">The enum value.</param>
         /// <returns>The value.</returns>
-        /// <exception cref="NotImplementedException">Thrown if an <see cref="EnumMemberAttribute"> for the enum value could not be found.</exception>
+        /// <exception cref="NotImplementedException">Thrown if an <see cref="EnumMemberAttribute"/> could not be found on the enum value.</exception>
         public static string EnumMemberValue(this Enum enumValue)
         {
             Type type = enumValue.GetType();
