@@ -44,6 +44,11 @@ namespace Uralstech.UGemini.Models.Tuning
         public GeminiTuningTask TuningTask;
 
         /// <summary>
+        /// List of project numbers that have read access to the tuned model.
+        /// </summary>
+        public long[] ReaderProjectNumbers;
+
+        /// <summary>
         /// TunedModel to use as the starting point for training the new model.
         /// </summary>
         public GeminiTunedModelSource TunedModelSource;
