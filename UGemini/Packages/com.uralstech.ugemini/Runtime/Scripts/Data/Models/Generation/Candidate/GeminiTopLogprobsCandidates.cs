@@ -7,7 +7,7 @@ namespace Uralstech.UGemini.Models.Generation.Candidate
     /// Candidates with top log probabilities at each decoding step.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class GeminiTopCandidates
+    public class GeminiTopLogprobsCandidates
     {
         /// <summary>
         /// Sorted by log probability in descending order.
