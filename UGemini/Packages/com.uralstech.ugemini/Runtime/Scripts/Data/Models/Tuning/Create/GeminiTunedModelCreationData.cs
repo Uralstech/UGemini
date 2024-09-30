@@ -1,6 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.ComponentModel;
+using Uralstech.UGemini.JsonConverters;
 
 namespace Uralstech.UGemini.Models.Tuning
 {
@@ -33,7 +34,7 @@ namespace Uralstech.UGemini.Models.Tuning
         /// <summary>
         /// List of project numbers that have read access to the tuned model.
         /// </summary>
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), JsonConverter(typeof(GeminiLongArrayToStringArrayJsonConverter)), DefaultValue(null)]
         public long[] ReaderProjectNumbers = null;
 
         /// <summary>

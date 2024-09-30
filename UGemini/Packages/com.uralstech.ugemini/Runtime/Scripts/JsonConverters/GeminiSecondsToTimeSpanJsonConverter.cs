@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace Uralstech.UGemini
+namespace Uralstech.UGemini.JsonConverters
 {
     /// <summary>
     /// Custom JSON converter to convert a time <see cref="string"/> of a format like "10.334s" to a <see cref="TimeSpan"/>.
