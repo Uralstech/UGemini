@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.ComponentModel;
+using Uralstech.UGemini.JsonConverters;
 using Uralstech.UGemini.Models.Content;
 
 namespace Uralstech.UGemini.Models.Embedding

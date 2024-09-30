@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using Uralstech.UGemini.JsonConverters;
 
 namespace Uralstech.UGemini.Models.Tuning
 {

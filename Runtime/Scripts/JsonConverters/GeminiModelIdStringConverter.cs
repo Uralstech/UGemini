@@ -1,7 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
+using Uralstech.UGemini.Models;
 
-namespace Uralstech.UGemini.Models
+namespace Uralstech.UGemini.JsonConverters
 {
     /// <summary>
     /// Custom JSON converter to handle conversion of <see cref="GeminiModelId"/> to a single <see cref="string"/> value and vice-versa.

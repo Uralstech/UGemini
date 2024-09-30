@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Serialization;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Uralstech.UGemini.JsonConverters;
 
 namespace Uralstech.UGemini.Models.Generation.Schema
 {
@@ -61,13 +62,13 @@ namespace Uralstech.UGemini.Models.Generation.Schema
         /// <summary>
         /// Optional. Maximum number of the elements for <see cref="GeminiSchemaDataType.Array"/>.
         /// </summary>
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), JsonConverter(typeof(GeminiLongToStringJsonConverter)), DefaultValue(null)]
         public long? MaxItems = null;
 
         /// <summary>
         /// Optional. Minimum number of the elements for <see cref="GeminiSchemaDataType.Array"/>.
         /// </summary>
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), JsonConverter(typeof(GeminiLongToStringJsonConverter)), DefaultValue(null)]
         public long? MinItems = null;
 
         /// <summary>

@@ -2,6 +2,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.ComponentModel;
+using Uralstech.UGemini.JsonConverters;
 
 namespace Uralstech.UGemini.Models.Caching
 {

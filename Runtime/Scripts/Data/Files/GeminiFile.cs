@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Serialization;
 using System;
 using Uralstech.UCloud.Operations;
+using Uralstech.UGemini.JsonConverters;
 
 namespace Uralstech.UGemini.FileAPI
 {
@@ -35,6 +36,7 @@ namespace Uralstech.UGemini.FileAPI
         /// <summary>
         /// Size of the file in bytes.
         /// </summary>
+        [JsonConverter(typeof(GeminiLongToStringJsonConverter))]
         public long SizeBytes;
 
         /// <summary>
