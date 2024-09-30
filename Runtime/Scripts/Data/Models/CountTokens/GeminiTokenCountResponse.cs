@@ -18,5 +18,10 @@ namespace Uralstech.UGemini.Models.CountTokens
         /// Cached content is not supported in this package.
         /// </remarks>
         public int TotalTokens;
+
+        /// <summary>
+        /// Number of tokens in the cached part of the prompt (the cached content).
+        /// </summary>
+        public int CachedContentTokenCount;
     }
 }

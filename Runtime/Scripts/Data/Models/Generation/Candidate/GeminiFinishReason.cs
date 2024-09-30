@@ -41,6 +41,12 @@ namespace Uralstech.UGemini.Models.Generation.Candidate
         Recitation,
 
         /// <summary>
+        /// The response candidate content was flagged for using an unsupported language.
+        /// </summary>
+        [EnumMember(Value = "LANGUAGE")]
+        Language,
+
+        /// <summary>
         /// Unknown reason.
         /// </summary>
         [EnumMember(Value = "OTHER")]

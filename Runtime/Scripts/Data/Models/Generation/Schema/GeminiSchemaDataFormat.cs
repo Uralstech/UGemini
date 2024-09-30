@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 namespace Uralstech.UGemini.Models.Generation.Schema
 {
     /// <summary>
-    /// Defines the format of schema data.
+    /// Defines the format of schema data. Based on the <a href="https://spec.openapis.org/oas/v3.0.3#data-types">OpenAPI Specification v3.0.3</a>.
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum GeminiSchemaDataFormat
@@ -46,23 +46,27 @@ namespace Uralstech.UGemini.Models.Generation.Schema
         Enum,
 
         /// <summary>
-        /// A base64 encoded string of bytes.
+        /// A base64 encoded string of bytes. Not officially supported by the Gemini API.
         /// </summary>
+        [EnumMember(Value = "byte")]
         Base64Bytes,
 
         /// <summary>
-        /// A string of "any sequence of octets".
+        /// A string of any sequence of octets. Not officially supported by the Gemini API.
         /// </summary>
+        [EnumMember(Value = "binary")]
         Binary,
 
         /// <summary>
-        /// Date string as defined by <a href="https://datatracker.ietf.org/doc/html/rfc3339#section-5.6">full-date - RFC 3339</a>.
+        /// Date string as defined by <a href="https://datatracker.ietf.org/doc/html/rfc3339#section-5.6">full-date - RFC 3339</a>. Not officially supported by the Gemini API.
         /// </summary>
+        [EnumMember(Value = "date")]
         Date,
 
         /// <summary>
-        /// Date and time string as defined by <a href="https://datatracker.ietf.org/doc/html/rfc3339#section-5.6">date-time - RFC 3339</a>.
+        /// Date and time string as defined by <a href="https://datatracker.ietf.org/doc/html/rfc3339#section-5.6">date-time - RFC 3339</a>. Not officially supported by the Gemini API.
         /// </summary>
+        [EnumMember(Value = "date-time")]
         DateTime,
     }
 }

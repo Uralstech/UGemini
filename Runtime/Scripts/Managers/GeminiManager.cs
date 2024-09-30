@@ -257,13 +257,13 @@ namespace Uralstech.UGemini
             {
                 case GeminiAuthMethod.APIKey:
                     webRequest.SetRequestHeader("X-goog-api-key", _geminiApiKey); break;
-                
+
                 case GeminiAuthMethod.OAuthAccessToken:
                     if (string.IsNullOrWhiteSpace(request.OAuthAccessToken))
                         throw new GeminiOAuthException(webRequest, $"Authentication method was set to {request.AuthMethod} but the provided access token was empty!");
 
                     webRequest.SetRequestHeader("Authorization", $"Bearer {request.OAuthAccessToken}"); break;
-                
+
                 default:
                     throw new GeminiOAuthException(webRequest, $"Unknown authentication method {request.AuthMethod}.");
             }
