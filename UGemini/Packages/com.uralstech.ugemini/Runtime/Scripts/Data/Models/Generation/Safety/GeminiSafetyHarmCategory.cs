@@ -75,5 +75,11 @@ namespace Uralstech.UGemini.Models.Generation.Safety
         /// </summary>
         [EnumMember(Value = "HARM_CATEGORY_DANGEROUS_CONTENT")]
         DangerousContent,
+
+        /// <summary>
+        /// Content that may be used to harm civic integrity.
+        /// </summary>
+        [EnumMember(Value = "HARM_CATEGORY_CIVIC_INTEGRITY")]
+        CivicIntegrity,
     }
 }

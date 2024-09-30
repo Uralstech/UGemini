@@ -65,6 +65,12 @@ namespace Uralstech.UGemini.Models.Generation.Schema
         public long? MaxItems = null;
 
         /// <summary>
+        /// Optional. Minimum number of the elements for <see cref="GeminiSchemaDataType.Array"/>.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public long? MinItems = null;
+
+        /// <summary>
         /// The properties of <see cref="GeminiSchemaDataType.Object"/>.
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]

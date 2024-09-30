@@ -148,6 +148,11 @@ namespace Uralstech.UGemini.Models
         public float Temperature;
 
         /// <summary>
+        /// The maximum temperature this model can use.
+        /// </summary>
+        public float MaxTemperature;
+
+        /// <summary>
         /// For Nucleus sampling.
         /// </summary>
         /// <remarks>

@@ -39,5 +39,11 @@ namespace Uralstech.UGemini.Models.Generation.Safety
         /// </summary>
         [EnumMember(Value = "BLOCK_NONE")]
         None,
+
+        /// <summary>
+        /// Turn off the safety filter.
+        /// </summary>
+        [EnumMember(Value = "OFF")]
+        Off,
     }
 }
