@@ -92,7 +92,14 @@ namespace Uralstech.UGemini.Models.Generation.Candidate
                 CitationMetadata = data.CitationMetadata;
 
             TokenCount = data.TokenCount;
+
+            if (data.GroundingAttributions != null)
+                GroundingAttributions = data.GroundingAttributions;
+
             AvgLogprobs = data.AvgLogprobs;
+            if (data.LogprobsResult != null) // TODO: Verify this.
+                LogprobsResult = data.LogprobsResult;
+
             Index = data.Index;
         }
     }
