@@ -33,7 +33,7 @@ namespace Uralstech.UGemini.Models
 
             JsonObjectAttribute jsonObjectAttribute = type.GetCustomAttribute<JsonObjectAttribute>()
                 ?? throw new NotImplementedException($"Cannot get field mask for object of type {type.Name} as it does not implement {nameof(JsonObjectAttribute)}!");
-            
+
             if (jsonObjectAttribute.NamingStrategyType is not Type namingStrategyType)
                 throw new NotImplementedException($"Cannot get field mask for object of type {type.Name} as it has no defined {nameof(NamingStrategy)}.");
 

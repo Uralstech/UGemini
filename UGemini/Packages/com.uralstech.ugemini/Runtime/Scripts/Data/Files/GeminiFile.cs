@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Serialization;
 using System;
 using Uralstech.UCloud.Operations;
+using Uralstech.UGemini.JsonConverters;
 
 namespace Uralstech.UGemini.FileAPI
 {
@@ -35,6 +36,7 @@ namespace Uralstech.UGemini.FileAPI
         /// <summary>
         /// Size of the file in bytes.
         /// </summary>
+        [JsonConverter(typeof(GeminiLongToStringJsonConverter))]
         public long SizeBytes;
 
         /// <summary>
@@ -71,6 +73,12 @@ namespace Uralstech.UGemini.FileAPI
         /// Error status if <see cref="GeminiFile"/> processing failed.
         /// </summary>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public OperationStatus Error;
+
+        /// <summary>
+        /// Error status if <see cref="GeminiFile"/> processing failed.
+        /// </summary>
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore), Obsolete("Use GeminiFile.Error instead.")]
         public OperationStatus Status;
 
         /// <summary>

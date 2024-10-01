@@ -58,6 +58,18 @@ namespace Uralstech.UGemini.Models.Generation.Candidate
         public GeminiGroundingAttribution[] GroundingAttributions;
 
         /// <summary>
+        /// (No description provided)
+        /// </summary>
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public float AvgLogprobs;
+
+        /// <summary>
+        /// Log-likelihood scores for the response tokens and top tokens
+        /// </summary>
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public GeminiLogprobsResult LogprobsResult;
+
+        /// <summary>
         /// Index of the candidate in the list of candidates.
         /// </summary>
         public int Index;
@@ -83,6 +95,10 @@ namespace Uralstech.UGemini.Models.Generation.Candidate
 
             if (data.GroundingAttributions != null)
                 GroundingAttributions = data.GroundingAttributions;
+
+            AvgLogprobs = data.AvgLogprobs;
+            if (data.LogprobsResult != null) // TODO: Verify this when compatible models release.
+                LogprobsResult = data.LogprobsResult;
 
             Index = data.Index;
         }
