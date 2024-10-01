@@ -97,7 +97,7 @@ namespace Uralstech.UGemini.Models.Generation.Candidate
                 GroundingAttributions = data.GroundingAttributions;
 
             AvgLogprobs = data.AvgLogprobs;
-            if (data.LogprobsResult != null) // TODO: Verify this.
+            if (data.LogprobsResult != null) // TODO: Verify this when compatible models release.
                 LogprobsResult = data.LogprobsResult;
 
             Index = data.Index;
