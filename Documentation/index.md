@@ -11,7 +11,7 @@ A Unity C# wrapper for the Google Gemini API.
 
 ## Installation
 
-This *should* work on any reasonably modern Unity version. Built and tested in Unity 2022.3.29f1.
+This *should* work on any reasonably modern Unity version. Built and tested in Unity 2022.3.
 
 # [OpenUPM](#tab/openupm)
 
