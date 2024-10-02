@@ -5,7 +5,7 @@ using System.ComponentModel;
 namespace Uralstech.UGemini.CorporaAPI
 {
     /// <summary>
-    /// Data to patch an existing corpus resource with new data.
+    /// Data to patch an existing Corpus resource with new data.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class GeminiCorpusPatchData
