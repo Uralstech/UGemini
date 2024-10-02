@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Serialization;
 using System.ComponentModel;
 
-namespace Uralstech.UGemini.Models.Generation.QuestionAnswering.SemanticRetriever
+namespace Uralstech.UGemini.CorporaAPI.Filters
 {
     /// <summary>
     /// Filter condition applicable to a single key.

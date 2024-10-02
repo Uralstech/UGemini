@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Converters;
 using System.Runtime.Serialization;
 
-namespace Uralstech.UGemini.Models.Generation.QuestionAnswering.SemanticRetriever
+namespace Uralstech.UGemini.CorporaAPI.Filters
 {
     /// <summary>
     /// Defines the valid operators that can be applied to a key-value pair.

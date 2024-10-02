@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace Uralstech.UGemini.Models.Generation.QuestionAnswering.SemanticRetriever
+namespace Uralstech.UGemini.CorporaAPI.Filters
 {
     /// <summary>
     /// User provided filter to limit retrieval based on Chunk or Document level metadata values.
