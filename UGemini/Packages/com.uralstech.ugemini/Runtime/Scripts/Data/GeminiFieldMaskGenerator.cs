@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace Uralstech.UGemini.Models
+namespace Uralstech.UGemini
 {
     /// <summary>
     /// Extension to generate a <a href="https://protobuf.dev/reference/protobuf/google.protobuf/#field-mask">Field Mask</a> from any object.
