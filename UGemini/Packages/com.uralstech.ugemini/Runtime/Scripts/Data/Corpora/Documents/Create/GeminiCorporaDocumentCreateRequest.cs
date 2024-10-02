@@ -21,7 +21,8 @@ namespace Uralstech.UGemini.CorporaAPI.Documents
         /// or dashes (-). The ID cannot start or end with a dash. If the name is empty on create, a unique name will be derived from<br/>
         /// displayName along with a 12 character random suffix. Example: corpora/{corpus_id}/documents/my-awesome-doc-123a456b789c
         /// </remarks>
-        public string Name;
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public string Name = null;
 
         /// <summary>
         /// The human-readable display name for the Document.
@@ -74,11 +75,28 @@ namespace Uralstech.UGemini.CorporaAPI.Documents
         /// <remarks>
         /// Only available in the beta API.
         /// </remarks>
-        /// <param name="corpusNameOrId">The name (format 'corpora/{corpusId}') or ID of the Corpus to create the Document in.</param>
+        /// <param name="corpusNameOrId">The name (format 'corpora/{corpusId}') or ID of the Corpus to create the document in.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
         public GeminiCorporaDocumentCreateRequest(string corpusNameOrId, bool useBetaApi = true)
         {
             CorpusId = corpusNameOrId.Split('/')[^1];
+            ApiVersion = useBetaApi ? "v1beta" : "v1";
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="GeminiCorporaDocumentCreateRequest"/>.
+        /// </summary>
+        /// <remarks>
+        /// Only available in the beta API.
+        /// </remarks>
+        /// <param name="corpusNameOrId">The name (format 'corpora/{corpusId}') or ID of the Corpus to create the Document in.</param>
+        /// <param name="documentNameOrId">The name (format 'corpora/{corpusId}/documents/{documentId}') or ID of the Document to create.</param>
+        /// <param name="useBetaApi">Should the request use the Beta API?</param>
+        public GeminiCorporaDocumentCreateRequest(string corpusNameOrId, string documentNameOrId, bool useBetaApi = true)
+        {
+            CorpusId = corpusNameOrId.Split('/')[^1];
+            Name = $"corpora/{CorpusId}/documents/{documentNameOrId.Split("/")[^1]}";
+
             ApiVersion = useBetaApi ? "v1beta" : "v1";
         }
 
