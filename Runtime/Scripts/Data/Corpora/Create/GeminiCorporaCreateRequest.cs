@@ -21,7 +21,8 @@ namespace Uralstech.UGemini.CorporaAPI
         /// The ID cannot start or end with a dash. If the name is empty on create, a unique name will be derived from displayName along<br/>
         /// with a 12 character random suffix. Example: corpora/my-awesome-corpora-123a456b789c
         /// </remarks>
-        public string Name;
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public string Name = null;
 
         /// <summary>
         /// The human-readable display name for the Corpus.
@@ -65,6 +66,20 @@ namespace Uralstech.UGemini.CorporaAPI
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
         public GeminiCorporaCreateRequest(bool useBetaApi = true)
         {
+            ApiVersion = useBetaApi ? "v1beta" : "v1";
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="GeminiCorporaCreateRequest"/>.
+        /// </summary>
+        /// <remarks>
+        /// Only available in the beta API.
+        /// </remarks>
+        /// <param name="corpusNameOrId">The name (format 'corpora/{corpusId}') or ID of the Corpus to create.</param>
+        /// <param name="useBetaApi">Should the request use the Beta API?</param>
+        public GeminiCorporaCreateRequest(string corpusNameOrId, bool useBetaApi = true)
+        {
+            Name = $"corpora/{corpusNameOrId.Split('/')[^1]}";
             ApiVersion = useBetaApi ? "v1beta" : "v1";
         }
 
