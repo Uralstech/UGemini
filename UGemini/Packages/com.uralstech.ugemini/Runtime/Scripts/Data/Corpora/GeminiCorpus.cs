@@ -1,6 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
+using Uralstech.UGemini.JsonConverters;
 
 namespace Uralstech.UGemini.CorporaAPI
 {
@@ -11,14 +12,15 @@ namespace Uralstech.UGemini.CorporaAPI
     public class GeminiCorpus
     {
         /// <summary>
-        /// The Corpus resource name.
+        /// The Corpus resource.
         /// </summary>
         /// <remarks>
         /// The ID (name excluding the "corpora/" prefix) can contain up to 40 characters that are lowercase alphanumeric or dashes (-).<br/>
         /// The ID cannot start or end with a dash. If the name is empty on create, a unique name will be derived from displayName along<br/>
         /// with a 12 character random suffix. Example: corpora/my-awesome-corpora-123a456b789c
         /// </remarks>
-        public string Name;
+        [JsonProperty("name"), JsonConverter(typeof(GeminiCorpusResourceIdToStringConverter<GeminiCorpusId>))]
+        public GeminiCorpusId Resource;
 
         /// <summary>
         /// The human-readable display name for the Corpus.

@@ -18,18 +18,17 @@ namespace Uralstech.UGemini
         private static readonly BindingFlags s_publicInstanceMembers = BindingFlags.Instance | BindingFlags.Public;
 
         /// <summary>
-        /// Generates a <a href="https://protobuf.dev/reference/protobuf/google.protobuf/#field-mask">Field Mask</a> from an object of type <typeparamref name="T"/>.
+        /// Generates a <a href="https://protobuf.dev/reference/protobuf/google.protobuf/#field-mask">Field Mask</a> from an object.
         /// </summary>
         /// <remarks>
-        /// This is a reflection heavy process. Also, this only works if the default value off all fields and properties in <typeparamref name="T"/> is <see langword="null"/>.
+        /// This is a reflection heavy process. Also, this only works if the default value of all fields and properties in the object is <see langword="null"/>.
         /// </remarks>
-        /// <typeparam name="T">The type.</typeparam>
         /// <param name="thiz">The object.</param>
         /// <returns>A string field mask.</returns>
-        /// <exception cref="NotImplementedException">Thrown if <typeparamref name="T"/> does not implement <see cref="JsonObjectAttribute"/> or has no defined <see cref="NamingStrategy"/>.</exception>
-        public static string GetFieldMask<T>(this T thiz)
+        /// <exception cref="NotImplementedException">Thrown if <paramref name="thiz"/> does not implement <see cref="JsonObjectAttribute"/> or has no defined <see cref="NamingStrategy"/>.</exception>
+        public static string GetFieldMask(this object thiz)
         {
-            Type type = typeof(T);
+            Type type = thiz.GetType();
 
             JsonObjectAttribute jsonObjectAttribute = type.GetCustomAttribute<JsonObjectAttribute>()
                 ?? throw new NotImplementedException($"Cannot get field mask for object of type {type.Name} as it does not implement {nameof(JsonObjectAttribute)}!");

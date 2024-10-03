@@ -5,18 +5,15 @@ using System.ComponentModel;
 namespace Uralstech.UGemini.CorporaAPI
 {
     /// <summary>
-    /// Data to patch an existing Corpora API resource with new data.
+    /// Data to patch an existing Document or Chunk resource with new data.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class GeminiCorpusPatchData
+    public class GeminiCorpusObjectPatchData : GeminiCorpusPatchData
     {
         /// <summary>
-        /// The human-readable display name for the resource.
+        /// User provided custom metadata stored as key-value pairs used for querying. A Document or Chunk can have a maximum of 20 CustomMetadata.
         /// </summary>
-        /// <remarks>
-        /// The display name must be no more than 512 characters in length, including spaces. Example: "Docs on Semantic Retriever"
-        /// </remarks>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
-        public string DisplayName = null;
+        public GeminiCorpusCustomMetadata[] CustomMetadata = null;
     }
 }

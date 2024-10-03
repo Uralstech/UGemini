@@ -47,7 +47,7 @@ namespace Uralstech.UGemini.Models.Tuning
         /// <remarks>
         /// If not provided, <see cref="TunedModelSource"/> must be provided.
         /// </remarks>
-        [JsonConverter(typeof(GeminiModelIdStringConverter)), JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        [JsonConverter(typeof(GeminiModelIdToStringConverter)), JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiModelId BaseModel = null;
 
         /// <summary>

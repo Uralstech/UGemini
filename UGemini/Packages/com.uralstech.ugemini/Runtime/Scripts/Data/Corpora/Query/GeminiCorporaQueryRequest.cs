@@ -6,7 +6,7 @@ using Uralstech.UGemini.CorporaAPI.Filters;
 namespace Uralstech.UGemini.CorporaAPI
 {
     /// <summary>
-    /// Performs semantic search over a Corpus. Response type is <see cref="GeminiCorporaQueryResponse"/>.
+    /// Performs semantic search over a Corpus or Document. Response type is <see cref="GeminiCorporaQueryResponse"/>.
     /// </summary>
     /// <remarks>
     /// Only available in the beta API.
@@ -26,7 +26,8 @@ namespace Uralstech.UGemini.CorporaAPI
         /// Each <see cref="GeminiMetadataFilter"/> object should correspond to a unique key. Multiple MetadataFilter objects are joined by logical "AND"s.
         /// <br/><br/>
         /// Example query at document level:<br/>
-        /// (year &gt;= 2020 OR year &lt; 2010) AND (genre = drama OR genre = action)
+        /// (year &gt;= 2020 OR year &lt; 2010) AND (genre = drama OR genre = action)<br/>
+        /// Note: Document-level filtering is not supported for query requests on Documents because a Document name is already specified.
         /// <br/><br/>
         /// MetadataFilter object list:<br/>
         /// MetadataFilters = [{Key = "document.custom_metadata.year", Conditions = [{NumericValue = 2020, Operation = GreaterThanOrEqual}, {NumericValue = 2010, Operation = LessThan<br/>
@@ -61,10 +62,10 @@ namespace Uralstech.UGemini.CorporaAPI
         public string ApiVersion;
 
         /// <summary>
-        /// The ID of the Corpus to query.
+        /// The resource ID of the Corpus or Document to query.
         /// </summary>
         [JsonIgnore]
-        public string CorpusId;
+        public IGeminiCorpusResourceId ResourceId;
 
         /// <inheritdoc/>
         [JsonIgnore]
@@ -81,7 +82,7 @@ namespace Uralstech.UGemini.CorporaAPI
         /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/corpora/{CorpusId}:query";
+            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{ResourceId.ResourceName}:query";
         }
 
         /// <summary>
@@ -90,11 +91,11 @@ namespace Uralstech.UGemini.CorporaAPI
         /// <remarks>
         /// Only available in the beta API.
         /// </remarks>
-        /// <param name="corpusNameOrId">The name (format 'corpora/{corpusId}') or ID of the Corpus to query.</param>
+        /// <param name="resourceId">The resource ID of the Corpus or Document to Query.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiCorporaQueryRequest(string corpusNameOrId, bool useBetaApi = true)
+        public GeminiCorporaQueryRequest(IGeminiCorpusResourceId resourceId, bool useBetaApi = true)
         {
-            CorpusId = corpusNameOrId.Split('/')[^1];
+            ResourceId = resourceId;
             ApiVersion = useBetaApi ? "v1beta" : "v1";
         }
 

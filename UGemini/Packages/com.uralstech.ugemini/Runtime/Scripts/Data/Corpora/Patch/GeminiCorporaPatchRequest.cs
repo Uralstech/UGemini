@@ -3,7 +3,8 @@ using Newtonsoft.Json;
 namespace Uralstech.UGemini.CorporaAPI
 {
     /// <summary>
-    /// Updates a Corpus. Response type is <see cref="GeminiCorpus"/>.
+    /// Updates a Corpora API resource. Response type can be <see cref="GeminiCorpus"/>,
+    /// <see cref="Documents.GeminiCorpusDocument"/> or <see cref="Chunks.GeminiCorpusChunk"/>.
     /// </summary>
     /// <remarks>
     /// Only available in the beta API.
@@ -13,12 +14,15 @@ namespace Uralstech.UGemini.CorporaAPI
         /// <summary>
         /// The patch data.
         /// </summary>
+        /// <remarks>
+        /// See <see cref="GeminiCorpusObjectPatchData"/> for Document and Chunk-specific patch data.
+        /// </remarks>
         public GeminiCorpusPatchData Patch;
 
         /// <summary>
-        /// The ID of the Corpus to patch.
+        /// The ID of the Corpora API resource to patch.
         /// </summary>
-        public string CorpusId;
+        public IGeminiCorpusResourceId ResourceId;
 
         /// <summary>
         /// The API version to use.
@@ -37,7 +41,7 @@ namespace Uralstech.UGemini.CorporaAPI
         /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/corpora/{CorpusId}?updateMask={Patch.GetFieldMask()}";
+            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{ResourceId.ResourceName}?updateMask={Patch.GetFieldMask()}";
         }
 
         /// <summary>
@@ -47,12 +51,12 @@ namespace Uralstech.UGemini.CorporaAPI
         /// Only available in the beta API.
         /// </remarks>
         /// <param name="patch">The patch data.</param>
-        /// <param name="corpusNameOrId">The name (format 'corpora/{corpusId}') or ID of the Corpus to patch.</param>
+        /// <param name="resourceId">The resource ID of the Corpora API resource to patch.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiCorporaPatchRequest(GeminiCorpusPatchData patch, string corpusNameOrId, bool useBetaApi = true)
+        public GeminiCorporaPatchRequest(GeminiCorpusPatchData patch, IGeminiCorpusResourceId resourceId, bool useBetaApi = true)
         {
             Patch = patch;
-            CorpusId = corpusNameOrId.Split('/')[^1];
+            ResourceId = resourceId;
             ApiVersion = useBetaApi ? "v1beta" : "v1";
         }
 

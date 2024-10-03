@@ -1,7 +1,8 @@
 namespace Uralstech.UGemini.CorporaAPI
 {
     /// <summary>
-    /// Gets information about a specific Corpus. Response type is <see cref="GeminiCorpus"/>.
+    /// Gets information about a specific Corpora API resource. Response type can be <see cref="GeminiCorpus"/>,
+    /// <see cref="Documents.GeminiCorpusDocument"/> or <see cref="Chunks.GeminiCorpusChunk"/>.
     /// </summary>
     /// <remarks>
     /// Only available in the beta API.
@@ -14,9 +15,9 @@ namespace Uralstech.UGemini.CorporaAPI
         public string ApiVersion;
 
         /// <summary>
-        /// The ID of the Corpus to get.
+        /// The ID of the resource to get.
         /// </summary>
-        public string CorpusId;
+        public IGeminiCorpusResourceId ResourceId;
 
         /// <inheritdoc/>
         public GeminiAuthMethod AuthMethod { get; set; } = GeminiAuthMethod.OAuthAccessToken;
@@ -27,7 +28,7 @@ namespace Uralstech.UGemini.CorporaAPI
         /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/corpora/{CorpusId}";
+            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{ResourceId.ResourceName}";
         }
 
         /// <summary>
@@ -36,11 +37,11 @@ namespace Uralstech.UGemini.CorporaAPI
         /// <remarks>
         /// Only available in the beta API.
         /// </remarks>
-        /// <param name="corpusNameOrId">The name (format 'corpora/{corpusId}') or ID of the Corpus to get.</param>
+        /// <param name="resourceId">The ID of the resource to get.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiCorporaGetRequest(string corpusNameOrId, bool useBetaApi = true)
+        public GeminiCorporaGetRequest(IGeminiCorpusResourceId resourceId, bool useBetaApi = true)
         {
-            CorpusId = corpusNameOrId.Split('/')[^1];
+            ResourceId = resourceId;
             ApiVersion = useBetaApi ? "v1beta" : "v1";
         }
     }
