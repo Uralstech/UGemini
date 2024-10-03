@@ -1,3 +1,5 @@
+using Uralstech.UGemini.CorporaAPI.Documents;
+
 namespace Uralstech.UGemini.CorporaAPI
 {
     /// <summary>
@@ -46,9 +48,16 @@ namespace Uralstech.UGemini.CorporaAPI
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             string parentResource = ParentResourceId?.ResourceName ?? "corpora";
+            string createMethod = ParentResourceId switch
+            {
+                GeminiCorpusDocumentId => "/chunks",
+                GeminiCorpusId => "/documents",
+                _ => string.Empty
+            };
+
             return string.IsNullOrEmpty(PageToken)
-                ? $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{parentResource}?pageSize={MaxResponseObjects}"
-                : $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{parentResource}?pageSize={MaxResponseObjects}&pageToken={PageToken}";
+                ? $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{parentResource}{createMethod}?pageSize={MaxResponseObjects}"
+                : $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{parentResource}{createMethod}?pageSize={MaxResponseObjects}&pageToken={PageToken}";
         }
 
         /// <summary>

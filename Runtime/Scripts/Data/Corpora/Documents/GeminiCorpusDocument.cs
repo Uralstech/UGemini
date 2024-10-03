@@ -1,6 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
+using Uralstech.UGemini.JsonConverters;
 
 namespace Uralstech.UGemini.CorporaAPI.Documents
 {
@@ -11,14 +12,15 @@ namespace Uralstech.UGemini.CorporaAPI.Documents
     public class GeminiCorpusDocument
     {
         /// <summary>
-        /// The Document resource name.
+        /// The Document resource ID.
         /// </summary>
         /// <remarks>
         /// The ID (name excluding the "corpora/*/documents/" prefix) can contain up to 40 characters that are lowercase alphanumeric<br/>
         /// or dashes (-). The ID cannot start or end with a dash. If the name is empty on create, a unique name will be derived from<br/>
         /// displayName along with a 12 character random suffix. Example: corpora/{corpus_id}/documents/my-awesome-doc-123a456b789c
         /// </remarks>
-        public string Name;
+        [JsonProperty("name"), JsonConverter(typeof(GeminiCorpusResourceIdToStringConverter<GeminiCorpusDocumentId>))]
+        public GeminiCorpusDocumentId Resource;
 
         /// <summary>
         /// The human-readable display name for the Document.

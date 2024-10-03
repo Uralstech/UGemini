@@ -2,6 +2,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.ComponentModel;
 using Uralstech.UGemini.CorporaAPI.Chunks;
+using Uralstech.UGemini.CorporaAPI.Documents;
 using Uralstech.UGemini.JsonConverters;
 
 namespace Uralstech.UGemini.CorporaAPI
@@ -48,7 +49,7 @@ namespace Uralstech.UGemini.CorporaAPI
         public GeminiCorpusChunkData Data = null;
 
         /// <summary>
-        /// User provided custom metadata stored as key-value pairs used for querying. A Document can have a maximum of 20 CustomMetadata.
+        /// User provided custom metadata stored as key-value pairs used for querying. A Document/Chunk can have a maximum of 20 CustomMetadata.
         /// </summary>
         /// <remarks>
         /// Not supported for Corpus creation requests.
@@ -87,7 +88,14 @@ namespace Uralstech.UGemini.CorporaAPI
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
             string parentResource = ParentResourceId?.ResourceName ?? "corpora";
-            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{parentResource}";
+            string createMethod = ParentResourceId switch
+            {
+                GeminiCorpusDocumentId => "/chunks",
+                GeminiCorpusId => "/documents",
+                _ => string.Empty
+            };
+
+            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{parentResource}{createMethod}";
         }
 
         /// <summary>
