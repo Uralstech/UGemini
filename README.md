@@ -72,10 +72,10 @@ Do not use preview versions (i.e. versions that end with "-preview") for product
 
 - [x] `corpora` endpoint 🧪 (Unstable)
     - [x] `documents` endpoint
-        - [ ] `chunks` endpoint
-            - [ ] `batchCreate` method
-            - [ ] `batchDelete` method
-            - [ ] `batchUpdate` method
+        - [x] `chunks` endpoint
+            - [x] `batchCreate` method
+            - [x] `batchDelete` method
+            - [x] `batchUpdate` method
             - [x] `create` method
             - [x] `delete` method
             - [x] `get` method

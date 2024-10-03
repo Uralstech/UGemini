@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
+using Uralstech.UGemini.JsonConverters;
 
 namespace Uralstech.UGemini.CorporaAPI.Chunks
 {
@@ -12,7 +13,7 @@ namespace Uralstech.UGemini.CorporaAPI.Chunks
     public class GeminiCorpusChunk
     {
         /// <summary>
-        /// The Chunk resource name.
+        /// The Chunk resource ID.
         /// </summary>
         /// <remarks>
         /// The ID (name excluding the "corpora/*/documents/*/chunks/" prefix) can contain up to 40 characters<br/>
@@ -20,7 +21,8 @@ namespace Uralstech.UGemini.CorporaAPI.Chunks
         /// is empty on create, a random 12-character unique ID will be generated. Example:<br/>
         /// corpora/{corpus_id}/documents/{document_id}/chunks/123a456b789c
         /// </remarks>
-        public string Name;
+        [JsonProperty("name"), JsonConverter(typeof(GeminiCorpusResourceIdToStringConverter<GeminiCorpusChunkId>))]
+        public GeminiCorpusChunkId Resource;
 
         /// <summary>
         /// The content for the Chunk, such as the text string. The maximum number of tokens per chunk is 2043.
