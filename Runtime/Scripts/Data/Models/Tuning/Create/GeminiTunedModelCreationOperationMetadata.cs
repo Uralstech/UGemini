@@ -13,7 +13,7 @@ namespace Uralstech.UGemini.Models.Tuning
         /// <summary>
         /// The ID of the model being tuned.
         /// </summary>
-        [JsonConverter(typeof(GeminiModelIdStringConverter))]
+        [JsonConverter(typeof(GeminiModelIdToStringConverter))]
         public GeminiModelId TunedModel;
 
         /// <summary>

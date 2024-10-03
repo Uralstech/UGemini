@@ -1,7 +1,7 @@
 namespace Uralstech.UGemini.CorporaAPI
 {
     /// <summary>
-    /// Deletes a Corpus.
+    /// Deletes a Corpora API resource.
     /// </summary>
     /// <remarks>
     /// Only available in the beta API.
@@ -14,13 +14,17 @@ namespace Uralstech.UGemini.CorporaAPI
         public string ApiVersion;
 
         /// <summary>
-        /// The ID of the Corpus to delete.
+        /// The ID of the Corpora API resource to delete.
         /// </summary>
-        public string CorpusId;
+        public IGeminiCorpusResourceId ResourceId;
 
         /// <summary>
-        /// If set to <see langword="true"/>, any Documents and objects related to this Corpus will also be deleted. If <see langword="false"/>, a FAILED_PRECONDITION error will be returned if the Corpus contains any Documents.
+        /// If set to <see langword="true"/>, any Documents/Chunks and objects related to this Corpus/Document will also be deleted.
+        /// If <see langword="false"/>, a FAILED_PRECONDITION error will be returned if the Corpus/Document contains any Documents/Chunks.
         /// </summary>
+        /// <remarks>
+        /// Unsupported for Chunk deletion requests.
+        /// </remarks>
         public bool ForceDelete = false;
 
         /// <inheritdoc/>
@@ -32,7 +36,9 @@ namespace Uralstech.UGemini.CorporaAPI
         /// <inheritdoc/>
         public string GetEndpointUri(GeminiRequestMetadata metadata)
         {
-            return $"{GeminiManager.BaseServiceUri}/{ApiVersion}/corpora/{CorpusId}?force={ForceDelete}";
+            return ForceDelete
+                ? $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{ResourceId.ResourceName}?force=true"
+                : $"{GeminiManager.BaseServiceUri}/{ApiVersion}/{ResourceId.ResourceName}";
         }
 
         /// <summary>
@@ -41,11 +47,11 @@ namespace Uralstech.UGemini.CorporaAPI
         /// <remarks>
         /// Only available in the beta API.
         /// </remarks>
-        /// <param name="corpusNameOrId">The name (format 'corpora/{corpusId}') or ID of the Corpus to delete.</param>
+        /// <param name="resourceId">The ID of the Corpora API resource to delete.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiCorporaDeleteRequest(string corpusNameOrId, bool useBetaApi = true)
+        public GeminiCorporaDeleteRequest(IGeminiCorpusResourceId resourceId, bool useBetaApi = true)
         {
-            CorpusId = corpusNameOrId.Split('/')[^1];
+            ResourceId = resourceId;
             ApiVersion = useBetaApi ? "v1beta" : "v1";
         }
     }
