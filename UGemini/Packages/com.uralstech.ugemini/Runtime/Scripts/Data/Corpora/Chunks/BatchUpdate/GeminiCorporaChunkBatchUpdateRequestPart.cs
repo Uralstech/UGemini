@@ -12,7 +12,7 @@ namespace Uralstech.UGemini.CorporaAPI.Chunks
         /// <summary>
         /// The patch data for the Chunk.
         /// </summary>
-        public GeminiCorpusObjectPatchData Chunk;
+        public GeminiCorpusChunkPatchData Chunk;
 
         /// <summary>
         /// The list of fields to update. This is automatically generated.
@@ -23,7 +23,7 @@ namespace Uralstech.UGemini.CorporaAPI.Chunks
         /// Creates a new <see cref="GeminiCorporaChunkBatchUpdateRequestPart"/>.
         /// </summary>
         /// <param name="chunk">The patch data for the Chunk.</param>
-        public GeminiCorporaChunkBatchUpdateRequestPart(GeminiCorpusObjectPatchData chunk)
+        public GeminiCorporaChunkBatchUpdateRequestPart(GeminiCorpusChunkPatchData chunk)
         {
             Chunk = chunk;
             UpdateMask = Chunk.GetFieldMask();

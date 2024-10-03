@@ -25,7 +25,7 @@ namespace Uralstech.UGemini.CorporaAPI.Chunks
         public GeminiCorpusChunkId Resource;
 
         /// <summary>
-        /// The content for the Chunk, such as the text string. The maximum number of tokens per chunk is 2043.
+        /// The content for the Chunk, such as text. The maximum number of tokens per chunk is 2043.
         /// </summary>
         public GeminiCorpusChunkData Data;
 
