@@ -9,15 +9,17 @@ namespace Uralstech.UGemini.CorporaAPI
     /// <remarks>
     /// Only available in the beta API.
     /// </remarks>
-    public class GeminiCorporaPatchRequest : IGeminiPatchRequest
+    /// <typeparam name="TPatchData">
+    /// The type of patch data. Use <see cref="GeminiCorpusPatchData"/> for patching Corpora, 
+    /// <see cref="Documents.GeminiCorpusDocumentPatchData"/> for Documents and
+    /// <see cref="Chunks.GeminiCorpusChunkPatchData"/> for Chunks.
+    /// </typeparam>
+    public class GeminiCorporaPatchRequest<TPatchData> : IGeminiPatchRequest
     {
         /// <summary>
         /// The patch data.
         /// </summary>
-        /// <remarks>
-        /// See <see cref="GeminiCorpusObjectPatchData"/> for Document and Chunk-specific patch data.
-        /// </remarks>
-        public GeminiCorpusPatchData Patch;
+        public TPatchData Patch;
 
         /// <summary>
         /// The ID of the Corpora API resource to patch.
@@ -53,7 +55,7 @@ namespace Uralstech.UGemini.CorporaAPI
         /// <param name="patch">The patch data.</param>
         /// <param name="resourceId">The resource ID of the Corpora API resource to patch.</param>
         /// <param name="useBetaApi">Should the request use the Beta API?</param>
-        public GeminiCorporaPatchRequest(GeminiCorpusPatchData patch, IGeminiCorpusResourceId resourceId, bool useBetaApi = true)
+        public GeminiCorporaPatchRequest(TPatchData patch, IGeminiCorpusResourceId resourceId, bool useBetaApi = true)
         {
             Patch = patch;
             ResourceId = resourceId;
