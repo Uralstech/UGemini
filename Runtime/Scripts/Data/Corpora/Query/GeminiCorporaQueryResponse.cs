@@ -5,7 +5,7 @@ using Uralstech.UGemini.CorporaAPI.Chunks;
 namespace Uralstech.UGemini.CorporaAPI
 {
     /// <summary>
-    /// The response for a <see cref="GeminiCorporaQueryRequest"/> or <see cref="Documents.GeminiCorporaDocumentQueryRequest"/> call.
+    /// The response for a <see cref="GeminiCorporaQueryRequest"/> call.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class GeminiCorporaQueryResponse

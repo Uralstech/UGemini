@@ -34,7 +34,7 @@ namespace Uralstech.UGemini.CorporaAPI.Documents
         /// Creates a new <see cref="GeminiCorpusDocumentId"/>.
         /// </summary>
         /// <param name="corpusId">The resource ID of the Corpus which contains the Document.</param>
-        /// <param name="documentNameOrId">The name (format 'corpora/{corpusId}/documents/{documentId}') or ID of the Document.</param
+        /// <param name="documentNameOrId">The name (format 'corpora/{corpusId}/documents/{documentId}') or ID of the Document.</param>
         public GeminiCorpusDocumentId(GeminiCorpusId corpusId, string documentNameOrId)
         {
             CorpusId = corpusId.ResourceId;

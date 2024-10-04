@@ -47,7 +47,7 @@ namespace Uralstech.UGemini.CorporaAPI
         }
 
         /// <summary>
-        /// Creates a new <see cref="GeminiCorporaPatchRequest"/>.
+        /// Creates a new <see cref="GeminiCorporaPatchRequest{TPatchData}"/>.
         /// </summary>
         /// <remarks>
         /// Only available in the beta API.
