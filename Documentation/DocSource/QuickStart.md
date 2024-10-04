@@ -2,6 +2,10 @@
 
 Please note that the code provided in this page is *purely* for learning purposes and is far from perfect. Remember to null-check all responses!
 
+## Breaking Changes Notice
+
+If you've just updated UGemini, it is recommended to check out the [*releases page*](https://github.com/Uralstech/UGemini/releases) for information on breaking changes for each update.
+
 ## Setup
 
 Add an instance of `Uralstech.UGemini.GeminiManager` to your scene, and set it up with your Gemini API key. You can get your API key from [*here*](https://makersuite.google.com/app/apikey).
