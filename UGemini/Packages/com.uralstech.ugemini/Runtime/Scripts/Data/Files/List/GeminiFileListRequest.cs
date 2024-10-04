@@ -14,7 +14,7 @@
         public string ApiVersion;
 
         /// <summary>
-        /// Maximum number of Files to return per page. If unspecified, defaults to 10. Maximum pageSize is 100.
+        /// Maximum number of Files to return per page. If unspecified, defaults to 10. Maximum is 100.
         /// </summary>
         public int MaxResponseFiles = 10;
 

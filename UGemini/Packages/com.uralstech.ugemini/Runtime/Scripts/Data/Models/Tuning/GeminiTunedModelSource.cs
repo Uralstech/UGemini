@@ -13,13 +13,13 @@ namespace Uralstech.UGemini.Models.Tuning
         /// <summary>
         /// The name of the <see cref="GeminiTunedModel"/> to use as the starting point for training the new model. Example: tunedModels/my-tuned-model
         /// </summary>
-        [JsonConverter(typeof(GeminiModelIdStringConverter))]
+        [JsonConverter(typeof(GeminiModelIdToStringConverter))]
         public GeminiModelId TunedModel;
 
         /// <summary>
         /// The name of the base <see cref="GeminiModel"/> this <see cref="GeminiTunedModel"/> was tuned from. Example: models/gemini-1.5-flash-001
         /// </summary>
-        [JsonConverter(typeof(GeminiModelIdStringConverter))]
+        [JsonConverter(typeof(GeminiModelIdToStringConverter))]
         public GeminiModelId BaseModel;
     }
 }

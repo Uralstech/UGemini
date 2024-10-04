@@ -25,5 +25,19 @@ namespace Uralstech.UGemini.FileAPI
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public string DisplayName = null;
+
+        /// <summary>
+        /// Creates a new <see cref="GeminiFileUploadMetaData"/> object.
+        /// </summary>
+        public GeminiFileUploadMetaData() { }
+
+        /// <summary>
+        /// Creates a new <see cref="GeminiFileUploadMetaData"/> object.
+        /// </summary>
+        /// <param name="fileNameOrId">The name (format 'files/{fileId}') or ID of the file to be uploaded.</param>
+        public GeminiFileUploadMetaData(string fileNameOrId)
+        {
+            Name = $"files/{fileNameOrId.Split('/')[^1]}";
+        }
     }
 }

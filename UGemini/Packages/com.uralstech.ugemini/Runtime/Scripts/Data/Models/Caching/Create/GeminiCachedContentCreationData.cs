@@ -53,7 +53,7 @@ namespace Uralstech.UGemini.Models.Caching
         /// <summary>
         /// The name of the Model to use for cached content.
         /// </summary>
-        [JsonConverter(typeof(GeminiModelIdStringConverter))]
+        [JsonConverter(typeof(GeminiModelIdToStringConverter))]
         public GeminiModelId Model;
 
         /// <summary>

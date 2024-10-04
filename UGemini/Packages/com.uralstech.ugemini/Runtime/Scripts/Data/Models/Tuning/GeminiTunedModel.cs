@@ -58,7 +58,7 @@ namespace Uralstech.UGemini.Models.Tuning
         /// <summary>
         /// The name of the <see cref="GeminiModel"/> to tune. Example: models/gemini-1.5-flash-0
         /// </summary>
-        [JsonConverter(typeof(GeminiModelIdStringConverter))]
+        [JsonConverter(typeof(GeminiModelIdToStringConverter))]
         public GeminiModelId BaseModel;
 
         /// <summary>
