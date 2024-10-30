@@ -268,7 +268,6 @@ namespace Uralstech.UGemini
                     throw new GeminiOAuthException(webRequest, $"Unknown authentication method {request.AuthMethod}.");
             }
 
-
             webRequest.disposeUploadHandlerOnDispose = true;
             webRequest.disposeDownloadHandlerOnDispose = true;
         }
