@@ -14,7 +14,7 @@ namespace Uralstech.UGemini.CorporaAPI.Chunks
         /// <summary>
         /// The parent document in which the Chunk will be created.
         /// </summary>
-        [JsonProperty("name"), JsonConverter(typeof(GeminiCorpusResourceIdToStringConverter))]
+        [JsonProperty("name"), JsonConverter(typeof(GeminiCorpusResourceIdToStringConverter<GeminiCorpusDocumentId>))]
         public GeminiCorpusDocumentId ParentDocumentId;
 
         /// <summary>
