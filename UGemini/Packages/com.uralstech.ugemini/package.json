@@ -1,7 +1,7 @@
 {
   "name": "com.uralstech.ugemini",
   "displayName": "UGemini",
-  "description": "UGemini: A Unity C# wrapper for the Google Gemini API.\n\nUGemini v2.0.0 contains many breaking changes. Please check the online documentation or the reference manual included with the package (located in the [package-location]/Documentation~/ folder) for the change list.",
+  "description": "UGemini: A Unity C# wrapper for the Google Gemini API.\n\nIf you've just updated UGemini, it is recommended to check out the releases page (https://github.com/Uralstech/UGemini/releases) for information on breaking changes for each update.",
   "keywords": [
     "API",
     "Google",
@@ -9,7 +9,7 @@
     "AI",
     "Integration"
   ],
-  "version": "2.3.0-preview.2",
+  "version": "2.3.0-preview.3",
   "unity": "2022.3",
   "hideInEditor": false,
   "documentationUrl": "https://uralstech.github.io/UGemini/",
@@ -67,7 +67,7 @@
     }
   ],
   "dependencies": {
-    "com.uralstech.utils.singleton": "1.0.1",
+    "com.uralstech.utils.singleton": "1.1.0",
     "com.uralstech.ucloud.operations": "1.1.4",
     "com.unity.nuget.newtonsoft-json": "3.2.1"
   }

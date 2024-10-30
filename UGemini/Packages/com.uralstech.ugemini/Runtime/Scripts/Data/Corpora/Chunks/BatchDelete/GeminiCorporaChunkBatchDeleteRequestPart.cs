@@ -13,7 +13,7 @@ namespace Uralstech.UGemini.CorporaAPI.Chunks
         /// <summary>
         /// The resource name of the Chunk to delete.
         /// </summary>
-        [JsonProperty("name"), JsonConverter(typeof(GeminiCorpusResourceIdToStringConverter))]
+        [JsonProperty("name"), JsonConverter(typeof(GeminiCorpusResourceIdToStringConverter<GeminiCorpusChunkId>))]
         public GeminiCorpusChunkId ChunkId;
     }
 }

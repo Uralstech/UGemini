@@ -9,7 +9,7 @@ namespace Uralstech.UGemini.CorporaAPI
 {
     /// <summary>
     /// Creates a new Corpora API resource. Response type can be <see cref="GeminiCorpus"/>,
-    /// <see cref="Documents.GeminiCorpusDocument"/> or <see cref="Chunks.GeminiCorpusChunk"/>.
+    /// <see cref="GeminiCorpusDocument"/> or <see cref="GeminiCorpusChunk"/>.
     /// </summary>
     /// <remarks>
     /// Only available in the beta API.
