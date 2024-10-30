@@ -21,7 +21,7 @@ namespace Uralstech.UGemini.Models
         /// <remarks>
         /// Supports image, video and text input.
         /// </remarks>
-        public readonly static GeminiModelId Gemini1_0ProVision = "gemini-pro-vision";
+        public static readonly GeminiModelId Gemini1_0ProVision = "gemini-pro-vision";
 
         /// <summary>
         /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro">
@@ -31,7 +31,7 @@ namespace Uralstech.UGemini.Models
         /// <remarks>
         /// Supports text input.
         /// </remarks>
-        public readonly static GeminiModelId Gemini1_0Pro = "gemini-1.0-pro";
+        public static readonly GeminiModelId Gemini1_0Pro = "gemini-1.0-pro";
 
         /// <summary>
         /// Finetuning-supported version of <see cref="Gemini1_0Pro"/>.
@@ -42,7 +42,7 @@ namespace Uralstech.UGemini.Models
         /// </a>
         /// Supports text input.
         /// </remarks>
-        public readonly static GeminiModelId Gemini1_0ProTuning = "gemini-1.0-pro-001";
+        public static readonly GeminiModelId Gemini1_0ProTuning = "gemini-1.0-pro-001";
 
         /// <summary>
         /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro">
@@ -54,7 +54,7 @@ namespace Uralstech.UGemini.Models
         /// <remarks>
         /// Supports audio, image, video and text input.
         /// </remarks>
-        public readonly static GeminiModelId Gemini1_5Pro = "gemini-1.5-pro";
+        public static readonly GeminiModelId Gemini1_5Pro = "gemini-1.5-pro";
 
         /// <summary>
         /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash">
@@ -64,7 +64,7 @@ namespace Uralstech.UGemini.Models
         /// <remarks>
         /// Supports audio, image, video and text input.
         /// </remarks>
-        public readonly static GeminiModelId Gemini1_5Flash = "gemini-1.5-flash";
+        public static readonly GeminiModelId Gemini1_5Flash = "gemini-1.5-flash";
 
         /// <summary>
         /// Finetuning-supported version of <see cref="Gemini1_5Flash"/>.
@@ -75,7 +75,7 @@ namespace Uralstech.UGemini.Models
         /// </a>
         /// Supports audio, image, video and text input.
         /// </remarks>
-        public readonly static GeminiModelId Gemini1_5FlashTuning = "gemini-1.5-flash-001-tuning";
+        public static readonly GeminiModelId Gemini1_5FlashTuning = "gemini-1.5-flash-001-tuning";
 
         /// <summary>
         /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#text-embedding">
@@ -85,7 +85,7 @@ namespace Uralstech.UGemini.Models
         /// <remarks>
         /// Supports text input.
         /// </remarks>
-        public readonly static GeminiModelId TextEmbedding004 = "text-embedding-004";
+        public static readonly GeminiModelId TextEmbedding004 = "text-embedding-004";
 
         /// <summary>
         /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#aqa">
@@ -96,7 +96,7 @@ namespace Uralstech.UGemini.Models
         /// <remarks>
         /// Supports text input.
         /// </remarks>
-        public readonly static GeminiModelId Aqa = "aqa";
+        public static readonly GeminiModelId Aqa = "aqa";
 
         /// <summary>
         /// The version number of the model.
