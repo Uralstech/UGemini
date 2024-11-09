@@ -3,6 +3,7 @@ using Newtonsoft.Json.Serialization;
 using Uralstech.UGemini.Models.Content;
 using Uralstech.UGemini.Models.Content.Attribution;
 using Uralstech.UGemini.Models.Content.Citation;
+using Uralstech.UGemini.Models.Generation.Candidate.GroundingMetadata;
 using Uralstech.UGemini.Models.Generation.Safety;
 
 namespace Uralstech.UGemini.Models.Generation.Candidate
@@ -56,6 +57,15 @@ namespace Uralstech.UGemini.Models.Generation.Candidate
         /// </remarks>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public GeminiGroundingAttribution[] GroundingAttributions;
+
+        /// <summary>
+        /// Grounding metadata for the candidate.
+        /// </summary>
+        /// <remarks>
+        /// This field is populated for GenerateContent calls.
+        /// </remarks>
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public GeminiGroundingMetadata GroundingMetadata;
 
         /// <summary>
         /// (No description provided)

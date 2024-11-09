@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Serialization;
 using System.ComponentModel;
 using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation.Tools.Declaration.GoogleSearch;
 
 namespace Uralstech.UGemini.Models.Generation.Tools.Declaration
 {
@@ -28,6 +29,12 @@ namespace Uralstech.UGemini.Models.Generation.Tools.Declaration
         /// </remarks>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiFunctionDeclaration[] FunctionDeclarations = null;
+
+        /// <summary>
+        /// Retrieval tool that is powered by Google search.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public GeminiGoogleSearchRetrieval GoogleSearchRetrieval = null;
 
         /// <summary>
         /// Enables the model to execute code as part of generation.
