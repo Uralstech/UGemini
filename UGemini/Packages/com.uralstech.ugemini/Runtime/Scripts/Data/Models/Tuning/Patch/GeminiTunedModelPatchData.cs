@@ -33,6 +33,12 @@ namespace Uralstech.UGemini.Models.Tuning
         public GeminiInitialTuningTask TuningTask = null;
 
         /// <summary>
+        /// List of project numbers that have read access to the tuned model.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), JsonConverter(typeof(GeminiLongArrayToStringArrayJsonConverter)), DefaultValue(null)]
+        public long[] ReaderProjectNumbers = null;
+
+        /// <summary>
         /// TunedModel to use as the starting point for training the new model.
         /// </summary>
         /// <remarks>

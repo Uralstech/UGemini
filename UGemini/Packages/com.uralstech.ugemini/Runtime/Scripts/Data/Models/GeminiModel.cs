@@ -78,6 +78,16 @@ namespace Uralstech.UGemini.Models
         public static readonly GeminiModelId Gemini1_5FlashTuning = "gemini-1.5-flash-001-tuning";
 
         /// <summary>
+        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash-8b">
+        /// Gemini 1.5 Flash-8B is a small model designed for lower intelligence tasks.
+        /// </a>
+        /// </summary>
+        /// <remarks>
+        /// Supports audio, image, video and text input.
+        /// </remarks>
+        public static readonly GeminiModelId Gemini1_5Flash8B = "gemini-1.5-flash-8b";
+
+        /// <summary>
         /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#text-embedding">
         /// text-embedding-004 achieves a stronger retrieval performance and outperforms existing models with comparable dimensions, on the standard MTEB embedding benchmarks.
         /// </a>

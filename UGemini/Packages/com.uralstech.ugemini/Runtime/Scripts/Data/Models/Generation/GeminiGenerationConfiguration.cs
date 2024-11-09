@@ -30,7 +30,7 @@ namespace Uralstech.UGemini.Models.Generation
         /// Output response schema of the generated candidate text when response mime type can have schema.
         /// </summary>
         /// <remarks>
-        /// If set, a compatible <see cref="GeminiResponseType"/> must also be set. Compatible types: <see cref="GeminiResponseType.Json"/>: Schema for JSON response.
+        /// If set, a compatible <see cref="GeminiResponseType"/> must also be set. Compatible types: <see cref="GeminiResponseType.Json"/> and <see cref="GeminiResponseType.Enum"/>.
         /// <br/><br/>
         /// Only available in the beta API.
         /// </remarks>

@@ -38,7 +38,7 @@ namespace Uralstech.UGemini.Models.Caching
         /// <summary>
         /// The resource name referring to the cached content. Format: cachedContents/{contentId}.
         /// </summary>
-        public string Name = null;
+        public string Name;
 
         /// <summary>
         /// The user-generated meaningful display name of the cached content. Maximum 128 Unicode characters.
@@ -51,5 +51,14 @@ namespace Uralstech.UGemini.Models.Caching
         /// </summary>
         [JsonConverter(typeof(GeminiModelIdToStringConverter))]
         public GeminiModelId Model;
+
+        /// <summary>
+        /// Converts the <see cref="GeminiCachedContent"/> to its <see cref="Name"/>.
+        /// </summary>
+        /// <param name="thiz">The current object.</param>
+        public static implicit operator string(GeminiCachedContent thiz)
+        {
+            return thiz.Name;
+        }
     }
 }

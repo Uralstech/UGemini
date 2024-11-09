@@ -7,7 +7,7 @@ A Unity C# wrapper for the Google Gemini API.
 
 ## Installation
 
-This *should* work on any reasonably modern Unity version. Built and tested in Unity 6000.0.23f1 (Unity 6).
+This *should* work on any reasonably modern Unity version. Built and tested in Unity 6000.0.26f1 (Unity 6).
 
 ### OpenUPM
 

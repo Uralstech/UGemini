@@ -51,14 +51,15 @@ namespace Uralstech.UGemini.Models.Tuning
         public long[] ReaderProjectNumbers;
 
         /// <summary>
-        /// TunedModel to use as the starting point for training the new model.
+        /// TunedModel to use as the starting point for training the new model. If not provided, <see cref="BaseModel"/> will be.
         /// </summary>
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public GeminiTunedModelSource TunedModelSource;
 
         /// <summary>
-        /// The name of the <see cref="GeminiModel"/> to tune. Example: models/gemini-1.5-flash-0
+        /// The name of the <see cref="GeminiModel"/> to tune. If not provided, <see cref="TunedModelSource"/> will be. Example: models/gemini-1.5-flash-0
         /// </summary>
-        [JsonConverter(typeof(GeminiModelIdToStringConverter))]
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore), JsonConverter(typeof(GeminiModelIdToStringConverter))]
         public GeminiModelId BaseModel;
 
         /// <summary>

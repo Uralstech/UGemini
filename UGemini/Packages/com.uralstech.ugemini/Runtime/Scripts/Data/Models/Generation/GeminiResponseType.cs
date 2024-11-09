@@ -26,5 +26,11 @@ namespace Uralstech.UGemini.Models.Generation
         /// </summary>
         [EnumMember(Value = "application/json")]
         Json,
+
+        /// <summary>
+        /// Plain text response type constrained to enum values.
+        /// </summary>
+        [EnumMember(Value = "text/x.enum")]
+        Enum,
     }
 }
