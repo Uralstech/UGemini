@@ -63,6 +63,8 @@ namespace Uralstech.UGemini.Models.Generation.Candidate
         /// </summary>
         /// <remarks>
         /// This field is populated for GenerateContent calls.
+        /// <br/><br/>
+        /// Only available in the beta API.
         /// </remarks>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public GeminiGroundingMetadata GroundingMetadata;
