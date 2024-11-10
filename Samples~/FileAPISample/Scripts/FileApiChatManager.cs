@@ -127,7 +127,7 @@ public class FileApiChatManager : MonoBehaviour
             $"\t{file.Sha256Hash}\n" +
             $"\t{file.Uri}\n" +
             $"\t{file.State}\n" +
-            $"\t{file.Status?.Message}\n" +
+            $"\t{file.Error?.Message}\n" +
             $"\t{file.VideoMetadata?.VideoDuration}\n" +
             $")";
     }
