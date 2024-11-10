@@ -58,12 +58,13 @@
       }
     },
     "com.uralstech.ucloud.operations": {
-      "version": "1.1.4",
+      "version": "1.1.5",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.uralstech.utils.singleton": "1.0.1",
-        "com.unity.nuget.newtonsoft-json": "3.2.1"
+        "com.uralstech.utils.singleton": "1.1.1",
+        "com.unity.nuget.newtonsoft-json": "3.2.1",
+        "com.unity.modules.unitywebrequest": "1.0.0"
       },
       "url": "https://package.openupm.com"
     },
@@ -72,15 +73,15 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {
-        "com.uralstech.utils.singleton": "1.1.0",
-        "com.uralstech.ucloud.operations": "1.1.4",
+        "com.uralstech.utils.singleton": "1.1.1",
+        "com.uralstech.ucloud.operations": "1.1.5",
         "com.unity.nuget.newtonsoft-json": "3.2.1",
         "com.unity.modules.unitywebrequest": "1.0.0",
         "com.unity.modules.imageconversion": "1.0.0"
       }
     },
     "com.uralstech.utils.singleton": {
-      "version": "1.1.0",
+      "version": "1.1.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {},

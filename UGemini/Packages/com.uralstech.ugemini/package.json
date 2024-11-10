@@ -67,8 +67,8 @@
     }
   ],
   "dependencies": {
-    "com.uralstech.utils.singleton": "1.1.0",
-    "com.uralstech.ucloud.operations": "1.1.4",
+    "com.uralstech.utils.singleton": "1.1.1",
+    "com.uralstech.ucloud.operations": "1.1.5",
     "com.unity.nuget.newtonsoft-json": "3.2.1",
     "com.unity.modules.unitywebrequest": "1.0.0",
     "com.unity.modules.imageconversion": "1.0.0"
