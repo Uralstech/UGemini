@@ -2,25 +2,25 @@
 // Utilities.Rest (https://github.com/RageAgainstThePixel/com.utilities.rest/), which is licensed under
 // the MIT license, which can be found here: https://github.com/RageAgainstThePixel/com.utilities.rest/blob/4b0cad9bdf46725ff44970c32f0ebb235aa2390e/LICENSE.md
 
-using System.Threading.Tasks;
+#if UTILITIES_ASYNC_1_0_0_OR_GREATER
+using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
-using Newtonsoft.Json.Linq;
-using System.Collections.Generic;
-
-#if UTILITIES_ASYNC_1_0_0_OR_GREATER
 using Utilities.Async;
 #endif
 
 namespace Uralstech.UGemini.Utils.Web
 {
+#if UTILITIES_ASYNC_1_0_0_OR_GREATER
+
     /// <summary>
     /// Extensions for the <see cref="UnityWebRequest"/> type.
     /// </summary>
     public static class WebRequestHelper
     {
-#if UTILITIES_ASYNC_1_0_0_OR_GREATER
         /// <summary>
         /// Sends a streaming web request.
         /// </summary>
@@ -91,6 +91,7 @@ namespace Uralstech.UGemini.Utils.Web
                 }
             }
         }
-#endif
     }
+
+#endif
 }

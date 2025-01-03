@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
-using System.ComponentModel;
 
 namespace Uralstech.UGemini.Models.Generation.Tools
 {
@@ -12,14 +12,14 @@ namespace Uralstech.UGemini.Models.Generation.Tools
     public class GeminiFunctionResponse
     {
         /// <summary>
-        /// The name of the function to call. Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 63.
+        /// The name of the function.
         /// </summary>
         public string Name;
 
         /// <summary>
-        /// The function response data.
+        /// The actual JSON response data of the function.
         /// </summary>
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
-        public GeminiFunctionResponseContent Response = null;
+        [JsonProperty("response")]
+        public JObject ResponseData;
     }
 }

@@ -35,11 +35,7 @@ namespace Uralstech.UGemini.Models.Generation.Tools
             return new GeminiFunctionResponse()
             {
                 Name = Name,
-                Response = responseJson == null ? null : new GeminiFunctionResponseContent()
-                {
-                    Name = Name,
-                    ResponseData = responseJson
-                }
+                ResponseData = responseJson
             };
         }
     }
