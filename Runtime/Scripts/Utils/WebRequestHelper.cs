@@ -1,4 +1,4 @@
-﻿// The below code is inspired by code from RageAgainstThePixel's (https://github.com/RageAgainstThePixel/)
+// The below code is inspired by code from RageAgainstThePixel's (https://github.com/RageAgainstThePixel/)
 // Utilities.Rest (https://github.com/RageAgainstThePixel/com.utilities.rest/), which is licensed under
 // the MIT license, which can be found here: https://github.com/RageAgainstThePixel/com.utilities.rest/blob/4b0cad9bdf46725ff44970c32f0ebb235aa2390e/LICENSE.md
 
