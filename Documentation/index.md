@@ -76,7 +76,30 @@ Do not use preview versions (i.e. versions that end with "-preview") for product
     - ✔️ `list` method
     - ✔️ `patch` method
 
-- ❌ `corpora` endpoint 🧪
+- ✔️ `corpora` endpoint 🧪 (Unstable)
+    - ✔️ `documents` endpoint
+        - ✔️ `chunks` endpoint
+            - ✔️ `batchCreate` method
+            - ✔️ `batchDelete` method
+            - ✔️ `batchUpdate` method
+            - ✔️ `create` method
+            - ✔️ `delete` method
+            - ✔️ `get` method
+            - ✔️ `list` method
+            - ✔️ `patch` method
+        - ✔️ `create` method
+        - ✔️ `delete` method
+        - ✔️ `get` method
+        - ✔️ `list` method
+        - ✔️ `patch` method
+        - ✔️ `query` method
+    - ✔️ `create` method
+    - ✔️ `delete` method
+    - ✔️ `get` method
+    - ✔️ `list` method
+    - ✔️ `patch` method
+    - ✔️ `query` method
+
 - ✔️ `files` endpoint 🧪
     - ✔️ `delete` method
     - ✔️ `get` method
