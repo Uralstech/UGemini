@@ -11,7 +11,7 @@
       ],
       "dest": "api",
       "filter": "filterConfig.yml",
-      "includePrivateMembers": true,
+      "includePrivateMembers": false,
       "allowCompilationErrors": true
     }
   ],
