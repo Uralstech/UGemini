@@ -9,6 +9,9 @@
           ]
         }
       ],
+      "properties": {
+          "DefineConstants": "UTILITIES_ASYNC_1_0_0_OR_GREATER;UTILITIES_ENCODING_WAV_1_0_0_OR_GREATER;UTILITIES_AUDIO_1_0_0_OR_GREATER"
+      },
       "dest": "api",
       "filter": "filterConfig.yml",
       "includePrivateMembers": false,
