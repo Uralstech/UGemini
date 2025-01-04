@@ -93,7 +93,11 @@ namespace Uralstech.UGemini.FileAPI
         /// Error status if <see cref="GeminiFile"/> processing failed.
         /// </summary>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore), Obsolete("Use GeminiFile.Error instead.")]
-        public OperationStatus Status;
+        public OperationStatus Status
+        {
+            get => Error;
+            set => Error = value;
+        }
 
         /// <summary>
         /// Metadata for a video.

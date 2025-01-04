@@ -126,12 +126,12 @@ namespace Uralstech.UGemini.Models
         /// The version number of the model.
         /// </summary>
         /// <remarks>
-        /// This represents the major version
+        /// This represents the major version (1.0 or 1.5).
         /// </remarks>
         public string Version;
 
         /// <summary>
-        /// The human-readable name of the model. E.g. "Chat Bison".
+        /// The human-readable name of the model. E.g. "Gemini 1.5 Flash".
         /// </summary>
         /// <remarks>
         /// The name can be up to 128 characters long and can consist of any UTF-8 characters.
@@ -157,7 +157,7 @@ namespace Uralstech.UGemini.Models
         /// The model's supported generation methods.
         /// </summary>
         /// <remarks>
-        /// The method names are defined as Pascal case strings, such as <c>generateMessage</c> which correspond to API methods.
+        /// The corresponding API method names are defined as Pascal case strings, such as generateMessage and generateContent.
         /// </remarks>
         public string[] SupportedGenerationMethods;
 
@@ -165,7 +165,7 @@ namespace Uralstech.UGemini.Models
         /// Controls the randomness of the output.
         /// </summary>
         /// <remarks>
-        /// Values can range over [0.0,2.0], inclusive. A higher value will produce responses that are more varied, while a value closer to<br/>
+        /// Values can range over [0.0,<see cref="MaxTemperature"/>], inclusive. A higher value will produce responses that are more varied, while a value closer to<br/>
         /// 0.0 will typically result in less surprising responses from the model. This value specifies default to be used by the backend<br/>
         /// while making the call to the model.
         /// </remarks>
@@ -177,7 +177,7 @@ namespace Uralstech.UGemini.Models
         public float MaxTemperature;
 
         /// <summary>
-        /// For Nucleus sampling.
+        /// For <a href="https://ai.google.dev/gemini-api/docs/prompting-strategies#top-p">Nucleus sampling</a>.
         /// </summary>
         /// <remarks>
         /// Nucleus sampling considers the smallest set of tokens whose probability sum is at least topP. This value specifies default to be used<br/>
