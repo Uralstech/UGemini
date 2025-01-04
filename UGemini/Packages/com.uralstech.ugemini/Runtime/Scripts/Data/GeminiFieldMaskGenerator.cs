@@ -74,7 +74,7 @@ namespace Uralstech.UGemini
         private static string GetJsonMemberName(MemberInfo member, NamingStrategy namingStrategy)
         {
             JsonPropertyAttribute jsonPropertyAttribute = member.GetCustomAttribute<JsonPropertyAttribute>();
-            return jsonPropertyAttribute != null && !string.IsNullOrEmpty(jsonPropertyAttribute.PropertyName)
+            return !string.IsNullOrEmpty(jsonPropertyAttribute?.PropertyName)
                 ? jsonPropertyAttribute.PropertyName
                 : namingStrategy.GetPropertyName(member.Name, false);
         }
