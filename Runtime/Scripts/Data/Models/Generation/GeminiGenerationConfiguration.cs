@@ -57,8 +57,8 @@ namespace Uralstech.UGemini.Models.Generation
         /// <remarks>
         /// Currently, this value can only be set to 1. If unset, this will default to 1.
         /// </remarks>
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(1)]
-        public int CandidateCount = 1;
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(-1)]
+        public int CandidateCount = -1;
 
         /// <summary>
         /// The maximum number of tokens to include in a candidate.

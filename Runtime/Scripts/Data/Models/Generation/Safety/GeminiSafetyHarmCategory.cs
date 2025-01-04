@@ -31,42 +31,6 @@ namespace Uralstech.UGemini.Models.Generation.Safety
         Unspecified,
 
         /// <summary>
-        /// Negative or harmful comments targeting identity and/or protected attribute.
-        /// </summary>
-        [EnumMember(Value = "HARM_CATEGORY_DEROGATORY")]
-        Derogatory,
-
-        /// <summary>
-        /// Content that is rude, disrespectful, or profane.
-        /// </summary>
-        [EnumMember(Value = "HARM_CATEGORY_TOXICITY")]
-        Toxicity,
-
-        /// <summary>
-        /// Describes scenarios depicting violence against an individual or group, or general descriptions of gore.
-        /// </summary>
-        [EnumMember(Value = "HARM_CATEGORY_VIOLENCE")]
-        Violence,
-
-        /// <summary>
-        /// Contains references to sexual acts or other lewd content.
-        /// </summary>
-        [EnumMember(Value = "HARM_CATEGORY_SEXUAL")]
-        Sexual,
-
-        /// <summary>
-        /// Promotes unchecked medical advice.
-        /// </summary>
-        [EnumMember(Value = "HARM_CATEGORY_MEDICAL")]
-        Medical,
-
-        /// <summary>
-        /// Dangerous content that promotes, facilitates, or encourages harmful acts.
-        /// </summary>
-        [EnumMember(Value = "HARM_CATEGORY_DANGEROUS")]
-        Dangerous,
-
-        /// <summary>
         /// Harasment content.
         /// </summary>
         [EnumMember(Value = "HARM_CATEGORY_HARASSMENT")]
