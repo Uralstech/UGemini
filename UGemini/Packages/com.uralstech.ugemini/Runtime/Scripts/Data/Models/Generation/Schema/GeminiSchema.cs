@@ -98,6 +98,12 @@ namespace Uralstech.UGemini.Models.Generation.Schema
         public string[] Required = null;
 
         /// <summary>
+        /// The order of the properties. Not a standard field in open api spec. Used to determine the order of the properties in the response.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public string[] PropertyOrdering = null;
+
+        /// <summary>
         /// Schema of the elements of <see cref="GeminiSchemaDataType.Array"/>.
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]

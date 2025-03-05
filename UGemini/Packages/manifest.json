@@ -4,7 +4,7 @@
     "com.unity.ugui": "2.0.0",
     "com.uralstech.ugemini": "1.0.1",
     "com.utilities.async": "2.2.1",
-    "com.utilities.encoder.wav": "2.1.0"
+    "com.utilities.encoder.wav": "2.2.0"
   },
   "scopedRegistries": [
     {

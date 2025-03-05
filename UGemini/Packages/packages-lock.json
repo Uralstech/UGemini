@@ -99,10 +99,11 @@
       "url": "https://package.openupm.com"
     },
     "com.utilities.audio": {
-      "version": "2.1.0",
+      "version": "2.2.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
+        "com.unity.modules.androidjni": "1.0.0",
         "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.unitywebrequestaudio": "1.0.0",
         "com.utilities.async": "2.2.1"
@@ -110,13 +111,19 @@
       "url": "https://package.openupm.com"
     },
     "com.utilities.encoder.wav": {
-      "version": "2.1.0",
+      "version": "2.2.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.utilities.audio": "2.1.0"
+        "com.utilities.audio": "2.2.0"
       },
       "url": "https://package.openupm.com"
+    },
+    "com.unity.modules.androidjni": {
+      "version": "1.0.0",
+      "depth": 2,
+      "source": "builtin",
+      "dependencies": {}
     },
     "com.unity.modules.audio": {
       "version": "1.0.0",

@@ -44,5 +44,12 @@ namespace Uralstech.UGemini.Models.Generation.Tools.Declaration
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiSchema Parameters = null;
+
+        /// <summary>
+        /// Describes the output from this function in JSON Schema format. Reflects the Open API 3.03 Response Object.
+        /// The Schema defines the type used for the response value of the function.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public GeminiSchema Response = null;
     }
 }

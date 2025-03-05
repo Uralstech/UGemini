@@ -55,5 +55,11 @@ namespace Uralstech.UGemini.Models.Generation.Tools.Declaration
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiCodeExecution CodeExecution = null;
+
+        /// <summary>
+        /// GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public GeminiGoogleSearch GoogleSearch = null;
     }
 }

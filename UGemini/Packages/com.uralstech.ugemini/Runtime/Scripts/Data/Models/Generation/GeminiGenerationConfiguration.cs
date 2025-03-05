@@ -15,7 +15,9 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.ComponentModel;
+using Uralstech.UGemini.Models.Generation.Candidate;
 using Uralstech.UGemini.Models.Generation.Schema;
+using Uralstech.UGemini.Models.Generation.Speech;
 
 namespace Uralstech.UGemini.Models.Generation
 {
@@ -50,6 +52,17 @@ namespace Uralstech.UGemini.Models.Generation
         /// </remarks>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiSchema ResponseSchema = null;
+
+        /// <summary>
+        /// The requested modalities of the response. Represents the set of modalities that the model can return, and should be expected in the response. This is an exact match to the modalities of the response.
+        /// </summary>
+        /// <remarks>
+        /// A model may have multiple combinations of supported modalities. If the requested modalities do not match any of the supported combinations, an error will be returned.
+        /// 
+        /// An empty list is equivalent to requesting only text.
+        /// </remarks>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public GeminiModality[] ResponseModalities = null;
 
         /// <summary>
         /// Number of generated responses to return.
@@ -96,6 +109,12 @@ namespace Uralstech.UGemini.Models.Generation
         public int TopK = -1;
 
         /// <summary>
+        /// Seed used in decoding. If not set, the request uses a randomly generated seed.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public int? Seed = null;
+
+        /// <summary>
         /// Presence penalty applied to the next token's logprobs if the token has already been seen in the response.
         /// </summary>
         /// <remarks>
@@ -134,5 +153,23 @@ namespace Uralstech.UGemini.Models.Generation
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(-1)]
         public int Logprobs = -1;
+
+        /// <summary>
+        /// Enables enhanced civic answers. It may not be available for all models.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public bool? EnableEnhancedCivicAnswers = null;
+
+        /// <summary>
+        /// The speech generation config.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public GeminiSpeechConfig SpeechConfig = null;
+
+        /// <summary>
+        /// If specified, the media resolution specified will be used.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(GeminiMediaResolution.Unspecified)]
+        public GeminiMediaResolution MediaResolution = GeminiMediaResolution.Unspecified;
     }
 }

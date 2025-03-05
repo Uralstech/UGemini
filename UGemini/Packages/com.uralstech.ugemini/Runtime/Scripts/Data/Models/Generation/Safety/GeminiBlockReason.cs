@@ -53,5 +53,11 @@ namespace Uralstech.UGemini.Models.Generation.Safety
         /// </summary>
         [EnumMember(Value = "PROHIBITED_CONTENT")]
         ProhibitedContent,
+
+        /// <summary>
+        /// Candidates blocked due to unsafe image generation content.
+        /// </summary>
+        [EnumMember(Value = "IMAGE_SAFETY")]
+        ImageSafety,
     }
 }

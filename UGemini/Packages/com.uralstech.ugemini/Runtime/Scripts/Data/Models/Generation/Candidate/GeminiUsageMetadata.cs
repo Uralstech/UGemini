@@ -42,9 +42,34 @@ namespace Uralstech.UGemini.Models.Generation.Candidate
         public int CandidatesTokenCount;
 
         /// <summary>
+        /// Number of tokens present in tool-use prompt(s).
+        /// </summary>
+        public int ToolUsePromptTokenCount;
+
+        /// <summary>
         /// Total token count for the generation request (prompt + candidates).
         /// </summary>
         public int TotalTokenCount;
+
+        /// <summary>
+        /// List of modalities that were processed in the request input.
+        /// </summary>
+        public GeminiModalityTokenCount[] PromptTokensDetails;
+
+        /// <summary>
+        /// List of modalities of the cached content in the request input.
+        /// </summary>
+        public GeminiModalityTokenCount[] CacheTokensDetails;
+
+        /// <summary>
+        /// List of modalities that were returned in the response.
+        /// </summary>
+        public GeminiModalityTokenCount[] CandidatesTokensDetails;
+
+        /// <summary>
+        /// List of modalities that were processed for tool-use request inputs.
+        /// </summary>
+        public GeminiModalityTokenCount[] ToolUsePromptTokensDetails;
 
         /// <inheritdoc/>
         public void Append(GeminiUsageMetadata data)
@@ -52,7 +77,13 @@ namespace Uralstech.UGemini.Models.Generation.Candidate
             PromptTokenCount = data.PromptTokenCount;
             CachedContentTokenCount = data.CachedContentTokenCount;
             CandidatesTokenCount = data.CandidatesTokenCount;
+            ToolUsePromptTokenCount = data.ToolUsePromptTokenCount;
             TotalTokenCount = data.TotalTokenCount;
+
+            PromptTokensDetails = data.PromptTokensDetails;
+            CacheTokensDetails = data.CacheTokensDetails;
+            CandidatesTokensDetails = data.CandidatesTokensDetails;
+            ToolUsePromptTokensDetails = data.ToolUsePromptTokensDetails;
         }
     }
 }
