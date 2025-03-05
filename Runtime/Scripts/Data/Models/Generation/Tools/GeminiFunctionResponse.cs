@@ -15,6 +15,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
+using System.ComponentModel;
 
 namespace Uralstech.UGemini.Models.Generation.Tools
 {
@@ -25,6 +26,12 @@ namespace Uralstech.UGemini.Models.Generation.Tools
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class GeminiFunctionResponse
     {
+        /// <summary>
+        /// The id of the function call this response is for. Populated by the client to match the corresponding function call id.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public string Id = null;
+
         /// <summary>
         /// The name of the function.
         /// </summary>

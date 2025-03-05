@@ -14,6 +14,7 @@
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using Uralstech.UGemini.Models.Generation.Candidate;
 
 namespace Uralstech.UGemini.Models.CountTokens
 {
@@ -37,5 +38,10 @@ namespace Uralstech.UGemini.Models.CountTokens
         /// Number of tokens in the cached part of the prompt (the cached content).
         /// </summary>
         public int CachedContentTokenCount;
+
+        /// <summary>
+        /// List of modalities that were processed in the request input.
+        /// </summary>
+        public GeminiModalityTokenCount[] PromptTokensDetails;
     }
 }

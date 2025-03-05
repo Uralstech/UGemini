@@ -89,5 +89,11 @@ namespace Uralstech.UGemini.Models.Generation.Candidate
         /// </summary>
         [EnumMember(Value = "MALFORMED_FUNCTION_CALL")]
         MalformedFunctionCall,
+
+        /// <summary>
+        /// Token generation stopped because generated images contain safety violations.
+        /// </summary>
+        [EnumMember(Value = "IMAGE_SAFETY")]
+        ImageSafety,
     }
 }

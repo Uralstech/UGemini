@@ -78,7 +78,7 @@ namespace Uralstech.UGemini.Models.Generation.Schema
         Date,
 
         /// <summary>
-        /// Date and time string as defined by <a href="https://datatracker.ietf.org/doc/html/rfc3339#section-5.6">date-time - RFC 3339</a>. Not officially supported by the Gemini API.
+        /// Date and time string as defined by <a href="https://datatracker.ietf.org/doc/html/rfc3339#section-5.6">date-time - RFC 3339</a>.
         /// </summary>
         [EnumMember(Value = "date-time")]
         DateTime,

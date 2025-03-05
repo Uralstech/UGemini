@@ -26,6 +26,12 @@ namespace Uralstech.UGemini.Models.Generation.Tools
     public class GeminiFunctionCall
     {
         /// <summary>
+        /// The unique id of the function call. If populated, the client to execute the functionCall and return the response with the matching id.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public string Id = null;
+
+        /// <summary>
         /// The name of the function to call. Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 63.
         /// </summary>
         public string Name;
@@ -48,6 +54,7 @@ namespace Uralstech.UGemini.Models.Generation.Tools
         {
             return new GeminiFunctionResponse()
             {
+                Id = !string.IsNullOrEmpty(Id) ? Id : null,
                 Name = Name,
                 ResponseData = responseJson
             };

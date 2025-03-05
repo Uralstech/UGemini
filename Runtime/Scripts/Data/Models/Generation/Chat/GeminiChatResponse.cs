@@ -50,6 +50,11 @@ namespace Uralstech.UGemini.Models.Generation.Chat
         public GeminiUsageMetadata UsageMetadata;
 
         /// <summary>
+        /// The model version used to generate the response.
+        /// </summary>
+        public string ModelVersion;
+
+        /// <summary>
         /// The parts of the <see cref="GeminiChatResponse"/> message.
         /// </summary>
         [JsonIgnore]
@@ -79,6 +84,9 @@ namespace Uralstech.UGemini.Models.Generation.Chat
                     Candidates = allCandidates;
                 }
             }
+
+            if (!string.IsNullOrEmpty(data.ModelVersion))
+                ModelVersion = data.ModelVersion;
         }
     }
 }

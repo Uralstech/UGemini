@@ -79,9 +79,19 @@ namespace Uralstech.UGemini.FileAPI
         public string Uri;
 
         /// <summary>
+        /// The download uri of the <see cref="GeminiFile"/>.
+        /// </summary>
+        public string DownloadUri;
+
+        /// <summary>
         /// Processing state of the <see cref="GeminiFile"/>.
         /// </summary>
         public GeminiFileState State;
+
+        /// <summary>
+        /// Source of the <see cref="GeminiFile"/>.
+        /// </summary>
+        public GeminiFileSource Source;
 
         /// <summary>
         /// Error status if <see cref="GeminiFile"/> processing failed.
@@ -92,7 +102,7 @@ namespace Uralstech.UGemini.FileAPI
         /// <summary>
         /// Error status if <see cref="GeminiFile"/> processing failed.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore), Obsolete("Use GeminiFile.Error instead.")]
+        [JsonIgnore, Obsolete("Use GeminiFile.Error instead.")]
         public OperationStatus Status
         {
             get => Error;
