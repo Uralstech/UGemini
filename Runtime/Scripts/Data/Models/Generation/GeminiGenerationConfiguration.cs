@@ -58,8 +58,9 @@ namespace Uralstech.UGemini.Models.Generation
         /// </summary>
         /// <remarks>
         /// A model may have multiple combinations of supported modalities. If the requested modalities do not match any of the supported combinations, an error will be returned.
-        /// 
         /// An empty list is equivalent to requesting only text.
+        /// <br/><br/>
+        /// <see cref="GeminiModality.Document"/> and <see cref="GeminiModality.Video"/> are not supported.
         /// </remarks>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiModality[] ResponseModalities = null;

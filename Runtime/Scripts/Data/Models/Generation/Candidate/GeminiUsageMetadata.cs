@@ -47,6 +47,11 @@ namespace Uralstech.UGemini.Models.Generation.Candidate
         public int ToolUsePromptTokenCount;
 
         /// <summary>
+        /// Number of tokens of thoughts for thinking models.
+        /// </summary>
+        public int ThoughtsTokenCount;
+
+        /// <summary>
         /// Total token count for the generation request (prompt + candidates).
         /// </summary>
         public int TotalTokenCount;
@@ -78,6 +83,7 @@ namespace Uralstech.UGemini.Models.Generation.Candidate
             CachedContentTokenCount = data.CachedContentTokenCount;
             CandidatesTokenCount = data.CandidatesTokenCount;
             ToolUsePromptTokenCount = data.ToolUsePromptTokenCount;
+            ThoughtsTokenCount = data.ThoughtsTokenCount;
             TotalTokenCount = data.TotalTokenCount;
 
             PromptTokensDetails = data.PromptTokensDetails;
