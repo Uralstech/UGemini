@@ -88,7 +88,7 @@
       "url": "https://package.openupm.com"
     },
     "com.utilities.async": {
-      "version": "2.2.1",
+      "version": "2.2.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -99,7 +99,7 @@
       "url": "https://package.openupm.com"
     },
     "com.utilities.audio": {
-      "version": "2.2.0",
+      "version": "2.2.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -111,11 +111,11 @@
       "url": "https://package.openupm.com"
     },
     "com.utilities.encoder.wav": {
-      "version": "2.2.0",
+      "version": "2.2.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.utilities.audio": "2.2.0"
+        "com.utilities.audio": "2.2.1"
       },
       "url": "https://package.openupm.com"
     },
