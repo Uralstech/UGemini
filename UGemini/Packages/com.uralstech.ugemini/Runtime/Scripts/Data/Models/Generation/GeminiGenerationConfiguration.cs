@@ -168,6 +168,12 @@ namespace Uralstech.UGemini.Models.Generation
         public GeminiSpeechConfig SpeechConfig = null;
 
         /// <summary>
+        /// Config for thinking features. An error will be returned if this field is set for models that don't support thinking.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public GeminiThinkingConfig ThinkingConfig = null;
+
+        /// <summary>
         /// If specified, the media resolution specified will be used.
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(GeminiMediaResolution.Unspecified)]
