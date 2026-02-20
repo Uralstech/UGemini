@@ -58,8 +58,9 @@ namespace Uralstech.UGemini.Models.Generation
         /// </summary>
         /// <remarks>
         /// A model may have multiple combinations of supported modalities. If the requested modalities do not match any of the supported combinations, an error will be returned.
-        /// 
         /// An empty list is equivalent to requesting only text.
+        /// <br/><br/>
+        /// <see cref="GeminiModality.Document"/> and <see cref="GeminiModality.Video"/> are not supported.
         /// </remarks>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiModality[] ResponseModalities = null;
@@ -165,6 +166,12 @@ namespace Uralstech.UGemini.Models.Generation
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiSpeechConfig SpeechConfig = null;
+
+        /// <summary>
+        /// Config for thinking features. An error will be returned if this field is set for models that don't support thinking.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public GeminiThinkingConfig ThinkingConfig = null;
 
         /// <summary>
         /// If specified, the media resolution specified will be used.
