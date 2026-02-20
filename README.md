@@ -5,6 +5,31 @@ A Unity C# wrapper for the Google Gemini API.
 [![openupm](https://img.shields.io/npm/v/com.uralstech.ugemini?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.uralstech.ugemini/)
 [![openupm](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=downloads&query=%24.downloads&suffix=%2Fmonth&url=https%3A%2F%2Fpackage.openupm.com%2Fdownloads%2Fpoint%2Flast-month%2Fcom.uralstech.ugemini)](https://openupm.com/packages/com.uralstech.ugemini/)
 
+## Deprecation Notice
+
+Hey everyone,
+
+UGemini was my early wrapper to make Google's Gemini API easy to use in Unity projects.
+Thanks a ton to everyone who's tried it, starred the repo, downloaded it, opened issues,
+and donated over the years. It's meant a lot!
+
+As of recently, I've moved on from using this package in my projects in favour of a server-based
+implementation, so I haven't been developing this much. Google has now released their own SDKs for
+implementing the Gemini API for .NET and for Unity specifically.
+
+As their GenAI SDK and Firebase AI Logic SDK supports more endpoints than this package,
+I've decided to archive this package. Even though the GenAI SDK is not available for Unity directly,
+I believe it should work through [NuGetForUnity](https://github.com/GlitchEnzo/NuGetForUnity) as it
+targets netstandard2.0.
+
+Here are the links to the official Google packages:
+
+- GenAI SDK for .NET: https://www.nuget.org/packages/Google.GenAI
+    - Docs: https://googleapis.github.io/dotnet-genai/
+- Firebase AI Logic SDK: https://firebase.google.com/docs/ai-logic
+
+Please feel free to fork this repo if needed, and thank you once again.
+
 ## Installation
 
 This *should* work on any reasonably modern Unity version. Built and tested in Unity 6000.0.26f1 (Unity 6).
