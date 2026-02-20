@@ -1,4 +1,18 @@
-﻿using Newtonsoft.Json;
+// Copyright 2024 URAV ADVANCED LEARNING SYSTEMS PRIVATE LIMITED
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace Uralstech.UGemini.Models
@@ -7,107 +21,18 @@ namespace Uralstech.UGemini.Models
     /// Information about a Generative Language Model.
     /// </summary>
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class GeminiModel : GeminiModelId
+    public partial class GeminiModel : GeminiModelId
     {
-        /// <summary>
-        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro-vision">
-        /// Note: Gemini 1.0 Pro Vision is deprecated. Use 1.5 Flash or 1.5 Pro instead.
-        /// <br/><br/>
-        /// Gemini 1.0 Pro Vision is a performance-optimized multimodal model that can perform visual-related tasks.<br/>
-        /// For example, 1.0 Pro Vision can generate image descriptions, identify objects present in images, provide<br/>
-        /// information about places or objects present in images, and more.
-        /// </a>
-        /// </summary>
-        /// <remarks>
-        /// Supports image, video and text input.
-        /// </remarks>
-        public readonly static GeminiModelId Gemini1_0ProVision = "gemini-pro-vision";
-
-        /// <summary>
-        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro">
-        /// Gemini 1.0 Pro is an NLP model that handles tasks like multi-turn text and code chat, and code generation.
-        /// </a>
-        /// </summary>
-        /// <remarks>
-        /// Supports text input.
-        /// </remarks>
-        public readonly static GeminiModelId Gemini1_0Pro = "gemini-1.0-pro";
-
-        /// <summary>
-        /// Finetuning-supported version of <see cref="Gemini1_0Pro"/>.
-        /// </summary>
-        /// <remarks>
-        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.0-pro">
-        /// Gemini 1.0 Pro is an NLP model that handles tasks like multi-turn text and code chat, and code generation.
-        /// </a>
-        /// Supports text input.
-        /// </remarks>
-        public readonly static GeminiModelId Gemini1_0ProTuning = "gemini-1.0-pro-001";
-
-        /// <summary>
-        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-pro">
-        /// Gemini 1.5 Pro is a mid-size multimodal model that is optimized for a wide-range of reasoning tasks.<br/>
-        /// 1.5 Pro can process large amounts of data at once, including 2 hours of video, 19 hours of audio,<br/>
-        /// codebases with 60,000 lines of code, or 2,000 pages of text.
-        /// </a>
-        /// </summary>
-        /// <remarks>
-        /// Supports audio, image, video and text input.
-        /// </remarks>
-        public readonly static GeminiModelId Gemini1_5Pro = "gemini-1.5-pro";
-
-        /// <summary>
-        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash">
-        /// Gemini 1.5 Flash is a fast and versatile multimodal model for scaling across diverse tasks.
-        /// </a>
-        /// </summary>
-        /// <remarks>
-        /// Supports audio, image, video and text input.
-        /// </remarks>
-        public readonly static GeminiModelId Gemini1_5Flash = "gemini-1.5-flash";
-
-        /// <summary>
-        /// Finetuning-supported version of <see cref="Gemini1_5Flash"/>.
-        /// </summary>
-        /// <remarks>
-        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#gemini-1.5-flash">
-        /// Gemini 1.5 Flash is a fast and versatile multimodal model for scaling across diverse tasks.
-        /// </a>
-        /// Supports audio, image, video and text input.
-        /// </remarks>
-        public readonly static GeminiModelId Gemini1_5FlashTuning = "gemini-1.5-flash-001-tuning";
-
-        /// <summary>
-        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#text-embedding">
-        /// text-embedding-004 achieves a stronger retrieval performance and outperforms existing models with comparable dimensions, on the standard MTEB embedding benchmarks.
-        /// </a>
-        /// </summary>
-        /// <remarks>
-        /// Supports text input.
-        /// </remarks>
-        public readonly static GeminiModelId TextEmbedding004 = "text-embedding-004";
-
-        /// <summary>
-        /// <a href="https://ai.google.dev/gemini-api/docs/models/gemini#aqa">
-        /// You can use the AQA model to perform Attributed Question-Answering (AQA)–related tasks over a document, corpus, or a set of passages. The AQA model returns answers
-        /// to questions that are grounded in provided sources, along with estimating answerable probability.
-        /// </a>
-        /// </summary>
-        /// <remarks>
-        /// Supports text input.
-        /// </remarks>
-        public readonly static GeminiModelId Aqa = "aqa";
-
         /// <summary>
         /// The version number of the model.
         /// </summary>
         /// <remarks>
-        /// This represents the major version
+        /// This represents the major version (1.0 or 1.5).
         /// </remarks>
         public string Version;
 
         /// <summary>
-        /// The human-readable name of the model. E.g. "Chat Bison".
+        /// The human-readable name of the model. E.g. "Gemini 1.5 Flash".
         /// </summary>
         /// <remarks>
         /// The name can be up to 128 characters long and can consist of any UTF-8 characters.
@@ -133,7 +58,7 @@ namespace Uralstech.UGemini.Models
         /// The model's supported generation methods.
         /// </summary>
         /// <remarks>
-        /// The method names are defined as Pascal case strings, such as <c>generateMessage</c> which correspond to API methods.
+        /// The corresponding API method names are defined as Pascal case strings, such as generateMessage and generateContent.
         /// </remarks>
         public string[] SupportedGenerationMethods;
 
@@ -141,7 +66,7 @@ namespace Uralstech.UGemini.Models
         /// Controls the randomness of the output.
         /// </summary>
         /// <remarks>
-        /// Values can range over [0.0,2.0], inclusive. A higher value will produce responses that are more varied, while a value closer to<br/>
+        /// Values can range over [0.0,<see cref="MaxTemperature"/>], inclusive. A higher value will produce responses that are more varied, while a value closer to<br/>
         /// 0.0 will typically result in less surprising responses from the model. This value specifies default to be used by the backend<br/>
         /// while making the call to the model.
         /// </remarks>
@@ -153,7 +78,7 @@ namespace Uralstech.UGemini.Models
         public float MaxTemperature;
 
         /// <summary>
-        /// For Nucleus sampling.
+        /// For <a href="https://ai.google.dev/gemini-api/docs/prompting-strategies#top-p">Nucleus sampling</a>.
         /// </summary>
         /// <remarks>
         /// Nucleus sampling considers the smallest set of tokens whose probability sum is at least topP. This value specifies default to be used<br/>

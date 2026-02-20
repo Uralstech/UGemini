@@ -1,3 +1,17 @@
+// Copyright 2024 URAV ADVANCED LEARNING SYSTEMS PRIVATE LIMITED
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
@@ -38,7 +52,7 @@ namespace Uralstech.UGemini.Models.Caching
         /// <summary>
         /// The resource name referring to the cached content. Format: cachedContents/{contentId}.
         /// </summary>
-        public string Name = null;
+        public string Name;
 
         /// <summary>
         /// The user-generated meaningful display name of the cached content. Maximum 128 Unicode characters.
@@ -49,7 +63,16 @@ namespace Uralstech.UGemini.Models.Caching
         /// <summary>
         /// The name of the Model to use for cached content Format: mod
         /// </summary>
-        [JsonConverter(typeof(GeminiModelIdStringConverter))]
+        [JsonConverter(typeof(GeminiModelIdToStringConverter))]
         public GeminiModelId Model;
+
+        /// <summary>
+        /// Converts the <see cref="GeminiCachedContent"/> to its <see cref="Name"/>.
+        /// </summary>
+        /// <param name="thiz">The current object.</param>
+        public static implicit operator string(GeminiCachedContent thiz)
+        {
+            return thiz.Name;
+        }
     }
 }

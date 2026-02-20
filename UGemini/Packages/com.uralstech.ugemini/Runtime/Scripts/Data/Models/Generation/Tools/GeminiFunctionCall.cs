@@ -1,4 +1,18 @@
-﻿using Newtonsoft.Json;
+// Copyright 2024 URAV ADVANCED LEARNING SYSTEMS PRIVATE LIMITED
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System.ComponentModel;
@@ -11,6 +25,12 @@ namespace Uralstech.UGemini.Models.Generation.Tools
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class GeminiFunctionCall
     {
+        /// <summary>
+        /// The unique id of the function call. If populated, the client to execute the functionCall and return the response with the matching id.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public string Id = null;
+
         /// <summary>
         /// The name of the function to call. Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 63.
         /// </summary>
@@ -34,12 +54,9 @@ namespace Uralstech.UGemini.Models.Generation.Tools
         {
             return new GeminiFunctionResponse()
             {
+                Id = !string.IsNullOrEmpty(Id) ? Id : null,
                 Name = Name,
-                Response = responseJson == null ? null : new GeminiFunctionResponseContent()
-                {
-                    Name = Name,
-                    ResponseData = responseJson
-                }
+                ResponseData = responseJson
             };
         }
     }

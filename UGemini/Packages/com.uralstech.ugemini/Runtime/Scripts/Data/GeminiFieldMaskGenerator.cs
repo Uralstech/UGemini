@@ -1,0 +1,82 @@
+// Copyright 2024 URAV ADVANCED LEARNING SYSTEMS PRIVATE LIMITED
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+
+namespace Uralstech.UGemini
+{
+    /// <summary>
+    /// Extension to generate a <a href="https://protobuf.dev/reference/protobuf/google.protobuf/#field-mask">Field Mask</a> from any object.
+    /// </summary>
+    public static class GeminiFieldMaskGenerator
+    {
+        /// <summary>
+        /// Binding flags for accessing public instance members.
+        /// </summary>
+        private static readonly BindingFlags s_publicInstanceMembers = BindingFlags.Instance | BindingFlags.Public;
+
+        /// <summary>
+        /// Generates a <a href="https://protobuf.dev/reference/protobuf/google.protobuf/#field-mask">Field Mask</a> from an object.
+        /// </summary>
+        /// <remarks>
+        /// This is a reflection heavy process. Also, this only works if the default value of all fields and properties in the object is <see langword="null"/>.
+        /// </remarks>
+        /// <param name="thiz">The object.</param>
+        /// <returns>A string field mask.</returns>
+        /// <exception cref="NotImplementedException">Thrown if <paramref name="thiz"/> does not implement <see cref="JsonObjectAttribute"/> or has no defined <see cref="NamingStrategy"/>.</exception>
+        public static string GetFieldMask(this object thiz)
+        {
+            Type type = thiz.GetType();
+
+            JsonObjectAttribute jsonObjectAttribute = type.GetCustomAttribute<JsonObjectAttribute>()
+                ?? throw new NotImplementedException($"Cannot get field mask for object of type {type.Name} as it does not implement {nameof(JsonObjectAttribute)}!");
+
+            if (jsonObjectAttribute.NamingStrategyType is not Type namingStrategyType)
+                throw new NotImplementedException($"Cannot get field mask for object of type {type.Name} as it has no defined {nameof(NamingStrategy)}.");
+
+            NamingStrategy namingStrategy = (NamingStrategy)Activator.CreateInstance(namingStrategyType);
+            PropertyInfo[] properties = type.GetProperties(s_publicInstanceMembers);
+            FieldInfo[] fields = type.GetFields(s_publicInstanceMembers);
+
+            IEnumerable<string> filledProperties = from property in properties
+                                                   where property.GetValue(thiz) != null
+                                                   select GetJsonMemberName(property, namingStrategy);
+
+            IEnumerable<string> filledFields = from field in fields
+                                               where field.GetValue(thiz) != null
+                                               select GetJsonMemberName(field, namingStrategy);
+
+            return string.Join(",", filledProperties.Concat(filledFields));
+        }
+
+        /// <summary>
+        /// Gets the JSON name of a type member as defined in its <see cref="JsonPropertyAttribute"/>, or uses a <see cref="NamingStrategy"/> to convert its name.
+        /// </summary>
+        /// <param name="member">The member.</param>
+        /// <param name="namingStrategy">The naming strategy to use if a defined JSON name was not found.</param>
+        /// <returns>The JSON name of the member.</returns>
+        private static string GetJsonMemberName(MemberInfo member, NamingStrategy namingStrategy)
+        {
+            JsonPropertyAttribute jsonPropertyAttribute = member.GetCustomAttribute<JsonPropertyAttribute>();
+            return !string.IsNullOrEmpty(jsonPropertyAttribute?.PropertyName)
+                ? jsonPropertyAttribute.PropertyName
+                : namingStrategy.GetPropertyName(member.Name, false);
+        }
+    }
+}

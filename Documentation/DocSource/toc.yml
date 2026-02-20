@@ -10,5 +10,3 @@ items:
   href: GeminiChatRequestFeatures.md
 - name: All Endpoints
   href: AllEndpoints.md
-- name: UGemini v2 Breaking Changes
-  href: BreakingChanges.md

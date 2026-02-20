@@ -1,7 +1,22 @@
-﻿using Newtonsoft.Json;
+// Copyright 2024 URAV ADVANCED LEARNING SYSTEMS PRIVATE LIMITED
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.ComponentModel;
 using Uralstech.UGemini.Models.Content;
+using Uralstech.UGemini.Models.Generation.Tools.Declaration.GoogleSearch;
 
 namespace Uralstech.UGemini.Models.Generation.Tools.Declaration
 {
@@ -30,9 +45,21 @@ namespace Uralstech.UGemini.Models.Generation.Tools.Declaration
         public GeminiFunctionDeclaration[] FunctionDeclarations = null;
 
         /// <summary>
+        /// Retrieval tool that is powered by Google search.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public GeminiGoogleSearchRetrieval GoogleSearchRetrieval = null;
+
+        /// <summary>
         /// Enables the model to execute code as part of generation.
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
         public GeminiCodeExecution CodeExecution = null;
+
+        /// <summary>
+        /// GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore), DefaultValue(null)]
+        public GeminiGoogleSearch GoogleSearch = null;
     }
 }
